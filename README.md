@@ -9,7 +9,7 @@ A nightly cron job builds
 and installs/updates all available CRAN packages
 as well as required or suggested packages from Bioconductor.
 
-Issues are *force-pushed* to the [**results branch**](tree/results/musl).
+Issues are *force-pushed* to the [**results branch**](../../tree/results/musl).
 
 
 ## TBD
