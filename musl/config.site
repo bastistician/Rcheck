@@ -1,0 +1,29 @@
+# compiler flags (without debubbing symbols for smaller libraries)
+CFLAGS="-O2 -mtune=native"
+FFLAGS="-O2 -mtune=native"
+CXXFLAGS="-O2 -mtune=native"
+# Note: Alpine patches gcc to use -D_FORTIFY_SOURCE=2 by default when -O >= 2
+
+# silence some warnings
+CXXFLAGS="${CXXFLAGS} -Wno-ignored-attributes" # rstanarm threw >10k
+
+# MUSL identification is a kludge for Rcpp (and packages LinkingTo it),
+# see also <https://github.com/RcppCore/Rcpp/issues/448>.
+# This is currently also done in the R package distributed by Alpine Linux.
+CXXFLAGS="${CXXFLAGS} -D__MUSL__"
+
+# R is configured with --enable-lto=R:
+# Optional link-time optimization for add-on packages specifying 'UseLTO: yes'.
+# Parallelize to avoid lto-wrapper warnings about serial compilation.
+LTO=-flto=4
+#LTO_OPT=-flto
+# FIXME: do we need to set the following as well?
+#AR=gcc-ar
+#RANLIB=gcc-ranlib
+
+# disable previewing URLs and PDFs
+R_BROWSER=false
+R_PDFVIEWER=false
+
+# AFAIR, chosen to be different from other check systems
+R_PAPERSIZE=letter
