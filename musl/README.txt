@@ -1,6 +1,7 @@
 Outputs of failed R package installations on a Linux system
 using musl instead of glibc and BusyBox instead of GNU coreutils.
 
+R version: nightly R-patched snapshot from CRAN/src/base-prerelease
 Platform: x86_64-pc-linux-musl
 OS: Alpine Linux v3.20
 Locale: C.UTF-8
