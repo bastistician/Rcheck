@@ -1,0 +1,48 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'pgenlibr' ...
+** package 'pgenlibr' successfully unpacked and MD5 sums checked
+** using staged installation
+checking for pkg-config... /usr/bin/pkg-config
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking for g++ -std=gnu++17 option to enable C++11 features... none needed
+configure: C++ compiler: g++ -std=gnu++17
+configure: zstd 1.5.6 library detected -- skipping zstd compilation
+configure: libdeflate 1.22 library detected -- skipping libdeflate compilation
+configure: simde not detected by pkg-config; falling back on system header file check
+no
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/pgenlibr/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DNO_UNALIGNED -DPGENLIB_NOPRINT -DIGNORE_BUNDLED_ZSTD -DIGNORE_BUNDLED_LIBDEFLATE     -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c pvar_ffi_support.cpp -o pvar_ffi_support.o
+In file included from include/plink2_bits.h:23,
+                 from include/pgenlib_misc.h:77,
+                 from pvar_ffi_support.h:20,
+                 from pvar_ffi_support.cpp:17:
+include/plink2_string.h: In function 'const char* plink2::strnul(const char*)':
+include/plink2_string.h:169:30: error: 'rawmemchr' was not declared in this scope; did you mean 'memchr'?
+  169 |   return S_CAST(CXXCONST_CP, rawmemchr(str, 0));
+      |                              ^~~~~~~~~
+include/plink2_base.h:281:48: note: in definition of macro 'S_CAST'
+  281 | #  define S_CAST(type, val) (static_cast<type>(val))
+      |                                                ^~~
+include/plink2_string.h: In function 'const char* plink2::AdvToDelim(const char*, char)':
+include/plink2_string.h:1107:30: error: 'rawmemchr' was not declared in this scope; did you mean 'rawmemchr3'?
+ 1107 |   return S_CAST(CXXCONST_CP, rawmemchr(str_iter, delim));
+      |                              ^~~~~~~~~
+include/plink2_base.h:281:48: note: in definition of macro 'S_CAST'
+  281 | #  define S_CAST(type, val) (static_cast<type>(val))
+      |                                                ^~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: pvar_ffi_support.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/pgenlibr/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/pgenlibr/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/pgenlibr/src'
+ERROR: compilation failed for package 'pgenlibr'
+* removing '/home/runner/R-patched/lib/pgenlibr'

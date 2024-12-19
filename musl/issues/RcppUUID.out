@@ -1,0 +1,49 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RcppUUID' ...
+** package 'RcppUUID' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++11
+make[1]: Entering directory '/var/local/PKGS/CRAN/RcppUUID/src'
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include   -DRCPP_NO_MODULES -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include   -DRCPP_NO_MODULES -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c uuid_name.cpp -o uuid_name.o
+In file included from /usr/include/c++/14.2.0/algorithm:61,
+                 from /home/runner/R-patched/lib/Rcpp/include/RcppCommon.h:65,
+                 from wrap.h:3,
+                 from uuid_name.cpp:1:
+/usr/include/c++/14.2.0/bits/stl_algo.h: In instantiation of '_OIter std::transform(_IIter, _IIter, _OIter, _UnaryOperation) [with _IIter = Rcpp::internal::Proxy_Iterator<Rcpp::internal::string_proxy<16> >; _OIter = __gnu_cxx::__normal_iterator<boost::uuids::uuid*, vector<boost::uuids::uuid> >; _UnaryOperation = boost::uuids::name_generator_sha1]':
+uuid_name.cpp:54:17:   required from here
+   54 |   std::transform(x.begin(), x.end(), res.begin(), gen);
+      |   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/14.2.0/bits/stl_algo.h:4219:31: error: no match for call to '(boost::uuids::name_generator_sha1) (Rcpp::internal::string_proxy<16>&)'
+ 4219 |         *__result = __unary_op(*__first);
+      |                     ~~~~~~~~~~^~~~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/uuid/name_generator_md5.hpp:9,
+                 from /home/runner/R-patched/lib/BH/include/boost/uuid/name_generator.hpp:13,
+                 from uuid_name.cpp:3:
+/home/runner/R-patched/lib/BH/include/boost/uuid/detail/basic_name_generator.hpp:44:29: note: candidate: 'template<class Ch> boost::uuids::uuid boost::uuids::detail::basic_name_generator<HashAlgo>::operator()(const Ch*) const [with HashAlgo = boost::uuids::detail::sha1]'
+   44 |     template<class Ch> uuid operator()( Ch const* name ) const noexcept
+      |                             ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/uuid/detail/basic_name_generator.hpp:44:29: note:   template argument deduction/substitution failed:
+/usr/include/c++/14.2.0/bits/stl_algo.h:4219:31: note:   mismatched types 'const Ch*' and 'Rcpp::internal::string_proxy<16>'
+ 4219 |         *__result = __unary_op(*__first);
+      |                     ~~~~~~~~~~^~~~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/uuid/detail/basic_name_generator.hpp:55:10: note: candidate: 'template<class Ch, class Traits, class Alloc> boost::uuids::uuid boost::uuids::detail::basic_name_generator<HashAlgo>::operator()(const std::__cxx11::basic_string<_CharT2, _Traits2, _Alloc>&) const [with Traits = Ch; Alloc = Traits; HashAlgo = boost::uuids::detail::sha1]'
+   55 |     uuid operator()( std::basic_string<Ch, Traits, Alloc> const& name ) const noexcept
+      |          ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/uuid/detail/basic_name_generator.hpp:55:10: note:   template argument deduction/substitution failed:
+/usr/include/c++/14.2.0/bits/stl_algo.h:4219:31: note:   'Rcpp::internal::string_proxy<16>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+ 4219 |         *__result = __unary_op(*__first);
+      |                     ~~~~~~~~~~^~~~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/uuid/detail/basic_name_generator.hpp:65:10: note: candidate: 'boost::uuids::uuid boost::uuids::detail::basic_name_generator<HashAlgo>::operator()(const void*, std::size_t) const [with HashAlgo = boost::uuids::detail::sha1; std::size_t = long unsigned int]'
+   65 |     uuid operator()( void const* buffer, std::size_t byte_count ) const noexcept
+      |          ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/uuid/detail/basic_name_generator.hpp:65:10: note:   candidate expects 2 arguments, 1 provided
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: uuid_name.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RcppUUID/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RcppUUID/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RcppUUID/src'
+ERROR: compilation failed for package 'RcppUUID'
+* removing '/home/runner/R-patched/lib/RcppUUID'
+* restoring previous '/home/runner/R-patched/lib/RcppUUID'

@@ -1,0 +1,16 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'cpp11armadillo' ...
+** package 'cpp11armadillo' successfully unpacked and MD5 sums checked
+** using staged installation
+R was not built as a library
+In file included from /home/runner/R-patched/lib/cpp11/include/cpp11.hpp:3,
+                 from ./inst/include/r_messages.hpp:3,
+                 from ./inst/include/armadillo.hpp:28,
+                 from conftest.cpp:1:
+/home/runner/R-patched/lib/cpp11/include/cpp11/R.hpp:19:10: fatal error: R_ext/Boolean.h: No such file or directory
+   19 | #include "R_ext/Boolean.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+Armadillo is not compatible with the C++ compiler used by R.
+ERROR: configuration failed for package 'cpp11armadillo'
+* removing '/home/runner/R-patched/lib/cpp11armadillo'

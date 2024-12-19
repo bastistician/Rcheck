@@ -1,0 +1,75 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'gpboost' ...
+** package 'gpboost' successfully unpacked and MD5 sums checked
+** using staged installation
+checking location of R... /home/runner/R-patched/build
+checking whether MM_PREFETCH works... yes
+./configure: line 1716: LGB_CPPFLAGS+= -DMM_PREFETCH=1: not found
+checking whether MM_MALLOC works... yes
+./configure: line 1743: LGB_CPPFLAGS+= -DMM_MALLOC=1: not found
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/gpboost/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./include -DEIGEN_MPL2_ONLY -DUSE_SOCKET -DLGB_R_BUILD  -I/usr/local/include   -fopenmp -pthread -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c boosting/boosting.cpp -o boosting/boosting.o
+In file included from ./include/LightGBM/config.h:23,
+                 from ./include/LightGBM/boosting.h:8,
+                 from boosting/boosting.cpp:5:
+./include/LightGBM/utils/common.h:58:26: error: 'void* malloc(size_t)' was declared 'extern' and later 'static' [-fpermissive]
+   58 | #define _mm_malloc(a, b) malloc(a)
+      |                          ^~~~~~
+In file included from /usr/include/fortify/wchar.h:27,
+                 from /usr/include/c++/14.2.0/cwchar:44,
+                 from /usr/include/c++/14.2.0/bits/postypes.h:40,
+                 from /usr/include/c++/14.2.0/iosfwd:42,
+                 from /usr/include/c++/14.2.0/bits/shared_ptr.h:52,
+                 from /usr/include/c++/14.2.0/memory:80,
+                 from ./include/LightGBM/meta.h:12,
+                 from ./include/LightGBM/config.h:22:
+/usr/include/stdlib.h:40:7: note: previous declaration of 'void* malloc(size_t)'
+   40 | void *malloc (size_t);
+      |       ^~~~~~
+In file included from /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/include/xmmintrin.h:34,
+                 from /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/include/emmintrin.h:31,
+                 from ./include/Eigen/src/Core/util/ConfigureVectorization.h:346,
+                 from ./include/Eigen/Core:22,
+                 from ./include/Eigen/SparseCore:11,
+                 from ./include/Eigen/Sparse:26,
+                 from ./include/GPBoost/type_defs.h:20,
+                 from ./include/GPBoost/re_model.h:12,
+                 from ./include/LightGBM/objective_function.h:9,
+                 from boosting/gbdt.h:10,
+                 from boosting/dart.hpp:16,
+                 from boosting/boosting.cpp:7:
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/include/mm_malloc.h: In function 'void* malloc(size_t)':
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/include/mm_malloc.h:42:7: error: '__alignment' was not declared in this scope
+   42 |   if (__alignment == 1)
+      |       ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/include/mm_malloc.h:44:7: error: '__alignment' was not declared in this scope
+   44 |   if (__alignment == 2 || (sizeof (void *) == 8 && __alignment == 4))
+      |       ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/include/mm_malloc.h:46:35: error: '__alignment' was not declared in this scope
+   46 |   if (_mm_posix_memalign (&__ptr, __alignment, __size) == 0)
+      |                                   ^~~~~~~~~~~
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/include/mm_malloc.h: At global scope:
+./include/LightGBM/utils/common.h:59:21: error: 'void free(void*)' was declared 'extern' and later 'static' [-fpermissive]
+   59 | #define _mm_free(a) free(a)
+      |                     ^~~~
+In file included from /usr/include/pthread.h:30,
+                 from /usr/include/c++/14.2.0/x86_64-alpine-linux-musl/bits/gthr-default.h:35,
+                 from /usr/include/c++/14.2.0/x86_64-alpine-linux-musl/bits/gthr.h:157,
+                 from /usr/include/c++/14.2.0/ext/atomicity.h:35,
+                 from /usr/include/c++/14.2.0/bits/shared_ptr_base.h:61,
+                 from /usr/include/c++/14.2.0/bits/shared_ptr.h:53:
+/usr/include/sched.h:85:6: note: previous declaration of 'void free(void*)'
+   85 | void free(void *);
+      |      ^~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: boosting/boosting.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/gpboost/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/gpboost/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/gpboost/src'
+ERROR: compilation failed for package 'gpboost'
+* removing '/home/runner/R-patched/lib/gpboost'

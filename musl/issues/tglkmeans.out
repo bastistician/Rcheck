@@ -1,0 +1,33 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'tglkmeans' ...
+** package 'tglkmeans' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/tglkmeans/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c AParamStat.cpp -o AParamStat.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c DownsampleWorker.cpp -o DownsampleWorker.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c KMeans.cpp -o KMeans.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c KMeansCenterBase.cpp -o KMeansCenterBase.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c KMeansCenterMean.cpp -o KMeansCenterMean.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c KMeansCenterMeanEuclid.cpp -o KMeansCenterMeanEuclid.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c KMeansCenterMeanPearson.cpp -o KMeansCenterMeanPearson.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c KMeansCenterMeanSpearman.cpp -o KMeansCenterMeanSpearman.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c Random.cpp -o Random.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c Ranking.cpp -o Ranking.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c ReassignWorker.cpp -o ReassignWorker.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c ReduceCoclust.cpp -o ReduceCoclust.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c TGLkmeans.cpp -o TGLkmeans.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c UpdateMinDistanceWorker.cpp -o UpdateMinDistanceWorker.o
+UpdateMinDistanceWorker.cpp: In member function 'void UpdateMinDistanceWorker::prepare_min_dist(std::vector<std::pair<float, int> >&)':
+UpdateMinDistanceWorker.cpp:31:25: error: 'remove_if' is not a member of 'std'; did you mean 'remove_cv'?
+   31 |     min_dist.erase(std::remove_if(min_dist.begin(), min_dist.end(), [](const std::pair<float, int>& p) { return p.first == REAL_MAX; }), min_dist.end());
+      |                         ^~~~~~~~~
+      |                         remove_cv
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: UpdateMinDistanceWorker.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/tglkmeans/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/tglkmeans/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/tglkmeans/src'
+ERROR: compilation failed for package 'tglkmeans'
+* removing '/home/runner/R-patched/lib/tglkmeans'

@@ -1,0 +1,842 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'lpsymphony' ...
+** package 'lpsymphony' successfully unpacked and MD5 sums checked
+** using staged installation
+Running on Linux
+CXX is g++ -std=gnu++17
+CXX is g++ -std=gnu++14
+checking build system type... x86_64-pc-linux-musl
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+configure: C compiler options are: -w -g -O2  
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking whether C++ compiler g++ -std=gnu++17 works... yes
+configure: C++ compiler options are: -w -g -O2  
+configure: Trying to determine Fortran compiler name
+checking whether we are using the GNU Fortran 77 compiler... yes
+checking whether gfortran accepts -g... yes
+configure: Fortran compiler options are: -O3 -pipe  
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking dependency style of g++ -std=gnu++17... none
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking host system type... x86_64-pc-linux-musl
+checking for a sed that does not truncate output... /bin/sed
+checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking how to recognise dependent libraries... pass_all
+./configure: line 4649: /usr/bin/file: not found
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... no
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking how to run the C++ preprocessor... g++ -std=gnu++17 -E
+checking the maximum length of command line arguments... 32768
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... ranlib
+checking for strip... strip
+checking if gcc supports -fno-rtti -fno-exceptions... yes
+checking for gcc option to produce PIC... -fPIC
+checking if gcc PIC flag -fPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by g++ -std=gnu++17... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking whether the g++ -std=gnu++17 linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking for g++ -std=gnu++17 option to produce PIC... -fPIC
+checking if g++ -std=gnu++17 PIC flag -fPIC works... yes
+checking if g++ -std=gnu++17 static flag -static works... yes
+checking if g++ -std=gnu++17 supports -c -o file.o... yes
+checking whether the g++ -std=gnu++17 linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for gfortran option to produce PIC... -fPIC
+checking if gfortran PIC flag -fPIC works... yes
+checking if gfortran static flag -static works... yes
+checking if gfortran supports -c -o file.o... yes
+checking whether the gfortran linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+configure: Build is "x86_64-pc-linux-musl".
+checking if library version is set... no
+checking whether source of project Blas is available and should be compiled... no, source file ./ThirdParty/Blas/daxpy.f not available
+checking whether source of project Lapack is available and should be compiled... no, source file ./ThirdParty/Lapack/LAPACK/SRC/dlarf.f not available
+checking whether source of project Glpk is available and should be compiled... no, source file ./ThirdParty/Glpk/glpk/src/glplpx01.c not available
+checking whether source of project Sample is available and should be compiled... no
+checking whether source of project miblib3 is available and should be compiled... no
+checking whether source of project CoinUtils is available and should be compiled... yes, source in CoinUtils
+checking whether source of project Osi is available and should be compiled... yes, source in Osi
+checking whether source of project Clp is available and should be compiled... yes, source in Clp
+checking whether source of project Cgl is available and should be compiled... yes, source in Cgl
+checking whether source of project DyLP is available and should be compiled... no
+checking whether source of project Vol is available and should be compiled... no
+checking whether source of project SYMPHONY is available and should be compiled... yes, source in SYMPHONY
+checking whether Clp is required... yes
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: executing depfiles commands
+configure: configuring in CoinUtils
+configure: running /bin/sh './configure' --prefix=/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY  '--enable-static' '--disable-shared' '--with-pic' '--with-application=no' '--disable-dependency-tracking' '--disable-zlib' '--disable-bzlib' '--disable-cplex-libcheck' '--disable-glpk-libcheck' '--disable-osl-libcheck' '--disable-soplex-libcheck' '--disable-xpress-libcheck' 'CFLAGS=-w -g -O2' 'CXXFLAGS=-w -g -O2' 'CC=gcc' 'CXX=g++ -std=gnu++17' 'F77=gfortran' 'FLIBS=-lgfortran -lm -lssp_nonshared -lquadmath' 'CPPFLAGS=-I/usr/local/include' 'LDFLAGS=-L/usr/local/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-pc-linux-musl
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+configure: C compiler options are: -w -g -O2   -DCOINUTILS_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking whether C++ compiler g++ -std=gnu++17 works... yes
+configure: C++ compiler options are: -w -g -O2   -DCOINUTILS_BUILD
+configure: Trying to determine Fortran compiler name
+checking whether we are using the GNU Fortran 77 compiler... yes
+checking whether gfortran accepts -g... yes
+configure: Fortran compiler options are: -O3 -pipe  
+checking how to get verbose linking output from gfortran... -v
+checking for Fortran libraries of gfortran... -lgfortran -lm -lssp_nonshared -lquadmath
+checking for dummy main to link with Fortran libraries... none
+checking for Fortran name-mangling scheme... lower case, underscore, no extra underscore
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking dependency style of g++ -std=gnu++17... none
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 13:6:10
+checking cmath usability... yes
+checking cmath presence... yes
+checking for cmath... yes
+checking cfloat usability... yes
+checking cfloat presence... yes
+checking for cfloat... yes
+checking cieeefp usability... no
+checking cieeefp presence... no
+checking for cieeefp... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking whether isfinite is declared... no
+checking whether finite is declared... yes
+checking for cmath... (cached) yes
+checking for cfloat... (cached) yes
+checking for cieeefp... (cached) no
+checking for ieeefp.h... (cached) no
+checking whether isnan is declared... no
+checking whether std::isnan(42.42) is declared... yes
+checking cinttypes usability... yes
+checking cinttypes presence... yes
+checking for cinttypes... yes
+checking cstdint usability... yes
+checking cstdint presence... yes
+checking for cstdint... yes
+checking for int64_t... yes
+checking for intptr_t... yes
+checking windows.h usability... no
+checking windows.h presence... no
+checking for windows.h... no
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking whether -lblas has BLAS... no
+checking for COIN-OR package Blas... not given: Package 'coinblas' not found
+checking whether -llapack has LAPACK... yes: -llapack
+checking for COIN-OR package Glpk... not given: Package 'coinglpk' not found
+checking for COIN-OR package Sample... not given: Package 'coindatasample' not found
+checking for COIN-OR package Netlib... not given: Package 'coindatanetlib' not found
+checking whether this is a VPATH configuration... no
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for latex... yes
+checking for dot... NO
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating test/Makefile
+config.status: creating coinutils.pc
+config.status: creating coinutils-uninstalled.pc
+config.status: creating doxydoc/doxygen.conf
+config.status: creating src/config.h
+config.status: creating src/config_coinutils.h
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of CoinUtils successful
+configure: configuring in Osi
+configure: running /bin/sh './configure' --prefix=/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY  '--enable-static' '--disable-shared' '--with-pic' '--with-application=no' '--disable-dependency-tracking' '--disable-zlib' '--disable-bzlib' '--disable-cplex-libcheck' '--disable-glpk-libcheck' '--disable-osl-libcheck' '--disable-soplex-libcheck' '--disable-xpress-libcheck' 'CFLAGS=-w -g -O2' 'CXXFLAGS=-w -g -O2' 'CC=gcc' 'CXX=g++ -std=gnu++17' 'F77=gfortran' 'FLIBS=-lgfortran -lm -lssp_nonshared -lquadmath' 'CPPFLAGS=-I/usr/local/include' 'LDFLAGS=-L/usr/local/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-pc-linux-musl
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+configure: C compiler options are: -w -g -O2   -DOSI_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking whether C++ compiler g++ -std=gnu++17 works... yes
+configure: C++ compiler options are: -w -g -O2   -DOSI_BUILD
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking dependency style of g++ -std=gnu++17... none
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 13:4:12
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking for COIN-OR package CoinUtils... yes: 2.10.6 
+checking for COIN-OR package Glpk... not given: Package 'coinglpk' not found
+checking for COIN-OR package SoPlex... not given: Package 'coinsoplex' not found
+checking for COIN-OR package Sample... not given: Package 'coindatasample' not found
+checking for COIN-OR package Netlib... not given: Package 'coindatanetlib' not found
+checking if user provides library for Cplex... no
+checking if user provides library for Mosek... no
+checking if user provides library for Xpress... no
+checking if user provides library for Gurobi... no
+configure: WARNING: No solver available, examples will not work.
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for latex... yes
+checking for dot... NO
+checking for doxygen doc'n for CoinUtils ... ../CoinUtils/doxydoc (tag)
+checking cmath usability... yes
+checking cmath presence... yes
+checking for cmath... yes
+checking cfloat usability... yes
+checking cfloat presence... yes
+checking for cfloat... yes
+checking cieeefp usability... no
+checking cieeefp presence... no
+checking for cieeefp... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating examples/Makefile
+config.status: creating src/Osi/Makefile
+config.status: creating src/OsiCpx/Makefile
+config.status: creating src/OsiGlpk/Makefile
+config.status: creating src/OsiMsk/Makefile
+config.status: creating src/OsiXpr/Makefile
+config.status: creating src/OsiGrb/Makefile
+config.status: creating src/OsiSpx/Makefile
+config.status: creating src/OsiCommonTest/Makefile
+config.status: creating test/Makefile
+config.status: creating osi.pc
+config.status: creating osi-uninstalled.pc
+config.status: creating osi-unittests.pc
+config.status: creating osi-unittests-uninstalled.pc
+config.status: creating doxydoc/doxygen.conf
+config.status: creating src/Osi/config.h
+config.status: creating src/Osi/config_osi.h
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of Osi successful
+configure: configuring in Clp
+configure: running /bin/sh './configure' --prefix=/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY  '--enable-static' '--disable-shared' '--with-pic' '--with-application=no' '--disable-dependency-tracking' '--disable-zlib' '--disable-bzlib' '--disable-cplex-libcheck' '--disable-glpk-libcheck' '--disable-osl-libcheck' '--disable-soplex-libcheck' '--disable-xpress-libcheck' 'CFLAGS=-w -g -O2' 'CXXFLAGS=-w -g -O2' 'CC=gcc' 'CXX=g++ -std=gnu++17' 'F77=gfortran' 'FLIBS=-lgfortran -lm -lssp_nonshared -lquadmath' 'CPPFLAGS=-I/usr/local/include' 'LDFLAGS=-L/usr/local/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-pc-linux-musl
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+configure: C compiler options are: -w -g -O2   -DCLP_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking whether C++ compiler g++ -std=gnu++17 works... yes
+configure: C++ compiler options are: -w -g -O2   -DCLP_BUILD
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking dependency style of g++ -std=gnu++17... none
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 14:6:13
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking for COIN-OR package CoinUtils... yes: 2.10.6 
+checking for COIN-OR package Osi... yes: 0.107.4 
+checking for COIN-OR package OsiTests... yes: 0.107.4 
+checking for COIN-OR package Sample... not given: Package 'coindatasample' not found
+checking for COIN-OR package Netlib... not given: Package 'coindatanetlib' not found
+checking if user provides library for AMD... no
+checking if user provides library for CHOLMOD... no
+checking for COIN-OR package Glpk... not given: Package 'coinglpk' not found
+checking for COIN-OR package Mumps... not given: Package 'coinmumps' not found
+checking for COIN-OR package ASL... not given: Package 'coinasl' not found
+checking cmath usability... yes
+checking cmath presence... yes
+checking for cmath... yes
+checking cfloat usability... yes
+checking cfloat presence... yes
+checking for cfloat... yes
+checking cieeefp usability... no
+checking cieeefp presence... no
+checking for cieeefp... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking whether this is a VPATH configuration... no
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for latex... yes
+checking for dot... NO
+checking for doxygen doc'n for CoinUtils ... ../CoinUtils/doxydoc (tag)
+checking for doxygen doc'n for Osi ... ../Osi/doxydoc (tag)
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating examples/Makefile
+config.status: creating src/Makefile
+config.status: creating src/OsiClp/Makefile
+config.status: creating test/Makefile
+config.status: creating clp.pc
+config.status: creating clp-uninstalled.pc
+config.status: creating osi-clp.pc
+config.status: creating osi-clp-uninstalled.pc
+config.status: creating doxydoc/doxygen.conf
+config.status: creating src/config.h
+config.status: creating src/config_clp.h
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of Clp successful
+configure: configuring in Cgl
+configure: running /bin/sh './configure' --prefix=/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY  '--enable-static' '--disable-shared' '--with-pic' '--with-application=no' '--disable-dependency-tracking' '--disable-zlib' '--disable-bzlib' '--disable-cplex-libcheck' '--disable-glpk-libcheck' '--disable-osl-libcheck' '--disable-soplex-libcheck' '--disable-xpress-libcheck' 'CFLAGS=-w -g -O2' 'CXXFLAGS=-w -g -O2' 'CC=gcc' 'CXX=g++ -std=gnu++17' 'F77=gfortran' 'FLIBS=-lgfortran -lm -lssp_nonshared -lquadmath' 'CPPFLAGS=-I/usr/local/include' 'LDFLAGS=-L/usr/local/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-pc-linux-musl
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+configure: C compiler options are: -w -g -O2   -DCGL_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking whether C++ compiler g++ -std=gnu++17 works... yes
+configure: C++ compiler options are: -w -g -O2   -DCGL_BUILD
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking dependency style of g++ -std=gnu++17... none
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 10:4:9
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking for COIN-OR package CoinUtils... yes: 2.10.6 
+checking for COIN-OR package Osi... yes: 0.107.4 
+checking for COIN-OR package Sample... not given: Package 'coindatasample' not found
+checking for COIN-OR package OsiClp... yes: 1.16.6 
+checking for COIN-OR package OsiCpx... not given: Package 'osi-cplex' not found
+checking for COIN-OR package OsiGlpk... not given: Package 'osi-glpk' not found
+checking for COIN-OR package OsiMsk... not given: Package 'osi-mosek' not found
+checking for COIN-OR package OsiXpr... not given: Package 'osi-xpress' not found
+checking for COIN-OR package OsiVol... not given: Package 'osi-vol' not found
+checking for COIN-OR package OsiDyLP... not given: Package 'osi-dylp' not found
+checking cmath usability... yes
+checking cmath presence... yes
+checking for cmath... yes
+checking cfloat usability... yes
+checking cfloat presence... yes
+checking for cfloat... yes
+checking cieeefp usability... no
+checking cieeefp presence... no
+checking for cieeefp... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+configure: configuring doxygen documentation options
+checking for doxygen... no
+checking for latex... yes
+checking for dot... NO
+checking for doxygen doc'n for CoinUtils ... ../CoinUtils/doxydoc (tag)
+checking whether this is a VPATH configuration... no
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating examples/Makefile
+config.status: creating src/Makefile
+config.status: creating src/CglAllDifferent/Makefile
+config.status: creating src/CglClique/Makefile
+config.status: creating src/CglDuplicateRow/Makefile
+config.status: creating src/CglFlowCover/Makefile
+config.status: creating src/CglGMI/Makefile
+config.status: creating src/CglGomory/Makefile
+config.status: creating src/CglKnapsackCover/Makefile
+config.status: creating src/CglLandP/Makefile
+config.status: creating src/CglLiftAndProject/Makefile
+config.status: creating src/CglMixedIntegerRounding/Makefile
+config.status: creating src/CglMixedIntegerRounding2/Makefile
+config.status: creating src/CglOddHole/Makefile
+config.status: creating src/CglPreProcess/Makefile
+config.status: creating src/CglProbing/Makefile
+config.status: creating src/CglRedSplit/Makefile
+config.status: creating src/CglRedSplit2/Makefile
+config.status: creating src/CglResidualCapacity/Makefile
+config.status: creating src/CglSimpleRounding/Makefile
+config.status: creating src/CglTwomir/Makefile
+config.status: creating src/CglZeroHalf/Makefile
+config.status: creating test/Makefile
+config.status: creating cgl.pc
+config.status: creating cgl-uninstalled.pc
+config.status: creating doxydoc/doxygen.conf
+config.status: creating src/config.h
+config.status: creating src/config_cgl.h
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of Cgl successful
+configure: configuring in SYMPHONY
+configure: running /bin/sh './configure' --prefix=/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY  '--enable-static' '--disable-shared' '--with-pic' '--with-application=no' '--disable-dependency-tracking' '--disable-zlib' '--disable-bzlib' '--disable-cplex-libcheck' '--disable-glpk-libcheck' '--disable-osl-libcheck' '--disable-soplex-libcheck' '--disable-xpress-libcheck' 'CFLAGS=-w -g -O2' 'CXXFLAGS=-w -g -O2' 'CC=gcc' 'CXX=g++ -std=gnu++17' 'F77=gfortran' 'FLIBS=-lgfortran -lm -lssp_nonshared -lquadmath' 'CPPFLAGS=-I/usr/local/include' 'LDFLAGS=-L/usr/local/lib' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-pc-linux-musl
+checking for svnversion... yes
+checking whether we want to compile in debug mode... no
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+configure: C compiler options are: -w -g -O2   -DSYMPHONY_BUILD
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking whether C++ compiler g++ -std=gnu++17 works... yes
+configure: C++ compiler options are: -w -g -O2   -DSYMPHONY_BUILD
+checking for egrep... grep -E
+checking whether ln -s works... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking dependency style of g++ -std=gnu++17... none
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: Using libtool script in directory ..
+checking if library version is set... 9:10:6
+checking for pkg-config... pkg-config
+checking pkg-config is at least version 0.16.0... yes
+checking for COIN-OR package CoinDepend... yes: 2.10.6 
+checking for COIN-OR package Clp... yes: 1.16.6 
+checking for COIN-OR package DyLP... not given: Package 'osi-dylp' not found
+checking for COIN-OR package Vol... not given: Package 'osi-vol' not found
+checking for COIN-OR package Cgl... yes: 0.59.4 
+checking for COIN-OR package OsiTests... yes: 0.107.4 
+checking for COIN-OR package Sample... not given: Package 'coindatasample' not found
+checking for COIN-OR package Netlib... not given: Package 'coindatanetlib' not found
+checking for COIN-OR package Miplib3... not given: Package 'coindatamiplib3' not found
+checking for COIN-OR package Cpx... not given: Package 'osi-cplex' not found
+checking for COIN-OR package Glpk... not given: Package 'osi-glpk' not found
+checking for COIN-OR package Msk... not given: Package 'osi-mosek' not found
+checking for COIN-OR package Xpr... not given: Package 'osi-xpress' not found
+checking for SYMPHONY default solver... Clp
+checking whether to compile with gmpl... no
+checking whether to compile application library... no
+checking if user provides library for Pvm... no
+checking whether compiler supports OpenMP... no
+checking whether this is a VPATH configuration... no
+checking which command should be used to link input files... ln -s
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/OsiSym/Makefile
+config.status: creating test/Makefile
+config.status: creating Examples/Makefile
+config.status: creating Applications/Makefile.Applications
+config.status: creating Applications/CNRP/Makefile
+config.status: creating Applications/MATCH/Makefile
+config.status: creating Applications/MCKP/Makefile
+config.status: creating Applications/MPP/Makefile
+config.status: creating Applications/SPP/Makefile
+config.status: creating Applications/SPP+CUTS/Makefile
+config.status: creating Applications/USER/Makefile
+config.status: creating Applications/VRP/Makefile
+config.status: creating symphony.pc
+config.status: creating symphony-app.pc
+config.status: creating symphony-uninstalled.pc
+config.status: creating osi-sym.pc
+config.status: creating osi-sym-uninstalled.pc
+config.status: creating include/config.h
+config.status: creating include/config_sym.h
+config.status: executing depfiles commands
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Configuration of SYMPHONY successful
+configure: In case of trouble, first consult the troubleshooting page at https://projects.coin-or.org/BuildTools/wiki/user-troubleshooting
+configure: Main configuration of SYMPHONY successful
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src'
+make[2]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY'
+Making all in CoinUtils
+make[3]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils'
+Making all in src
+make[4]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src'
+make  all-am
+make[5]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src'
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinAlloc.lo CoinAlloc.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinAlloc.cpp  -fPIC -DPIC -o CoinAlloc.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinBuild.lo CoinBuild.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinBuild.cpp  -fPIC -DPIC -o CoinBuild.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinDenseVector.lo CoinDenseVector.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinDenseVector.cpp  -fPIC -DPIC -o CoinDenseVector.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinError.lo CoinError.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinError.cpp  -fPIC -DPIC -o CoinError.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinFactorization1.lo CoinFactorization1.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinFactorization1.cpp  -fPIC -DPIC -o CoinFactorization1.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinFactorization2.lo CoinFactorization2.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinFactorization2.cpp  -fPIC -DPIC -o CoinFactorization2.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinFactorization3.lo CoinFactorization3.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinFactorization3.cpp  -fPIC -DPIC -o CoinFactorization3.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinFactorization4.lo CoinFactorization4.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinFactorization4.cpp  -fPIC -DPIC -o CoinFactorization4.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinSimpFactorization.lo CoinSimpFactorization.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinSimpFactorization.cpp  -fPIC -DPIC -o CoinSimpFactorization.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinDenseFactorization.lo CoinDenseFactorization.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinDenseFactorization.cpp  -fPIC -DPIC -o CoinDenseFactorization.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinOslFactorization.lo CoinOslFactorization.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinOslFactorization.cpp  -fPIC -DPIC -o CoinOslFactorization.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinOslFactorization2.lo CoinOslFactorization2.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinOslFactorization2.cpp  -fPIC -DPIC -o CoinOslFactorization2.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinOslFactorization3.lo CoinOslFactorization3.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinOslFactorization3.cpp  -fPIC -DPIC -o CoinOslFactorization3.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinFileIO.lo CoinFileIO.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinFileIO.cpp  -fPIC -DPIC -o CoinFileIO.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinFinite.lo CoinFinite.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinFinite.cpp  -fPIC -DPIC -o CoinFinite.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinIndexedVector.lo CoinIndexedVector.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinIndexedVector.cpp  -fPIC -DPIC -o CoinIndexedVector.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinLpIO.lo CoinLpIO.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinLpIO.cpp  -fPIC -DPIC -o CoinLpIO.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinMessage.lo CoinMessage.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinMessage.cpp  -fPIC -DPIC -o CoinMessage.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinMessageHandler.lo CoinMessageHandler.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinMessageHandler.cpp  -fPIC -DPIC -o CoinMessageHandler.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinModel.lo CoinModel.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinModel.cpp  -fPIC -DPIC -o CoinModel.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinStructuredModel.lo CoinStructuredModel.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinStructuredModel.cpp  -fPIC -DPIC -o CoinStructuredModel.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinModelUseful.lo CoinModelUseful.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinModelUseful.cpp  -fPIC -DPIC -o CoinModelUseful.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinModelUseful2.lo CoinModelUseful2.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinModelUseful2.cpp  -fPIC -DPIC -o CoinModelUseful2.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinMpsIO.lo CoinMpsIO.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinMpsIO.cpp  -fPIC -DPIC -o CoinMpsIO.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPackedMatrix.lo CoinPackedMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPackedMatrix.cpp  -fPIC -DPIC -o CoinPackedMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPackedVector.lo CoinPackedVector.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPackedVector.cpp  -fPIC -DPIC -o CoinPackedVector.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPackedVectorBase.lo CoinPackedVectorBase.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPackedVectorBase.cpp  -fPIC -DPIC -o CoinPackedVectorBase.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinParam.lo CoinParam.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinParam.cpp  -fPIC -DPIC -o CoinParam.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinParamUtils.lo CoinParamUtils.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinParamUtils.cpp  -fPIC -DPIC -o CoinParamUtils.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPostsolveMatrix.lo CoinPostsolveMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPostsolveMatrix.cpp  -fPIC -DPIC -o CoinPostsolveMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPrePostsolveMatrix.lo CoinPrePostsolveMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPrePostsolveMatrix.cpp  -fPIC -DPIC -o CoinPrePostsolveMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveDoubleton.lo CoinPresolveDoubleton.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveDoubleton.cpp  -fPIC -DPIC -o CoinPresolveDoubleton.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveDual.lo CoinPresolveDual.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveDual.cpp  -fPIC -DPIC -o CoinPresolveDual.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveDupcol.lo CoinPresolveDupcol.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveDupcol.cpp  -fPIC -DPIC -o CoinPresolveDupcol.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveEmpty.lo CoinPresolveEmpty.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveEmpty.cpp  -fPIC -DPIC -o CoinPresolveEmpty.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveFixed.lo CoinPresolveFixed.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveFixed.cpp  -fPIC -DPIC -o CoinPresolveFixed.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveForcing.lo CoinPresolveForcing.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveForcing.cpp  -fPIC -DPIC -o CoinPresolveForcing.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveHelperFunctions.lo CoinPresolveHelperFunctions.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveHelperFunctions.cpp  -fPIC -DPIC -o CoinPresolveHelperFunctions.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveImpliedFree.lo CoinPresolveImpliedFree.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveImpliedFree.cpp  -fPIC -DPIC -o CoinPresolveImpliedFree.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveIsolated.lo CoinPresolveIsolated.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveIsolated.cpp  -fPIC -DPIC -o CoinPresolveIsolated.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveMatrix.lo CoinPresolveMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveMatrix.cpp  -fPIC -DPIC -o CoinPresolveMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolvePsdebug.lo CoinPresolvePsdebug.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolvePsdebug.cpp  -fPIC -DPIC -o CoinPresolvePsdebug.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveMonitor.lo CoinPresolveMonitor.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveMonitor.cpp  -fPIC -DPIC -o CoinPresolveMonitor.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveSingleton.lo CoinPresolveSingleton.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveSingleton.cpp  -fPIC -DPIC -o CoinPresolveSingleton.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveSubst.lo CoinPresolveSubst.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveSubst.cpp  -fPIC -DPIC -o CoinPresolveSubst.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveTighten.lo CoinPresolveTighten.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveTighten.cpp  -fPIC -DPIC -o CoinPresolveTighten.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveTripleton.lo CoinPresolveTripleton.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveTripleton.cpp  -fPIC -DPIC -o CoinPresolveTripleton.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveUseless.lo CoinPresolveUseless.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveUseless.cpp  -fPIC -DPIC -o CoinPresolveUseless.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinPresolveZeros.lo CoinPresolveZeros.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinPresolveZeros.cpp  -fPIC -DPIC -o CoinPresolveZeros.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinRational.lo CoinRational.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinRational.cpp  -fPIC -DPIC -o CoinRational.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinSearchTree.lo CoinSearchTree.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinSearchTree.cpp  -fPIC -DPIC -o CoinSearchTree.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinShallowPackedVector.lo CoinShallowPackedVector.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinShallowPackedVector.cpp  -fPIC -DPIC -o CoinShallowPackedVector.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinSnapshot.lo CoinSnapshot.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinSnapshot.cpp  -fPIC -DPIC -o CoinSnapshot.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinWarmStartBasis.lo CoinWarmStartBasis.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinWarmStartBasis.cpp  -fPIC -DPIC -o CoinWarmStartBasis.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinWarmStartVector.lo CoinWarmStartVector.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinWarmStartVector.cpp  -fPIC -DPIC -o CoinWarmStartVector.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinWarmStartDual.lo CoinWarmStartDual.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinWarmStartDual.cpp  -fPIC -DPIC -o CoinWarmStartDual.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`   -I/usr/local/include  -w -g -O2   -DCOINUTILS_BUILD -c -o CoinWarmStartPrimalDual.lo CoinWarmStartPrimalDual.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/usr/local/include -w -g -O2 -DCOINUTILS_BUILD -c CoinWarmStartPrimalDual.cpp  -fPIC -DPIC -o CoinWarmStartPrimalDual.o
+/bin/sh ../../libtool --tag=CXX --mode=link g++ -std=gnu++17  -w -g -O2   -DCOINUTILS_BUILD  -L/usr/local/lib -o libCoinUtils.la -rpath /var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/lib -no-undefined -version-info 13:6:10 CoinAlloc.lo CoinBuild.lo CoinDenseVector.lo CoinError.lo CoinFactorization1.lo CoinFactorization2.lo CoinFactorization3.lo CoinFactorization4.lo CoinSimpFactorization.lo CoinDenseFactorization.lo CoinOslFactorization.lo CoinOslFactorization2.lo CoinOslFactorization3.lo CoinFileIO.lo CoinFinite.lo CoinIndexedVector.lo CoinLpIO.lo CoinMessage.lo CoinMessageHandler.lo CoinModel.lo CoinStructuredModel.lo CoinModelUseful.lo CoinModelUseful2.lo CoinMpsIO.lo CoinPackedMatrix.lo CoinPackedVector.lo CoinPackedVectorBase.lo CoinParam.lo CoinParamUtils.lo CoinPostsolveMatrix.lo CoinPrePostsolveMatrix.lo CoinPresolveDoubleton.lo CoinPresolveDual.lo CoinPresolveDupcol.lo CoinPresolveEmpty.lo CoinPresolveFixed.lo CoinPresolveForcing.lo CoinPresolveHelperFunctions.lo CoinPresolveImpliedFree.lo CoinPresolveIsolated.lo CoinPresolveMatrix.lo CoinPresolvePsdebug.lo CoinPresolveMonitor.lo CoinPresolveSingleton.lo CoinPresolveSubst.lo CoinPresolveTighten.lo CoinPresolveTripleton.lo CoinPresolveUseless.lo CoinPresolveZeros.lo CoinRational.lo CoinSearchTree.lo CoinShallowPackedVector.lo CoinSnapshot.lo CoinWarmStartBasis.lo CoinWarmStartVector.lo CoinWarmStartDual.lo CoinWarmStartPrimalDual.lo -llapack -lm  
+mkdir .libs
+ar cru .libs/libCoinUtils.a  CoinAlloc.o CoinBuild.o CoinDenseVector.o CoinError.o CoinFactorization1.o CoinFactorization2.o CoinFactorization3.o CoinFactorization4.o CoinSimpFactorization.o CoinDenseFactorization.o CoinOslFactorization.o CoinOslFactorization2.o CoinOslFactorization3.o CoinFileIO.o CoinFinite.o CoinIndexedVector.o CoinLpIO.o CoinMessage.o CoinMessageHandler.o CoinModel.o CoinStructuredModel.o CoinModelUseful.o CoinModelUseful2.o CoinMpsIO.o CoinPackedMatrix.o CoinPackedVector.o CoinPackedVectorBase.o CoinParam.o CoinParamUtils.o CoinPostsolveMatrix.o CoinPrePostsolveMatrix.o CoinPresolveDoubleton.o CoinPresolveDual.o CoinPresolveDupcol.o CoinPresolveEmpty.o CoinPresolveFixed.o CoinPresolveForcing.o CoinPresolveHelperFunctions.o CoinPresolveImpliedFree.o CoinPresolveIsolated.o CoinPresolveMatrix.o CoinPresolvePsdebug.o CoinPresolveMonitor.o CoinPresolveSingleton.o CoinPresolveSubst.o CoinPresolveTighten.o CoinPresolveTripleton.o CoinPresolveUseless.o CoinPresolveZeros.o CoinRational.o CoinSearchTree.o CoinShallowPackedVector.o CoinSnapshot.o CoinWarmStartBasis.o CoinWarmStartVector.o CoinWarmStartDual.o CoinWarmStartPrimalDual.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib .libs/libCoinUtils.a
+creating libCoinUtils.la
+(cd .libs && rm -f libCoinUtils.la && ln -s ../libCoinUtils.la libCoinUtils.la)
+make[5]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src'
+make[4]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src'
+make[4]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils'
+make[3]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils'
+Making all in Osi
+make[3]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi'
+Making all in src/Osi
+make[4]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi/src/Osi'
+make  all-am
+make[5]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi/src/Osi'
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiAuxInfo.lo OsiAuxInfo.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiAuxInfo.cpp  -fPIC -DPIC -o OsiAuxInfo.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiBranchingObject.lo OsiBranchingObject.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiBranchingObject.cpp  -fPIC -DPIC -o OsiBranchingObject.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiChooseVariable.lo OsiChooseVariable.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiChooseVariable.cpp  -fPIC -DPIC -o OsiChooseVariable.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiColCut.lo OsiColCut.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiColCut.cpp  -fPIC -DPIC -o OsiColCut.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiCut.lo OsiCut.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiCut.cpp  -fPIC -DPIC -o OsiCut.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiCuts.lo OsiCuts.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiCuts.cpp  -fPIC -DPIC -o OsiCuts.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiNames.lo OsiNames.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiNames.cpp  -fPIC -DPIC -o OsiNames.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiPresolve.lo OsiPresolve.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiPresolve.cpp  -fPIC -DPIC -o OsiPresolve.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiRowCut.lo OsiRowCut.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiRowCut.cpp  -fPIC -DPIC -o OsiRowCut.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiRowCutDebugger.lo OsiRowCutDebugger.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiRowCutDebugger.cpp  -fPIC -DPIC -o OsiRowCutDebugger.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiSolverBranch.lo OsiSolverBranch.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiSolverBranch.cpp  -fPIC -DPIC -o OsiSolverBranch.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiSolverInterface.lo OsiSolverInterface.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiSolverInterface.cpp  -fPIC -DPIC -o OsiSolverInterface.o
+/bin/sh ../../../libtool --tag=CXX --mode=link g++ -std=gnu++17  -w -g -O2   -DOSI_BUILD  -L/usr/local/lib -o libOsi.la -rpath /var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/lib -no-undefined -version-info 13:4:12 OsiAuxInfo.lo OsiBranchingObject.lo OsiChooseVariable.lo OsiColCut.lo OsiCut.lo OsiCuts.lo OsiNames.lo OsiPresolve.lo OsiRowCut.lo OsiRowCutDebugger.lo OsiSolverBranch.lo OsiSolverInterface.lo /var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src/libCoinUtils.la -llapack -lm  
+mkdir .libs
+ar cru .libs/libOsi.a  OsiAuxInfo.o OsiBranchingObject.o OsiChooseVariable.o OsiColCut.o OsiCut.o OsiCuts.o OsiNames.o OsiPresolve.o OsiRowCut.o OsiRowCutDebugger.o OsiSolverBranch.o OsiSolverInterface.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib .libs/libOsi.a
+creating libOsi.la
+(cd .libs && rm -f libOsi.la && ln -s ../libOsi.la libOsi.la)
+make[5]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi/src/Osi'
+make[4]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi/src/Osi'
+Making all in src/OsiCommonTest
+make[4]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi/src/OsiCommonTest'
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiColCutTest.lo OsiColCutTest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiColCutTest.cpp  -fPIC -DPIC -o OsiColCutTest.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiCutsTest.lo OsiCutsTest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiCutsTest.cpp  -fPIC -DPIC -o OsiCutsTest.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiRowCutDebuggerTest.lo OsiRowCutDebuggerTest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiRowCutDebuggerTest.cpp  -fPIC -DPIC -o OsiRowCutDebuggerTest.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiRowCutTest.lo OsiRowCutTest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiRowCutTest.cpp  -fPIC -DPIC -o OsiRowCutTest.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiSimplexAPITest.lo OsiSimplexAPITest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiSimplexAPITest.cpp  -fPIC -DPIC -o OsiSimplexAPITest.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiNetlibTest.lo OsiNetlibTest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiNetlibTest.cpp  -fPIC -DPIC -o OsiNetlibTest.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiUnitTestUtils.lo OsiUnitTestUtils.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiUnitTestUtils.cpp  -fPIC -DPIC -o OsiUnitTestUtils.o
+/bin/sh ../../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .` -I../../src/Osi  -I`echo ./../Osi` -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include  -w -g -O2   -DOSI_BUILD -c -o OsiSolverInterfaceTest.lo OsiSolverInterfaceTest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I../../src/Osi -I./../Osi -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -I/usr/local/include -w -g -O2 -DOSI_BUILD -c OsiSolverInterfaceTest.cpp  -fPIC -DPIC -o OsiSolverInterfaceTest.o
+/bin/sh ../../../libtool --tag=CXX --mode=link g++ -std=gnu++17  -w -g -O2   -DOSI_BUILD  -L/usr/local/lib -o libOsiCommonTests.la -rpath /var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/lib -no-undefined -version-info 13:4:12 OsiColCutTest.lo OsiCutsTest.lo OsiRowCutDebuggerTest.lo OsiRowCutTest.lo OsiSimplexAPITest.lo OsiNetlibTest.lo OsiUnitTestUtils.lo OsiSolverInterfaceTest.lo /var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src/libCoinUtils.la -llapack -lm  ../Osi/libOsi.la 
+mkdir .libs
+ar cru .libs/libOsiCommonTests.a  OsiColCutTest.o OsiCutsTest.o OsiRowCutDebuggerTest.o OsiRowCutTest.o OsiSimplexAPITest.o OsiNetlibTest.o OsiUnitTestUtils.o OsiSolverInterfaceTest.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib .libs/libOsiCommonTests.a
+creating libOsiCommonTests.la
+(cd .libs && rm -f libOsiCommonTests.la && ln -s ../libOsiCommonTests.la libOsiCommonTests.la)
+make[4]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi/src/OsiCommonTest'
+make[4]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi'
+make[3]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Osi'
+Making all in Clp
+make[3]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Clp'
+Making all in src
+make[4]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Clp/src'
+make  all-am
+make[5]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Clp/src'
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpCholeskyBase.lo ClpCholeskyBase.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpCholeskyBase.cpp  -fPIC -DPIC -o ClpCholeskyBase.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpCholeskyDense.lo ClpCholeskyDense.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpCholeskyDense.cpp  -fPIC -DPIC -o ClpCholeskyDense.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpConstraint.lo ClpConstraint.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpConstraint.cpp  -fPIC -DPIC -o ClpConstraint.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpConstraintLinear.lo ClpConstraintLinear.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpConstraintLinear.cpp  -fPIC -DPIC -o ClpConstraintLinear.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpConstraintQuadratic.lo ClpConstraintQuadratic.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpConstraintQuadratic.cpp  -fPIC -DPIC -o ClpConstraintQuadratic.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o Clp_C_Interface.lo Clp_C_Interface.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c Clp_C_Interface.cpp  -fPIC -DPIC -o Clp_C_Interface.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpDualRowDantzig.lo ClpDualRowDantzig.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpDualRowDantzig.cpp  -fPIC -DPIC -o ClpDualRowDantzig.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpDualRowPivot.lo ClpDualRowPivot.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpDualRowPivot.cpp  -fPIC -DPIC -o ClpDualRowPivot.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpDualRowSteepest.lo ClpDualRowSteepest.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpDualRowSteepest.cpp  -fPIC -DPIC -o ClpDualRowSteepest.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpDummyMatrix.lo ClpDummyMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpDummyMatrix.cpp  -fPIC -DPIC -o ClpDummyMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpDynamicExampleMatrix.lo ClpDynamicExampleMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpDynamicExampleMatrix.cpp  -fPIC -DPIC -o ClpDynamicExampleMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpDynamicMatrix.lo ClpDynamicMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpDynamicMatrix.cpp  -fPIC -DPIC -o ClpDynamicMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpEventHandler.lo ClpEventHandler.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpEventHandler.cpp  -fPIC -DPIC -o ClpEventHandler.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpFactorization.lo ClpFactorization.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpFactorization.cpp  -fPIC -DPIC -o ClpFactorization.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpGubDynamicMatrix.lo ClpGubDynamicMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpGubDynamicMatrix.cpp  -fPIC -DPIC -o ClpGubDynamicMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpGubMatrix.lo ClpGubMatrix.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpGubMatrix.cpp  -fPIC -DPIC -o ClpGubMatrix.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpHelperFunctions.lo ClpHelperFunctions.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpHelperFunctions.cpp  -fPIC -DPIC -o ClpHelperFunctions.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpInterior.lo ClpInterior.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpInterior.cpp  -fPIC -DPIC -o ClpInterior.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpLinearObjective.lo ClpLinearObjective.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpLinearObjective.cpp  -fPIC -DPIC -o ClpLinearObjective.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpMatrixBase.lo ClpMatrixBase.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpMatrixBase.cpp  -fPIC -DPIC -o ClpMatrixBase.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpMessage.lo ClpMessage.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpMessage.cpp  -fPIC -DPIC -o ClpMessage.o
+/bin/sh ../../libtool --tag=CXX --mode=compile g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I`echo .`  -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src  -DCOIN_HAS_CLP   -I/usr/local/include  -w -g -O2   -DCLP_BUILD -c -o ClpModel.lo ClpModel.cpp
+ g++ -std=gnu++17 -DHAVE_CONFIG_H -I. -I. -I/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/CoinUtils/src -DCOIN_HAS_CLP -I/usr/local/include -w -g -O2 -DCLP_BUILD -c ClpModel.cpp  -fPIC -DPIC -o ClpModel.o
+ClpModel.cpp: In member function 'int ClpModel::writeMps(const char*, int, int, double) const':
+ClpModel.cpp:3848:24: error: invalid cast from type 'std::nullptr_t' to type 'const char*'
+ 3848 |                        reinterpret_cast<const char*> (NULL) /*integrality*/,
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[5]: *** [Makefile:935: ClpModel.lo] Error 1
+make[5]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Clp/src'
+make[4]: *** [Makefile:693: all] Error 2
+make[4]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Clp/src'
+make[3]: *** [Makefile:519: all-recursive] Error 1
+make[3]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY/Clp'
+make[2]: *** [Makefile:324: all-recursive] Error 1
+make[2]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src/SYMPHONY'
+make[1]: *** [Makevars:14: SYMPHONY.ts] Error 2
+make[1]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src'
+make[1]: Entering directory '/var/local/PKGS/BIOC/lpsymphony/src'
+make[1]: Leaving directory '/var/local/PKGS/BIOC/lpsymphony/src'
+ERROR: compilation failed for package 'lpsymphony'
+* removing '/home/runner/R-patched/lib/lpsymphony'

@@ -1,0 +1,22 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'readstata13' ...
+** package 'readstata13' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/readstata13/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c read.cpp -o read.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c read_data.cpp -o read_data.o
+read_data.cpp: In function 'Rcpp::List read_data(FILE*, Rcpp::IntegerVector, bool, int8_t, uint64_t, uint32_t, Rcpp::IntegerVector, std::string, bool)':
+read_data.cpp:229:9: error: 'fseeko64' was not declared in this scope; did you mean 'fseeko'?
+  229 |         fseeko64(file, abs(type), SEEK_CUR);
+      |         ^~~~~~~~
+      |         fseeko
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: read_data.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/readstata13/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/readstata13/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/readstata13/src'
+ERROR: compilation failed for package 'readstata13'
+* removing '/home/runner/R-patched/lib/readstata13'
+* restoring previous '/home/runner/R-patched/lib/readstata13'
