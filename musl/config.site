@@ -17,9 +17,8 @@ CXXFLAGS="${CXXFLAGS} -D__MUSL__"
 # Parallelize to avoid lto-wrapper warnings about serial compilation.
 LTO=-flto=4
 #LTO_OPT=-flto
-# FIXME: do we need to set the following as well?
-#AR=gcc-ar
-#RANLIB=gcc-ranlib
+# (seems to work with standard ar/ranlib from plugin-enabled binutils,
+# which will automatically load /usr/lib/bfd-plugins/liblto_plugin.so)
 
 # disable previewing URLs and PDFs
 R_BROWSER=false

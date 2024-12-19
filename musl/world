@@ -84,7 +84,8 @@ tesseract-ocr-dev
 texinfo
 texlive
 texlive-xetex
-texmf-dist-full
+texmf-dist-fontsextra
+texmf-dist-most
 thrift-dev
 tiff-dev
 tk-dev
