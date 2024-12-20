@@ -20,3 +20,4 @@ See also the following files in this directory:
 The following additional software was manually installed from source:
 - JAGS 4.3.2 <https://mcmc-jags.sourceforge.io/>
 - BWidget 1.10.1 <https://wiki.tcl-lang.org/page/BWidget>
+- COIN-OR SYMPHONY 5.7.2 <https://github.com/coin-or/SYMPHONY>
