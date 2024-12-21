@@ -1,0 +1,89 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'salso' ...
+** package 'salso' successfully unpacked and MD5 sums checked
+** using staged installation
+---
+Trying to find a suitable Cargo using tools::R_user_dir('cargo', 'cache').
+Trying to find a suitable Cargo using the conventional location.
+Trying to find a suitable Cargo using the PATH environment variable.
+Trying to use Cargo at: /usr/bin/cargo
+'rustc --version' reports: rustc 1.83.0 (90b35a623 2024-11-26) (Alpine Linux 1.83.0-r0)
+'cargo --version' reports: cargo 1.83.0 (5ffbef321 2024-10-29)
+Version '1.83.0' is available, which satisfies the need for '1.66.1'.
+   Compiling autocfg v1.3.0
+   Compiling proc-macro2 v1.0.86
+   Compiling unicode-ident v1.0.13
+   Compiling num-traits v0.2.19
+   Compiling libc v0.2.158
+   Compiling quote v1.0.37
+   Compiling crossbeam-utils v0.8.20
+   Compiling syn v2.0.77
+error[E0463]: can't find crate for `core`
+  |
+  = note: the `x86_64-unknown-linux-gnu` target may not be installed
+  = help: consider downloading the target with `rustup target add x86_64-unknown-linux-gnu`
+
+For more information about this error, try `rustc --explain E0463`.
+error: could not compile `num-traits` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+   Compiling num-traits v0.2.19
+   Compiling crossbeam-utils v0.8.20
+error[E0463]: can't find crate for `core`
+  |
+  = note: the `x86_64-unknown-linux-gnu` target may not be installed
+  = help: consider downloading the target with `rustup target add x86_64-unknown-linux-gnu`
+
+For more information about this error, try `rustc --explain E0463`.
+error: could not compile `crossbeam-utils` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `num-traits` (lib) due to 1 previous error
+---
+No suitable version of Cargo was found.
+One solution is to run 'cargo::install()'.
+---
+No suitable version of Cargo was found.
+
+This R package relies on Cargo, the Rust package manager. Cargo can be provided in a number of ways.
+Either of the following methods should work (although the first method will guarantee that the most
+recent version is installed):
+
+1. Install from https://rustup.rs, an official Rust website, e.g.:
+
+   Linux / MacOS:
+   * Run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --no-modify-path -y
+
+   Windows:
+   * Download rustup-init.exe from https://rustup.rs
+   * Open the terminal in the directory in which rustup-init.exe was downloaded
+   * Run: .\rustup-init.exe --no-modify-path -y --default-host x86_64-pc-windows-gnu
+
+   If you do not mind having the script modify your PATH environment variable, remove the
+   "--no-modify-path" argument. Having Cargo's bin directory in your PATH environment variable is
+   *not* necessarily, however, as the R package will still be able to find the 'cargo' executable
+   in the $HOME/.cargo/bin directory.
+
+OR
+
+2. Install from a package manager and let 'cargo' by found using the $PATH environment variable,
+   e.g.:
+
+   Debian:  sudo apt install cargo
+   Ubuntu:  sudo apt install cargo
+   Fedora:  sudo dnf install cargo
+
+   Note that package managers for MacOS and Windows are *not* recommended.  Homebrew's Rust
+   may yield static libraries with a higher minimum macOS version than that used by the compiler
+   for R.  Likewise Msys2 may be unsuitable since, "One should only be installing packages from
+   'msys' sub-repository of Msys2, mixing other sub-repositories with the toolchain may cause
+   trouble." (https://cran.r-project.org/bin/windows/base/howto-R-devel.html)
+
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/salso/src'
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c shim.c -o shim.o
+make[1]: *** No rule to make target 'librust.a', needed by 'salso.so'.  Stop.
+make[1]: Leaving directory '/var/local/PKGS/CRAN/salso/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/salso/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/salso/src'
+ERROR: compilation failed for package 'salso'
+* removing '/home/runner/R-patched/lib/salso'

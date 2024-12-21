@@ -1,0 +1,58 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'cytolib' ...
+** package 'cytolib' successfully unpacked and MD5 sums checked
+** using staged installation
+checking for a sed that does not truncate output... /bin/sed
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking how to run the C++ preprocessor... g++ -std=gnu++17 -E
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ -std=gnu++17 accepts -g... (cached) yes
+configure: Parsing cytolib version info ...
+configure: CYTOLIB_VERSION=2.18.0
+configure: creating ./config.status
+config.status: creating inst/include/cytolib/cytolibConfig.h
+config.status: creating src/Makevars
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++11
+make[1]: Entering directory '/var/local/PKGS/BIOC/cytolib/src'
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG -DROUT -I../inst/include -w -Wfatal-errors -DBOOST_NO_AUTO_PTR -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_SINGLE_THREADED  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/RProtoBufLib/include' -I'/home/runner/R-patched/lib/Rhdf5lib/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c dummy.cpp -o dummy.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG -DROUT -I../inst/include -w -Wfatal-errors -DBOOST_NO_AUTO_PTR -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_SINGLE_THREADED  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/RProtoBufLib/include' -I'/home/runner/R-patched/lib/Rhdf5lib/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c boost/libs/system/src/error_code.cpp -o boost/libs/system/src/error_code.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG -DROUT -I../inst/include -w -Wfatal-errors -DBOOST_NO_AUTO_PTR -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_SINGLE_THREADED  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/RProtoBufLib/include' -I'/home/runner/R-patched/lib/Rhdf5lib/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c boost/libs/filesystem/src/codecvt_error_category.cpp -o boost/libs/filesystem/src/codecvt_error_category.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG -DROUT -I../inst/include -w -Wfatal-errors -DBOOST_NO_AUTO_PTR -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_SINGLE_THREADED  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/RProtoBufLib/include' -I'/home/runner/R-patched/lib/Rhdf5lib/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c boost/libs/filesystem/src/directory.cpp -o boost/libs/filesystem/src/directory.o
+boost/libs/filesystem/src/directory.cpp: In function 'void boost::filesystem::detail::directory_iterator_construct(boost::filesystem::directory_iterator&, const boost::filesystem::path&, unsigned int, directory_iterator_params*, boost::system::error_code*)':
+boost/libs/filesystem/src/directory.cpp:1055:17: error: 'void boost::filesystem::directory_entry::assign_with_status(boost::filesystem::path&&, boost::filesystem::file_status, boost::filesystem::file_status)' is private within this context
+ 1054 |                 imp->dir_entry.assign_with_status
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1055 |                 (
+      |                 ^
+ 1056 | #if !defined(BOOST_NO_CXX11_RVALUE_REFERENCES)
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1057 |                     static_cast< path&& >(full_path),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1058 | #else
+      | ~~~~~            
+ 1059 |                     full_path,
+      |                     ~~~~~~~~~~
+ 1060 | #endif
+      | ~~~~~~           
+ 1061 |                     file_stat,
+      |                     ~~~~~~~~~~
+ 1062 |                     symlink_file_stat
+      |                     ~~~~~~~~~~~~~~~~~
+ 1063 |                 );
+      |                 ~
+compilation terminated due to -Wfatal-errors.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: boost/libs/filesystem/src/directory.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/BIOC/cytolib/src'
+make[1]: Entering directory '/var/local/PKGS/BIOC/cytolib/src'
+make[1]: Leaving directory '/var/local/PKGS/BIOC/cytolib/src'
+ERROR: compilation failed for package 'cytolib'
+* removing '/home/runner/R-patched/lib/cytolib'
+* restoring previous '/home/runner/R-patched/lib/cytolib'

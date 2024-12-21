@@ -1,0 +1,147 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'TDA' ...
+** package 'TDA' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+/bin/sh: clang++: not found
+expr: syntax error
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/TDA/src'
+/bin/sh: clang++: not found
+expr: syntax error
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I. -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DBOOST_DISABLE_THREADS -DCGAL_EIGEN3_ENABLED -DCGAL_HEADER_ONLY -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I. -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DBOOST_DISABLE_THREADS -DCGAL_EIGEN3_ENABLED -DCGAL_HEADER_ONLY -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c diag.cpp -o diag.o
+In file included from ./CGAL/license/Triangulation.h:17,
+                 from ./CGAL/Delaunay_triangulation.h:15,
+                 from ./gudhi/Alpha_complex.h:26,
+                 from ./tdautils/gudhiUtils.h:13,
+                 from diag.cpp:19:
+./CGAL/config.h:124:9: warning: "BOOST_PARAMETER_MAX_ARITY" redefined
+  124 | #define BOOST_PARAMETER_MAX_ARITY 12
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/parameter/aux_/is_tagged_argument.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/parameter/is_argument_pack.hpp:9,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/named_function_params.hpp:20,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/depth_first_search.hpp:21,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/max_cardinality_matching.hpp:21,
+                 from ./topology/persistence-diagram.hpp:144,
+                 from ./topology/persistence-diagram.h:176,
+                 from ./tdautils/ripsL2.h:9,
+                 from diag.cpp:9:
+/home/runner/R-patched/lib/BH/include/boost/parameter/config.hpp:61:9: note: this is the location of the previous definition
+   61 | #define BOOST_PARAMETER_MAX_ARITY BOOST_MPL_LIMIT_VECTOR_SIZE
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from ./utilities/property-maps.h:6,
+                 from ./topology/complex-traits.h:6,
+                 from ./topology/filtration.h:7,
+                 from ./tdautils/ripsL2.h:6:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:326:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  326 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:35,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/bind/bind.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/multi_index/detail/ord_index_impl.hpp:82,
+                 from /home/runner/R-patched/lib/BH/include/boost/multi_index/ordered_index.hpp:17,
+                 from ./topology/filtration.h:14:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp: At global scope:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/deprecated_macros.hpp:8,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_base.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:22:
+/home/runner/R-patched/lib/BH/include/boost/config/pragma_message.hpp:24:34: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'
+   24 | # define BOOST_PRAGMA_MESSAGE(x) _Pragma(BOOST_STRINGIZE(message(x)))
+      |                                  ^~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/bind.hpp:36:1: note: in expansion of macro 'BOOST_PRAGMA_MESSAGE'
+   36 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/scoped_ptr.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from ./topology/persistence-diagram.hpp:143:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/scoped_ptr.hpp:75:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   75 |     explicit scoped_ptr( std::auto_ptr<T> p ) noexcept : px( p.release() )
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from ./boost/container/detail/flat_tree.hpp:30,
+                 from ./boost/container/flat_map.hpp:29,
+                 from ./gudhi/Simplex_tree/Simplex_tree_siblings.h:16,
+                 from ./gudhi/Simplex_tree.h:15,
+                 from ./tdautils/gudhiUtils.h:10:
+./boost/container/vector.hpp:3173:1: error: 'BOOST_MOVE_STD_NS_BEG' does not name a type; did you mean 'BOOST_MATH_STD_USING'?
+ 3173 | BOOST_MOVE_STD_NS_BEG
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | BOOST_MATH_STD_USING
+./boost/container/vector.hpp:3180:1: error: 'BOOST_MOVE_STD_NS_END' does not name a type; did you mean 'BOOST_MOVE_CATCH_END'?
+ 3180 | BOOST_MOVE_STD_NS_END
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | BOOST_MOVE_CATCH_END
+./boost/container/detail/flat_tree.hpp: In function 'void boost::container::dtl::flat_tree_container_inplace_merge(SequenceContainer&, typename SequenceContainer::iterator, Compare, boost::move_detail::true_)':
+./boost/container/detail/flat_tree.hpp:148:38: error: 'back_free_capacity' was not declared in this scope
+  148 |       (braw, iraw, eraw, comp, eraw, back_free_capacity<SequenceContainer>::get(dest));
+      |                                      ^~~~~~~~~~~~~~~~~~
+./boost/container/detail/flat_tree.hpp:148:74: error: expected primary-expression before '>' token
+  148 |       (braw, iraw, eraw, comp, eraw, back_free_capacity<SequenceContainer>::get(dest));
+      |                                                                          ^
+./boost/container/detail/flat_tree.hpp: In function 'void boost::container::dtl::flat_tree_container_inplace_sort_ending(SequenceContainer&, typename SequenceContainer::iterator, Compare, boost::move_detail::true_)':
+./boost/container/detail/flat_tree.hpp:175:32: error: 'back_free_capacity' was not declared in this scope
+  175 |       (iraw, eraw, comp, eraw, back_free_capacity<SequenceContainer>::get(dest));
+      |                                ^~~~~~~~~~~~~~~~~~
+./boost/container/detail/flat_tree.hpp:175:68: error: expected primary-expression before '>' token
+  175 |       (iraw, eraw, comp, eraw, back_free_capacity<SequenceContainer>::get(dest));
+      |                                                                    ^
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: diag.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/TDA/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/TDA/src'
+/bin/sh: clang++: not found
+expr: syntax error
+make[1]: Leaving directory '/var/local/PKGS/CRAN/TDA/src'
+ERROR: compilation failed for package 'TDA'
+* removing '/home/runner/R-patched/lib/TDA'
+* restoring previous '/home/runner/R-patched/lib/TDA'

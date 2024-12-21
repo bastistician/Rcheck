@@ -1,0 +1,46 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'Rblpapi' ...
+** package 'Rblpapi' successfully unpacked and MD5 sums checked
+** using staged installation
+Setting up compilation for a linux 64-bit system
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rblpapi/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c authenticate.cpp -o authenticate.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c bdh.cpp -o bdh.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c bdp.cpp -o bdp.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c bds.cpp -o bds.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c beqs.cpp -o beqs.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c blpConnect.cpp -o blpConnect.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c blpVersion.cpp -o blpVersion.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c blpapi_utils.cpp -o blpapi_utils.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c bsrch.cpp -o bsrch.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c fieldsearch.cpp -o fieldsearch.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c getBars.cpp -o getBars.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c getFieldInfo.cpp -o getFieldInfo.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c getTicks.cpp -o getTicks.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c lookup.cpp -o lookup.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I. -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c subscribe.cpp -o subscribe.o
+g++ -std=gnu++17 -shared -L/usr/local/lib -o Rblpapi.so RcppExports.o authenticate.o bdh.o bdp.o bds.o beqs.o blpConnect.o blpVersion.o blpapi_utils.o bsrch.o fieldsearch.o getBars.o getFieldInfo.o getTicks.o lookup.o subscribe.o -lblpapi3_64 -L../inst/blp -Wl,-rpath,$ORIGIN/../blp
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rblpapi/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rblpapi/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rblpapi/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rblpapi/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rblpapi/src'
+installing to /home/runner/R-patched/lib/00LOCK-Rblpapi/00new/Rblpapi/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Error: package or namespace load failed for 'Rblpapi' in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/home/runner/R-patched/lib/00LOCK-Rblpapi/00new/Rblpapi/libs/Rblpapi.so':
+  Error loading shared library libresolv.so.2: No such file or directory (needed by /home/runner/R-patched/lib/00LOCK-Rblpapi/00new/Rblpapi/libs/../blp/libblpapi3_64.so)
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing '/home/runner/R-patched/lib/Rblpapi'

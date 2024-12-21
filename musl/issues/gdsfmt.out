@@ -1,0 +1,50 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'gdsfmt' ...
+** package 'gdsfmt' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/BIOC/gdsfmt/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c R_CoreArray.cpp -o R_CoreArray.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c gdsfmt.cpp -o gdsfmt.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c digest.cpp -o digest.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/CoreArray.cpp -o CoreArray/CoreArray.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dAllocator.cpp -o CoreArray/dAllocator.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dAny.cpp -o CoreArray/dAny.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dBase.cpp -o CoreArray/dBase.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dBitGDS.cpp -o CoreArray/dBitGDS.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dEndian.cpp -o CoreArray/dEndian.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dFile.cpp -o CoreArray/dFile.o
+CoreArray/dFile.cpp: In member function 'void CoreArray::CdObjAttr::Delete(int)':
+CoreArray/dFile.cpp:129:17: warning: ignoring return value of 'std::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::at(size_type) [with _Tp = CoreArray::CdObjAttr::TdPair*; _Alloc = std::allocator<CoreArray::CdObjAttr::TdPair*>; reference = CoreArray::CdObjAttr::TdPair*&; size_type = long unsigned int]', declared with attribute 'nodiscard' [-Wunused-result]
+  129 |         fList.at(Index); // check range
+      |         ~~~~~~~~^~~~~~~
+In file included from /usr/include/c++/14.2.0/vector:66,
+                 from CoreArray/dPlatform.h:48,
+                 from CoreArray/dEndian.h:40,
+                 from CoreArray/dBase.h:41,
+                 from CoreArray/dFile.h:40,
+                 from CoreArray/dFile.cpp:28:
+/usr/include/c++/14.2.0/bits/stl_vector.h:1180:7: note: declared here
+ 1180 |       at(size_type __n)
+      |       ^~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dParallel.cpp -o CoreArray/dParallel.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native  -c CoreArray/dParallel_Ext.c -o CoreArray/dParallel_Ext.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c CoreArray/dPlatform.cpp -o CoreArray/dPlatform.o
+CoreArray/dPlatform.cpp: In function 'C_Int64 CoreArray::SysHandleSeek(TSysHandle, C_Int64, TdSysSeekOrg)':
+CoreArray/dPlatform.cpp:1212:32: error: 'lseek64' was not declared in this scope; did you mean 'lseek'?
+ 1212 |                         return lseek64(Handle, Offset, sk);
+      |                                ^~~~~~~
+      |                                lseek
+CoreArray/dPlatform.cpp: In function 'bool CoreArray::SysHandleSetSize(TSysHandle, C_Int64)':
+CoreArray/dPlatform.cpp:1228:32: error: 'ftruncate64' was not declared in this scope; did you mean 'ftruncate'?
+ 1228 |                         return ftruncate64(Handle, NewSize)==0;
+      |                                ^~~~~~~~~~~
+      |                                ftruncate
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: CoreArray/dPlatform.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/BIOC/gdsfmt/src'
+make[1]: Entering directory '/var/local/PKGS/BIOC/gdsfmt/src'
+make[1]: Leaving directory '/var/local/PKGS/BIOC/gdsfmt/src'
+ERROR: compilation failed for package 'gdsfmt'
+* removing '/home/runner/R-patched/lib/gdsfmt'
+* restoring previous '/home/runner/R-patched/lib/gdsfmt'

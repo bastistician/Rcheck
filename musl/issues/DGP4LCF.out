@@ -1,0 +1,19 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'DGP4LCF' ...
+** package 'DGP4LCF' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/DGP4LCF/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c gibbs_after_mcem_irregular_time.cpp -o gibbs_after_mcem_irregular_time.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c gibbs_within_mcem_irregular_time.cpp -o gibbs_within_mcem_irregular_time.o
+g++ -std=gnu++17 -shared -L/usr/local/lib -o DGP4LCF.so RcppExports.o gibbs_after_mcem_irregular_time.o gibbs_within_mcem_irregular_time.o -llapack -lblas
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lblas: No such file or directory
+collect2: error: ld returned 1 exit status
+make[1]: *** [/home/runner/R-patched/build/share/make/shlib.mk:10: DGP4LCF.so] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/DGP4LCF/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/DGP4LCF/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/DGP4LCF/src'
+ERROR: compilation failed for package 'DGP4LCF'
+* removing '/home/runner/R-patched/lib/DGP4LCF'
