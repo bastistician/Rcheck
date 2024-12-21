@@ -6,6 +6,7 @@ bash-completion
 boost-dev
 busybox-mdev-openrc
 bzip2-dev
+cargo
 cmake
 curl
 curl-dev
@@ -29,6 +30,7 @@ grep
 gsl-dev
 hdf5-dev
 hdf5-tools
+hiredis-dev
 imagemagick-dev
 jq-dev
 lftp
@@ -84,6 +86,7 @@ re2-dev
 readline-dev
 redland-dev
 rsync
+rust
 sqlite-dev
 subversion
 syslinux
