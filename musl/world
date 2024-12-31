@@ -7,7 +7,6 @@ boost-dev
 busybox-mdev-openrc
 bzip2-dev
 cargo
-checkbashisms
 cmake
 curl
 curl-dev
