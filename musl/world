@@ -18,6 +18,7 @@ font-liberation
 g++
 gcc
 gdal-dev
+gdal-driver-jpeg
 gdal-driver-netCDF
 gdal-driver-PNG
 geos-dev
