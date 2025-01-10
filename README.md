@@ -1,27 +1,17 @@
-This repository shares installation issues of R packages on
-Alpine Linux, which uses [musl](https://musl.libc.org/)
+This is a preliminary repository used to share **installation issues**
+of R packages on Alpine Linux, which uses [musl](https://musl.libc.org/)
 instead of [glibc](https://www.gnu.org/software/libc/). Portable code will
 work with both. Some functional differences between the two are listed on
 [musl's community wiki](https://wiki.musl-libc.org/functional-differences-from-glibc).
 
 A nightly cron job builds
 [R-patched](https://CRAN.R-project.org/src/base-prerelease/)
-and installs/updates all available CRAN packages
+and installs/updates (almost) **all available CRAN packages**
 as well as required or suggested packages from Bioconductor.
 
-Issues are *force-pushed* to the [**results branch**](../../tree/results/musl).
-
-
-## TBD
-
-- Exercise the packages, i.e., run something like `R CMD check --extra-arch`.
-  As the server is currently hosted on a standard desktop computer, a full
-  check run will take about 3 days, so delay updates of packages and results.
-
-- Provide a Docker image that mirrors the server on which these checks run.
-  In the meantime, the Alpine-based Docker images maintained at
-  [`rhub/r-minimal`](https://github.com/r-hub/r-minimal)
-  should usually reproduce the compilation issues reported here.
+Installation issues are *force-pushed* to the
+[**results branch**](../../tree/results/musl).
+Results may be published elsewhere in the future.
 
 
 ## Background
