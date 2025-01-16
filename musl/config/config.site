@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # compiler flags (without debubbing symbols for smaller libraries)
 CFLAGS="-O2 -mtune=native"
 FFLAGS="-O2 -mtune=native"
