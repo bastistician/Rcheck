@@ -1,0 +1,59 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'xgboost' ...
+** package 'xgboost' successfully unpacked and MD5 sums checked
+** using staged installation
+checking Backtrace lib... 
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking for g++ -std=gnu++17 option to enable C++11 features... none needed
+checking for backtrace in -lexecinfo... no
+checking endian... 
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+Makevars:17: -DXGBOOST_STRICT_R_MODE=1
+Makevars:17: -DDMLC_LOG_BEFORE_THROW=0
+Makevars:17: -DDMLC_ENABLE_STD_THREAD=1
+Makevars:17: -DDMLC_DISABLE_STDIN=1
+Makevars:17: -DDMLC_LOG_CUSTOMIZE=1
+Makevars:17: -DXGBOOST_CUSTOMIZE_LOGGER=1
+Makevars:17: -DRABIT_CUSTOMIZE_MSG_
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/xgboost/src'
+Makevars:17: -DXGBOOST_STRICT_R_MODE=1
+Makevars:17: -DDMLC_LOG_BEFORE_THROW=0
+Makevars:17: -DDMLC_ENABLE_STD_THREAD=1
+Makevars:17: -DDMLC_DISABLE_STDIN=1
+Makevars:17: -DDMLC_LOG_CUSTOMIZE=1
+Makevars:17: -DXGBOOST_CUSTOMIZE_LOGGER=1
+Makevars:17: -DRABIT_CUSTOMIZE_MSG_
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./include -I./dmlc-core/include -I./rabit/include -I. -DXGBOOST_STRICT_R_MODE=1 -DDMLC_LOG_BEFORE_THROW=0 -DDMLC_ENABLE_STD_THREAD=1 -DDMLC_DISABLE_STDIN=1 -DDMLC_LOG_CUSTOMIZE=1 -DXGBOOST_CUSTOMIZE_LOGGER=1 -DRABIT_CUSTOMIZE_MSG_  -I/usr/local/include   -fopenmp -DDMLC_CMAKE_LITTLE_ENDIAN=1 -pthread -fvisibility=hidden -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c xgboost_R.cc -o xgboost_R.o
+In file included from ./dmlc-core/include/dmlc/././base.h:336,
+                 from ./dmlc-core/include/dmlc/./logging.h:16,
+                 from ./dmlc-core/include/dmlc/common.h:14,
+                 from xgboost_R.cc:4:
+./dmlc-core/include/dmlc/build_config_default.h:27:29: fatal error: execinfo.h: No such file or directory
+   27 |     #define DMLC_EXECINFO_H <execinfo.h>
+      |                             ^
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:202: xgboost_R.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/xgboost/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/xgboost/src'
+Makevars:17: -DXGBOOST_STRICT_R_MODE=1
+Makevars:17: -DDMLC_LOG_BEFORE_THROW=0
+Makevars:17: -DDMLC_ENABLE_STD_THREAD=1
+Makevars:17: -DDMLC_DISABLE_STDIN=1
+Makevars:17: -DDMLC_LOG_CUSTOMIZE=1
+Makevars:17: -DXGBOOST_CUSTOMIZE_LOGGER=1
+Makevars:17: -DRABIT_CUSTOMIZE_MSG_
+make[1]: Leaving directory '/var/local/PKGS/CRAN/xgboost/src'
+ERROR: compilation failed for package 'xgboost'
+* removing '/home/runner/R-patched/lib/xgboost'
+* restoring previous '/home/runner/R-patched/lib/xgboost'

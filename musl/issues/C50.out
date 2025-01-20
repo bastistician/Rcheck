@@ -1,0 +1,38 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'C50' ...
+** package 'C50' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/C50/src'
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c attwinnow.c -o attwinnow.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c classify.c -o classify.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c confmat.c -o confmat.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c construct.c -o construct.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c contin.c -o contin.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c discr.c -o discr.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c formrules.c -o formrules.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c formtree.c -o formtree.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c getdata.c -o getdata.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c getnames.c -o getnames.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c global.c -o global.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c hash.c -o hash.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c hooks.c -o hooks.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c implicitatt.c -o implicitatt.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c info.c -o info.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c mcost.c -o mcost.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c modelfiles.c -o modelfiles.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c p-thresh.c -o p-thresh.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c prune.c -o prune.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DNDEBUG  -I/usr/local/include    -fpic  -O2 -mtune=native  -c rc50.c -o rc50.o
+rc50.c:37:10: fatal error: sys/unistd.h: No such file or directory
+   37 | #include <sys/unistd.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:195: rc50.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/C50/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/C50/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/C50/src'
+ERROR: compilation failed for package 'C50'
+* removing '/home/runner/R-patched/lib/C50'
+* restoring previous '/home/runner/R-patched/lib/C50'

@@ -1,0 +1,41 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'medfate' ...
+** package 'medfate' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/medfate/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c aspwb.cpp -o aspwb.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c biophysicsutils.cpp -o biophysicsutils.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c carbon.cpp -o carbon.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c communication_structures.cpp -o communication_structures.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c firebehaviour.cpp -o firebehaviour.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c fireseverity.cpp -o fireseverity.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c forestutils.cpp -o forestutils.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c fuelmoisture.cpp -o fuelmoisture.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c fuelstructure.cpp -o fuelstructure.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c growth.cpp -o growth.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c hydraulics.cpp -o hydraulics.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c hydrology.cpp -o hydrology.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c incbeta.cpp -o incbeta.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c incgamma.cpp -o incgamma.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/meteoland/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c inner_sperry.cpp -o inner_sperry.o
+inner_sperry.cpp:16:72: error: conversion from 'std::nullptr_t' to 'Rcpp::List' {aka 'Rcpp::Vector<19>'} is ambiguous
+   16 |                        double sapFluidityDay = 1.0, List control = NULL) {
+      |                                                                        ^
+In file included from /home/runner/R-patched/lib/Rcpp/include/Rcpp/Vector.h:51,
+                 from /home/runner/R-patched/lib/Rcpp/include/Rcpp.h:40,
+                 from inner_sperry.cpp:2:
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:107:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(const char*) [with int RTYPE = 19; StoragePolicy = Rcpp::PreserveStorage]'
+  107 |     Vector( const char* st ) {
+      |     ^~~~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:71:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(SEXP) [with int RTYPE = 19; StoragePolicy = Rcpp::PreserveStorage; SEXP = SEXPREC*]'
+   71 |     Vector( SEXP x ) {
+      |     ^~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:204: inner_sperry.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/medfate/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/medfate/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/medfate/src'
+ERROR: compilation failed for package 'medfate'
+* removing '/home/runner/R-patched/lib/medfate'
