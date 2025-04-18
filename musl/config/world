@@ -57,6 +57,7 @@ linux-lts
 lz4
 make
 mariadb-connector-c-dev
+mount
 mpfr-dev
 musl-dev
 nano
