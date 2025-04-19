@@ -1,0 +1,812 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RcppPlanc' ...
+** this is package 'RcppPlanc' version '2.0.4'
+** package 'RcppPlanc' successfully unpacked and MD5 sums checked
+** using staged installation
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+This is libplanc 1.0.0 containing component nmflib 1.0.0
+CMake Debug Log at cmake/FindR.cmake:38 (find_program):
+  find_program called with the following settings:
+
+    VAR: R_EXECUTABLE
+    NAMES: "R"
+    Documentation: Path to a program.
+    Framework
+      Only Search Frameworks: 0
+      Search Frameworks Last: 0
+      Search Frameworks First: 0
+    AppBundle
+      Only Search AppBundle: 0
+      Search AppBundle Last: 0
+      Search AppBundle First: 0
+    CMAKE_FIND_USE_CMAKE_PATH: 1
+    CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: 0
+    CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: 0
+    CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: 0
+    CMAKE_FIND_USE_INSTALL_PREFIX: 1
+
+  find_program considered the following locations:
+
+  The item was found at
+
+    /home/runner/R-patched/build/bin/R
+
+Call Stack (most recent call first):
+  CMakeLists.txt:51 (find_package)
+
+
+CMake Debug Log at cmake/FindR.cmake:64 (find_program):
+  find_program called with the following settings:
+
+    VAR: RSCRIPT_EXECUTABLE
+    NAMES: "Rscript"
+    Documentation: Rscript executable.
+    Framework
+      Only Search Frameworks: 0
+      Search Frameworks Last: 0
+      Search Frameworks First: 0
+    AppBundle
+      Only Search AppBundle: 0
+      Search AppBundle Last: 0
+      Search AppBundle First: 0
+    CMAKE_FIND_USE_CMAKE_PATH: 1
+    CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: 1
+    CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: 1
+    CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: 1
+    CMAKE_FIND_USE_INSTALL_PREFIX: 1
+
+  find_program considered the following locations:
+
+  The item was found at
+
+    /home/runner/R-patched/build/bin/Rscript
+
+Call Stack (most recent call first):
+  CMakeLists.txt:51 (find_package)
+
+
+-- Found R: /home/runner/R-patched/build/bin/R (found version "4.5.0")
+CMake Debug Log at CMakeLists.txt:51 (find_package):
+  find_package considered the following paths for FindR.cmake:
+
+    /usr/share/cmake/Modules/FindR.cmake
+
+  The file was found at
+
+    /var/local/PKGS/CRAN/RcppPlanc/src/planc/cmake/FindR.cmake
+
+
+
+-- MKL_THREADING = OMP
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void*
+-- Check size of void* - done
+-- Looking for sgemm_
+-- Looking for sgemm_ - not found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for sgemm_
+-- Looking for sgemm_ - found
+-- Found BLAS: /usr/lib/libopenblas.so
+-- Looking for cheev_
+-- Looking for cheev_ - found
+-- Found LAPACK: /usr/lib/libopenblas.so;-lm;-ldl
+-- Looking for openblas/cblas.h
+-- Looking for openblas/cblas.h - not found
+-- Found OpenMP_C: -fopenmp (found version "4.5")
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+CMake Warning (dev) at /usr/share/cmake/Modules/FetchContent.cmake:1953 (message):
+  Calling FetchContent_Populate(HighFive) is deprecated, call
+  FetchContent_MakeAvailable(HighFive) instead.  Policy CMP0169 can be set to
+  OLD to allow FetchContent_Populate(HighFive) to be called directly for now,
+  but the ability to call it with declared details will be removed completely
+  in a future version.
+Call Stack (most recent call first):
+  CMakeLists.txt:149 (FetchContent_Populate)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- HDF5 C compiler wrapper is unable to compile a minimal HDF5 program.
+-- Found HDF5: /usr/lib/libhdf5.so (found version "1.14.4")
+-- Performing Test HDF5_LINKS
+-- Performing Test HDF5_LINKS - Success
+-- Found R_Rcpp: /home/runner/R-patched/lib/Rcpp
+-- Found R_RcppArmadillo: /home/runner/R-patched/lib/RcppArmadillo
+-- Found R_RcppProgress: /home/runner/R-patched/lib/RcppProgress
+-- Performing Test UNSAFE_MATH
+-- Performing Test UNSAFE_MATH - Success
+-- Performing Test FINITE_MATH
+-- Performing Test FINITE_MATH - Success
+-- Performing Test TRAPPING_MATH
+-- Performing Test TRAPPING_MATH - Success
+-- Performing Test ERRNO_MATH
+-- Performing Test ERRNO_MATH - Success
+-- Performing Test UNSIGNED_ZERO
+-- Performing Test UNSIGNED_ZERO - Success
+-- Performing Test RECIPROCAL_MATH
+-- Performing Test RECIPROCAL_MATH - Success
+-- Performing Test ARCH_AVX
+-- Performing Test ARCH_AVX - Success
+-- Performing Test HAS_POPCNT
+-- Performing Test HAS_POPCNT - Success
+-- Looking for cblas.h
+-- Looking for cblas.h - found
+-- A cache variable, namely HWLOC_DIR, has been set to specify the install directory of HWLOC
+-- Checking for one of the modules 'hwloc'
+-- Looking for HWLOC - not found using PkgConfig.
+   Perhaps you should add the directory containing hwloc.pc to
+   the PKG_CONFIG_PATH environment variable.
+-- Looking for HWLOC - PkgConfig not used
+-- Looking for hwloc -- hwloc.h not found
+-- Looking for hwloc -- lib hwloc not found
+-- Could NOT find HWLOC (missing: HWLOC_LIBRARIES HWLOC_WORKS) 
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- NNLS_SOURCE_DIR =  /var/local/PKGS/CRAN/RcppPlanc/src/planc/nnls
+-- NMF_SOURCE_DIR =  /var/local/PKGS/CRAN/RcppPlanc/src/planc/nmf
+-- NMFLIB_COMMON =  /var/local/PKGS/CRAN/RcppPlanc/src/planc/common
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+CMake Warning (dev) at CMakeLists.txt:446 (install):
+  Policy CMP0177 is not set: install() DESTINATION paths are normalized.  Run
+  "cmake --help-policy CMP0177" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:446 (install):
+  Policy CMP0177 is not set: install() DESTINATION paths are normalized.  Run
+  "cmake --help-policy CMP0177" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:446 (install):
+  Policy CMP0177 is not set: install() DESTINATION paths are normalized.  Run
+  "cmake --help-policy CMP0177" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done (15.6s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    R_SHLIB_EXT
+
+
+-- Build files have been written to: /var/local/PKGS/CRAN/RcppPlanc/src/build
+make[1]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+/usr/bin/cmake -S/var/local/PKGS/CRAN/RcppPlanc/src/planc -B/var/local/PKGS/CRAN/RcppPlanc/src/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /var/local/PKGS/CRAN/RcppPlanc/src/build/CMakeFiles /var/local/PKGS/CRAN/RcppPlanc/src/build//CMakeFiles/progress.marks
+make  -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make  -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/depend
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build/CMakeFiles/utils.dir/DependInfo.cmake "--color="
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make  -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/build
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[  5%] Building CXX object CMakeFiles/utils.dir/common/utils.cpp.o
+/usr/bin/g++ -DUSING_R -I/var/local/PKGS/CRAN/RcppPlanc/src/build/_deps/highfive-src/include -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/usr/local/include -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__ -O2 -g -DNDEBUG -fPIC -fvisibility-inlines-hidden -fopenmp -MD -MT CMakeFiles/utils.dir/common/utils.cpp.o -MF CMakeFiles/utils.dir/common/utils.cpp.o.d -o CMakeFiles/utils.dir/common/utils.cpp.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/common/utils.cpp
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[  5%] Built target utils
+make  -f CMakeFiles/hwloc.dir/build.make CMakeFiles/hwloc.dir/depend
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build/CMakeFiles/hwloc.dir/DependInfo.cmake "--color="
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make  -f CMakeFiles/hwloc.dir/build.make CMakeFiles/hwloc.dir/build
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[ 11%] Creating directories for 'hwloc'
+/usr/bin/cmake -Dcfgdir= -P /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/tmp/hwloc-mkdirs.cmake
+/usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-mkdir
+[ 17%] Performing download step (download, verify and extract) for 'hwloc'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/download-hwloc.cmake
+-- Downloading...
+   dst='/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-2.11.2.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://download.open-mpi.org/release/hwloc/v2.11/hwloc-2.11.2.tar.gz'
+-- [download 0% complete]
+-- [download 1% complete]
+-- [download 2% complete]
+-- [download 3% complete]
+-- [download 4% complete]
+-- [download 5% complete]
+-- [download 6% complete]
+-- [download 7% complete]
+-- [download 8% complete]
+-- [download 9% complete]
+-- [download 10% complete]
+-- [download 11% complete]
+-- [download 12% complete]
+-- [download 13% complete]
+-- [download 14% complete]
+-- [download 15% complete]
+-- [download 16% complete]
+-- [download 17% complete]
+-- [download 18% complete]
+-- [download 19% complete]
+-- [download 20% complete]
+-- [download 21% complete]
+-- [download 22% complete]
+-- [download 23% complete]
+-- [download 24% complete]
+-- [download 25% complete]
+-- [download 26% complete]
+-- [download 27% complete]
+-- [download 28% complete]
+-- [download 29% complete]
+-- [download 30% complete]
+-- [download 31% complete]
+-- [download 32% complete]
+-- [download 33% complete]
+-- [download 34% complete]
+-- [download 35% complete]
+-- [download 36% complete]
+-- [download 37% complete]
+-- [download 38% complete]
+-- [download 39% complete]
+-- [download 40% complete]
+-- [download 41% complete]
+-- [download 42% complete]
+-- [download 43% complete]
+-- [download 44% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 47% complete]
+-- [download 48% complete]
+-- [download 49% complete]
+-- [download 50% complete]
+-- [download 51% complete]
+-- [download 52% complete]
+-- [download 53% complete]
+-- [download 54% complete]
+-- [download 55% complete]
+-- [download 56% complete]
+-- [download 57% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 60% complete]
+-- [download 61% complete]
+-- [download 62% complete]
+-- [download 63% complete]
+-- [download 64% complete]
+-- [download 65% complete]
+-- [download 66% complete]
+-- [download 67% complete]
+-- [download 68% complete]
+-- [download 69% complete]
+-- [download 70% complete]
+-- [download 71% complete]
+-- [download 72% complete]
+-- [download 73% complete]
+-- [download 74% complete]
+-- [download 75% complete]
+-- [download 76% complete]
+-- [download 77% complete]
+-- [download 78% complete]
+-- [download 79% complete]
+-- [download 80% complete]
+-- [download 81% complete]
+-- [download 82% complete]
+-- [download 83% complete]
+-- [download 84% complete]
+-- [download 85% complete]
+-- [download 86% complete]
+-- [download 87% complete]
+-- [download 88% complete]
+-- [download 89% complete]
+-- [download 90% complete]
+-- [download 91% complete]
+-- [download 92% complete]
+-- [download 93% complete]
+-- [download 94% complete]
+-- [download 95% complete]
+-- [download 96% complete]
+-- [download 97% complete]
+-- [download 98% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- verifying file...
+       file='/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-2.11.2.tar.gz'
+-- Downloading... done
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/verify-hwloc.cmake
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/extract-hwloc.cmake
+-- extracting...
+     src='/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-2.11.2.tar.gz'
+     dst='/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src && /usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-download
+[ 23%] No update step for 'hwloc'
+/usr/bin/cmake -E echo_append
+/usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-update
+[ 29%] Performing patch step for 'hwloc'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc && /usr/bin/cmake -E cat /var/local/PKGS/CRAN/RcppPlanc/src/planc/../../tools/patches/00_remove_stdio.patch /var/local/PKGS/CRAN/RcppPlanc/src/planc/../../tools/patches/01_remove_sprintf.patch /var/local/PKGS/CRAN/RcppPlanc/src/planc/../../tools/patches/02_adjust_windows_types.patch /var/local/PKGS/CRAN/RcppPlanc/src/planc/../../tools/patches/03_remove_abort.patch | /usr/bin/patch -p1 -l
+patching file hwloc/components.c
+patching file hwloc/distances.c
+patching file hwloc/memattrs.c
+patching file hwloc/pci-common.c
+patching file hwloc/topology-aix.c
+patching file hwloc/topology-bgq.c
+patching file hwloc/topology-cuda.c
+patching file hwloc/topology-darwin.c
+patching file hwloc/topology-levelzero.c
+patching file hwloc/topology-linux.c
+patching file hwloc/topology-nvml.c
+patching file hwloc/topology-opencl.c
+patching file hwloc/topology-pci.c
+patching file hwloc/topology-rsmi.c
+patching file hwloc/topology-solaris.c
+patching file hwloc/topology-synthetic.c
+patching file hwloc/topology-windows.c
+patching file hwloc/topology-x86.c
+patching file hwloc/topology-xml-libxml.c
+patching file hwloc/topology-xml-nolibxml.c
+patching file hwloc/topology-xml.c
+patching file hwloc/topology.c
+patching file hwloc/cpukinds.c
+patching file hwloc/topology-freebsd.c
+patching file hwloc/topology-linux.c
+patching file hwloc/topology-rsmi.c
+patching file hwloc/topology-windows.c
+patching file hwloc/topology-xml.c
+patching file include/hwloc/cuda.h
+patching file include/hwloc/cudart.h
+patching file include/hwloc/levelzero.h
+patching file include/hwloc/nvml.h
+patching file include/hwloc/opencl.h
+patching file include/hwloc/openfabrics-verbs.h
+patching file include/hwloc/rsmi.h
+patching file hwloc/topology-windows.c
+patching file hwloc/distances.c
+patching file hwloc/topology-linux.c
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc && /usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-patch
+[ 35%] Performing configure step for 'hwloc'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build && /usr/bin/cmake -E env LD= "CFLAGS=-DNDEBUG -I/usr/local/include -O2 -mtune=native   " sh ../hwloc/configure --with-pic --prefix=/out/ --disable-picky --enable-shared=no --enable-static=yes --disable-cairo --disable-libxml2 --disable-io --disable-plugin-dlopen --disable-plugin-ltdl --enable-embedded-mode && /usr/bin/cmake -E touch_nocreate ../hwloc/aclocal.m4 && /usr/bin/cmake -E touch_nocreate ../hwloc/Makefile.in && /usr/bin/cmake -E touch_nocreate ../hwloc/configure && /usr/bin/cmake -E touch_nocreate config.status
+
+###
+### Configuring hwloc distribution tarball
+### Startup tests
+###
+checking build system type... x86_64-pc-linux-musl
+checking host system type... x86_64-pc-linux-musl
+checking target system type... x86_64-pc-linux-musl
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '103' is supported by ustar format... yes
+checking whether GID '102' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-pc-linux-musl file names to x86_64-pc-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for file... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking for gcc options needed to detect all undeclared functions... none needed
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking how to run the C preprocessor... gcc -E
+checking for X... libraries , headers 
+
+###
+### Configuring hwloc core
+###
+checking hwloc building mode... embedded
+configure: hwloc builddir: /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build
+configure: hwloc srcdir: /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc
+configure: Detected VPATH build
+checking for hwloc version... 2.11.2
+checking if want hwloc maintainer support... disabled (embedded mode)
+checking for hwloc directory prefix... (none)
+checking for hwloc symbol prefix... hwloc_
+checking for the C compiler vendor... gnu
+checking size of void *... 8
+checking which OS support to include... Linux
+checking which CPU support to include... x86_64
+checking size of unsigned long... 8
+checking size of unsigned int... 4
+checking for __attribute__... yes
+checking for __attribute__(aligned)... yes
+checking for __attribute__(always_inline)... yes
+checking for __attribute__(cold)... yes
+checking for __attribute__(const)... yes
+checking for __attribute__(deprecated)... yes
+checking for __attribute__(constructor)... yes
+checking for __attribute__(format)... yes
+checking for __attribute__(hot)... yes
+checking for __attribute__(malloc)... yes
+checking for __attribute__(may_alias)... yes
+checking for __attribute__(no_instrument_function)... yes
+checking for __attribute__(nonnull)... yes
+checking for __attribute__(noreturn)... yes
+checking for __attribute__(packed)... yes
+checking for __attribute__(pure)... yes
+checking for __attribute__(sentinel)... yes
+checking for __attribute__(unused)... yes
+checking for __attribute__(warn_unused_result)... yes
+checking for __attribute__(weak_alias)... yes
+checking if gcc supports -fvisibility=hidden... yes
+checking whether to enable symbol visibility... yes (via -fvisibility=hidden)
+configure: WARNING: "-fvisibility=hidden" has been added to the hwloc CFLAGS
+checking whether the C compiler rejects function calls with too many arguments... yes
+checking whether the C compiler rejects function calls with too few arguments... yes
+checking for unistd.h... (cached) yes
+checking for dirent.h... yes
+checking for strings.h... (cached) yes
+checking for ctype.h... yes
+checking for strcasecmp... yes
+checking whether strcasecmp is declared... yes
+checking whether function strcasecmp has a complete prototype... yes
+checking for strncasecmp... yes
+checking whether strncasecmp is declared... yes
+checking whether function strncasecmp has a complete prototype... yes
+checking for strftime... yes
+checking for setlocale... yes
+checking for stdint.h... (cached) yes
+checking for sys/mman.h... yes
+
+**** Linux-specific checks
+checking whether sched_getcpu is declared... yes
+checking whether sched_setaffinity is declared... yes
+checking whether function sched_setaffinity has a complete prototype... yes
+checking for old prototype of sched_setaffinity... no
+checking for working CPU_SET... yes
+checking for working CPU_SET_S... yes
+checking for working syscall with 6 parameters... yes
+checking for libudev.h... no
+**** end of Linux-specific checks
+
+checking whether pthread_setaffinity_np is declared... yes
+checking whether pthread_getaffinity_np is declared... yes
+checking whether fabsf is declared... yes
+checking for fabsf in -lm... yes
+checking whether modff is declared... yes
+checking for modff in -lm... yes
+checking whether _SC_NPROCESSORS_ONLN is declared... yes
+checking whether _SC_NPROCESSORS_CONF is declared... yes
+checking whether _SC_NPROC_ONLN is declared... no
+checking whether _SC_NPROC_CONF is declared... no
+checking whether _SC_PAGESIZE is declared... yes
+checking whether _SC_PAGE_SIZE is declared... yes
+checking whether _SC_LARGE_PAGESIZE is declared... no
+checking for mach/mach_init.h... no
+checking for mach_init.h... no
+checking for mach/mach_host.h... no
+checking whether strtoull is declared... yes
+checking for ssize_t... yes
+checking whether snprintf is declared... yes
+checking whether _strdup is declared... no
+checking whether _putenv is declared... no
+checking whether snprintf is correct... yes
+checking whether getprogname is declared... no
+checking whether getexecname is declared... no
+checking for program_invocation_name... yes
+checking for __progname... yes
+checking for pthread_t... yes
+checking for ffs... yes
+checking whether ffs is declared... yes
+checking whether function ffs has a complete prototype... yes
+checking for ffsl... yes
+checking whether ffsl is declared... yes
+checking whether function ffsl has a complete prototype... yes
+checking for fls... no
+checking for flsl... no
+checking for clz... no
+checking for clzl... no
+checking for openat... yes
+checking for malloc.h... yes
+checking for getpagesize... yes
+checking for memalign... yes
+checking for posix_memalign... yes
+checking for sys/utsname.h... yes
+checking for uname... yes
+checking for pthread_mutex_lock... yes
+
+**** x86 CPUID configuration
+checking for x86 cpuid... yes
+**** end of x86 CPUID configuration
+
+**** component and plugin-specific configuration
+checking if plugin support is enabled... no
+checking components to build statically...  noos xml synthetic xml_nolibxml linux x86
+checking components to build as plugins... 
+**** end of component and plugin configuration
+checking for diff... /usr/bin/diff
+
+###
+### Performing final hwloc configuration
+###
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating hwloc/Makefile
+config.status: creating include/private/autogen/config.h
+config.status: creating include/hwloc/autogen/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+-----------------------------------------------------------------------------
+Hwloc optional build support status (more details can be found above):
+
+Probe / display I/O devices: no
+Graphical output:            no (disabled in embedded mode)
+XML input / output:          basic
+Plugin support:              no
+-----------------------------------------------------------------------------
+
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build && /usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-configure
+[ 41%] Performing build step for 'hwloc'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build && make
+make[4]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+ /bin/sh ./config.status
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating hwloc/Makefile
+config.status: creating include/private/autogen/config.h
+config.status: include/private/autogen/config.h is unchanged
+config.status: creating include/hwloc/autogen/config.h
+config.status: include/hwloc/autogen/config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+Making all in include
+make[5]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/include'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/include'
+Making all in hwloc
+make[5]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+  CC       topology.lo
+  CC       traversal.lo
+  CC       distances.lo
+  CC       memattrs.lo
+  CC       cpukinds.lo
+  CC       components.lo
+  CC       bind.lo
+  CC       bitmap.lo
+  CC       pci-common.lo
+  CC       diff.lo
+  CC       shmem.lo
+  CC       misc.lo
+  CC       base64.lo
+  CC       topology-noos.lo
+  CC       topology-synthetic.lo
+  CC       topology-xml.lo
+  CC       topology-xml-nolibxml.lo
+  CC       topology-linux.lo
+  CC       topology-hardwired.lo
+  CC       topology-x86.lo
+  CCLD     libhwloc_embedded.la
+make[5]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+make[5]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+make[4]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build && /usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-build
+[ 47%] Performing install step for 'hwloc'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build && make install
+make[4]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+Making install in include
+make[5]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/include'
+make[6]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/include'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/include'
+make[5]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/include'
+Making install in hwloc
+make[5]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+make[6]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+make  install-exec-hook
+make[7]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+make[7]: Nothing to be done for 'install-exec-hook'.
+make[7]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+make[6]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+make[5]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/hwloc'
+make[5]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+make[6]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+make[5]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+make[4]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build && /usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-install
+[ 52%] Completed 'hwloc'
+/usr/bin/cmake -E make_directory /var/local/PKGS/CRAN/RcppPlanc/src/build/CMakeFiles
+/usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/CMakeFiles/hwloc-complete
+/usr/bin/cmake -E touch /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-stamp/hwloc-done
+/usr/bin/cmake -E remove_directory /var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc/utils/lstopo
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[ 52%] Built target hwloc
+make  -f CMakeFiles/hw_detect.dir/build.make CMakeFiles/hw_detect.dir/depend
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build/CMakeFiles/hw_detect.dir/DependInfo.cmake "--color="
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make  -f CMakeFiles/hw_detect.dir/build.make CMakeFiles/hw_detect.dir/build
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[ 58%] Building C object CMakeFiles/hw_detect.dir/common/hw_detect.c.o
+/usr/bin/gcc -DUSING_R -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc-build/include -I/var/local/PKGS/CRAN/RcppPlanc/src/build/hwloc-prefix/src/hwloc/include -I/usr/local/include -O2 -mtune=native -O2 -g -DNDEBUG -std=gnu99 -fPIC -fopenmp -funsafe-math-optimizations -ffinite-math-only -fno-trapping-math -fno-math-errno -fno-signed-zeros -freciprocal-math -mavx -mpopcnt -MD -MT CMakeFiles/hw_detect.dir/common/hw_detect.c.o -MF CMakeFiles/hw_detect.dir/common/hw_detect.c.o.d -o CMakeFiles/hw_detect.dir/common/hw_detect.c.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/common/hw_detect.c
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[ 58%] Built target hw_detect
+make  -f CMakeFiles/detect_blas.dir/build.make CMakeFiles/detect_blas.dir/depend
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build/CMakeFiles/detect_blas.dir/DependInfo.cmake "--color="
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make  -f CMakeFiles/detect_blas.dir/build.make CMakeFiles/detect_blas.dir/build
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[ 64%] Building C object CMakeFiles/detect_blas.dir/common/detect_blas.c.o
+/usr/bin/gcc -DUSING_R -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/usr/local/include -O2 -mtune=native -O2 -g -DNDEBUG -std=gnu99 -fPIC -fopenmp -funsafe-math-optimizations -ffinite-math-only -fno-trapping-math -fno-math-errno -fno-signed-zeros -freciprocal-math -mavx -mpopcnt -MD -MT CMakeFiles/detect_blas.dir/common/detect_blas.c.o -MF CMakeFiles/detect_blas.dir/common/detect_blas.c.o.d -o CMakeFiles/detect_blas.dir/common/detect_blas.c.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/common/detect_blas.c
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[ 64%] Built target detect_blas
+make  -f nmf/CMakeFiles/nmflib.dir/build.make nmf/CMakeFiles/nmflib.dir/depend
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /var/local/PKGS/CRAN/RcppPlanc/src/planc /var/local/PKGS/CRAN/RcppPlanc/src/planc/nmf /var/local/PKGS/CRAN/RcppPlanc/src/build /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf/CMakeFiles/nmflib.dir/DependInfo.cmake "--color="
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make  -f nmf/CMakeFiles/nmflib.dir/build.make nmf/CMakeFiles/nmflib.dir/build
+make[3]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+[ 70%] Building CXX object nmf/CMakeFiles/nmflib.dir/nmf_lib.cpp.o
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf && /usr/bin/g++ -DUSING_R -Dnmflib_EXPORTS -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/common -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/nnls -I/var/local/PKGS/CRAN/RcppPlanc/src/build/nmf -I/var/local/PKGS/CRAN/RcppPlanc/src/build/_deps/highfive-src/include -I/usr/local/include -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__ -O2 -g -DNDEBUG -fPIC -fvisibility-inlines-hidden -fopenmp -funsafe-math-optimizations -ffinite-math-only -fno-trapping-math -fno-math-errno -fno-signed-zeros -freciprocal-math -mavx -mpopcnt -MD -MT nmf/CMakeFiles/nmflib.dir/nmf_lib.cpp.o -MF CMakeFiles/nmflib.dir/nmf_lib.cpp.o.d -o CMakeFiles/nmflib.dir/nmf_lib.cpp.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/nmf/nmf_lib.cpp
+[ 76%] Building CXX object nmf/CMakeFiles/nmflib.dir/bppnmf.cpp.o
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf && /usr/bin/g++ -DUSING_R -Dnmflib_EXPORTS -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/common -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/nnls -I/var/local/PKGS/CRAN/RcppPlanc/src/build/nmf -I/var/local/PKGS/CRAN/RcppPlanc/src/build/_deps/highfive-src/include -I/usr/local/include -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__ -O2 -g -DNDEBUG -fPIC -fvisibility-inlines-hidden -fopenmp -funsafe-math-optimizations -ffinite-math-only -fno-trapping-math -fno-math-errno -fno-signed-zeros -freciprocal-math -mavx -mpopcnt -MD -MT nmf/CMakeFiles/nmflib.dir/bppnmf.cpp.o -MF CMakeFiles/nmflib.dir/bppnmf.cpp.o.d -o CMakeFiles/nmflib.dir/bppnmf.cpp.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/nmf/bppnmf.cpp
+[ 82%] Building CXX object nmf/CMakeFiles/nmflib.dir/__/nnls/nnls_lib.cpp.o
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf && /usr/bin/g++ -DUSING_R -Dnmflib_EXPORTS -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/common -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/nnls -I/var/local/PKGS/CRAN/RcppPlanc/src/build/nmf -I/var/local/PKGS/CRAN/RcppPlanc/src/build/_deps/highfive-src/include -I/usr/local/include -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__ -O2 -g -DNDEBUG -fPIC -fvisibility-inlines-hidden -fopenmp -funsafe-math-optimizations -ffinite-math-only -fno-trapping-math -fno-math-errno -fno-signed-zeros -freciprocal-math -mavx -mpopcnt -MD -MT nmf/CMakeFiles/nmflib.dir/__/nnls/nnls_lib.cpp.o -MF CMakeFiles/nmflib.dir/__/nnls/nnls_lib.cpp.o.d -o CMakeFiles/nmflib.dir/__/nnls/nnls_lib.cpp.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/nnls/nnls_lib.cpp
+[ 88%] Building CXX object nmf/CMakeFiles/nmflib.dir/__/common/parseutils.cpp.o
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf && /usr/bin/g++ -DUSING_R -Dnmflib_EXPORTS -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/common -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/nnls -I/var/local/PKGS/CRAN/RcppPlanc/src/build/nmf -I/var/local/PKGS/CRAN/RcppPlanc/src/build/_deps/highfive-src/include -I/usr/local/include -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__ -O2 -g -DNDEBUG -fPIC -fvisibility-inlines-hidden -fopenmp -funsafe-math-optimizations -ffinite-math-only -fno-trapping-math -fno-math-errno -fno-signed-zeros -freciprocal-math -mavx -mpopcnt -MD -MT nmf/CMakeFiles/nmflib.dir/__/common/parseutils.cpp.o -MF CMakeFiles/nmflib.dir/__/common/parseutils.cpp.o.d -o CMakeFiles/nmflib.dir/__/common/parseutils.cpp.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/common/parseutils.cpp
+[ 94%] Building CXX object nmf/CMakeFiles/nmflib.dir/__/common/data.cpp.o
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf && /usr/bin/g++ -DUSING_R -Dnmflib_EXPORTS -I/home/runner/R-patched/build/include -I/home/runner/R-patched/lib/Rcpp/include -I/home/runner/R-patched/lib/RcppArmadillo/include -I/home/runner/R-patched/lib/RcppProgress/include -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/common -I/var/local/PKGS/CRAN/RcppPlanc/src/planc/nnls -I/var/local/PKGS/CRAN/RcppPlanc/src/build/nmf -I/var/local/PKGS/CRAN/RcppPlanc/src/build/_deps/highfive-src/include -I/usr/local/include -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__ -O2 -g -DNDEBUG -fPIC -fvisibility-inlines-hidden -fopenmp -funsafe-math-optimizations -ffinite-math-only -fno-trapping-math -fno-math-errno -fno-signed-zeros -freciprocal-math -mavx -mpopcnt -MD -MT nmf/CMakeFiles/nmflib.dir/__/common/data.cpp.o -MF CMakeFiles/nmflib.dir/__/common/data.cpp.o.d -o CMakeFiles/nmflib.dir/__/common/data.cpp.o -c /var/local/PKGS/CRAN/RcppPlanc/src/planc/common/data.cpp
+[100%] Linking CXX shared library libnmflib.so
+cd /var/local/PKGS/CRAN/RcppPlanc/src/build/nmf && /usr/bin/cmake -E cmake_link_script CMakeFiles/nmflib.dir/link.txt --verbose=1
+/usr/bin/g++ -fPIC -I/usr/local/include -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__ -O2 -g -DNDEBUG -fopenmp -Wl,--dependency-file,CMakeFiles/nmflib.dir/link.d -L/usr/local/lib -shared -Wl,-soname,libnmflib.so -o libnmflib.so CMakeFiles/nmflib.dir/nmf_lib.cpp.o CMakeFiles/nmflib.dir/bppnmf.cpp.o CMakeFiles/nmflib.dir/__/nnls/nnls_lib.cpp.o CMakeFiles/nmflib.dir/__/common/parseutils.cpp.o CMakeFiles/nmflib.dir/__/common/data.cpp.o ../CMakeFiles/utils.dir/common/utils.cpp.o ../CMakeFiles/hw_detect.dir/common/hw_detect.c.o ../CMakeFiles/detect_blas.dir/common/detect_blas.c.o  /usr/lib/libopenblas.so /usr/lib/libopenblas.so -lm -ldl ../hwloc-prefix/src/hwloc-build/hwloc/.libs/libhwloc_embedded.a -L/home/runner/R-patched/build/libError: unexpected ')' in .Platform$r_arch)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find unexpected: No such file or directory
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find ): No such file or directory
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find in: No such file or directory
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find .Platform$r_arch): No such file or directory
+collect2: error: ld returned 1 exit status
+make[3]: *** [nmf/CMakeFiles/nmflib.dir/build.make:178: nmf/libnmflib.so] Error 1
+make[3]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make[2]: *** [CMakeFiles/Makefile2:247: nmf/CMakeFiles/nmflib.dir/all] Error 2
+make[2]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+make[1]: *** [Makefile:139: all] Error 2
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src/build'
+-- Install configuration: "RelWithDebInfo"
+CMake Error at cmake_install.cmake:65 (file):
+  file INSTALL cannot find
+  "/var/local/PKGS/CRAN/RcppPlanc/src/build/nmf/libnmflib.so": No such file
+  or directory.
+
+
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iplanc/common -Iplanc/nmf -Iplanc/nnls -Ibuild/_deps/highfive-src/include -Ibuild/nmf -DUSING_R -DHIGHFIVE_HAS_CONCEPTS=0 -DMPI_NO_CPPBIND -DRcppPlanc_EXPORTS -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppProgress/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iplanc/common -Iplanc/nmf -Iplanc/nnls -Ibuild/_deps/highfive-src/include -Ibuild/nmf -DUSING_R -DHIGHFIVE_HAS_CONCEPTS=0 -DMPI_NO_CPPBIND -DRcppPlanc_EXPORTS -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppProgress/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c rcppplanc_nmf.cpp -o rcppplanc_nmf.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iplanc/common -Iplanc/nmf -Iplanc/nnls -Ibuild/_deps/highfive-src/include -Ibuild/nmf -DUSING_R -DHIGHFIVE_HAS_CONCEPTS=0 -DMPI_NO_CPPBIND -DRcppPlanc_EXPORTS -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppProgress/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c rcppplanc_nnls.cpp -o rcppplanc_nnls.o
+g++ -std=gnu++17 -shared -L/usr/local/lib -o RcppPlanc.so RcppExports.o rcppplanc_nmf.o rcppplanc_nnls.o -L./ -lnmflib -fopenmp -Wl,-rpath,$ORIGIN/../libs,--enable-new-dtags
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lnmflib: No such file or directory
+collect2: error: ld returned 1 exit status
+make[1]: *** [/home/runner/R-patched/build/share/make/shlib.mk:10: RcppPlanc.so] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RcppPlanc/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RcppPlanc/src'
+ERROR: compilation failed for package 'RcppPlanc'
+* removing '/home/runner/R-patched/lib/RcppPlanc'

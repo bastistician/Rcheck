@@ -1,0 +1,5 @@
+* installing to library '/home/runner/R-patched/lib'
+ERROR: dependency 'ggjoy' is not available for package 'hdpGLM'
+Perhaps try a variation of:
+install.packages('ggjoy')
+* removing '/home/runner/R-patched/lib/hdpGLM'

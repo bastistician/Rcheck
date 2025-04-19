@@ -1,0 +1,33 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'CNEr' ...
+** this is package 'CNEr' version '1.42.0'
+** package 'CNEr' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/BIOC/CNEr/src'
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c IRanges_stubs.c -o IRanges_stubs.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c XVector_stubs.c -o XVector_stubs.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c R_init_CNEr.c -o R_init_CNEr.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c utils.c -o utils.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c io.c -o io.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ceScan.c -o ceScan.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/axt.c -o ucsc/axt.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/base64.c -o ucsc/base64.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/binRange.c -o ucsc/binRange.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/bits.c -o ucsc/bits.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/chain.c -o ucsc/chain.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/_cheapcgi.c -o ucsc/_cheapcgi.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/cirTree.c -o ucsc/cirTree.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include   -g -fpic  -O2 -mtune=native  -c ucsc/common.c -o ucsc/common.o
+ucsc/common.c: In function 'slUniqify':
+ucsc/common.c:360:9: error: too many arguments to function 'free'
+  360 |         free(el);
+      |         ^~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:202: ucsc/common.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/BIOC/CNEr/src'
+make[1]: Entering directory '/var/local/PKGS/BIOC/CNEr/src'
+make[1]: Leaving directory '/var/local/PKGS/BIOC/CNEr/src'
+ERROR: compilation failed for package 'CNEr'
+* removing '/home/runner/R-patched/lib/CNEr'
