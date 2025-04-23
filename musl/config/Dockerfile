@@ -13,8 +13,7 @@ WORKDIR /opt/R
 RUN wget -q -O - https://CRAN.R-project.org/src/base-prerelease/R-patched.tar.xz | \
         tar x -J -f - --strip-components=1
 COPY config.site .
-RUN ./configure --with-internal-tzcode --enable-lto=R --with-blas=openblas --with-lapack
-RUN make
+RUN ./configure && make
 RUN ln -s /opt/R/bin/R /usr/local/bin/R
 
 WORKDIR /

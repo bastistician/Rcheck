@@ -7,22 +7,16 @@ OS: Alpine Linux v3.21
 Locale: C.UTF-8
 TZ: Europe/Berlin
 
-R was configured with options
-
---with-internal-tzcode
---enable-lto=R
---with-blas=openblas
---with-lapack
-
 See sub-directory 'config' for more details, including:
-- 'config.site' for compiler flags and other configuration variables
+- 'config.site' for compiler flags and configuration variables
 - 'world' for the list of installed Alpine packages
 A simple Dockerfile is also provided.  It uses these files to build an R
 environment that mimics the server's setup.  Note that the image will be
 very large (> 6 GB) as it fulfils the system requirements of almost all
-CRAN packages.  To reproduce an issue for a specific R package, it may be
-more convenient to first try with a smaller Alpine-based Docker image,
-for example from <https://github.com/r-hub/r-minimal>.
+CRAN packages.  To reproduce an issue for a specific R package, it may
+be more convenient and sufficient to use the standard 'alpine' Docker
+image (`docker pull alpine`) with a released version of R from Alpine's
+repositories (`apk add R R-dev R-doc`).
 
 The following additional software was manually installed from source
 (and is currently not reproduced in the Dockerfile):
