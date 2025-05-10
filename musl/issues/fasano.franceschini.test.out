@@ -1,0 +1,589 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'fasano.franceschini.test' ...
+** this is package 'fasano.franceschini.test' version '2.2.2'
+** package 'fasano.franceschini.test' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/fasano.franceschini.test/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c ProgressBar.cpp -o ProgressBar.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -D__MUSL__   -c ff_internal_functions.cpp -o ff_internal_functions.o
+In file included from ff_internal_functions.cpp:8:
+RangeTree.h:493:14: error: 'shared_ptr' in namespace 'std' does not name a template type
+  493 |         std::shared_ptr<RangeTreeNode<T,S> > left; /**< Contains points <= the comparison point **/
+      |              ^~~~~~~~~~
+RangeTree.h:46:1: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+   45 | #include <cmath>
+  +++ |+#include <memory>
+   46 | #include <algorithm>
+RangeTree.h:494:14: error: 'shared_ptr' in namespace 'std' does not name a template type
+  494 |         std::shared_ptr<RangeTreeNode<T,S> > right; /**< Contains points > the comparison point **/
+      |              ^~~~~~~~~~
+RangeTree.h:494:9: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+  494 |         std::shared_ptr<RangeTreeNode<T,S> > right; /**< Contains points > the comparison point **/
+      |         ^~~
+RangeTree.h:495:14: error: 'shared_ptr' in namespace 'std' does not name a template type
+  495 |         std::shared_ptr<RangeTreeNode<T,S> > treeOnNextDim; /**< Tree on the next dimension **/
+      |              ^~~~~~~~~~
+RangeTree.h:495:9: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+  495 |         std::shared_ptr<RangeTreeNode<T,S> > treeOnNextDim; /**< Tree on the next dimension **/
+      |         ^~~
+RangeTree.h:969:50: error: 'shared_ptr' is not a member of 'std'
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                  ^~~~~~~~~~
+RangeTree.h:969:50: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:969:80: error: template argument 1 is invalid
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                ^
+RangeTree.h:969:80: error: template argument 2 is invalid
+RangeTree.h:969:50: error: 'shared_ptr' is not a member of 'std'
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                  ^~~~~~~~~~
+RangeTree.h:969:50: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:969:80: error: template argument 1 is invalid
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                ^
+RangeTree.h:969:80: error: template argument 2 is invalid
+RangeTree.h:969:50: error: 'shared_ptr' is not a member of 'std'
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                  ^~~~~~~~~~
+RangeTree.h:969:50: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:969:80: error: template argument 1 is invalid
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                ^
+RangeTree.h:969:80: error: template argument 2 is invalid
+RangeTree.h:969:33: error: invalid template-id
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                 ^~~
+RangeTree.h:969:50: error: 'shared_ptr' is not a member of 'std'
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                  ^~~~~~~~~~
+RangeTree.h:969:50: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:969:80: error: expected primary-expression before '>' token
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                ^
+RangeTree.h:969:33: error: missing template argument list after 'std::vector'; template placeholder not permitted in parameter
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                 ^~~
+      |                                    <>
+In file included from /usr/include/c++/14.2.0/vector:66,
+                 from /home/runner/R-patched/lib/Rcpp/include/RcppCommon.h:61,
+                 from /home/runner/R-patched/lib/Rcpp/include/Rcpp.h:27,
+                 from ff_internal_functions.cpp:1:
+/usr/include/c++/14.2.0/bits/stl_vector.h:428:11: note: 'template<class _Tp, class _Alloc> class std::vector' declared here
+  428 |     class vector : protected _Vector_base<_Tp, _Alloc>
+      |           ^~~~~~
+RangeTree.h:969:82: error: expected ',' or '...' before '>' token
+  969 |                                 std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                  ^
+RangeTree.h:997:51: error: 'shared_ptr' is not a member of 'std'
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                   ^~~~~~~~~~
+RangeTree.h:997:51: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:997:81: error: template argument 1 is invalid
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                 ^
+RangeTree.h:997:81: error: template argument 2 is invalid
+RangeTree.h:997:51: error: 'shared_ptr' is not a member of 'std'
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                   ^~~~~~~~~~
+RangeTree.h:997:51: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:997:81: error: template argument 1 is invalid
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                 ^
+RangeTree.h:997:81: error: template argument 2 is invalid
+RangeTree.h:997:51: error: 'shared_ptr' is not a member of 'std'
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                   ^~~~~~~~~~
+RangeTree.h:997:51: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:997:81: error: template argument 1 is invalid
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                 ^
+RangeTree.h:997:81: error: template argument 2 is invalid
+RangeTree.h:997:34: error: invalid template-id
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                  ^~~
+RangeTree.h:997:51: error: 'shared_ptr' is not a member of 'std'
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                   ^~~~~~~~~~
+RangeTree.h:997:51: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:997:81: error: expected primary-expression before '>' token
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                 ^
+RangeTree.h:997:34: error: missing template argument list after 'std::vector'; template placeholder not permitted in parameter
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                  ^~~
+      |                                     <>
+/usr/include/c++/14.2.0/bits/stl_vector.h:428:11: note: 'template<class _Tp, class _Alloc> class std::vector' declared here
+  428 |     class vector : protected _Vector_base<_Tp, _Alloc>
+      |           ^~~~~~
+RangeTree.h:997:83: error: expected ',' or '...' before '>' token
+  997 |                                  std::vector<std::shared_ptr<RangeTreeNode<T,S> > >& nodes) {
+      |                                                                                   ^
+RangeTree.h: In constructor 'RangeTree::RangeTreeNode<T, S>::RangeTreeNode(RangeTree::SortedPointMatrix<T, S>&, bool, bool)':
+RangeTree.h:534:17: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  534 |                 left = std::shared_ptr<RangeTreeNode<T,S> >(
+      |                 ^~~~
+      |                 std::left
+In file included from /usr/include/c++/14.2.0/streambuf:43,
+                 from /usr/include/c++/14.2.0/bits/streambuf_iterator.h:35,
+                 from /usr/include/c++/14.2.0/iterator:66,
+                 from /home/runner/R-patched/lib/Rcpp/include/RcppCommon.h:51:
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:534:29: error: 'shared_ptr' is not a member of 'std'
+  534 |                 left = std::shared_ptr<RangeTreeNode<T,S> >(
+      |                             ^~~~~~~~~~
+RangeTree.h:534:29: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:534:59: error: expected primary-expression before '>' token
+  534 |                 left = std::shared_ptr<RangeTreeNode<T,S> >(
+      |                                                           ^
+RangeTree.h:536:17: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  536 |                 right = std::shared_ptr<RangeTreeNode<T,S> >(
+      |                 ^~~~~
+      |                 std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:536:30: error: 'shared_ptr' is not a member of 'std'
+  536 |                 right = std::shared_ptr<RangeTreeNode<T,S> >(
+      |                              ^~~~~~~~~~
+RangeTree.h:536:30: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:536:60: error: expected primary-expression before '>' token
+  536 |                 right = std::shared_ptr<RangeTreeNode<T,S> >(
+      |                                                            ^
+RangeTree.h:559:25: error: 'treeOnNextDim' was not declared in this scope
+  559 |                         treeOnNextDim = std::shared_ptr<RangeTreeNode>(new RangeTreeNode(spm));
+      |                         ^~~~~~~~~~~~~
+RangeTree.h:559:46: error: 'shared_ptr' is not a member of 'std'
+  559 |                         treeOnNextDim = std::shared_ptr<RangeTreeNode>(new RangeTreeNode(spm));
+      |                                              ^~~~~~~~~~
+RangeTree.h:559:46: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:559:70: error: expected primary-expression before '>' token
+  559 |                         treeOnNextDim = std::shared_ptr<RangeTreeNode>(new RangeTreeNode(spm));
+      |                                                                      ^
+RangeTree.h: In member function 'std::vector<RangeTree::Point<T, S> > RangeTree::RangeTreeNode<T, S>::getAllPoints() const':
+RangeTree.h:654:34: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  654 |             auto allPointsLeft = left->getAllPoints();
+      |                                  ^~~~
+      |                                  std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:655:35: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  655 |             auto allPointsRight = right->getAllPoints();
+      |                                   ^~~~~
+      |                                   std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h: In member function 'int RangeTree::RangeTreeNode<T, S>::countInRange(const std::vector<T>&, const std::vector<T>&) const':
+RangeTree.h:713:24: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  713 |                 return left->countInRange(lower, upper);
+      |                        ^~~~
+      |                        std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:716:24: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  716 |                 return right->countInRange(lower, upper);
+      |                        ^~~~~
+      |                        std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:730:17: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  730 |                 left->leftFractionalCascade(lower,
+      |                 ^~~~
+      |                 std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:735:17: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  735 |                 right->rightFractionalCascade(upper,
+      |                 ^~~~~
+      |                 std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:751:34: error: 'shared_ptr' is not a member of 'std'
+  751 |                 std::vector<std::shared_ptr<RangeTreeNode<T, S> > > canonicalNodes;
+      |                                  ^~~~~~~~~~
+RangeTree.h:751:34: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:751:65: error: template argument 1 is invalid
+  751 |                 std::vector<std::shared_ptr<RangeTreeNode<T, S> > > canonicalNodes;
+      |                                                                 ^
+RangeTree.h:751:65: error: template argument 2 is invalid
+RangeTree.h:751:67: error: expected unqualified-id before '>' token
+  751 |                 std::vector<std::shared_ptr<RangeTreeNode<T, S> > > canonicalNodes;
+      |                                                                   ^
+RangeTree.h:753:21: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  753 |                 if (left->isLeaf) {
+      |                     ^~~~
+      |                     std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:754:21: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  754 |                     canonicalNodes.push_back(left);
+      |                     ^~~~~~~~~~~~~~
+      |                     leftCanonicalNodes
+RangeTree.h:756:53: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  756 |                     left->leftCanonicalNodes(lower, canonicalNodes);
+      |                                                     ^~~~~~~~~~~~~~
+      |                                                     leftCanonicalNodes
+RangeTree.h:759:21: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  759 |                 if (right->isLeaf) {
+      |                     ^~~~~
+      |                     std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:760:21: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  760 |                     canonicalNodes.push_back(right);
+      |                     ^~~~~~~~~~~~~~
+      |                     leftCanonicalNodes
+RangeTree.h:762:55: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  762 |                     right->rightCanonicalNodes(upper, canonicalNodes);
+      |                                                       ^~~~~~~~~~~~~~
+      |                                                       leftCanonicalNodes
+RangeTree.h:766:37: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  766 |                 for (int i = 0; i < canonicalNodes.size(); i++) {
+      |                                     ^~~~~~~~~~~~~~
+      |                                     leftCanonicalNodes
+RangeTree.h:767:26: error: 'shared_ptr' is not a member of 'std'
+  767 |                     std::shared_ptr<RangeTreeNode<T, S> > node = canonicalNodes[i];
+      |                          ^~~~~~~~~~
+RangeTree.h:767:26: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:767:57: error: expected primary-expression before '>' token
+  767 |                     std::shared_ptr<RangeTreeNode<T, S> > node = canonicalNodes[i];
+      |                                                         ^
+RangeTree.h:767:59: error: 'node' was not declared in this scope
+  767 |                     std::shared_ptr<RangeTreeNode<T, S> > node = canonicalNodes[i];
+      |                                                           ^~~~
+RangeTree.h: In member function 'std::vector<RangeTree::Point<T, S> > RangeTree::RangeTreeNode<T, S>::pointsInRange(const std::vector<T>&, const std::vector<T>&) const':
+RangeTree.h:801:24: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  801 |                 return left->pointsInRange(lower, upper);
+      |                        ^~~~
+      |                        std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:804:24: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  804 |                 return right->pointsInRange(lower, upper);
+      |                        ^~~~~
+      |                        std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:818:17: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  818 |                 left->leftFractionalCascade(lower,
+      |                 ^~~~
+      |                 std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:823:17: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  823 |                 right->rightFractionalCascade(upper,
+      |                 ^~~~~
+      |                 std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:839:34: error: 'shared_ptr' is not a member of 'std'
+  839 |                 std::vector<std::shared_ptr<RangeTreeNode<T, S> > > canonicalNodes = {};
+      |                                  ^~~~~~~~~~
+RangeTree.h:839:34: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:839:65: error: template argument 1 is invalid
+  839 |                 std::vector<std::shared_ptr<RangeTreeNode<T, S> > > canonicalNodes = {};
+      |                                                                 ^
+RangeTree.h:839:65: error: template argument 2 is invalid
+RangeTree.h:839:67: error: expected unqualified-id before '>' token
+  839 |                 std::vector<std::shared_ptr<RangeTreeNode<T, S> > > canonicalNodes = {};
+      |                                                                   ^
+RangeTree.h:841:21: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  841 |                 if (left->isLeaf) {
+      |                     ^~~~
+      |                     std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:842:21: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  842 |                     canonicalNodes.push_back(left);
+      |                     ^~~~~~~~~~~~~~
+      |                     leftCanonicalNodes
+RangeTree.h:844:53: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  844 |                     left->leftCanonicalNodes(lower, canonicalNodes);
+      |                                                     ^~~~~~~~~~~~~~
+      |                                                     leftCanonicalNodes
+RangeTree.h:847:21: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  847 |                 if (right->isLeaf) {
+      |                     ^~~~~
+      |                     std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:848:21: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  848 |                     canonicalNodes.push_back(right);
+      |                     ^~~~~~~~~~~~~~
+      |                     leftCanonicalNodes
+RangeTree.h:850:55: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  850 |                     right->rightCanonicalNodes(upper, canonicalNodes);
+      |                                                       ^~~~~~~~~~~~~~
+      |                                                       leftCanonicalNodes
+RangeTree.h:853:37: error: 'canonicalNodes' was not declared in this scope; did you mean 'leftCanonicalNodes'?
+  853 |                 for (int i = 0; i < canonicalNodes.size(); i++) {
+      |                                     ^~~~~~~~~~~~~~
+      |                                     leftCanonicalNodes
+RangeTree.h:854:26: error: 'shared_ptr' is not a member of 'std'
+  854 |                     std::shared_ptr<RangeTreeNode<T, S> > node = canonicalNodes[i];
+      |                          ^~~~~~~~~~
+RangeTree.h:854:26: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:854:57: error: expected primary-expression before '>' token
+  854 |                     std::shared_ptr<RangeTreeNode<T, S> > node = canonicalNodes[i];
+      |                                                         ^
+RangeTree.h:854:59: error: 'node' was not declared in this scope
+  854 |                     std::shared_ptr<RangeTreeNode<T, S> > node = canonicalNodes[i];
+      |                                                           ^~~~
+RangeTree.h: In member function 'void RangeTree::RangeTreeNode<T, S>::leftFractionalCascade(const std::vector<T>&, int, int, std::vector<RangeTree::RangeTreeNode<T, S>*>&, std::vector<std::pair<int, int> >&)':
+RangeTree.h:892:37: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  892 |                     nodes.push_back(right.get());
+      |                                     ^~~~~
+      |                                     std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:900:17: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  900 |                 left->leftFractionalCascade(lower,
+      |                 ^~~~
+      |                 std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:909:17: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  909 |                 right->leftFractionalCascade(lower,
+      |                 ^~~~~
+      |                 std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h: In member function 'void RangeTree::RangeTreeNode<T, S>::rightFractionalCascade(const std::vector<T>&, int, int, std::vector<RangeTree::RangeTreeNode<T, S>*>&, std::vector<std::pair<int, int> >&)':
+RangeTree.h:938:37: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  938 |                     nodes.push_back(left.get());
+      |                                     ^~~~
+      |                                     std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:945:17: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  945 |                 right->rightFractionalCascade(upper,
+      |                 ^~~~~
+      |                 std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:954:17: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  954 |                 left->rightFractionalCascade(upper,
+      |                 ^~~~
+      |                 std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h: In member function 'void RangeTree::RangeTreeNode<T, S>::leftCanonicalNodes(...)':
+RangeTree.h:976:17: error: 'nodes' was not declared in this scope
+  976 |                 nodes.push_back(right);
+      |                 ^~~~~
+RangeTree.h:976:33: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  976 |                 nodes.push_back(right);
+      |                                 ^~~~~
+      |                                 std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:977:21: error: 'left' was not declared in this scope; did you mean 'std::left'?
+  977 |                 if (left->isLeaf) {
+      |                     ^~~~
+      |                     std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:983:21: error: 'right' was not declared in this scope; did you mean 'std::right'?
+  983 |                 if (right->isLeaf) {
+      |                     ^~~~~
+      |                     std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:984:21: error: 'nodes' was not declared in this scope
+  984 |                     nodes.push_back(right);
+      |                     ^~~~~
+RangeTree.h:986:54: error: 'nodes' was not declared in this scope
+  986 |                     right->leftCanonicalNodes(lower, nodes);
+      |                                                      ^~~~~
+RangeTree.h: In member function 'void RangeTree::RangeTreeNode<T, S>::rightCanonicalNodes(...)':
+RangeTree.h:1004:17: error: 'nodes' was not declared in this scope
+ 1004 |                 nodes.push_back(left);
+      |                 ^~~~~
+RangeTree.h:1004:33: error: 'left' was not declared in this scope; did you mean 'std::left'?
+ 1004 |                 nodes.push_back(left);
+      |                                 ^~~~
+      |                                 std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:1005:21: error: 'right' was not declared in this scope; did you mean 'std::right'?
+ 1005 |                 if (right->isLeaf) {
+      |                     ^~~~~
+      |                     std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h:1011:21: error: 'left' was not declared in this scope; did you mean 'std::left'?
+ 1011 |                 if (left->isLeaf) {
+      |                     ^~~~
+      |                     std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:1012:21: error: 'nodes' was not declared in this scope
+ 1012 |                     nodes.push_back(left);
+      |                     ^~~~~
+RangeTree.h:1014:54: error: 'nodes' was not declared in this scope
+ 1014 |                     left->rightCanonicalNodes(upper, nodes);
+      |                                                      ^~~~~
+RangeTree.h: In member function 'void RangeTree::RangeTreeNode<T, S>::print(int)':
+RangeTree.h:1032:17: error: 'left' was not declared in this scope; did you mean 'std::left'?
+ 1032 |                 left->print(numIndents + 1);
+      |                 ^~~~
+      |                 std::left
+/usr/include/c++/14.2.0/bits/ios_base.h:1062:3: note: 'std::left' declared here
+ 1062 |   left(ios_base& __base)
+      |   ^~~~
+RangeTree.h:1033:17: error: 'right' was not declared in this scope; did you mean 'std::right'?
+ 1033 |                 right->print(numIndents + 1);
+      |                 ^~~~~
+      |                 std::right
+/usr/include/c++/14.2.0/bits/ios_base.h:1070:3: note: 'std::right' declared here
+ 1070 |   right(ios_base& __base)
+      |   ^~~~~
+RangeTree.h: At global scope:
+RangeTree.h:1062:14: error: 'shared_ptr' in namespace 'std' does not name a template type
+ 1062 |         std::shared_ptr<RangeTreeNode<T,S> > root;
+      |              ^~~~~~~~~~
+RangeTree.h:1062:9: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+ 1062 |         std::shared_ptr<RangeTreeNode<T,S> > root;
+      |         ^~~
+RangeTree.h:1063:26: error: 'shared_ptr' is not a member of 'std'
+ 1063 |         std::vector<std::shared_ptr<Point<T,S> > > savedPoints;
+      |                          ^~~~~~~~~~
+RangeTree.h:1063:26: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:1063:48: error: template argument 1 is invalid
+ 1063 |         std::vector<std::shared_ptr<Point<T,S> > > savedPoints;
+      |                                                ^
+RangeTree.h:1063:48: error: template argument 2 is invalid
+RangeTree.h:1063:50: error: expected unqualified-id before '>' token
+ 1063 |         std::vector<std::shared_ptr<Point<T,S> > > savedPoints;
+      |                                                  ^
+RangeTree.h:1066:26: error: 'shared_ptr' is not a member of 'std'
+ 1066 |         std::vector<std::shared_ptr<Point<T,S> > > copyPointsToHeap(const std::vector<Point<T,S> >& points) {
+      |                          ^~~~~~~~~~
+RangeTree.h:1066:26: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:1066:48: error: template argument 1 is invalid
+ 1066 |         std::vector<std::shared_ptr<Point<T,S> > > copyPointsToHeap(const std::vector<Point<T,S> >& points) {
+      |                                                ^
+RangeTree.h:1066:48: error: template argument 2 is invalid
+RangeTree.h:1066:50: error: expected unqualified-id before '>' token
+ 1066 |         std::vector<std::shared_ptr<Point<T,S> > > copyPointsToHeap(const std::vector<Point<T,S> >& points) {
+      |                                                  ^
+RangeTree.h:1074:67: error: 'shared_ptr' is not a member of 'std'
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                   ^~~~~~~~~~
+RangeTree.h:1074:67: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:1074:89: error: template argument 1 is invalid
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                                         ^
+RangeTree.h:1074:89: error: template argument 2 is invalid
+RangeTree.h:1074:67: error: 'shared_ptr' is not a member of 'std'
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                   ^~~~~~~~~~
+RangeTree.h:1074:67: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:1074:89: error: template argument 1 is invalid
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                                         ^
+RangeTree.h:1074:89: error: template argument 2 is invalid
+RangeTree.h:1074:67: error: 'shared_ptr' is not a member of 'std'
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                   ^~~~~~~~~~
+RangeTree.h:1074:67: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:1074:89: error: template argument 1 is invalid
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                                         ^
+RangeTree.h:1074:89: error: template argument 2 is invalid
+RangeTree.h:1074:50: error: invalid template-id
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                  ^~~
+RangeTree.h:1074:67: error: 'shared_ptr' is not a member of 'std'
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                   ^~~~~~~~~~
+RangeTree.h:1074:67: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:1074:89: error: expected primary-expression before '>' token
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                                         ^
+RangeTree.h:1074:50: error: missing template argument list after 'std::vector'; template placeholder not permitted in parameter
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                  ^~~
+      |                                                     <>
+/usr/include/c++/14.2.0/bits/stl_vector.h:428:11: note: 'template<class _Tp, class _Alloc> class std::vector' declared here
+  428 |     class vector : protected _Vector_base<_Tp, _Alloc>
+      |           ^~~~~~
+RangeTree.h:1074:91: error: expected ',' or '...' before '>' token
+ 1074 |         std::vector<Point<T,S>* > getRawPointers(std::vector<std::shared_ptr<Point<T,S> > >& points) {
+      |                                                                                           ^
+RangeTree.h: In member function 'std::vector<RangeTree::Point<T, S>*> RangeTree::RangeTree<T, S>::getRawPointers(...)':
+RangeTree.h:1076:33: error: 'points' was not declared in this scope; did you mean 'Point'?
+ 1076 |             for (int i = 0; i < points.size(); i++) {
+      |                                 ^~~~~~
+      |                                 Point
+RangeTree.h: In constructor 'RangeTree::RangeTree<T, S>::RangeTree(const std::vector<RangeTree::Point<T, S> >&)':
+RangeTree.h:1126:60: error: class 'RangeTree::RangeTree<T, S>' does not have any field named 'savedPoints'
+ 1126 |         RangeTree(const std::vector<Point<T,S> >& points): savedPoints(copyPointsToHeap(points)),
+      |                                                            ^~~~~~~~~~~
+RangeTree.h:1127:90: error: 'savedPoints' was not declared in this scope; did you mean 'savedPointsRaw'?
+ 1127 |                                                            savedPointsRaw(getRawPointers(savedPoints)) {
+      |                                                                                          ^~~~~~~~~~~
+      |                                                                                          savedPointsRaw
+RangeTree.h:1129:13: error: 'root' was not declared in this scope
+ 1129 |             root = std::shared_ptr<RangeTreeNode<T,S> >(new RangeTreeNode<T,S>(spm));
+      |             ^~~~
+RangeTree.h:1129:25: error: 'shared_ptr' is not a member of 'std'
+ 1129 |             root = std::shared_ptr<RangeTreeNode<T,S> >(new RangeTreeNode<T,S>(spm));
+      |                         ^~~~~~~~~~
+RangeTree.h:1129:25: note: 'std::shared_ptr' is defined in header '<memory>'; this is probably fixable by adding '#include <memory>'
+RangeTree.h:1129:55: error: expected primary-expression before '>' token
+ 1129 |             root = std::shared_ptr<RangeTreeNode<T,S> >(new RangeTreeNode<T,S>(spm));
+      |                                                       ^
+RangeTree.h: In member function 'int RangeTree::RangeTree<T, S>::countInRange(const std::vector<T>&, const std::vector<T>&, const std::vector<bool>&, const std::vector<bool>&) const':
+RangeTree.h:1164:20: error: 'root' was not declared in this scope
+ 1164 |             return root->countInRange(getModifiedLower(lower, withLower),
+      |                    ^~~~
+RangeTree.h: In member function 'int RangeTree::RangeTree<T, S>::countInRange(const std::vector<T>&, const std::vector<T>&) const':
+RangeTree.h:1186:20: error: 'root' was not declared in this scope
+ 1186 |             return root->countInRange(lower, upper);
+      |                    ^~~~
+RangeTree.h: In member function 'std::vector<RangeTree::Point<T, S> > RangeTree::RangeTree<T, S>::pointsInRange(const std::vector<T>&, const std::vector<T>&, const std::vector<bool>&, const std::vector<bool>&) const':
+RangeTree.h:1222:20: error: 'root' was not declared in this scope
+ 1222 |             return root->pointsInRange(getModifiedLower(lower, withLower),
+      |                    ^~~~
+RangeTree.h: In member function 'void RangeTree::RangeTree<T, S>::print() const':
+RangeTree.h:1227:13: error: 'root' was not declared in this scope
+ 1227 |             root->print(0);
+      |             ^~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: ff_internal_functions.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/fasano.franceschini.test/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/fasano.franceschini.test/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/fasano.franceschini.test/src'
+ERROR: compilation failed for package 'fasano.franceschini.test'
+* removing '/home/runner/R-patched/lib/fasano.franceschini.test'
