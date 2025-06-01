@@ -3,7 +3,7 @@ using musl instead of glibc and BusyBox instead of GNU coreutils.
 
 R version: nightly R-patched snapshot from CRAN/src/base-prerelease
 Platform: x86_64-pc-linux-musl
-OS: Alpine Linux v3.21
+OS: Alpine Linux v3.22
 Locale: C.UTF-8
 TZ: Europe/Berlin
 
