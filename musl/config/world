@@ -64,7 +64,6 @@ nano
 netcdf-dev
 openblas-dev
 openjdk21-jdk
-openmpi
 openmpi-dev
 openssh
 openssl
