@@ -20,7 +20,9 @@ gcc
 gdal-dev
 gdal-driver-jpeg
 gdal-driver-netCDF
+gdal-driver-pg
 gdal-driver-PNG
+gdal-driver-postgisraster
 geos-dev
 gfortran
 ghostscript-fonts
