@@ -19,11 +19,6 @@ CXXFLAGS="-O2 -mtune=native"
 # silence some warnings
 CXXFLAGS="${CXXFLAGS} -Wno-ignored-attributes" # rstanarm threw >10k
 
-# MUSL identification is a kludge for Rcpp (and packages LinkingTo it),
-# see also <https://github.com/RcppCore/Rcpp/issues/448>.
-# This is currently also done in the R package distributed by Alpine Linux.
-CXXFLAGS="${CXXFLAGS} -D__MUSL__"
-
 # Optional link-time optimization for add-on packages specifying 'UseLTO: yes'.
 enable_lto=R
 # Parallelize to avoid lto-wrapper warnings about serial compilation.
