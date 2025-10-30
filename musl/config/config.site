@@ -19,6 +19,10 @@ CXXFLAGS="-O2 -mtune=native"
 # silence some warnings
 CXXFLAGS="${CXXFLAGS} -Wno-ignored-attributes" # rstanarm threw >10k
 
+# Temporarily disable inclusion of unavailable <execinfo.h> in <Rcpp.h>,
+# awaiting the release of <https://github.com/RcppCore/Rcpp/pull/1401>.
+CXXFLAGS="${CXXFLAGS} -DRCPP_DEMANGLER_ENABLED=0"
+
 # Optional link-time optimization for add-on packages specifying 'UseLTO: yes'.
 enable_lto=R
 # Parallelize to avoid lto-wrapper warnings about serial compilation.
