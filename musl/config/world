@@ -1,6 +1,4 @@
-abuild
 alpine-base
-atools
 bash
 bash-completion
 busybox-mdev-openrc
