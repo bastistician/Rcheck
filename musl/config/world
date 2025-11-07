@@ -1,6 +1,7 @@
 alpine-base
 bash
 bash-completion
+blosc-dev
 busybox-mdev-openrc
 bzip2-dev
 cargo
