@@ -8,13 +8,13 @@ ENV TZ=Europe/Berlin
 COPY world /etc/apk/world
 RUN apk fix --no-cache
 
-## download and build R-patched
-WORKDIR /opt/R
-RUN wget -q -O - https://CRAN.R-project.org/src/base-prerelease/R-patched.tar.xz | \
-        tar x -J -f - --strip-components=1
+## download and build nightly R-patched (potentially R-beta or R-rc)
+ADD https://CRAN.R-project.org/src/base-prerelease/R-patched.tar.xz /R.tar.xz
+WORKDIR /R
+RUN tar x -J -f /R.tar.xz --strip-components=1 && rm /R.tar.xz
 COPY config.site .
 RUN ./configure && make
-RUN ln -s /opt/R/bin/R /usr/local/bin/R
+RUN ln -s /R/bin/R /usr/local/bin/R
 
 WORKDIR /
 CMD ["R"]
