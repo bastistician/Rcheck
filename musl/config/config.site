@@ -37,3 +37,6 @@ R_PDFVIEWER=false
 
 # AFAIR, chosen to be different from other check systems
 R_PAPERSIZE=letter
+
+# inconsolata is currently not installed
+R_RD4PDF=times,hyper
