@@ -15,6 +15,11 @@ WORKDIR /R
 RUN tar x -J -f /R.tar.xz --strip-components=1 && rm /R.tar.xz
 COPY config.site .
 RUN ./configure && make
+
+## set a default CRAN mirror for convenience
+RUN sed -i -e 's|@CRAN@|https://cloud.R-project.org|' etc/repositories
+
+## add this R to the PATH, masking the system R
 RUN ln -s /R/bin/R /usr/local/bin/R
 
 WORKDIR /
