@@ -12,7 +12,7 @@ See sub-directory 'config' for more details, including:
 - 'world' for the list of installed Alpine packages
 A simple Dockerfile is also provided.  It uses these files to build an R
 environment that mimics the server's setup.  Note that the image will be
-very large (> 6 GB) as it fulfils the system requirements of almost all
+very large (> 4 GB) as it fulfils the system requirements of almost all
 CRAN packages.  To reproduce an issue for a specific R package, it may
 be more convenient and sufficient to use the standard 'alpine' Docker
 image (`docker pull alpine`) with a released version of R from Alpine's
