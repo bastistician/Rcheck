@@ -1,0 +1,108 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RGF' ...
+** this is package 'RGF' version '1.1.1'
+** package 'RGF' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+
+ *** caught segfault ***
+address 0x90, cause 'memory not mapped'
+
+Traceback:
+ 1: py_initialize(config$python, config$libpython, config$pythonhome,     config$virtualenv_activate, config$version$major, config$version$minor,     interactive(), numpy_load_error)
+ 2: (function() {    Sys.setenv(PYTHONPATH = newpythonpath)    on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)    py_initialize(config$python, config$libpython, config$pythonhome,         config$virtualenv_activate, config$version$major, config$version$minor,         interactive(), numpy_load_error)})()
+ 3: doTryCatch(return(expr), name, parentenv, handler)
+ 4: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 5: tryCatchList(expr, classes, parentenv, handlers)
+ 6: tryCatch({    oldpythonpath <- Sys.getenv("PYTHONPATH")    newpythonpath <- Sys.getenv("RETICULATE_PYTHONPATH", unset = paste(config$pythonpath,         system.file("python", package = "reticulate"), sep = .Platform$path.sep))    local({        Sys.setenv(PYTHONPATH = newpythonpath)        on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)        py_initialize(config$python, config$libpython, config$pythonhome,             config$virtualenv_activate, config$version$major,             config$version$minor, interactive(), numpy_load_error)    })}, error = function(e) {    Sys.setenv(PATH = oldpath)    if (is.na(curr_session_env)) {        Sys.unsetenv("R_SESSION_INITIALIZED")    }    else {        Sys.setenv(R_SESSION_INITIALIZED = curr_session_env)    }    stop(e)})
+ 7: initialize_python()
+ 8: ensure_python_initialized()
+ 9: doTryCatch(return(expr), name, parentenv, handler)
+10: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+11: tryCatchList(expr, classes, parentenv, handlers)
+12: tryCatch({    ensure_python_initialized()    .globals$py_config$available}, error = function(e) FALSE)
+13: reticulate::py_available(initialize = TRUE)
+14: doTryCatch(return(expr), name, parentenv, handler)
+15: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+16: tryCatchList(expr, classes, parentenv, handlers)
+17: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+18: try({    if (reticulate::py_available(initialize = TRUE)) {        try({            RGF_mod <<- reticulate::import("rgf.sklearn", delay_load = TRUE)        }, silent = TRUE)        try({            RGF_utils <<- reticulate::import("rgf.utils", delay_load = TRUE)        }, silent = TRUE)        try({            SCP <<- reticulate::import("scipy", delay_load = TRUE,                 convert = FALSE)        }, silent = TRUE)    }}, silent = TRUE)
+19: fun(libname, pkgname)
+20: doTryCatch(return(expr), name, parentenv, handler)
+21: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+22: tryCatchList(expr, classes, parentenv, handlers)
+23: tryCatch(fun(libname, pkgname), error = identity)
+24: runHook(".onLoad", env, package.lib, package)
+25: loadNamespace(package, lib.loc)
+26: doTryCatch(return(expr), name, parentenv, handler)
+27: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+28: tryCatchList(expr, classes, parentenv, handlers)
+29: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+30: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+31: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+32: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+33: doTryCatch(return(expr), name, parentenv, handler)
+34: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+35: tryCatchList(expr, classes, parentenv, handlers)
+36: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+37: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+38: tools:::.test_load_package("RGF", "/home/runner/R-patched/lib/00LOCK-RGF/00new")
+An irrecoverable exception occurred. R is aborting now ...
+** testing if installed package can be loaded from final location
+
+ *** caught segfault ***
+address 0x90, cause 'memory not mapped'
+
+Traceback:
+ 1: py_initialize(config$python, config$libpython, config$pythonhome,     config$virtualenv_activate, config$version$major, config$version$minor,     interactive(), numpy_load_error)
+ 2: (function() {    Sys.setenv(PYTHONPATH = newpythonpath)    on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)    py_initialize(config$python, config$libpython, config$pythonhome,         config$virtualenv_activate, config$version$major, config$version$minor,         interactive(), numpy_load_error)})()
+ 3: doTryCatch(return(expr), name, parentenv, handler)
+ 4: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 5: tryCatchList(expr, classes, parentenv, handlers)
+ 6: tryCatch({    oldpythonpath <- Sys.getenv("PYTHONPATH")    newpythonpath <- Sys.getenv("RETICULATE_PYTHONPATH", unset = paste(config$pythonpath,         system.file("python", package = "reticulate"), sep = .Platform$path.sep))    local({        Sys.setenv(PYTHONPATH = newpythonpath)        on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)        py_initialize(config$python, config$libpython, config$pythonhome,             config$virtualenv_activate, config$version$major,             config$version$minor, interactive(), numpy_load_error)    })}, error = function(e) {    Sys.setenv(PATH = oldpath)    if (is.na(curr_session_env)) {        Sys.unsetenv("R_SESSION_INITIALIZED")    }    else {        Sys.setenv(R_SESSION_INITIALIZED = curr_session_env)    }    stop(e)})
+ 7: initialize_python()
+ 8: ensure_python_initialized()
+ 9: doTryCatch(return(expr), name, parentenv, handler)
+10: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+11: tryCatchList(expr, classes, parentenv, handlers)
+12: tryCatch({    ensure_python_initialized()    .globals$py_config$available}, error = function(e) FALSE)
+13: reticulate::py_available(initialize = TRUE)
+14: doTryCatch(return(expr), name, parentenv, handler)
+15: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+16: tryCatchList(expr, classes, parentenv, handlers)
+17: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+18: try({    if (reticulate::py_available(initialize = TRUE)) {        try({            RGF_mod <<- reticulate::import("rgf.sklearn", delay_load = TRUE)        }, silent = TRUE)        try({            RGF_utils <<- reticulate::import("rgf.utils", delay_load = TRUE)        }, silent = TRUE)        try({            SCP <<- reticulate::import("scipy", delay_load = TRUE,                 convert = FALSE)        }, silent = TRUE)    }}, silent = TRUE)
+19: fun(libname, pkgname)
+20: doTryCatch(return(expr), name, parentenv, handler)
+21: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+22: tryCatchList(expr, classes, parentenv, handlers)
+23: tryCatch(fun(libname, pkgname), error = identity)
+24: runHook(".onLoad", env, package.lib, package)
+25: loadNamespace(package, lib.loc)
+26: doTryCatch(return(expr), name, parentenv, handler)
+27: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+28: tryCatchList(expr, classes, parentenv, handlers)
+29: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+30: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+31: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+32: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+33: doTryCatch(return(expr), name, parentenv, handler)
+34: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+35: tryCatchList(expr, classes, parentenv, handlers)
+36: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+37: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+38: tools:::.test_load_package("RGF", "/home/runner/R-patched/lib")
+An irrecoverable exception occurred. R is aborting now ...
+** testing if installed package keeps a record of temporary installation path
+Warning in file(con, "rb") :
+  cannot open file '/home/runner/tmp/Rtmpmgcjci/file563c1e47506': No such file or directory
+Error in file(con, "rb") : cannot open the connection
+* removing '/home/runner/R-patched/lib/RGF'
+* restoring previous '/home/runner/R-patched/lib/RGF'
