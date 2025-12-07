@@ -9,8 +9,11 @@ ENV TZ=Europe/Berlin
 COPY world /etc/apk/world
 RUN apk fix --no-cache
 
-## download and build nightly R-patched (potentially R-beta or R-rc)
-ADD https://CRAN.R-project.org/src/base-prerelease/R-patched.tar.xz /R.tar.xz
+## download and build R
+## the actual check system uses R-patched (potentially R-beta or R-rc)
+#ADD https://CRAN.R-project.org/src/base-prerelease/R-patched.tar.xz /R.tar.xz
+## but here we use R-release so the image does not need to be updated too often
+ADD https://CRAN.R-project.org/src/base/R-latest.tar.xz /R.tar.xz
 WORKDIR /R
 RUN tar x -J -f /R.tar.xz --strip-components=1 && rm /R.tar.xz
 COPY config.site .
