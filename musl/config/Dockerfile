@@ -23,7 +23,8 @@ RUN ./configure && make
 RUN sed -i -e 's|@CRAN@|https://cloud.R-project.org|' etc/repositories
 
 ## add this R to the PATH, masking the system R
-RUN ln -s /R/bin/R /usr/local/bin/R
+RUN ln -s /R/bin/R       /usr/local/bin/R
+RUN ln -s /R/bin/Rscript /usr/local/bin/Rscript
 
 WORKDIR /
 CMD ["R"]
