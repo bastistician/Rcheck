@@ -71,6 +71,7 @@ pango-dev
 patch
 pcre-dev
 pcre2-dev
+pdpmake
 podman
 poppler-data
 poppler-dev
