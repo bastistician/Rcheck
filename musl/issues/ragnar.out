@@ -1,0 +1,34 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'ragnar' ...
+** this is package 'ragnar' version '0.2.1'
+** package 'ragnar' successfully unpacked and MD5 sums checked
+** using staged installation
+Downloading speechrecognition (31.3MiB)
+ Downloading speechrecognition
+Installed 56 packages in 140ms
+warning: The package `markitdown==0.0.2` does not have an extra named `all`
+
+ *** caught segfault ***
+address 0x90, cause 'memory not mapped'
+
+Traceback:
+ 1: py_initialize(config$python, config$libpython, config$pythonhome,     config$virtualenv_activate, config$version$major, config$version$minor,     interactive(), numpy_load_error)
+ 2: (function() {    Sys.setenv(PYTHONPATH = newpythonpath)    on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)    py_initialize(config$python, config$libpython, config$pythonhome,         config$virtualenv_activate, config$version$major, config$version$minor,         interactive(), numpy_load_error)})()
+ 3: doTryCatch(return(expr), name, parentenv, handler)
+ 4: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 5: tryCatchList(expr, classes, parentenv, handlers)
+ 6: tryCatch({    oldpythonpath <- Sys.getenv("PYTHONPATH")    newpythonpath <- Sys.getenv("RETICULATE_PYTHONPATH", unset = paste(config$pythonpath,         system.file("python", package = "reticulate"), sep = .Platform$path.sep))    local({        Sys.setenv(PYTHONPATH = newpythonpath)        on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)        py_initialize(config$python, config$libpython, config$pythonhome,             config$virtualenv_activate, config$version$major,             config$version$minor, interactive(), numpy_load_error)    })}, error = function(e) {    Sys.setenv(PATH = oldpath)    if (is.na(curr_session_env)) {        Sys.unsetenv("R_SESSION_INITIALIZED")    }    else {        Sys.setenv(R_SESSION_INITIALIZED = curr_session_env)    }    stop(e)})
+ 7: initialize_python()
+ 8: ensure_python_initialized()
+ 9: py_config()
+10: print(py_config())
+11: doTryCatch(return(expr), name, parentenv, handler)
+12: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+13: tryCatchList(expr, classes, parentenv, handlers)
+14: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+15: try({    print(py_config())    import("markitdown")})
+An irrecoverable exception occurred. R is aborting now ...
+Segmentation fault
+ERROR: configuration failed for package 'ragnar'
+* removing '/home/runner/R-patched/lib/ragnar'
+* restoring previous '/home/runner/R-patched/lib/ragnar'

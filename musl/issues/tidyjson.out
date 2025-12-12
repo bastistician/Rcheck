@@ -1,0 +1,15 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'tidyjson' ...
+** this is package 'tidyjson' version '0.3.2'
+** package 'tidyjson' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'at_depth' is not exported by 'namespace:purrr'
+Execution halted
+ERROR: lazy loading failed for package 'tidyjson'
+* removing '/home/runner/R-patched/lib/tidyjson'
+* restoring previous '/home/runner/R-patched/lib/tidyjson'
