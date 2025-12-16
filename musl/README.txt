@@ -15,7 +15,7 @@ See sub-directory 'config' for more details, including:
 A Docker image built from that configuration with the latest R release
 is available via
 
-    docker pull ghcr.io/bastistician/rcheckserver:latest
+    docker pull ghcr.io/bastistician/rcheck-musl:latest
 
 but note that this image is very large (> 4 GB) as it fulfils the system
 requirements of almost all CRAN packages.  To reproduce an issue for a
