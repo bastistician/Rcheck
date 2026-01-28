@@ -1,0 +1,32 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'evesim' ...
+** this is package 'evesim' version '1.0.0'
+** package 'evesim' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/evesim/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include   -I../inst/include -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include   -I../inst/include -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c eve_sim.cpp -o eve_sim.o
+In file included from eve_sim.cpp:8:
+../inst/include/evesim/rutils.h:75:21: error: 'tbb' was not declared in this scope
+   75 |     std::unique_ptr<tbb::global_control> gc_;
+      |                     ^~~
+../inst/include/evesim/rutils.h:75:40: error: template argument 1 is invalid
+   75 |     std::unique_ptr<tbb::global_control> gc_;
+      |                                        ^
+../inst/include/evesim/rutils.h:75:40: error: template argument 2 is invalid
+../inst/include/evesim/rutils.h: In constructor 'rutils::tbb_global_control_guard::tbb_global_control_guard(bool)':
+../inst/include/evesim/rutils.h:67:13: error: request for member 'reset' in '((rutils::tbb_global_control_guard*)this)->rutils::tbb_global_control_guard::gc_', which is of non-class type 'int'
+   67 |         gc_.reset(new tbb::global_control(tbb::global_control::max_allowed_parallelism, num_threads_));
+      |             ^~~~~
+../inst/include/evesim/rutils.h:67:23: error: 'tbb' does not name a type
+   67 |         gc_.reset(new tbb::global_control(tbb::global_control::max_allowed_parallelism, num_threads_));
+      |                       ^~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: eve_sim.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/evesim/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/evesim/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/evesim/src'
+ERROR: compilation failed for package 'evesim'
+* removing '/home/runner/R-patched/lib/evesim'

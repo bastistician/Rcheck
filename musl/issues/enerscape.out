@@ -1,0 +1,60 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'enerscape' ...
+** this is package 'enerscape' version '1.2.0'
+** package 'enerscape' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/enerscape/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c distance.cpp -o distance.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c enerscape.cpp -o enerscape.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c humanscape.cpp -o humanscape.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c neighbours.cpp -o neighbours.o
+In file included from /usr/include/pthread.h:31,
+                 from /usr/include/c++/14.2.0/x86_64-alpine-linux-musl/bits/gthr-default.h:35,
+                 from /usr/include/c++/14.2.0/x86_64-alpine-linux-musl/bits/gthr.h:157,
+                 from /usr/include/c++/14.2.0/ext/atomicity.h:35,
+                 from /usr/include/c++/14.2.0/bits/ios_base.h:39,
+                 from /usr/include/c++/14.2.0/streambuf:43,
+                 from /usr/include/c++/14.2.0/bits/streambuf_iterator.h:35,
+                 from /usr/include/c++/14.2.0/iterator:66,
+                 from /home/runner/R-patched/lib/Rcpp/include/RcppCommon.h:51,
+                 from /home/runner/R-patched/lib/Rcpp/include/Rcpp.h:27,
+                 from neighbours.cpp:1:
+neighbours.cpp: In function 'Rcpp::NumericVector neighbours(int, int, int, Rcpp::NumericMatrix)':
+neighbours.cpp:17:12: error: conversion from 'std::nullptr_t' to 'Rcpp::NumericVector' {aka 'Rcpp::Vector<14, Rcpp::PreserveStorage>'} is ambiguous
+   17 |     return NULL;
+      |            ^~~~
+In file included from /home/runner/R-patched/lib/Rcpp/include/Rcpp/Vector.h:51,
+                 from /home/runner/R-patched/lib/Rcpp/include/Rcpp.h:41:
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:107:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(const char*) [with int RTYPE = 14; StoragePolicy = Rcpp::PreserveStorage]'
+  107 |     Vector( const char* st ) {
+      |     ^~~~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:71:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(SEXP) [with int RTYPE = 14; StoragePolicy = Rcpp::PreserveStorage; SEXP = SEXPREC*]'
+   71 |     Vector( SEXP x ) {
+      |     ^~~~~~
+neighbours.cpp:20:12: error: conversion from 'std::nullptr_t' to 'Rcpp::NumericVector' {aka 'Rcpp::Vector<14, Rcpp::PreserveStorage>'} is ambiguous
+   20 |     return NULL;
+      |            ^~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:107:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(const char*) [with int RTYPE = 14; StoragePolicy = Rcpp::PreserveStorage]'
+  107 |     Vector( const char* st ) {
+      |     ^~~~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:71:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(SEXP) [with int RTYPE = 14; StoragePolicy = Rcpp::PreserveStorage; SEXP = SEXPREC*]'
+   71 |     Vector( SEXP x ) {
+      |     ^~~~~~
+neighbours.cpp:39:12: error: conversion from 'std::nullptr_t' to 'Rcpp::NumericVector' {aka 'Rcpp::Vector<14, Rcpp::PreserveStorage>'} is ambiguous
+   39 |     return NULL;
+      |            ^~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:107:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(const char*) [with int RTYPE = 14; StoragePolicy = Rcpp::PreserveStorage]'
+  107 |     Vector( const char* st ) {
+      |     ^~~~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:71:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(SEXP) [with int RTYPE = 14; StoragePolicy = Rcpp::PreserveStorage; SEXP = SEXPREC*]'
+   71 |     Vector( SEXP x ) {
+      |     ^~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: neighbours.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/enerscape/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/enerscape/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/enerscape/src'
+ERROR: compilation failed for package 'enerscape'
+* removing '/home/runner/R-patched/lib/enerscape'

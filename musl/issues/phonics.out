@@ -1,0 +1,61 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'phonics' ...
+** this is package 'phonics' version '1.3.10'
+** package 'phonics' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/phonics/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c metaphone.cpp -o metaphone.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/mem_fn.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/function/function_template.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/function.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/detail/find_iterator.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/find_iterator.hpp:24,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/iter_find.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/split.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:23,
+                 from metaphone.cpp:31:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/iterator_facade.hpp:11,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range_core.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/as_literal.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/trim.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:19:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+metaphone.cpp: In function 'bool is(std::string, char)':
+metaphone.cpp:37:21: error: cast from 'std::nullptr_t' to 'char' loses precision [-fpermissive]
+   37 | #define NULLCHAR    (char)NULL
+      |                     ^
+metaphone.cpp:40:18: note: in expansion of macro 'NULLCHAR'
+   40 |     return (c != NULLCHAR && x.find_first_of(c) != std::string::npos);
+      |                  ^~~~~~~~
+metaphone.cpp: In function 'char at(std::string, int)':
+metaphone.cpp:37:21: error: cast from 'std::nullptr_t' to 'char' loses precision [-fpermissive]
+   37 | #define NULLCHAR    (char)NULL
+      |                     ^
+metaphone.cpp:48:16: note: in expansion of macro 'NULLCHAR'
+   48 |         return NULLCHAR;
+      |                ^~~~~~~~
+metaphone.cpp: In function 'std::string metaphone_single(std::string, int, bool)':
+metaphone.cpp:37:21: error: cast from 'std::nullptr_t' to 'char' loses precision [-fpermissive]
+   37 | #define NULLCHAR    (char)NULL
+      |                     ^
+metaphone.cpp:68:21: note: in expansion of macro 'NULLCHAR'
+   68 |     char lastChar = NULLCHAR;
+      |                     ^~~~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: metaphone.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/phonics/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/phonics/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/phonics/src'
+ERROR: compilation failed for package 'phonics'
+* removing '/home/runner/R-patched/lib/phonics'
+* restoring previous '/home/runner/R-patched/lib/phonics'

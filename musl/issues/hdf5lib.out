@@ -1,0 +1,24 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'hdf5lib' ...
+** this is package 'hdf5lib' version '2.0.0.2'
+** package 'hdf5lib' successfully unpacked and MD5 sums checked
+** using staged installation
+--- [hdf5lib] Starting Configuration (Static) ---
+--- [hdf5lib] Decompressing sources...
+--- [hdf5lib] Building ZLIB...
+  CC:       gcc -std=gnu23
+  CFLAGS:   -O2 -mtune=native -fpic
+  CPPFLAGS: -I. -I/usr/local/include
+--- [hdf5lib] Building HDF5...
+  CC:       gcc -std=gnu23
+  CFLAGS:   -O2 -mtune=native -fpic
+  CPPFLAGS: -Isrc -Ihl/src -I../zlib-1.3.1 -Iinclude -I/usr/local/include -DH5_BUILT_AS_STATIC_LIB -DH5_DLL= -DH5HL_DLL=
+  $CC $CFLAGS $CPPFLAGS -c src/H5.c -o H5.o
+src/H5.c:30:13: error: storage size of 'r_stdout_sentinel' isn't known
+   30 | static FILE r_stdout_sentinel;
+      |             ^~~~~~~~~~~~~~~~~
+src/H5.c:31:13: error: storage size of 'r_stderr_sentinel' isn't known
+   31 | static FILE r_stderr_sentinel;
+      |             ^~~~~~~~~~~~~~~~~
+ERROR: configuration failed for package 'hdf5lib'
+* removing '/home/runner/R-patched/lib/hdf5lib'

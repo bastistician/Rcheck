@@ -1,0 +1,57 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'junctions' ...
+** this is package 'junctions' version '2.1.3'
+** package 'junctions' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/junctions/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/nloptr/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c Fish.cpp -o Fish.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/nloptr/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c Output.cpp -o Output.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/nloptr/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/nloptr/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c backcrossing.cpp -o backcrossing.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/nloptr/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c estimate_time_unphased.cpp -o estimate_time_unphased.o
+In file included from estimate_time_unphased.cpp:26:
+util.h: In function 'size_t get_rcpp_num_threads()':
+util.h:20:9: error: 'tbb' has not been declared
+   20 |       ? tbb::task_arena::automatic  // -1
+      |         ^~~
+util.h: In function 'void set_num_threads()':
+util.h:27:7: error: 'tbb' has not been declared
+   27 |       tbb::global_control(tbb::global_control::max_allowed_parallelism,
+      |       ^~~
+util.h:27:27: error: 'tbb' has not been declared
+   27 |       tbb::global_control(tbb::global_control::max_allowed_parallelism,
+      |                           ^~~
+estimate_time_unphased.cpp: In member function 'double chromosome::calculate_likelihood(double, int, double) const':
+estimate_time_unphased.cpp:542:5: error: 'tbb' has not been declared
+  542 |     tbb::parallel_for(
+      |     ^~~
+estimate_time_unphased.cpp:543:7: error: 'tbb' has not been declared
+  543 |       tbb::blocked_range<unsigned>(1, distances.size()),
+      |       ^~~
+estimate_time_unphased.cpp:543:26: error: expected primary-expression before 'unsigned'
+  543 |       tbb::blocked_range<unsigned>(1, distances.size()),
+      |                          ^~~~~~~~
+estimate_time_unphased.cpp:544:17: error: 'tbb' does not name a type
+  544 |       [&](const tbb::blocked_range<unsigned>& r) {
+      |                 ^~~
+estimate_time_unphased.cpp: In lambda function:
+estimate_time_unphased.cpp:552:9: error: expected '{' before ';' token
+  552 |       });
+      |         ^
+estimate_time_unphased.cpp: In member function 'double chromosome::calculate_likelihood(double, int, double) const':
+estimate_time_unphased.cpp:552:9: error: expected ')' before ';' token
+  552 |       });
+      |         ^
+      |         )
+estimate_time_unphased.cpp:542:22: note: to match this '('
+  542 |     tbb::parallel_for(
+      |                      ^
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: estimate_time_unphased.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/junctions/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/junctions/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/junctions/src'
+ERROR: compilation failed for package 'junctions'
+* removing '/home/runner/R-patched/lib/junctions'

@@ -1,0 +1,73 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'CaseBasedReasoning' ...
+** this is package 'CaseBasedReasoning' version '0.3'
+** package 'CaseBasedReasoning' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/CaseBasedReasoning/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c distanceAPI.cpp -o distanceAPI.o
+In file included from distanceAPI.h:8,
+                 from distanceAPI.cpp:1:
+parallelFrameworks.h:14:9: error: 'tbb' does not name a type
+   14 | typedef tbb::concurrent_unordered_map<std::pair<int, int>, double> tbbUPMap;
+      |         ^~~
+parallelFrameworks.h:15:9: error: 'tbb' does not name a type
+   15 | typedef tbb::concurrent_unordered_map<int, double> tbbUMap;
+      |         ^~~
+distanceAPI.cpp: In member function 'arma::vec distanceAPI::calculate_distance(arma::mat&)':
+distanceAPI.cpp:11:3: error: 'parallelDistance' was not declared in this scope
+   11 |   parallelDistance parallelDistance(x, dist_, nrow, output);
+      |   ^~~~~~~~~~~~~~~~
+distanceAPI.cpp: In member function 'arma::mat weightedXYDistanceAPI::calculate_distance(arma::mat&, arma::mat&)':
+distanceAPI.cpp:48:3: error: 'parallelDistanceNM' was not declared in this scope
+   48 |   parallelDistanceNM parallelDistanceNM(x, y, dist_, nrow, output);
+      |   ^~~~~~~~~~~~~~~~~~
+distanceAPI.cpp:49:3: error: 'parallelFor' was not declared in this scope; did you mean 'RcppParallel::parallelFor'?
+   49 |   parallelFor(0, nrow, parallelDistanceNM);
+      |   ^~~~~~~~~~~
+      |   RcppParallel::parallelFor
+In file included from parallelFrameworks.h:6:
+/home/runner/R-patched/lib/RcppParallel/include/RcppParallel.h:34:13: note: 'RcppParallel::parallelFor' declared here
+   34 | inline void parallelFor(std::size_t begin,
+      |             ^~~~~~~~~~~
+distanceAPI.cpp: In member function 'arma::mat rfProximityXYDistanceAPI::calculate_distance(arma::mat&, arma::mat&)':
+distanceAPI.cpp:87:3: error: 'parallelDistanceNM' was not declared in this scope
+   87 |   parallelDistanceNM parallelDistanceNM(x, y, dist_, nrow, output);
+      |   ^~~~~~~~~~~~~~~~~~
+distanceAPI.cpp:88:3: error: 'parallelFor' was not declared in this scope; did you mean 'RcppParallel::parallelFor'?
+   88 |   parallelFor(0, nrow, parallelDistanceNM);
+      |   ^~~~~~~~~~~
+      |   RcppParallel::parallelFor
+/home/runner/R-patched/lib/RcppParallel/include/RcppParallel.h:34:13: note: 'RcppParallel::parallelFor' declared here
+   34 | inline void parallelFor(std::size_t begin,
+      |             ^~~~~~~~~~~
+distanceAPI.cpp: In member function 'arma::vec rfDepthDistanceAPI::calculate_distance(arma::mat&)':
+distanceAPI.cpp:111:3: error: 'parallelDistance' was not declared in this scope
+  111 |   parallelDistance parallelDistance(xNodeIDs, dist_, nrow, output);
+      |   ^~~~~~~~~~~~~~~~
+distanceAPI.cpp:112:3: error: 'parallelFor' was not declared in this scope; did you mean 'RcppParallel::parallelFor'?
+  112 |   parallelFor(0, nrow, parallelDistance);
+      |   ^~~~~~~~~~~
+      |   RcppParallel::parallelFor
+/home/runner/R-patched/lib/RcppParallel/include/RcppParallel.h:34:13: note: 'RcppParallel::parallelFor' declared here
+   34 | inline void parallelFor(std::size_t begin,
+      |             ^~~~~~~~~~~
+distanceAPI.cpp: In member function 'arma::mat rfDepthXYDistanceAPI::calculate_distance(arma::mat&, arma::mat&)':
+distanceAPI.cpp:129:3: error: 'parallelDistanceNM' was not declared in this scope
+  129 |   parallelDistanceNM parallelDistanceNM(xNodeIDs, yNodeIDs, dist_, nrow, output);
+      |   ^~~~~~~~~~~~~~~~~~
+distanceAPI.cpp:130:3: error: 'parallelFor' was not declared in this scope; did you mean 'RcppParallel::parallelFor'?
+  130 |   parallelFor(0, nrow, parallelDistanceNM);
+      |   ^~~~~~~~~~~
+      |   RcppParallel::parallelFor
+/home/runner/R-patched/lib/RcppParallel/include/RcppParallel.h:34:13: note: 'RcppParallel::parallelFor' declared here
+   34 | inline void parallelFor(std::size_t begin,
+      |             ^~~~~~~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: distanceAPI.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/CaseBasedReasoning/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/CaseBasedReasoning/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/CaseBasedReasoning/src'
+ERROR: compilation failed for package 'CaseBasedReasoning'
+* removing '/home/runner/R-patched/lib/CaseBasedReasoning'

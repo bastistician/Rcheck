@@ -1,0 +1,15 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'SpaDES.core' ...
+** this is package 'SpaDES.core' version '2.1.8'
+** package 'SpaDES.core' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for 'citation' in package 'SpaDES.core'
+Error in get(x, envir = ns, inherits = FALSE) : object 'isSpat' not found
+Error: unable to load R code in package 'SpaDES.core'
+Execution halted
+ERROR: lazy loading failed for package 'SpaDES.core'
+* removing '/home/runner/R-patched/lib/SpaDES.core'
+* restoring previous '/home/runner/R-patched/lib/SpaDES.core'

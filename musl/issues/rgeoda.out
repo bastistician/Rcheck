@@ -1,0 +1,319 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'rgeoda' ...
+** this is package 'rgeoda' version '0.1.0'
+** package 'rgeoda' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/rgeoda/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/libgeoda.cpp -o libgeoda/libgeoda.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/gda_sa.cpp -o libgeoda/gda_sa.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/mem_fn.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/function/function_template.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/function.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/detail/find_iterator.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/find_iterator.hpp:24,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/iter_find.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/split.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:23,
+                 from libgeoda/gda_sa.cpp:3:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/iterator_facade.hpp:11,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range_core.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/as_literal.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/trim.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:19:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/gda_data.cpp -o libgeoda/gda_data.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/mem_fn.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/function/function_template.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/function.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/detail/find_iterator.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/find_iterator.hpp:24,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/iter_find.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/split.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:23,
+                 from libgeoda/gda_data.cpp:4:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/iterator_facade.hpp:11,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range_core.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/as_literal.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/trim.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:19:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/gda_weights.cpp -o libgeoda/gda_weights.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/mem_fn.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/function/function_template.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/function.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/detail/find_iterator.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/find_iterator.hpp:24,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/iter_find.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/split.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:23,
+                 from libgeoda/gda_weights.cpp:16:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/bits/shared_ptr_base.h:59,
+                 from /usr/include/c++/14.2.0/bits/shared_ptr.h:53,
+                 from /usr/include/c++/14.2.0/regex:49,
+                 from libgeoda/gda_weights.cpp:5:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/graph_concepts.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/biconnected_components.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/graph/graph_util.hpp:12,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/graph/detect_biconnected_components.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/traverse.hpp:20,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/overlay.hpp:37,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/intersection_insert.hpp:34,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/intersection/interface.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/intersection/gc.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/difference.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/relate/implementation_gc.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/covered_by/implementation_gc.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/covered_by.hpp:25,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/buffer/buffered_piece_collection.hpp:33,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/buffer/buffer_inserter.hpp:30,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/buffer/implementation.hpp:25,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/buffer.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/geometry.hpp:63,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry.hpp:17,
+                 from libgeoda/SpatialIndTypes.h:23,
+                 from libgeoda/SpatialIndAlgs.h:9,
+                 from libgeoda/gda_weights.cpp:23:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/scoped_ptr.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/graph/graph_util.hpp:13:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/scoped_ptr.hpp: At global scope:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/scoped_ptr.hpp:63:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   63 |     explicit scoped_ptr( std::auto_ptr<T> p ) noexcept : px( p.release() )
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/gda_clustering.cpp -o libgeoda/gda_clustering.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/mem_fn.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/function/function_template.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/function.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/detail/find_iterator.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/find_iterator.hpp:24,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/iter_find.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/split.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:23,
+                 from libgeoda/gda_clustering.cpp:2:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/iterator_facade.hpp:11,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range_core.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/as_literal.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/trim.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:19:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/GenGeomAlgs.cpp -o libgeoda/GenGeomAlgs.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/GenUtils.cpp -o libgeoda/GenUtils.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/mem_fn.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/function/function_template.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/function.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/detail/find_iterator.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/find_iterator.hpp:24,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/iter_find.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/split.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:23,
+                 from libgeoda/GenUtils.cpp:27:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/iterator_facade.hpp:11,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range_core.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/iterator_range.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/as_literal.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/trim.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:19:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/SpatialIndAlgs.cpp -o libgeoda/SpatialIndAlgs.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/bind/mem_fn.hpp:23,
+                 from /home/runner/R-patched/lib/BH/include/boost/mem_fn.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/function/function_template.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/function.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/detail/find_iterator.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/find_iterator.hpp:24,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/iter_find.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string/split.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/algorithm/string.hpp:23,
+                 from libgeoda/SpatialIndAlgs.cpp:6:
+/home/runner/R-patched/lib/BH/include/boost/get_pointer.hpp:48:40: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/iterator_facade.hpp:11,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/iterator_adaptor.hpp:15,
+                 from /home/runner/R-patched/lib/BH/include/boost/iterator/reverse_iterator.hpp:10,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/reverse_iterator.hpp:21,
+                 from /home/runner/R-patched/lib/BH/include/boost/range/rend.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/foreach.hpp:82,
+                 from libgeoda/SpatialIndAlgs.cpp:4:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/graph_concepts.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/biconnected_components.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/graph/graph_util.hpp:12,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/graph/detect_biconnected_components.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/traverse.hpp:20,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/overlay.hpp:37,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/intersection_insert.hpp:34,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/intersection/interface.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/intersection/gc.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/difference.hpp:19,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/relate/implementation_gc.hpp:18,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/covered_by/implementation_gc.hpp:16,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/covered_by.hpp:25,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/buffer/buffered_piece_collection.hpp:33,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/buffer/buffer_inserter.hpp:30,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/buffer/implementation.hpp:25,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/buffer.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/geometry.hpp:63,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry.hpp:17,
+                 from libgeoda/SpatialIndTypes.h:23,
+                 from libgeoda/SpatialIndAlgs.h:9,
+                 from libgeoda/SpatialIndAlgs.cpp:13:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/scoped_ptr.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from /home/runner/R-patched/lib/BH/include/boost/geometry/algorithms/detail/overlay/graph/graph_util.hpp:13:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/scoped_ptr.hpp: At global scope:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/scoped_ptr.hpp:63:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   63 |     explicit scoped_ptr( std::auto_ptr<T> p ) noexcept : px( p.release() )
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/pg/geoms.cpp -o libgeoda/pg/geoms.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/pg/utils.cpp -o libgeoda/pg/utils.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/shapelib/dbfopen.cpp -o libgeoda/shapelib/dbfopen.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/shapelib/safileio.cpp -o libgeoda/shapelib/safileio.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/shapelib/shpopen.cpp -o libgeoda/shapelib/shpopen.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/weights/PointsToContigWeights.cpp -o libgeoda/weights/PointsToContigWeights.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/weights/PolysToContigWeights.cpp -o libgeoda/weights/PolysToContigWeights.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/weights/GalWeight.cpp -o libgeoda/weights/GalWeight.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/weights/GwtWeight.cpp -o libgeoda/weights/GwtWeight.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/weights/GeodaWeight.cpp -o libgeoda/weights/GeodaWeight.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I./libgeoda -D__USE_PTHREAD__ -D__RGEODA__ -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c libgeoda/weights/VoronoiUtils.cpp -o libgeoda/weights/VoronoiUtils.o
+libgeoda/weights/VoronoiUtils.cpp:30:10: fatal error: boost/geometry/multi/geometries/multi_point.hpp: No such file or directory
+   30 | #include <boost/geometry/multi/geometries/multi_point.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: libgeoda/weights/VoronoiUtils.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/rgeoda/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/rgeoda/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/rgeoda/src'
+ERROR: compilation failed for package 'rgeoda'
+* removing '/home/runner/R-patched/lib/rgeoda'
+* restoring previous '/home/runner/R-patched/lib/rgeoda'

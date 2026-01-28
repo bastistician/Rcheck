@@ -1,0 +1,28 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'GENLIB' ...
+** this is package 'GENLIB' version '1.1.10'
+** package 'GENLIB' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/GENLIB/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c apparentement.cpp -o apparentement.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c asa239.cpp -o asa239.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c congen.cpp -o congen.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c consanguinite.cpp -o consanguinite.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c exception.cpp -o exception.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c fondateur.cpp -o fondateur.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c genphi.cpp -o genphi.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c hal.cpp -o hal.o
+hal.cpp:151:18: fatal error: sys/unistd.h: No such file or directory
+  151 |         #include <sys/unistd.h>
+      |                  ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: hal.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/GENLIB/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/GENLIB/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/GENLIB/src'
+ERROR: compilation failed for package 'GENLIB'
+* removing '/home/runner/R-patched/lib/GENLIB'
+* restoring previous '/home/runner/R-patched/lib/GENLIB'

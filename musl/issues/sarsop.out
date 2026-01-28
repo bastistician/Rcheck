@@ -1,0 +1,1483 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'sarsop' ...
+** this is package 'sarsop' version '0.6.16'
+** package 'sarsop' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/sarsop/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c readme.cpp -o readme.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native  -c zzz.c -o zzz.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/BeliefTransitionMOMDP.cpp -o appl-0.96/Models/MOMDP/BeliefTransitionMOMDP.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Core/BeliefTransition.h:4,
+                 from appl-0.96/Models/MOMDP/BeliefTransitionMOMDP.h:5,
+                 from appl-0.96/Models/MOMDP/BeliefTransitionMOMDP.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/BeliefTransitionMOMDPLite.cpp -o appl-0.96/Models/MOMDP/BeliefTransitionMOMDPLite.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Core/BeliefTransition.h:4,
+                 from appl-0.96/Models/MOMDP/BeliefTransitionMOMDPLite.h:5,
+                 from appl-0.96/Models/MOMDP/BeliefTransitionMOMDPLite.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/BooleanVariable.cpp -o appl-0.96/Models/MOMDP/BooleanVariable.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/Models/MOMDP/BooleanVariable.h:7,
+                 from appl-0.96/Models/MOMDP/BooleanVariable.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/IVariable.cpp -o appl-0.96/Models/MOMDP/IVariable.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariable.h:7,
+                 from appl-0.96/Models/MOMDP/IVariable.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/IVariableValue.cpp -o appl-0.96/Models/MOMDP/IVariableValue.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/MOMDP.cpp -o appl-0.96/Models/MOMDP/MOMDP.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/Models/MOMDP/MOMDP.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/MOMDPLite.cpp -o appl-0.96/Models/MOMDP/MOMDPLite.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/Models/MOMDP/MOMDPLite.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDPLite.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/ObservationProbabilities.cpp -o appl-0.96/Models/MOMDP/ObservationProbabilities.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/ObservationProbabilities.h:5,
+                 from appl-0.96/Models/MOMDP/ObservationProbabilities.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/Rewards.cpp -o appl-0.96/Models/MOMDP/Rewards.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/Rewards.h:5,
+                 from appl-0.96/Models/MOMDP/Rewards.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/StateTransitionX.cpp -o appl-0.96/Models/MOMDP/StateTransitionX.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/StateTransitionX.h:6,
+                 from appl-0.96/Models/MOMDP/StateTransitionX.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/StateTransitionXXpY.cpp -o appl-0.96/Models/MOMDP/StateTransitionXXpY.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/StateTransitionXXpY.h:5,
+                 from appl-0.96/Models/MOMDP/StateTransitionXXpY.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/StateTransitionXY.cpp -o appl-0.96/Models/MOMDP/StateTransitionXY.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/StateTransitionXY.h:5,
+                 from appl-0.96/Models/MOMDP/StateTransitionXY.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/StateTransitionY.cpp -o appl-0.96/Models/MOMDP/StateTransitionY.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/StateTransitionY.h:5,
+                 from appl-0.96/Models/MOMDP/StateTransitionY.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/Variable.cpp -o appl-0.96/Models/MOMDP/Variable.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/Models/MOMDP/Variable.h:7,
+                 from appl-0.96/Models/MOMDP/Variable.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/VariableCombined.cpp -o appl-0.96/Models/MOMDP/VariableCombined.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/Models/MOMDP/VariableCombined.h:7,
+                 from appl-0.96/Models/MOMDP/VariableCombined.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/VariableRelation.cpp -o appl-0.96/Models/MOMDP/VariableRelation.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/VariableRelation.h:8,
+                 from appl-0.96/Models/MOMDP/VariableRelation.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Models/MOMDP/VariableValue.cpp -o appl-0.96/Models/MOMDP/VariableValue.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Models/MOMDP/VariableValue.h:7,
+                 from appl-0.96/Models/MOMDP/VariableValue.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/PolicyGraph/PolicyGraphGenerator.cpp -o appl-0.96/PolicyGraph/PolicyGraphGenerator.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/PolicyGraph/PolicyGraphGenerator.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Evaluator/EvaluationEngine.cpp -o appl-0.96/Evaluator/EvaluationEngine.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/Evaluator/EvaluationEngine.h:6,
+                 from appl-0.96/Evaluator/EvaluationEngine.cpp:3:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Evaluator/EvaluatorSampleEngine.cpp -o appl-0.96/Evaluator/EvaluatorSampleEngine.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/Core/Belief.h:4,
+                 from appl-0.96/Algorithms/SARSOP/Sample.h:19,
+                 from appl-0.96/Evaluator/EvaluatorSampleEngine.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Simulator/SimulationEngine.cpp -o appl-0.96/Simulator/SimulationEngine.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/Models/MOMDP/IVariableValue.h:7,
+                 from appl-0.96/Core/Observations.h:6,
+                 from appl-0.96/Models/MOMDP/MOMDP.h:10,
+                 from appl-0.96/Simulator/SimulationEngine.h:6,
+                 from appl-0.96/Simulator/SimulationEngine.cpp:3:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/MathLib/DenseVector.cpp -o appl-0.96/MathLib/DenseVector.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/DenseVector.h:8,
+                 from appl-0.96/MathLib/DenseVector.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/MathLib/MathLib.cpp -o appl-0.96/MathLib/MathLib.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/MathLib/MathLib.h:11,
+                 from appl-0.96/MathLib/MathLib.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/MathLib/SparseMatrix.cpp -o appl-0.96/MathLib/SparseMatrix.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseMatrix.h:9,
+                 from appl-0.96/MathLib/SparseMatrix.cpp:2:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/MathLib/SparseVector.cpp -o appl-0.96/MathLib/SparseVector.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/MathLib/SparseVector.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Algorithms/SARSOP/BinManager.cpp -o appl-0.96/Algorithms/SARSOP/BinManager.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/Core/Belief.h:4,
+                 from appl-0.96/Core/BeliefCache.h:6,
+                 from appl-0.96/Algorithms/SARSOP/BinManager.h:11,
+                 from appl-0.96/Algorithms/SARSOP/BinManager.cpp:5:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Algorithms/SARSOP/BinManagerSet.cpp -o appl-0.96/Algorithms/SARSOP/BinManagerSet.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/MathLib/MathLib.h:11,
+                 from appl-0.96/Core/FacmodelStructs.h:11,
+                 from appl-0.96/Algorithms/SARSOP/BinManagerSet.h:13,
+                 from appl-0.96/Algorithms/SARSOP/BinManagerSet.cpp:5:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Algorithms/SARSOP/Sample.cpp -o appl-0.96/Algorithms/SARSOP/Sample.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/Core/Belief.h:4,
+                 from appl-0.96/Algorithms/SARSOP/Sample.h:19,
+                 from appl-0.96/Algorithms/SARSOP/Sample.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Algorithms/SARSOP/SampleBP.cpp -o appl-0.96/Algorithms/SARSOP/SampleBP.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/Core/Belief.h:4,
+                 from appl-0.96/Algorithms/SARSOP/Sample.h:19,
+                 from appl-0.96/Algorithms/SARSOP/SampleBP.h:19,
+                 from appl-0.96/Algorithms/SARSOP/SampleBP.cpp:9:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Algorithms/SARSOP/SARSOP.cpp -o appl-0.96/Algorithms/SARSOP/SARSOP.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/Parser/Cassandra/MDP.h:31,
+                 from appl-0.96/Parser/Cassandra/POMDP.h:32,
+                 from appl-0.96/OfflineSolver/solverUtils.h:19,
+                 from appl-0.96/Algorithms/PointBasedAlgorithm.h:6,
+                 from appl-0.96/Algorithms/SARSOP/SARSOP.h:4,
+                 from appl-0.96/Algorithms/SARSOP/SARSOP.cpp:5:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/Algorithms/SARSOP/SARSOPPrune.cpp -o appl-0.96/Algorithms/SARSOP/SARSOPPrune.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from appl-0.96/Core/MObject.h:7,
+                 from appl-0.96/MathLib/SparseVector.h:8,
+                 from appl-0.96/Parser/Cassandra/MDP.h:31,
+                 from appl-0.96/Parser/Cassandra/POMDP.h:32,
+                 from appl-0.96/OfflineSolver/solverUtils.h:19,
+                 from appl-0.96/Algorithms/PointBasedAlgorithm.h:6,
+                 from appl-0.96/Algorithms/SARSOP/SARSOPPrune.h:4,
+                 from appl-0.96/Algorithms/SARSOP/SARSOPPrune.cpp:1:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/14.2.0/memory:78,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/sp_counted_impl.hpp:27,
+                 from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:23:
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/14.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -Iappl-0.96 -Iappl-0.96/MathLib -Iappl-0.96/Algorithms -Iappl-0.96/Algorithms/HSVI -Iappl-0.96/Algorithms/SARSOP -Iappl-0.96/Models/MOMDP -Iappl-0.96/Models/MOMDP/CoLoc -Iappl-0.96/OfflineSolver -Iappl-0.96/Bounds -Iappl-0.96/Core -Iappl-0.96/Parser/Cassandra -Iappl-0.96/Parser/Cassandra/include -Iappl-0.96/Parser -Iappl-0.96/Parser/POMDPX -Iappl-0.96/Utils -Iappl-0.96/Simulator -Iappl-0.96/Evaluator -Iappl-0.96/Controller -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c appl-0.96/OfflineSolver/GlobalResource.cpp -o appl-0.96/OfflineSolver/GlobalResource.o
+In file included from appl-0.96/OfflineSolver/GlobalResource.cpp:7:
+appl-0.96/Utils/CPMemUtils.h:21:26: fatal error: sys/unistd.h: No such file or directory
+   21 |                 #include <sys/unistd.h>
+      |                          ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: appl-0.96/OfflineSolver/GlobalResource.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/sarsop/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/sarsop/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/sarsop/src'
+ERROR: compilation failed for package 'sarsop'
+* removing '/home/runner/R-patched/lib/sarsop'
