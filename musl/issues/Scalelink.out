@@ -1,0 +1,20 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'Scalelink' ...
+** this is package 'Scalelink' version '1.0'
+** package 'Scalelink' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++11
+make[1]: Entering directory '/var/local/PKGS/CRAN/Scalelink/src'
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c rcpp_build_astar.cpp -o rcpp_build_astar.o
+rcpp_build_astar.cpp:44:1: error: 'tbb' does not name a type
+   44 | tbb::mutex m;
+      | ^~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: rcpp_build_astar.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Scalelink/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Scalelink/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Scalelink/src'
+ERROR: compilation failed for package 'Scalelink'
+* removing '/home/runner/R-patched/lib/Scalelink'

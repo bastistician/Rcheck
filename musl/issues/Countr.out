@@ -1,0 +1,32 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'Countr' ...
+** this is package 'Countr' version '3.5.8'
+** package 'Countr' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Countr/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c built_in_distributions.cpp -o built_in_distributions.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c conv_all.cpp -o conv_all.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c conv_dePril.cpp -o conv_dePril.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c conv_naive.cpp -o conv_naive.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c modifiedRenewal.cpp -o modifiedRenewal.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c series_hetwei.cpp -o series_hetwei.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c series_weibull.cpp -o series_weibull.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c utils.cpp -o utils.o
+g++ -std=gnu++17 -shared -L/usr/local/lib -o Countr.so RcppExports.o built_in_distributions.o conv_all.o conv_dePril.o conv_naive.o modifiedRenewal.o series_hetwei.o series_weibull.o utils.o -lopenblas -lgfortran -lm -lssp_nonshared -lquadmath
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Countr/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Countr/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Countr/src'
+installing to /home/runner/R-patched/lib/00LOCK-Countr/00new/Countr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'cauchit' is not exported by 'namespace:VGAM'
+Execution halted
+ERROR: lazy loading failed for package 'Countr'
+* removing '/home/runner/R-patched/lib/Countr'
+* restoring previous '/home/runner/R-patched/lib/Countr'

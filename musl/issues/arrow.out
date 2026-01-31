@@ -1,0 +1,1003 @@
+processing '/var/local/PKGS/CRAN/arrow'
+a directory
+* installing to library '/home/runner/R-patched/lib'
+* build_help_types=
+* DBG: 'R CMD INSTALL' now doing do_install()
+* created lock directory '/home/runner/R-patched/lib/00LOCK-arrow'
+* installing *source* package 'arrow' ...
+** this is package 'arrow' version '22.0.0'
+** package 'arrow' successfully unpacked and MD5 sums checked
+** backing up earlier installation
+** using staged installation
+configure command: 'ARROW_R_DEV=true ./configure '
+*** pkg-config found.
+trying URL 'https://github.com/apache/arrow/releases'
+downloaded 418 KB
+
+*** Found local C++ source: 'tools/cpp'
+*** Building libarrow from source
+    For build options and troubleshooting, see the install guide:
+    https://arrow.apache.org/docs/r/articles/install.html
+*** Building with MAKEFLAGS=-j2
+**** cmake 3.31.7: /usr/bin/cmake
+**** arrow with SOURCE_DIR='tools/cpp' BUILD_DIR='/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453' DEST_DIR='libarrow/arrow-22.0.0' CMAKE='/usr/bin/cmake' EXTRA_CMAKE_FLAGS='' CC='gcc -std=gnu23' CXX='g++ -std=gnu++17' LDFLAGS='-L/usr/local/lib' N_JOBS='2' ARROW_S3='OFF' ARROW_GCS='OFF'
+++ pwd
++ : /var/local/PKGS/CRAN/arrow
++ : tools/cpp
++ : /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453
++ : libarrow/arrow-22.0.0
++ : /usr/bin/cmake
+++ cd tools/cpp
+++ pwd
++ SOURCE_DIR=/var/local/PKGS/CRAN/arrow/tools/cpp
+++ mkdir -p libarrow/arrow-22.0.0
+++ cd libarrow/arrow-22.0.0
+++ pwd
++ DEST_DIR=/var/local/PKGS/CRAN/arrow/libarrow/arrow-22.0.0
++ '[' 2 = '' ']'
++ '[' '' '!=' '' ']'
++ '[' '' = false ']'
++ ARROW_DEFAULT_PARAM=OFF
++ case "$CXX" in
++ mkdir -p /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453
++ pushd /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453
+~/tmp/RtmpJoLIdb/file790a4c7e9453 /var/local/PKGS/CRAN/arrow
++ /usr/bin/cmake -DARROW_BOOST_USE_SHARED=OFF -DARROW_SNAPPY_USE_SHARED=OFF -DARROW_BUILD_TESTS=OFF -DARROW_BUILD_SHARED=OFF -DARROW_BUILD_STATIC=ON -DARROW_ACERO=ON -DARROW_COMPUTE=ON -DARROW_CSV=ON -DARROW_DATASET=ON -DARROW_DEPENDENCY_SOURCE=AUTO -DAWSSDK_SOURCE= -DBoost_SOURCE= -Dlz4_SOURCE= -DARROW_FILESYSTEM=ON -DARROW_GCS=OFF -DARROW_JEMALLOC=OFF -DARROW_MIMALLOC=ON -DARROW_JSON=ON -DARROW_PARQUET=ON -DARROW_S3=OFF -DARROW_WITH_BROTLI=OFF -DARROW_WITH_BZ2=OFF -DARROW_WITH_LZ4=ON -DARROW_WITH_RE2=ON -DARROW_WITH_SNAPPY=ON -DARROW_WITH_UTF8PROC=ON -DARROW_WITH_ZLIB=OFF -DARROW_WITH_ZSTD=OFF -DARROW_VERBOSE_THIRDPARTY_BUILD=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_FIND_DEBUG_MODE=OFF -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_INSTALL_PREFIX=/var/local/PKGS/CRAN/arrow/libarrow/arrow-22.0.0 -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON -DCMAKE_UNITY_BUILD=OFF -DOPENSSL_ROOT_DIR=/usr -Dre2_SOURCE=BUNDLED -Dxsimd_SOURCE= -Dzstd_SOURCE= -G 'Unix Makefiles' /var/local/PKGS/CRAN/arrow/tools/cpp
+-- Building using CMake version: 3.31.7
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Arrow version: 22.0.0 (full: '22.0.0')
+-- Arrow SO version: 2200 (full: 2200.0.0)
+-- clang-tidy 14 not found
+-- clang-format 14 not found
+-- Could NOT find ClangTools (missing: CLANG_FORMAT_BIN CLANG_TIDY_BIN) 
+-- infer not found
+-- Found Python3: /usr/bin/python3.12 (found version "3.12.12") found components: Interpreter
+fatal: not a git repository (or any of the parent directories): .git
+-- System processor: x86_64
+-- Performing Test CXX_SUPPORTS_SSE4_2
+-- Performing Test CXX_SUPPORTS_SSE4_2 - Success
+-- Performing Test CXX_SUPPORTS_AVX2
+-- Performing Test CXX_SUPPORTS_AVX2 - Success
+-- Performing Test CXX_SUPPORTS_AVX512
+-- Performing Test CXX_SUPPORTS_AVX512 - Success
+-- Arrow build warning level: PRODUCTION
+-- Using ld linker
+-- Build Type: Release
+-- Performing Test CXX_LINKER_SUPPORTS_VERSION_SCRIPT
+-- Performing Test CXX_LINKER_SUPPORTS_VERSION_SCRIPT - Success
+-- Using AUTO approach to find dependencies
+-- ARROW_ABSL_BUILD_VERSION: 20211102.0
+-- ARROW_ABSL_BUILD_SHA256_CHECKSUM: dcf71b9cba8dc0ca9940c4b316a0c796be8fab42b070bb6b7cab62b48f0e66c4
+-- ARROW_AWS_C_AUTH_BUILD_VERSION: v0.9.0
+-- ARROW_AWS_C_AUTH_BUILD_SHA256_CHECKSUM: aa6e98864fefb95c249c100da4ae7aed36ba13a8a91415791ec6fad20bec0427
+-- ARROW_AWS_C_CAL_BUILD_VERSION: v0.9.2
+-- ARROW_AWS_C_CAL_BUILD_SHA256_CHECKSUM: f9f3bc6a069e2efe25fcdf73e4d2b16b5608c327d2eb57c8f7a8524e9e1fcad0
+-- ARROW_AWS_C_COMMON_BUILD_VERSION: v0.12.4
+-- ARROW_AWS_C_COMMON_BUILD_SHA256_CHECKSUM: 0b7705a4d115663c3f485d353a75ed86e37583157585e5825d851af634b57fe3
+-- ARROW_AWS_C_COMPRESSION_BUILD_VERSION: v0.3.1
+-- ARROW_AWS_C_COMPRESSION_BUILD_SHA256_CHECKSUM: d89fca17a37de762dc34f332d2da402343078da8dbd2224c46a11a88adddf754
+-- ARROW_AWS_C_EVENT_STREAM_BUILD_VERSION: v0.5.4
+-- ARROW_AWS_C_EVENT_STREAM_BUILD_SHA256_CHECKSUM: cef8b78e362836d15514110fb43a0a0c7a86b0a210d5fe25fd248a82027a7272
+-- ARROW_AWS_C_HTTP_BUILD_VERSION: v0.10.2
+-- ARROW_AWS_C_HTTP_BUILD_SHA256_CHECKSUM: 048d9d683459ade363fd7cc448c2b6329c78f67a2a0c0cb61c16de4634a2fc6b
+-- ARROW_AWS_C_IO_BUILD_VERSION: v0.19.1
+-- ARROW_AWS_C_IO_BUILD_SHA256_CHECKSUM: f2fea0c066924f7fe3c2b1c7b2fa9be640f5b16a6514854226330e63a1faacd0
+-- ARROW_AWS_C_MQTT_BUILD_VERSION: v0.13.1
+-- ARROW_AWS_C_MQTT_BUILD_SHA256_CHECKSUM: c54d02c1e46f55bae8d5e6f9c4b0d78d84c1c9d9ac16ba8d78c3361edcd8b5bb
+-- ARROW_AWS_C_S3_BUILD_VERSION: v0.8.1
+-- ARROW_AWS_C_S3_BUILD_SHA256_CHECKSUM: c8b09780691d2b94e50d101c68f01fa2d1c3debb0ff3aed313d93f0d3c9af663
+-- ARROW_AWS_C_SDKUTILS_BUILD_VERSION: v0.2.4
+-- ARROW_AWS_C_SDKUTILS_BUILD_SHA256_CHECKSUM: 493cbed4fa57e0d4622fcff044e11305eb4fc12445f32c8861025597939175fc
+-- ARROW_AWS_CHECKSUMS_BUILD_VERSION: v0.2.7
+-- ARROW_AWS_CHECKSUMS_BUILD_SHA256_CHECKSUM: 178e8398d98111f29150f7813a70c20ad97ab30be0de02525440355fe84ccb1d
+-- ARROW_AWS_CRT_CPP_BUILD_VERSION: v0.32.8
+-- ARROW_AWS_CRT_CPP_BUILD_SHA256_CHECKSUM: db44260452a0296341fb8e7b987e4c328f08f7829b9f1c740fed9c963e081e93
+-- ARROW_AWS_LC_BUILD_VERSION: v1.52.1
+-- ARROW_AWS_LC_BUILD_SHA256_CHECKSUM: fe552e3c3522f73afc3c30011745c431c633f7b4e25dcd7b38325f194a7b3b75
+-- ARROW_AWSSDK_BUILD_VERSION: 1.11.587
+-- ARROW_AWSSDK_BUILD_SHA256_CHECKSUM: b9944ba9905a68d6e53abb4f36ab2b3bd18ac88d8571647bb9f2b8026b76f8cd
+-- ARROW_AZURE_SDK_BUILD_VERSION: azure-identity_1.9.0
+-- ARROW_AZURE_SDK_BUILD_SHA256_CHECKSUM: 97065bfc971ac8df450853ce805f820f52b59457bd7556510186a1569502e4a1
+-- ARROW_BOOST_BUILD_VERSION: 1.88.0
+-- ARROW_BOOST_BUILD_SHA256_CHECKSUM: dcea50f40ba1ecfc448fdf886c0165cf3e525fef2c9e3e080b9804e8117b9694
+-- ARROW_BROTLI_BUILD_VERSION: v1.0.9
+-- ARROW_BROTLI_BUILD_SHA256_CHECKSUM: f9e8d81d0405ba66d181529af42a3354f838c939095ff99930da6aa9cdf6fe46
+-- ARROW_BZIP2_BUILD_VERSION: 1.0.8
+-- ARROW_BZIP2_BUILD_SHA256_CHECKSUM: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+-- ARROW_CARES_BUILD_VERSION: 1.17.2
+-- ARROW_CARES_BUILD_SHA256_CHECKSUM: 4803c844ce20ce510ef0eb83f8ea41fa24ecaae9d280c468c582d2bb25b3913d
+-- ARROW_CRC32C_BUILD_VERSION: 1.1.2
+-- ARROW_CRC32C_BUILD_SHA256_CHECKSUM: ac07840513072b7fcebda6e821068aa04889018f24e10e46181068fb214d7e56
+-- ARROW_GBENCHMARK_BUILD_VERSION: v1.8.3
+-- ARROW_GBENCHMARK_BUILD_SHA256_CHECKSUM: 6bc180a57d23d4d9515519f92b0c83d61b05b5bab188961f36ac7b06b0d9e9ce
+-- ARROW_GFLAGS_BUILD_VERSION: v2.2.2
+-- ARROW_GFLAGS_BUILD_SHA256_CHECKSUM: 34af2f15cf7367513b352bdcd2493ab14ce43692d2dcd9dfc499492966c64dcf
+-- ARROW_GLOG_BUILD_VERSION: v0.5.0
+-- ARROW_GLOG_BUILD_SHA256_CHECKSUM: eede71f28371bf39aa69b45de23b329d37214016e2055269b3b5e7cfd40b59f5
+-- ARROW_GOOGLE_CLOUD_CPP_BUILD_VERSION: v2.22.0
+-- ARROW_GOOGLE_CLOUD_CPP_BUILD_SHA256_CHECKSUM: 0c68782e57959c82e0c81def805c01460a042c1aae0c2feee905acaa2a2dc9bf
+-- ARROW_GRPC_BUILD_VERSION: v1.46.3
+-- ARROW_GRPC_BUILD_SHA256_CHECKSUM: d6cbf22cb5007af71b61c6be316a79397469c58c82a942552a62e708bce60964
+-- ARROW_GTEST_BUILD_VERSION: 1.16.0
+-- ARROW_GTEST_BUILD_SHA256_CHECKSUM: 78c676fc63881529bf97bf9d45948d905a66833fbfa5318ea2cd7478cb98f399
+-- ARROW_JEMALLOC_BUILD_VERSION: 5.3.0
+-- ARROW_JEMALLOC_BUILD_SHA256_CHECKSUM: 2db82d1e7119df3e71b7640219b6dfe84789bc0537983c3b7ac4f7189aecfeaa
+-- ARROW_LZ4_BUILD_VERSION: v1.10.0
+-- ARROW_LZ4_BUILD_SHA256_CHECKSUM: 537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b
+-- ARROW_MIMALLOC_BUILD_VERSION: v3.1.5
+-- ARROW_MIMALLOC_BUILD_SHA256_CHECKSUM: 1c6949032069d5ebea438ec5cedd602d06f40a92ddf0f0d9dcff0993e5f6635c
+-- ARROW_NLOHMANN_JSON_BUILD_VERSION: v3.12.0
+-- ARROW_NLOHMANN_JSON_BUILD_SHA256_CHECKSUM: 4b92eb0c06d10683f7447ce9406cb97cd4b453be18d7279320f7b2f025c10187
+-- ARROW_OPENTELEMETRY_BUILD_VERSION: v1.21.0
+-- ARROW_OPENTELEMETRY_BUILD_SHA256_CHECKSUM: 98e5546f577a11b52a57faed1f4cc60d8c1daa44760eba393f43eab5a8ec46a2
+-- ARROW_OPENTELEMETRY_PROTO_BUILD_VERSION: v1.7.0
+-- ARROW_OPENTELEMETRY_PROTO_BUILD_SHA256_CHECKSUM: 11330d850f5e24d34c4246bc8cb21fcd311e7565d219195713455a576bb11bed
+-- ARROW_ORC_BUILD_VERSION: 2.2.0
+-- ARROW_ORC_BUILD_SHA256_CHECKSUM: b15aca45a7e73ffbd1bbc36a78cd1422d41f07721092a25f43448e6e16f4763b
+-- ARROW_PROTOBUF_BUILD_VERSION: v21.3
+-- ARROW_PROTOBUF_BUILD_SHA256_CHECKSUM: 2f723218f6cb709ae4cdc4fb5ed56a5951fc5d466f0128ce4c946b8c78c8c49f
+-- ARROW_RAPIDJSON_BUILD_VERSION: 232389d4f1012dddec4ef84861face2d2ba85709
+-- ARROW_RAPIDJSON_BUILD_SHA256_CHECKSUM: b9290a9a6d444c8e049bd589ab804e0ccf2b05dc5984a19ed5ae75d090064806
+-- ARROW_RE2_BUILD_VERSION: 2022-06-01
+-- ARROW_RE2_BUILD_SHA256_CHECKSUM: f89c61410a072e5cbcf8c27e3a778da7d6fd2f2b5b1445cd4f4508bee946ab0f
+-- ARROW_SNAPPY_BUILD_VERSION: 1.2.2
+-- ARROW_SNAPPY_BUILD_SHA256_CHECKSUM: 90f74bc1fbf78a6c56b3c4a082a05103b3a56bb17bca1a27e052ea11723292dc
+-- ARROW_SUBSTRAIT_BUILD_VERSION: v0.44.0
+-- ARROW_SUBSTRAIT_BUILD_SHA256_CHECKSUM: f989a862f694e7dbb695925ddb7c4ce06aa6c51aca945105c075139aed7e55a2
+-- ARROW_S2N_TLS_BUILD_VERSION: v1.5.23
+-- ARROW_S2N_TLS_BUILD_SHA256_CHECKSUM: 81961ea5ae9313c987edfa579306ad4500bedfbf10caf84d8a5dcfc42aaf591f
+-- ARROW_THRIFT_BUILD_VERSION: 0.22.0
+-- ARROW_THRIFT_BUILD_SHA256_CHECKSUM: 794a0e455787960d9f27ab92c38e34da27e8deeda7a5db0e59dc64a00df8a1e5
+-- ARROW_UTF8PROC_BUILD_VERSION: v2.10.0
+-- ARROW_UTF8PROC_BUILD_SHA256_CHECKSUM: 6f4f1b639daa6dca9f80bc5db1233e9cbaa31a67790887106160b33ef743f136
+-- ARROW_XSIMD_BUILD_VERSION: 13.0.0
+-- ARROW_XSIMD_BUILD_SHA256_CHECKSUM: 8bdbbad0c3e7afa38d88d0d484d70a1671a1d8aefff03f4223ab2eb6a41110a3
+-- ARROW_ZLIB_BUILD_VERSION: 1.3.1
+-- ARROW_ZLIB_BUILD_SHA256_CHECKSUM: 9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23
+-- ARROW_ZSTD_BUILD_VERSION: 1.5.7
+-- ARROW_ZSTD_BUILD_SHA256_CHECKSUM: eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for _M_ARM64
+-- Looking for _M_ARM64 - not found
+-- Looking for __SIZEOF_INT128__
+-- Looking for __SIZEOF_INT128__ - found
+CMake Warning at cmake_modules/ThirdpartyToolchain.cmake:291 (find_package):
+  By not providing "FindBoost.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Boost", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Boost" (requested
+  version 1.58) with any of the following names:
+
+    BoostConfig.cmake
+    boost-config.cmake
+
+  Add the installation prefix of "Boost" to CMAKE_PREFIX_PATH or set
+  "Boost_DIR" to a directory containing one of the above files.  If "Boost"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  cmake_modules/ThirdpartyToolchain.cmake:1282 (resolve_dependency)
+  CMakeLists.txt:523 (include)
+
+
+-- Boost: Building from source
+-- Boost: Boost: Release build, static libraries, MPI OFF, Python OFF, testing OFF
+-- Boost: Boost: libraries included: algorithm;crc;numeric/conversion;scope_exit;throw_exception;tokenizer;locale;thread;uuid
+-- Boost: Performing Test BOOST_ATOMIC_TARGET_X86
+-- Boost: Performing Test BOOST_ATOMIC_TARGET_X86 - Success
+-- Boost: Performing Test BOOST_ATOMIC_COMPILER_HAS_SSE2
+-- Boost: Performing Test BOOST_ATOMIC_COMPILER_HAS_SSE2 - Success
+-- Boost: Performing Test BOOST_ATOMIC_COMPILER_HAS_SSE41
+-- Boost: Performing Test BOOST_ATOMIC_COMPILER_HAS_SSE41 - Success
+-- Boost: Performing Test BOOST_CHARCONV_QUADMATH_FOUND
+-- Boost: Performing Test BOOST_CHARCONV_QUADMATH_FOUND - Failed
+-- Boost: Boost.Charconv: quadmath support OFF
+-- Boost: Performing Test Iconv_IS_BUILT_IN
+-- Boost: Performing Test Iconv_IS_BUILT_IN - Success
+-- Boost: Found Iconv: built in to C library
+-- Boost: Found ICU: /usr/include (found suitable version "76.1", minimum required is "4.8.1") found components: data i18n uc
+-- Boost: Boost.Locale: iconv ON, ICU ON, POSIX ON, std ON, winapi OFF
+-- Boost: Found ICU: /usr/include (found version "76.1") found components: data i18n uc
+-- Boost: Boost.Thread: threading API is pthread
+-- Boost include dir: $<TARGET_PROPERTY:boost_algorithm,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_crc,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_numeric_conversion,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_scope_exit,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_throw_exception,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_tokenizer,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_locale,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_thread,INTERFACE_INCLUDE_DIRECTORIES>;$<TARGET_PROPERTY:boost_uuid,INTERFACE_INCLUDE_DIRECTORIES>
+CMake Warning at cmake_modules/FindSnappyAlt.cmake:41 (find_package):
+  By not providing "FindSnappy.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Snappy", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Snappy" with any
+  of the following names:
+
+    SnappyConfig.cmake
+    snappy-config.cmake
+
+  Add the installation prefix of "Snappy" to CMAKE_PREFIX_PATH or set
+  "Snappy_DIR" to a directory containing one of the above files.  If "Snappy"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  cmake_modules/ThirdpartyToolchain.cmake:291 (find_package)
+  cmake_modules/ThirdpartyToolchain.cmake:1444 (resolve_dependency)
+  CMakeLists.txt:523 (include)
+
+
+-- Could NOT find SnappyAlt (missing: Snappy_LIB Snappy_INCLUDE_DIR) 
+-- Building snappy from source
+-- Building without OpenSSL support. Minimum OpenSSL version 1.0.2 required.
+CMake Warning at cmake_modules/FindThriftAlt.cmake:42 (find_package):
+  By not providing "FindThrift.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Thrift", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Thrift" (requested
+  version 0.11.0) with any of the following names:
+
+    ThriftConfig.cmake
+    thrift-config.cmake
+
+  Add the installation prefix of "Thrift" to CMAKE_PREFIX_PATH or set
+  "Thrift_DIR" to a directory containing one of the above files.  If "Thrift"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  cmake_modules/ThirdpartyToolchain.cmake:291 (find_package)
+  cmake_modules/ThirdpartyToolchain.cmake:1840 (resolve_dependency)
+  CMakeLists.txt:523 (include)
+
+
+-- Checking for module 'thrift'
+--   Package 'thrift' not found
+-- Could NOT find ThriftAlt: (Required is at least version "0.11.0") (found ThriftAlt_LIB-NOTFOUND)
+-- Thrift: Building from source
+-- Thrift: Configuring arrow 0.22.0
+-- Thrift: libevent NOT found.
+-- Thrift: Found OpenSSL: /usr/lib/libcrypto.so (found version "3.5.4")
+CMake Warning (dev) at /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/DefineOptions.cmake:120 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/CMakeLists.txt:44 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/DefineOptions.cmake:121 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/CMakeLists.txt:44 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:441 (message):
+  The package name passed to `find_package_handle_standard_args` (clang-tidy)
+  does not match the name of the calling package (ClangTools).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/FindClangTools.cmake:16 (find_package_handle_standard_args)
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/StaticCodeAnalysis.cmake:1 (find_package)
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/CMakeLists.txt:51 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Thrift: Could NOT find clang-tidy (missing: clang-tidy_BINARY) 
+CMake Warning (dev) at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:441 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (clang-apply-replacements) does not match the name of the calling package
+  (ClangTools).  This can lead to problems in calling code that expects
+  `find_package` result variables (e.g., `_FOUND`) to follow a certain
+  pattern.
+Call Stack (most recent call first):
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/FindClangTools.cmake:16 (find_package_handle_standard_args)
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/StaticCodeAnalysis.cmake:1 (find_package)
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/CMakeLists.txt:51 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Thrift: Could NOT find clang-apply-replacements (missing: clang-apply-replacements_BINARY) 
+CMake Warning (dev) at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:441 (message):
+  The package name passed to `find_package_handle_standard_args`
+  (run-clang-tidy) does not match the name of the calling package
+  (ClangTools).  This can lead to problems in calling code that expects
+  `find_package` result variables (e.g., `_FOUND`) to follow a certain
+  pattern.
+Call Stack (most recent call first):
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/FindClangTools.cmake:24 (find_package_handle_standard_args)
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/build/cmake/StaticCodeAnalysis.cmake:1 (find_package)
+  /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/thrift-src/CMakeLists.txt:51 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Thrift: Could NOT find run-clang-tidy (missing: run-clang-tidy_BINARY) 
+-- Thrift: Looking for arpa/inet.h
+-- Thrift: Looking for arpa/inet.h - found
+-- Thrift: Looking for fcntl.h
+-- Thrift: Looking for fcntl.h - found
+-- Thrift: Looking for getopt.h
+-- Thrift: Looking for getopt.h - found
+-- Thrift: Looking for inttypes.h
+-- Thrift: Looking for inttypes.h - found
+-- Thrift: Looking for netdb.h
+-- Thrift: Looking for netdb.h - found
+-- Thrift: Looking for netinet/in.h
+-- Thrift: Looking for netinet/in.h - found
+-- Thrift: Looking for signal.h
+-- Thrift: Looking for signal.h - found
+-- Thrift: Looking for stdint.h
+-- Thrift: Looking for stdint.h - found
+-- Thrift: Looking for unistd.h
+-- Thrift: Looking for unistd.h - found
+-- Thrift: Looking for pthread.h
+-- Thrift: Looking for pthread.h - found
+-- Thrift: Looking for sys/ioctl.h
+-- Thrift: Looking for sys/ioctl.h - found
+-- Thrift: Looking for sys/param.h
+-- Thrift: Looking for sys/param.h - found
+-- Thrift: Looking for sys/resource.h
+-- Thrift: Looking for sys/resource.h - found
+-- Thrift: Looking for sys/socket.h
+-- Thrift: Looking for sys/socket.h - found
+-- Thrift: Looking for sys/stat.h
+-- Thrift: Looking for sys/stat.h - found
+-- Thrift: Looking for sys/time.h
+-- Thrift: Looking for sys/time.h - found
+-- Thrift: Looking for sys/un.h
+-- Thrift: Looking for sys/un.h - found
+-- Thrift: Looking for poll.h
+-- Thrift: Looking for poll.h - found
+-- Thrift: Looking for sys/poll.h
+-- Thrift: Looking for sys/poll.h - found
+-- Thrift: Looking for sys/select.h
+-- Thrift: Looking for sys/select.h - found
+-- Thrift: Looking for sched.h
+-- Thrift: Looking for sched.h - found
+-- Thrift: Looking for string.h
+-- Thrift: Looking for string.h - found
+-- Thrift: Looking for strings.h
+-- Thrift: Looking for strings.h - found
+-- Thrift: Performing Test HAVE_AF_UNIX_H
+-- Thrift: Performing Test HAVE_AF_UNIX_H - Failed
+-- Thrift: Looking for gethostbyname
+-- Thrift: Looking for gethostbyname - found
+-- Thrift: Looking for gethostbyname_r
+-- Thrift: Looking for gethostbyname_r - found
+-- Thrift: Looking for strerror_r
+-- Thrift: Looking for strerror_r - found
+-- Thrift: Looking for sched_get_priority_max
+-- Thrift: Looking for sched_get_priority_max - found
+-- Thrift: Looking for sched_get_priority_min
+-- Thrift: Looking for sched_get_priority_min - found
+-- Thrift: Performing Test STRERROR_R_CHAR_P
+-- Thrift: Performing Test STRERROR_R_CHAR_P - Failed
+-- Thrift: Building without tests
+-- Thrift: ----------------------------------------------------------
+-- Thrift: Thrift version:                               0.22.0 (0.22.0)
+-- Thrift: Thrift package version:                       0.22.0
+-- Thrift: 
+-- Thrift: Build configuration summary
+-- Thrift:   Build compiler:                             OFF
+-- Thrift:   Build libraries:                            ON
+-- Thrift:   Build tests:                                OFF
+-- Thrift:    - Disabled because BUILD_COMPILER=OFF and no valid THRIFT_COMPILER is given
+-- Thrift:   Build type:                                 Release
+-- Thrift: 
+-- Thrift: Language libraries:
+-- Thrift: 
+-- Thrift:   Build as3 library:                          OFF
+-- Thrift:    - Disabled by WITH_AS3=OFF
+-- Thrift:    - Adobe Flex compc was not found - did you set env var FLEX_HOME?
+-- Thrift: 
+-- Thrift:   Build with OpenSSL:                         ON
+-- Thrift:     Version:                                  3.5.4
+-- Thrift: 
+-- Thrift:   Build C++ library:                          ON
+-- Thrift:     C++ Language Level:                       C++17 [compiler must support it]
+-- Thrift:     Build shared libraries:                   OFF
+-- Thrift:     Build with libevent support:              OFF
+-- Thrift:     Build with Qt5 support:                   OFF
+-- Thrift:     Build with ZLIB support:                  OFF
+-- Thrift: 
+-- Thrift:   Build C (GLib) library:                     OFF
+-- Thrift:    - Disabled by WITH_C_GLIB=OFF
+-- Thrift:    - GLib missing
+-- Thrift: 
+-- Thrift:   Build Java library:                         OFF
+-- Thrift:    - Disabled by WITH_JAVA=OFF
+-- Thrift:    - Gradle missing
+-- Thrift:   Build Javascript library:                   OFF
+-- Thrift:    - Disabled by WITH_JAVASCRIPT=OFF
+-- Thrift:   Build NodeJS library:                       OFF
+-- Thrift:    - Disabled by WITH_NODEJS=OFF
+-- Thrift: 
+-- Thrift:   Build Python library:                       OFF
+-- Thrift:    - Disabled by WITH_PYTHON=OFF
+-- Thrift:    - Python libraries missing
+-- Thrift: 
+-- Thrift: 
+-- Thrift: ----------------------------------------------------------
+-- Building (vendored) mimalloc from source
+CMake Warning at cmake_modules/FindRapidJSONAlt.cmake:29 (find_package):
+  By not providing "FindRapidJSON.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "RapidJSON", but CMake did not find one.
+
+  Could not find a package configuration file provided by "RapidJSON"
+  (requested version 1.1.0) with any of the following names:
+
+    RapidJSONConfig.cmake
+    rapidjson-config.cmake
+
+  Add the installation prefix of "RapidJSON" to CMAKE_PREFIX_PATH or set
+  "RapidJSON_DIR" to a directory containing one of the above files.  If
+  "RapidJSON" provides a separate development package or SDK, be sure it has
+  been installed.
+Call Stack (most recent call first):
+  cmake_modules/ThirdpartyToolchain.cmake:291 (find_package)
+  cmake_modules/ThirdpartyToolchain.cmake:2550 (resolve_dependency)
+  CMakeLists.txt:523 (include)
+
+
+-- Could NOT find RapidJSONAlt (missing: RAPIDJSON_INCLUDE_DIR) (Required is at least version "1.1.0")
+-- Building RapidJSON from source
+CMake Warning at cmake_modules/ThirdpartyToolchain.cmake:291 (find_package):
+  By not providing "Findxsimd.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "xsimd", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "xsimd" with any of
+  the following names:
+
+    xsimdConfig.cmake
+    xsimd-config.cmake
+
+  Add the installation prefix of "xsimd" to CMAKE_PREFIX_PATH or set
+  "xsimd_DIR" to a directory containing one of the above files.  If "xsimd"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  cmake_modules/ThirdpartyToolchain.cmake:2590 (resolve_dependency)
+  CMakeLists.txt:523 (include)
+
+
+-- Building xsimd from source
+-- Found ZLIB: /usr/lib/libz.so (found version "1.3.1")
+-- Using pkg-config package for zlib that is used by arrow for static link
+CMake Warning at cmake_modules/Findlz4Alt.cmake:29 (find_package):
+  By not providing "Findlz4.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "lz4", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "lz4" with any of
+  the following names:
+
+    lz4Config.cmake
+    lz4-config.cmake
+
+  Add the installation prefix of "lz4" to CMAKE_PREFIX_PATH or set "lz4_DIR"
+  to a directory containing one of the above files.  If "lz4" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  cmake_modules/ThirdpartyToolchain.cmake:291 (find_package)
+  cmake_modules/ThirdpartyToolchain.cmake:2710 (resolve_dependency)
+  CMakeLists.txt:523 (include)
+
+
+-- Checking for module 'liblz4'
+--   Package 'liblz4' not found
+-- Could NOT find lz4Alt (missing: LZ4_LIB LZ4_INCLUDE_DIR) 
+-- Building LZ4 from source using FetchContent
+CMake Deprecation Warning at /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/_deps/lz4-src/build/cmake/CMakeLists.txt:11 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Creating build script for LZ4 version: 1.10.0
+-- Performing Test CFLAG_pedantic_errors
+-- Performing Test CFLAG_pedantic_errors - Success
+-- Performing Test CFLAG_Wall
+-- Performing Test CFLAG_Wall - Success
+-- Performing Test CFLAG_Wextra
+-- Performing Test CFLAG_Wextra - Success
+-- Performing Test CFLAG_Wundef
+-- Performing Test CFLAG_Wundef - Success
+-- Performing Test CFLAG_Wcast_qual
+-- Performing Test CFLAG_Wcast_qual - Success
+-- Performing Test CFLAG_Wcast_align
+-- Performing Test CFLAG_Wcast_align - Success
+-- Performing Test CFLAG_Wshadow
+-- Performing Test CFLAG_Wshadow - Success
+-- Performing Test CFLAG_Wswitch_enum
+-- Performing Test CFLAG_Wswitch_enum - Success
+-- Performing Test CFLAG_Wdeclaration_after_statement
+-- Performing Test CFLAG_Wdeclaration_after_statement - Success
+-- Performing Test CFLAG_Wstrict_prototypes
+-- Performing Test CFLAG_Wstrict_prototypes - Success
+-- Performing Test CFLAG_Wpointer_arith
+-- Performing Test CFLAG_Wpointer_arith - Success
+-- Building RE2 from source
+-- Could NOT find utf8proc: (Required is at least version "2.2.0") (found utf8proc_LIB-NOTFOUND)
+-- Building utf8proc from source
+-- Found hdfs.h at: /var/local/PKGS/CRAN/arrow/tools/cpp/thirdparty/hadoop/include/hdfs.h
+-- All bundled static libraries: Snappy::snappy-static;thrift;mimalloc::mimalloc;lz4_static;re2::re2;utf8proc::utf8proc
+-- CMAKE_C_FLAGS: -O2 -mtune=native  -Wall -fno-semantic-interposition -msse4.2 
+-- CMAKE_CXX_FLAGS:  -Wno-noexcept-type -Wno-self-move -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0 -fdiagnostics-color=always  -Wall -fno-semantic-interposition -msse4.2 
+-- CMAKE_C_FLAGS_RELEASE: -O3 -DNDEBUG -O2 -ftree-vectorize 
+-- CMAKE_CXX_FLAGS_RELEASE: -O3 -DNDEBUG -O2 -ftree-vectorize 
+-- Creating bundled static library target arrow_bundled_dependencies at /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/release/libarrow_bundled_dependencies.a
+-- Looking for backtrace
+-- Looking for backtrace - not found
+-- Could NOT find Backtrace (missing: Backtrace_LIBRARY Backtrace_INCLUDE_DIR) 
+-- ---------------------------------------------------------------------
+-- Arrow version:                                 22.0.0
+-- 
+-- Build configuration summary:
+--   Generator: Unix Makefiles
+--   Build type: Release
+--   Source directory: /var/local/PKGS/CRAN/arrow/tools/cpp
+--   Install prefix: /var/local/PKGS/CRAN/arrow/libarrow/arrow-22.0.0
+-- 
+-- Compile and link options:
+-- 
+--   ARROW_CXXFLAGS="" [default=""]
+--       Compiler flags to append when compiling Arrow
+--   ARROW_BUILD_STATIC=ON [default=ON]
+--       Build static libraries
+--   ARROW_BUILD_SHARED=OFF [default=ON]
+--       Build shared libraries
+--   ARROW_PACKAGE_KIND="" [default=""]
+--       Arbitrary string that identifies the kind of package
+--       (for informational purposes)
+--   ARROW_GIT_ID="" [default=""]
+--       The Arrow git commit id (if any)
+--   ARROW_GIT_DESCRIPTION="" [default=""]
+--       The Arrow git commit description (if any)
+--   ARROW_POSITION_INDEPENDENT_CODE=ON [default=ON]
+--       Whether to create position-independent target
+--   ARROW_USE_CCACHE=ON [default=ON]
+--       Use ccache when compiling (if available)
+--   ARROW_USE_SCCACHE=ON [default=ON]
+--       Use sccache when compiling (if available),
+--       takes precedence over ccache if a storage backend is configured
+--   ARROW_USE_LD_GOLD=OFF [default=OFF]
+--       Use ld.gold for linking on Linux (if available)
+--   ARROW_USE_LLD=OFF [default=OFF]
+--       Use the LLVM lld for linking (if available)
+--   ARROW_USE_MOLD=OFF [default=OFF]
+--       Use mold for linking on Linux (if available)
+--   ARROW_SIMD_LEVEL=SSE4_2 [default=DEFAULT|NONE|SSE4_2|AVX2|AVX512|NEON|SVE|SVE128|SVE256|SVE512]
+--       Compile-time SIMD optimization level
+--   ARROW_RUNTIME_SIMD_LEVEL=MAX [default=MAX|NONE|SSE4_2|AVX2|AVX512]
+--       Max runtime SIMD optimization level
+--   ARROW_ALTIVEC=ON [default=ON]
+--       Build with Altivec if compiler has support
+--   ARROW_RPATH_ORIGIN=OFF [default=OFF]
+--       Build Arrow libraries with RATH set to $ORIGIN
+--   ARROW_INSTALL_NAME_RPATH=ON [default=ON]
+--       Build Arrow libraries with install_name set to @rpath
+--   ARROW_GGDB_DEBUG=ON [default=ON]
+--       Pass -ggdb flag to debug builds
+--   ARROW_WITH_MUSL=OFF [default=OFF]
+--       Whether the system libc is musl or not
+--   ARROW_ENABLE_THREADING=ON [default=ON]
+--       Enable threading in Arrow core
+-- 
+-- Tests and benchmarks options:
+-- 
+--   ARROW_BUILD_EXAMPLES=OFF [default=OFF]
+--       Build the Arrow examples
+--   ARROW_BUILD_TESTS=OFF [default=OFF]
+--       Build the Arrow googletest unit tests
+--   ARROW_ENABLE_TIMING_TESTS=ON [default=ON]
+--       Enable timing-sensitive tests
+--   ARROW_BUILD_INTEGRATION=OFF [default=OFF]
+--       Build the Arrow integration test executables
+--   ARROW_BUILD_BENCHMARKS=OFF [default=OFF]
+--       Build the Arrow micro benchmarks
+--   ARROW_BUILD_BENCHMARKS_REFERENCE=OFF [default=OFF]
+--       Build the Arrow micro reference benchmarks
+--   ARROW_BUILD_DETAILED_BENCHMARKS=OFF [default=OFF]
+--       Build benchmarks that do a longer exploration of performance
+--   ARROW_TEST_LINKAGE=static [default=static|shared]
+--       Linkage of Arrow libraries with unit tests executables.
+--   ARROW_BUILD_FUZZING_UTILITIES=OFF [default=OFF]
+--       Build command line utilities for fuzzing
+--   ARROW_FUZZING=OFF [default=OFF]
+--       Build Arrow fuzz targets
+--   ARROW_LARGE_MEMORY_TESTS=OFF [default=OFF]
+--       Enable unit tests which use large memory
+-- 
+-- Coverage options:
+-- 
+--   ARROW_GENERATE_COVERAGE=OFF [default=OFF]
+--       Build with C++ code coverage enabled
+-- 
+-- Checks options:
+-- 
+--   ARROW_TEST_MEMCHECK=OFF [default=OFF]
+--       Run the test suite using valgrind --tool=memcheck
+--   ARROW_USE_ASAN=OFF [default=OFF]
+--       Enable Address Sanitizer checks
+--   ARROW_USE_TSAN=OFF [default=OFF]
+--       Enable Thread Sanitizer checks
+--   ARROW_USE_UBSAN=OFF [default=OFF]
+--       Enable Undefined Behavior sanitizer checks
+-- 
+-- Project component options:
+-- 
+--   ARROW_ACERO=ON [default=OFF]
+--       Build the Arrow Acero Engine Module
+--   ARROW_AZURE=OFF [default=OFF]
+--       Build Arrow with Azure support (requires the Azure SDK for C++)
+--   ARROW_BUILD_UTILITIES=OFF [default=OFF]
+--       Build Arrow command line utilities
+--   ARROW_COMPUTE=ON [default=OFF]
+--       Build all Arrow Compute kernels
+--   ARROW_CSV=ON [default=OFF]
+--       Build the Arrow CSV Parser Module
+--   ARROW_CUDA=OFF [default=OFF]
+--       Build the Arrow CUDA extensions (requires CUDA toolkit)
+--   ARROW_DATASET=ON [default=OFF]
+--       Build the Arrow Dataset Modules
+--   ARROW_FILESYSTEM=ON [default=OFF]
+--       Build the Arrow Filesystem Layer
+--   ARROW_FLIGHT=OFF [default=OFF]
+--       Build the Arrow Flight RPC System (requires GRPC, Protocol Buffers)
+--   ARROW_FLIGHT_SQL=OFF [default=OFF]
+--       Build the Arrow Flight SQL extension
+--   ARROW_FLIGHT_SQL_ODBC=OFF [default=OFF]
+--       Build the Arrow Flight SQL ODBC extension
+--   ARROW_GANDIVA=OFF [default=OFF]
+--       Build the Gandiva libraries
+--   ARROW_GCS=OFF [default=C++ Client Libraries)]
+--       Build Arrow with GCS support (requires the Google Cloud Platform 
+--   ARROW_HDFS=OFF [default=OFF]
+--       Build the Arrow HDFS bridge
+--   ARROW_IPC=ON [default=ON]
+--       Build the Arrow IPC extensions
+--   ARROW_JEMALLOC=OFF [default=OFF]
+--       Build the Arrow jemalloc-based allocator
+--   ARROW_JSON=ON [default=OFF]
+--       Build Arrow with JSON support (requires RapidJSON)
+--   ARROW_MIMALLOC=ON [default=ON]
+--       Build the Arrow mimalloc-based allocator
+--   ARROW_PARQUET=ON [default=OFF]
+--       Build the Parquet libraries
+--   ARROW_ORC=OFF [default=OFF]
+--       Build the Arrow ORC adapter
+--   ARROW_PYTHON=OFF [default=OFF]
+--       Build some components needed by PyArrow.
+--       (This is a deprecated option. Use CMake presets instead.)
+--   ARROW_S3=OFF [default=OFF]
+--       Build Arrow with S3 support (requires the AWS SDK for C++)
+--   ARROW_S3_MODULE=OFF [default=OFF]
+--       Build the Arrow S3 filesystem as a dynamic module
+--   ARROW_SUBSTRAIT=OFF [default=OFF]
+--       Build the Arrow Substrait Consumer Module
+--   ARROW_TENSORFLOW=OFF [default=OFF]
+--       Build Arrow with TensorFlow support enabled
+--   ARROW_TESTING=OFF [default=OFF]
+--       Build the Arrow testing libraries
+-- 
+-- Thirdparty toolchain options:
+-- 
+--   ARROW_DEPENDENCY_SOURCE=AUTO [default=AUTO|BUNDLED|SYSTEM|CONDA|VCPKG|BREW]
+--       Method to use for acquiring arrow's build dependencies
+--   ARROW_VERBOSE_THIRDPARTY_BUILD=OFF [default=OFF]
+--       Show output from ExternalProjects rather than just logging to files
+--   ARROW_DEPENDENCY_USE_SHARED=ON [default=ON]
+--       Link to shared libraries
+--   ARROW_BOOST_USE_SHARED=OFF [default=ON]
+--       Rely on Boost shared libraries where relevant
+--   ARROW_BROTLI_USE_SHARED=ON [default=ON]
+--       Rely on Brotli shared libraries where relevant
+--   ARROW_BZ2_USE_SHARED=ON [default=ON]
+--       Rely on Bz2 shared libraries where relevant
+--   ARROW_GFLAGS_USE_SHARED=ON [default=ON]
+--       Rely on GFlags shared libraries where relevant
+--   ARROW_GRPC_USE_SHARED=ON [default=ON]
+--       Rely on gRPC shared libraries where relevant
+--   ARROW_JEMALLOC_USE_SHARED=ON [default=ON]
+--       Rely on jemalloc shared libraries where relevant
+--   ARROW_LLVM_USE_SHARED=ON [default=ON]
+--       Rely on LLVM shared libraries where relevant
+--   ARROW_LZ4_USE_SHARED=ON [default=ON]
+--       Rely on lz4 shared libraries where relevant
+--   ARROW_OPENSSL_USE_SHARED=ON [default=ON]
+--       Rely on OpenSSL shared libraries where relevant
+--   ARROW_PROTOBUF_USE_SHARED=ON [default=ON]
+--       Rely on Protocol Buffers shared libraries where relevant
+--   ARROW_SNAPPY_USE_SHARED=OFF [default=ON]
+--       Rely on snappy shared libraries where relevant
+--   ARROW_THRIFT_USE_SHARED=ON [default=ON]
+--       Rely on thrift shared libraries where relevant
+--   ARROW_UTF8PROC_USE_SHARED=ON [default=ON]
+--       Rely on utf8proc shared libraries where relevant
+--   ARROW_ZSTD_USE_SHARED=ON [default=ON]
+--       Rely on zstd shared libraries where relevant
+--   ARROW_USE_GLOG=OFF [default=OFF]
+--       Build libraries with glog support for pluggable logging
+--   ARROW_WITH_BACKTRACE=ON [default=ON]
+--       Build with backtrace support
+--   ARROW_WITH_OPENTELEMETRY=OFF [default=OFF]
+--       Build libraries with OpenTelemetry support for distributed tracing
+--   ARROW_WITH_BROTLI=OFF [default=OFF]
+--       Build with Brotli compression
+--   ARROW_WITH_BZ2=OFF [default=OFF]
+--       Build with BZ2 compression
+--   ARROW_WITH_LZ4=ON [default=OFF]
+--       Build with lz4 compression
+--   ARROW_WITH_SNAPPY=ON [default=OFF]
+--       Build with Snappy compression
+--   ARROW_WITH_ZLIB=ON [default=OFF]
+--       Build with zlib compression
+--   ARROW_WITH_ZSTD=OFF [default=OFF]
+--       Build with zstd compression
+--   ARROW_WITH_UTF8PROC=ON [default=ON]
+--       Build with support for Unicode properties using the utf8proc library
+--       (only used if ARROW_COMPUTE is ON or ARROW_GANDIVA is ON)
+--   ARROW_WITH_RE2=ON [default=ON]
+--       Build with support for regular expressions using the re2 library
+--       (only used if ARROW_COMPUTE or ARROW_GANDIVA is ON)
+-- 
+-- Parquet options:
+-- 
+--   PARQUET_BUILD_EXECUTABLES=OFF [default=OFF]
+--       Build the Parquet executable CLI tools. Requires static libraries to be built.
+--   PARQUET_BUILD_EXAMPLES=OFF [default=OFF]
+--       Build the Parquet examples. Requires static libraries to be built.
+--   PARQUET_REQUIRE_ENCRYPTION=OFF [default=OFF]
+--       Build support for encryption. Fail if OpenSSL is not found
+-- 
+-- Gandiva options:
+-- 
+--   ARROW_GANDIVA_STATIC_LIBSTDCPP=OFF [default=OFF]
+--       Include -static-libstdc++ -static-libgcc when linking with
+--       Gandiva static libraries
+--   ARROW_GANDIVA_PC_CXX_FLAGS="" [default=""]
+--       Compiler flags to append when pre-compiling Gandiva operations
+-- 
+-- Cross compiling options:
+-- 
+--   ARROW_GRPC_CPP_PLUGIN="" [default=""]
+--       grpc_cpp_plugin path to be used
+-- 
+-- Advanced developer options:
+-- 
+--   ARROW_EXTRA_ERROR_CONTEXT=OFF [default=OFF]
+--       Compile with extra error context (line numbers, code)
+--   ARROW_OPTIONAL_INSTALL=OFF [default=OFF]
+--       If enabled install ONLY targets that have already been built. Please be
+--       advised that if this is enabled 'install' will fail silently on components
+--       that have not been built
+--   ARROW_GDB_INSTALL_DIR="" [default=""]
+--       Use a custom install directory for GDB plugin.
+--       In general, you don't need to specify this because the default
+--       (CMAKE_INSTALL_FULL_BINDIR on Windows, CMAKE_INSTALL_FULL_LIBDIR otherwise)
+--       is reasonable.
+--   Outputting build configuration summary to /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/cmake_summary.json
+-- Configuring done (31.8s)
+-- Generating done (0.6s)
+-- Build files have been written to: /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453
++ /usr/bin/cmake --build . --target install -- -j 2
+gmake[1]: Entering directory '/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453'
+[  0%] Creating directories for 'mimalloc_ep'
+[  0%] Creating directories for 'snappy_ep'
+[  0%] Performing download step (download, verify and extract) for 'mimalloc_ep'
+[  0%] Performing download step (download, verify and extract) for 'snappy_ep'
+-- mimalloc_ep download command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/mimalloc_ep-prefix/src/mimalloc_ep-stamp/mimalloc_ep-download-*.log
+[  1%] No update step for 'mimalloc_ep'
+-- snappy_ep download command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/snappy_ep-prefix/src/snappy_ep-stamp/snappy_ep-download-*.log
+[  1%] No patch step for 'mimalloc_ep'
+[  1%] No update step for 'snappy_ep'
+[  2%] Performing configure step for 'mimalloc_ep'
+[  3%] No patch step for 'snappy_ep'
+[  3%] Performing configure step for 'snappy_ep'
+-- mimalloc_ep configure command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/mimalloc_ep-prefix/src/mimalloc_ep-stamp/mimalloc_ep-configure-*.log
+[  3%] Performing build step for 'mimalloc_ep'
+-- snappy_ep configure command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/snappy_ep-prefix/src/snappy_ep-stamp/snappy_ep-configure-*.log
+[  4%] Performing build step for 'snappy_ep'
+-- snappy_ep build command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/snappy_ep-prefix/src/snappy_ep-stamp/snappy_ep-build-*.log
+[  4%] Performing install step for 'snappy_ep'
+-- snappy_ep install command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/snappy_ep-prefix/src/snappy_ep-stamp/snappy_ep-install-*.log
+[  4%] Completed 'snappy_ep'
+[  4%] Built target snappy_ep
+[  4%] Creating directories for 'rapidjson_ep'
+[  4%] Performing download step (download, verify and extract) for 'rapidjson_ep'
+-- rapidjson_ep download command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/rapidjson_ep-stamp/rapidjson_ep-download-*.log
+[  5%] No update step for 'rapidjson_ep'
+[  5%] No patch step for 'rapidjson_ep'
+[  6%] Performing configure step for 'rapidjson_ep'
+-- rapidjson_ep configure command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/rapidjson_ep-stamp/rapidjson_ep-configure-*.log
+[  6%] Performing build step for 'rapidjson_ep'
+-- rapidjson_ep build command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/rapidjson_ep-stamp/rapidjson_ep-build-*.log
+[  6%] Performing install step for 'rapidjson_ep'
+-- rapidjson_ep install command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/rapidjson_ep-stamp/rapidjson_ep-install-*.log
+[  6%] Completed 'rapidjson_ep'
+[  6%] Built target rapidjson_ep
+[  6%] Creating directories for 'xsimd_ep'
+[  6%] Performing download step (download, verify and extract) for 'xsimd_ep'
+-- xsimd_ep download command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/xsimd_ep-stamp/xsimd_ep-download-*.log
+[  7%] No update step for 'xsimd_ep'
+[  7%] No patch step for 'xsimd_ep'
+[  8%] Performing configure step for 'xsimd_ep'
+-- xsimd_ep configure command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/xsimd_ep-stamp/xsimd_ep-configure-*.log
+[  8%] Performing build step for 'xsimd_ep'
+-- xsimd_ep build command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/xsimd_ep-stamp/xsimd_ep-build-*.log
+[  8%] Performing install step for 'xsimd_ep'
+-- xsimd_ep install command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/src/xsimd_ep-stamp/xsimd_ep-install-*.log
+[  8%] Completed 'xsimd_ep'
+[  8%] Built target xsimd_ep
+[  8%] Creating directories for 're2_ep'
+[  8%] Performing download step (download, verify and extract) for 're2_ep'
+-- re2_ep download command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep-stamp/re2_ep-download-*.log
+[  8%] No update step for 're2_ep'
+[  8%] No patch step for 're2_ep'
+[  8%] Performing configure step for 're2_ep'
+-- re2_ep configure command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep-stamp/re2_ep-configure-*.log
+[  8%] Performing build step for 're2_ep'
+-- mimalloc_ep build command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/mimalloc_ep-prefix/src/mimalloc_ep-stamp/mimalloc_ep-build-*.log
+[  8%] Performing install step for 'mimalloc_ep'
+-- mimalloc_ep install command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/mimalloc_ep-prefix/src/mimalloc_ep-stamp/mimalloc_ep-install-*.log
+[  8%] Completed 'mimalloc_ep'
+[  8%] Built target mimalloc_ep
+[  9%] Creating directories for 'utf8proc_ep'
+[  9%] Performing download step (download, verify and extract) for 'utf8proc_ep'
+-- utf8proc_ep download command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/utf8proc_ep-prefix/src/utf8proc_ep-stamp/utf8proc_ep-download-*.log
+[  9%] No update step for 'utf8proc_ep'
+[  9%] No patch step for 'utf8proc_ep'
+[  9%] Performing configure step for 'utf8proc_ep'
+-- utf8proc_ep configure command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/utf8proc_ep-prefix/src/utf8proc_ep-stamp/utf8proc_ep-configure-*.log
+[  9%] Performing build step for 'utf8proc_ep'
+-- utf8proc_ep build command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/utf8proc_ep-prefix/src/utf8proc_ep-stamp/utf8proc_ep-build-*.log
+[  9%] Performing install step for 'utf8proc_ep'
+-- utf8proc_ep install command succeeded.  See also /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/utf8proc_ep-prefix/src/utf8proc_ep-stamp/utf8proc_ep-install-*.log
+[ 10%] Completed 'utf8proc_ep'
+[ 10%] Built target utf8proc_ep
+[ 10%] Building C object _deps/lz4-build/CMakeFiles/lz4_static.dir/__/lz4-src/lib/lz4.c.o
+[ 10%] Building C object _deps/lz4-build/CMakeFiles/lz4_static.dir/__/lz4-src/lib/lz4file.c.o
+[ 10%] Building C object _deps/lz4-build/CMakeFiles/lz4_static.dir/__/lz4-src/lib/lz4frame.c.o
+[ 11%] Building C object _deps/lz4-build/CMakeFiles/lz4_static.dir/__/lz4-src/lib/lz4hc.c.o
+[ 11%] Building C object _deps/lz4-build/CMakeFiles/lz4_static.dir/__/lz4-src/lib/xxhash.c.o
+[ 11%] Linking C static library liblz4.a
+[ 11%] Built target lz4_static
+[ 11%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/array_base.cc.o
+[ 11%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/array_binary.cc.o
+[ 11%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/array_decimal.cc.o
+[ 12%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/array_dict.cc.o
+CMake Error at /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep-stamp/re2_ep-build-Release.cmake:37 (message):
+  Command failed: 2
+
+   'make'
+
+  See also
+
+    /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep-stamp/re2_ep-build-*.log
+
+
+-- stdout output is:
+[  1%] Building CXX object CMakeFiles/re2.dir/re2/bitstate.cc.o
+[  2%] Building CXX object CMakeFiles/re2.dir/re2/compile.cc.o
+[  3%] Building CXX object CMakeFiles/re2.dir/re2/dfa.cc.o
+[  4%] Building CXX object CMakeFiles/re2.dir/re2/filtered_re2.cc.o
+[  5%] Building CXX object CMakeFiles/re2.dir/re2/mimics_pcre.cc.o
+[  6%] Building CXX object CMakeFiles/re2.dir/re2/nfa.cc.o
+[  7%] Building CXX object CMakeFiles/re2.dir/re2/onepass.cc.o
+[  8%] Building CXX object CMakeFiles/re2.dir/re2/parse.cc.o
+[  9%] Building CXX object CMakeFiles/re2.dir/re2/perl_groups.cc.o
+[ 10%] Building CXX object CMakeFiles/re2.dir/re2/prefilter.cc.o
+[ 11%] Building CXX object CMakeFiles/re2.dir/re2/prefilter_tree.cc.o
+[ 12%] Building CXX object CMakeFiles/re2.dir/re2/prog.cc.o
+[ 13%] Building CXX object CMakeFiles/re2.dir/re2/re2.cc.o
+[ 14%] Building CXX object CMakeFiles/re2.dir/re2/regexp.cc.o
+[ 15%] Building CXX object CMakeFiles/re2.dir/re2/set.cc.o
+[ 16%] Building CXX object CMakeFiles/re2.dir/re2/simplify.cc.o
+[ 17%] Building CXX object CMakeFiles/re2.dir/re2/stringpiece.cc.o
+[ 18%] Building CXX object CMakeFiles/re2.dir/re2/tostring.cc.o
+[ 20%] Building CXX object CMakeFiles/re2.dir/re2/unicode_casefold.cc.o
+[ 21%] Building CXX object CMakeFiles/re2.dir/re2/unicode_groups.cc.o
+[ 22%] Building CXX object CMakeFiles/re2.dir/util/rune.cc.o
+[ 23%] Building CXX object CMakeFiles/re2.dir/util/strutil.cc.o
+[ 24%] Linking CXX static library libre2.a
+[ 24%] Built target re2
+[ 25%] Building CXX object CMakeFiles/testing.dir/re2/testing/backtrack.cc.o
+[ 26%] Building CXX object CMakeFiles/testing.dir/re2/testing/dump.cc.o
+[ 27%] Building CXX object CMakeFiles/testing.dir/re2/testing/exhaustive_tester.cc.o
+[ 28%] Building CXX object CMakeFiles/testing.dir/re2/testing/null_walker.cc.o
+[ 29%] Building CXX object CMakeFiles/testing.dir/re2/testing/regexp_generator.cc.o
+[ 30%] Building CXX object CMakeFiles/testing.dir/re2/testing/string_generator.cc.o
+[ 31%] Building CXX object CMakeFiles/testing.dir/re2/testing/tester.cc.o
+[ 32%] Building CXX object CMakeFiles/testing.dir/util/pcre.cc.o
+
+-- stderr output is:
+In file included from [01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:21[m[K:
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.h:503:11:[m[K [01;31m[Kerror: [m[K'[01m[Kint32_t[m[K' does not name a type
+  503 |   mutable [01;31m[Kint32_t[m[K     hit_limit_;      // Hit limit during execution (bool)
+      |           [01;31m[K^~~~~~~[m[K
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.h:166:1:[m[K [01;36m[Knote: [m[K'[01m[Kint32_t[m[K' is defined in header '[01m[K<cstdint>[m[K'; this is probably fixable by adding '[01m[K#include <cstdint>[m[K'
+  165 | #include "re2/stringpiece.h"
+  +++ |+[32m[K#include <cstdint>[m[K
+  166 | 
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:[m[K In member function '[01m[Kvoid re2::PCRE::[01;32m[KInit[m[K(const char*, Option, int, int, bool)[m[K':
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:109:3:[m[K [01;31m[Kerror: [m[K'[01m[Khit_limit_[m[K' was not declared in this scope; did you mean '[01m[KHitLimit[m[K'?
+  109 |   [01;31m[Khit_limit_[m[K = false;
+      |   [01;31m[K^~~~~~~~~~[m[K
+      |   [32m[KHitLimit[m[K
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:[m[K In member function '[01m[Kbool re2::PCRE::[01;32m[KHitLimit[m[K()[m[K':
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:504:10:[m[K [01;31m[Kerror: [m[K'[01m[Khit_limit_[m[K' was not declared in this scope; did you mean '[01m[KHitLimit[m[K'?
+  504 |   return [01;31m[Khit_limit_[m[K != 0;
+      |          [01;31m[K^~~~~~~~~~[m[K
+      |          [32m[KHitLimit[m[K
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:[m[K In member function '[01m[Kvoid re2::PCRE::[01;32m[KClearHitLimit[m[K()[m[K':
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:508:3:[m[K [01;31m[Kerror: [m[K'[01m[Khit_limit_[m[K' was not declared in this scope; did you mean '[01m[KHitLimit[m[K'?
+  508 |   [01;31m[Khit_limit_[m[K = 0;
+      |   [01;31m[K^~~~~~~~~~[m[K
+      |   [32m[KHitLimit[m[K
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:[m[K In member function '[01m[Kint re2::PCRE::[01;32m[KTryMatch[m[K(const re2::StringPiece&, size_t, Anchor, bool, int*, int) const[m[K':
+[01m[K/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep/util/pcre.cc:573:9:[m[K [01;31m[Kerror: [m[K'[01m[Khit_limit_[m[K' was not declared in this scope; did you mean '[01m[KHitLimit[m[K'?
+  573 |         [01;31m[Khit_limit_[m[K = true;
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[KHitLimit[m[K
+make[6]: *** [CMakeFiles/testing.dir/build.make:177: CMakeFiles/testing.dir/util/pcre.cc.o] Error 1
+make[5]: *** [CMakeFiles/Makefile2:185: CMakeFiles/testing.dir/all] Error 2
+make[4]: *** [Makefile:136: all] Error 2
+
+CMake Error at /home/runner/tmp/RtmpJoLIdb/file790a4c7e9453/re2_ep-prefix/src/re2_ep-stamp/re2_ep-build-Release.cmake:47 (message):
+  Stopping after outputting logs.
+
+
+make[3]: *** [CMakeFiles/re2_ep.dir/build.make:86: re2_ep-prefix/src/re2_ep-stamp/re2_ep-build] Error 1
+make[2]: *** [CMakeFiles/Makefile2:2297: CMakeFiles/re2_ep.dir/all] Error 2
+make[2]: *** Waiting for unfinished jobs....
+[ 12%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/array_nested.cc.o
+[ 12%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/array_primitive.cc.o
+[ 12%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/array_run_end.cc.o
+[ 12%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_adaptive.cc.o
+[ 13%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_base.cc.o
+[ 13%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_binary.cc.o
+[ 13%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_decimal.cc.o
+[ 13%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_dict.cc.o
+[ 13%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_run_end.cc.o
+[ 14%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_nested.cc.o
+[ 14%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_primitive.cc.o
+[ 14%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/builder_union.cc.o
+[ 14%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/concatenate.cc.o
+[ 14%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/data.cc.o
+[ 15%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/diff.cc.o
+[ 15%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/statistics.cc.o
+[ 15%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/util.cc.o
+[ 15%] Building CXX object src/arrow/CMakeFiles/arrow_array.dir/array/validate.cc.o
+[ 15%] Built target arrow_array
+gmake[1]: *** [Makefile:166: all] Error 2
+gmake[1]: Leaving directory '/home/runner/tmp/RtmpJoLIdb/file790a4c7e9453'
+**** Error building Arrow C++.
+*** Failed to find Arrow C++ libraries.
+------------------------- NOTE ---------------------------
+There was an issue preparing the Arrow C++ libraries.
+See https://arrow.apache.org/docs/r/articles/install.html
+----------------------------------------------------------
+
+Test compile error: <stdin>:1:10: fatal error: arrow/api.h: No such file or directory
+compilation terminated.
+Failing compile command: g++ -E -I/usr/local/include  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0 -std=gnu++17 -xc++ -
+PKG_CFLAGS=
+PKG_LIBS=
+ERROR: configuration failed for package 'arrow'
+* removing '/home/runner/R-patched/lib/arrow'
+* restoring previous '/home/runner/R-patched/lib/arrow'

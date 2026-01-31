@@ -1,0 +1,33 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'jrSiCKLSNMF' ...
+** this is package 'jrSiCKLSNMF' version '1.2.3'
+** package 'jrSiCKLSNMF' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/jrSiCKLSNMF/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppProgress/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppProgress/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c jrSiCKLSNMF.cpp -o jrSiCKLSNMF.o
+In file included from /home/runner/R-patched/lib/RcppArmadillo/include/current/armadillo:85,
+                 from /home/runner/R-patched/lib/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:57,
+                 from /home/runner/R-patched/lib/RcppArmadillo/include/RcppArmadillo.h:32,
+                 from jrSiCKLSNMF.cpp:2:
+jrSiCKLSNMF.cpp: In function 'Rcpp::List jrSiCKLSNMF(const Rcpp::List&, Rcpp::List&, arma::mat&, const Rcpp::List&, const Rcpp::List&, const Rcpp::List&, const double&, const arma::uvec&, bool, std::string, std::string, double, int, bool, bool, int, bool, int)':
+jrSiCKLSNMF.cpp:287:13: error: conversion from 'std::nullptr_t' to 'Rcpp::List' {aka 'Rcpp::Vector<19>'} is ambiguous
+  287 |      return NULL;
+      |             ^~~~
+In file included from /home/runner/R-patched/lib/Rcpp/include/Rcpp/Vector.h:51,
+                 from /home/runner/R-patched/lib/Rcpp/include/Rcpp.h:41,
+                 from /home/runner/R-patched/lib/RcppArmadillo/include/RcppArmadillo.h:35:
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:107:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(const char*) [with int RTYPE = 19; StoragePolicy = Rcpp::PreserveStorage]'
+  107 |     Vector( const char* st ) {
+      |     ^~~~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:71:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(SEXP) [with int RTYPE = 19; StoragePolicy = Rcpp::PreserveStorage; SEXP = SEXPREC*]'
+   71 |     Vector( SEXP x ) {
+      |     ^~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: jrSiCKLSNMF.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/jrSiCKLSNMF/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/jrSiCKLSNMF/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/jrSiCKLSNMF/src'
+ERROR: compilation failed for package 'jrSiCKLSNMF'
+* removing '/home/runner/R-patched/lib/jrSiCKLSNMF'

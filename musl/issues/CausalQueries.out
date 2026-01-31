@@ -1,0 +1,41 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'CausalQueries' ...
+** this is package 'CausalQueries' version '1.4.4'
+** package 'CausalQueries' successfully unpacked and MD5 sums checked
+** using staged installation
+Registered S3 methods overwritten by 'RcppEigen':
+  method               from         
+  predict.fastLm       RcppArmadillo
+  print.fastLm         RcppArmadillo
+  summary.fastLm       RcppArmadillo
+  print.summary.fastLm RcppArmadillo
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/CausalQueries/src'
+
+
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I"../inst/include" -I"/home/runner/R-patched/lib/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I'/home/runner/R-patched/lib/rstan/include' -I'/home/runner/R-patched/lib/StanHeaders/include' -I/usr/local/include    -I'/home/runner/R-patched/lib/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+
+
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I"../inst/include" -I"/home/runner/R-patched/lib/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I'/home/runner/R-patched/lib/rstan/include' -I'/home/runner/R-patched/lib/StanHeaders/include' -I/usr/local/include    -I'/home/runner/R-patched/lib/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c get_type_prob_helpers_arma.cpp -o get_type_prob_helpers_arma.o
+
+
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I"../inst/include" -I"/home/runner/R-patched/lib/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I'/home/runner/R-patched/lib/rstan/include' -I'/home/runner/R-patched/lib/StanHeaders/include' -I/usr/local/include    -I'/home/runner/R-patched/lib/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c realise_outcome_c.cpp -o realise_outcome_c.o
+
+
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I"../inst/include" -I"/home/runner/R-patched/lib/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I'/home/runner/R-patched/lib/rstan/include' -I'/home/runner/R-patched/lib/StanHeaders/include' -I/usr/local/include    -I'/home/runner/R-patched/lib/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c stanExports_simplexes.cc -o stanExports_simplexes.o
+In file included from /home/runner/R-patched/lib/rstan/include/rstan/rstaninc.hpp:4,
+                 from stanExports_simplexes.h:23,
+                 from stanExports_simplexes.cc:5:
+/home/runner/R-patched/lib/rstan/include/rstan/stan_fit.hpp:15:10: fatal error: boost/date_time/posix_time/posix_time_types.hpp: No such file or directory
+   15 | #include <boost/date_time/posix_time/posix_time_types.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:209: stanExports_simplexes.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/CausalQueries/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/CausalQueries/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/CausalQueries/src'
+ERROR: compilation failed for package 'CausalQueries'
+* removing '/home/runner/R-patched/lib/CausalQueries'
+* restoring previous '/home/runner/R-patched/lib/CausalQueries'

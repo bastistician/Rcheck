@@ -1,0 +1,42 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'secsse' ...
+** this is package 'secsse' version '3.5.0'
+** package 'secsse' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/secsse/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_HAS_AUTO_PTR_ETC=0 -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_HAS_AUTO_PTR_ETC=0 -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I'/home/runner/R-patched/lib/BH/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c secsse_eval.cpp -o secsse_eval.o
+In file included from secsse_eval.cpp:13:
+secsse_loglik.h: In function 'secsse::inodes_t<secsse::terse::inode_t> secsse::find_inte_nodes(const std::vector<phy_edge_t>&, rvector<const int>, std::vector<std::vector<double> >&)':
+secsse_loglik.h:111:5: error: 'tbb' has not been declared
+  111 |     tbb::parallel_for<int>(0, ances.size(), 1, [&](int i) {
+      |     ^~~
+secsse_loglik.h:111:23: error: expected primary-expression before 'int'
+  111 |     tbb::parallel_for<int>(0, ances.size(), 1, [&](int i) {
+      |                       ^~~
+secsse_loglik.h:125:6: error: expected primary-expression before ')' token
+  125 |     });
+      |      ^
+secsse_loglik.h: In function 'secsse::calc_ll_res secsse::calc_ll(const INTEGRATOR&, inodes_t<terse::inode_t>&, std::vector<std::vector<double> >&)':
+secsse_loglik.h:245:7: error: 'tbb' has not been declared
+  245 |       tbb::parallel_for_each(first, last, [&](auto& inode) {
+      |       ^~~
+secsse_eval.cpp: In function 'Rcpp::List secsse::eval(std::unique_ptr<ODE>, const Rcpp::IntegerVector&, const Rcpp::NumericMatrix&, const Rcpp::NumericMatrix&, const std::string&, double, double, size_t)':
+secsse_eval.cpp:30:25: error: 'tbb' has not been declared
+   30 |   auto global_control = tbb::global_control(tbb::global_control::max_allowed_parallelism, num_threads);
+      |                         ^~~
+secsse_eval.cpp:30:45: error: 'tbb' has not been declared
+   30 |   auto global_control = tbb::global_control(tbb::global_control::max_allowed_parallelism, num_threads);
+      |                                             ^~~
+secsse_eval.cpp:47:3: error: 'tbb' has not been declared
+   47 |   tbb::parallel_for_each(std::begin(snodes), std::end(snodes),
+      |   ^~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: secsse_eval.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/secsse/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/secsse/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/secsse/src'
+ERROR: compilation failed for package 'secsse'
+* removing '/home/runner/R-patched/lib/secsse'

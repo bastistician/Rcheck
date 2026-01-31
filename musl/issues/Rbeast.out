@@ -1,0 +1,95 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'Rbeast' ...
+** this is package 'Rbeast' version '1.0.1'
+** package 'Rbeast' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rbeast/src'
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c _beastv2_gui_plot.c -o _beastv2_gui_plot.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c _beastv2_gui_winmain.c -o _beastv2_gui_winmain.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_common.c -o abc_common.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_cpu.c -o abc_cpu.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_date.c -o abc_date.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_dir.c -o abc_dir.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_ide_util_R.c -o abc_ide_util_R.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_ide_util_common.c -o abc_ide_util_common.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_ide_util_matlab.c -o abc_ide_util_matlab.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_ide_util_python.c -o abc_ide_util_python.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_lzw.c -o abc_lzw.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_mat.c -o abc_mat.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_math.c -o abc_math.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_math_avx.c -o abc_math_avx.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_math_avx512.c -o abc_math_avx512.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_mcmc.c -o abc_mcmc.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_mem.c -o abc_mem.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_mem_ext.c -o abc_mem_ext.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_pthread.c -o abc_pthread.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_rand_pcg_global.c -o abc_rand_pcg_global.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_rand_pcg_local.c -o abc_rand_pcg_local.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_rand_pcg_local_avx2.c -o abc_rand_pcg_local_avx2.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_rand_pcg_local_avx512.c -o abc_rand_pcg_local_avx512.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_rand_pcg_local_generic.c -o abc_rand_pcg_local_generic.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_sort.c -o abc_sort.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_svd.c -o abc_svd.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_system.c -o abc_system.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_timer.c -o abc_timer.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_tranpose.c -o abc_tranpose.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_ts_func.c -o abc_ts_func.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_vec.c -o abc_vec.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_vec_avx2.c -o abc_vec_avx2.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_vec_avx512.c -o abc_vec_avx512.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_vec_generic.c -o abc_vec_generic.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c abc_win32_demo.c -o abc_win32_demo.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_COREV4.c -o beastv2_COREV4.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_COREV4_bic.c -o beastv2_COREV4_bic.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_COREV4_bic_mthrd.c -o beastv2_COREV4_bic_mthrd.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_COREV4_gui.c -o beastv2_COREV4_gui.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_COREV4_mthrd.c -o beastv2_COREV4_mthrd.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_allocinitmem.c -o beastv2_basis_allocinitmem.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_computexy_q.c -o beastv2_basis_computexy_q.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_cvtKnotsToBinVec.c -o beastv2_basis_cvtKnotsToBinVec.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_genrandbasis.c -o beastv2_basis_genrandbasis.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_gensegment.c -o beastv2_basis_gensegment.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_pickcmptId.c -o beastv2_basis_pickcmptId.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_proposeNew_q.c -o beastv2_basis_proposeNew_q.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_updateKsKe_prec0123.c -o beastv2_basis_updateKsKe_prec0123.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_basis_updategoodvec.c -o beastv2_basis_updategoodvec.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_date.c -o beastv2_date.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_func_q.c -o beastv2_func_q.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_io_in_args.c -o beastv2_io_in_args.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_io_in_readts.c -o beastv2_io_in_readts.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_io_out_allocmem_q.c -o beastv2_io_out_allocmem_q.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_io_out_printargs.c -o beastv2_io_out_printargs.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_io_out_tsextractprint.c -o beastv2_io_out_tsextractprint.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_io_out_write_q.c -o beastv2_io_out_write_q.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_model_allocinit_q.c -o beastv2_model_allocinit_q.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_prior_model.c -o beastv2_prior_model.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_prior_precfunc.c -o beastv2_prior_precfunc.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_svdbasis.c -o beastv2_svdbasis.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c beastv2_xxyy_allocmem_q.c -o beastv2_xxyy_allocmem_q.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c globalvars.c -o globalvars.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c glue_code.c -o glue_code.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG -D_REENTRANT -DR_RELEASE  -I/usr/local/include   -DR_RELEASE   -fpic  -O2 -mtune=native  -c tetris.c -o tetris.o
+gcc -std=gnu23 -shared -O2 -mtune=native -fpic -L/usr/local/lib -o Rbeast.so _beastv2_gui_plot.o _beastv2_gui_winmain.o abc_common.o abc_cpu.o abc_date.o abc_dir.o abc_ide_util_R.o abc_ide_util_common.o abc_ide_util_matlab.o abc_ide_util_python.o abc_lzw.o abc_mat.o abc_math.o abc_math_avx.o abc_math_avx512.o abc_mcmc.o abc_mem.o abc_mem_ext.o abc_pthread.o abc_rand_pcg_global.o abc_rand_pcg_local.o abc_rand_pcg_local_avx2.o abc_rand_pcg_local_avx512.o abc_rand_pcg_local_generic.o abc_sort.o abc_svd.o abc_system.o abc_timer.o abc_tranpose.o abc_ts_func.o abc_vec.o abc_vec_avx2.o abc_vec_avx512.o abc_vec_generic.o abc_win32_demo.o beastv2_COREV4.o beastv2_COREV4_bic.o beastv2_COREV4_bic_mthrd.o beastv2_COREV4_gui.o beastv2_COREV4_mthrd.o beastv2_basis_allocinitmem.o beastv2_basis_computexy_q.o beastv2_basis_cvtKnotsToBinVec.o beastv2_basis_genrandbasis.o beastv2_basis_gensegment.o beastv2_basis_pickcmptId.o beastv2_basis_proposeNew_q.o beastv2_basis_updateKsKe_prec0123.o beastv2_basis_updategoodvec.o beastv2_date.o beastv2_func_q.o beastv2_io_in_args.o beastv2_io_in_readts.o beastv2_io_out_allocmem_q.o beastv2_io_out_printargs.o beastv2_io_out_tsextractprint.o beastv2_io_out_write_q.o beastv2_model_allocinit_q.o beastv2_prior_model.o beastv2_prior_precfunc.o beastv2_svdbasis.o beastv2_xxyy_allocmem_q.o globalvars.o glue_code.o tetris.o -lpthread -lm
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rbeast/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rbeast/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rbeast/src'
+installing to /home/runner/R-patched/lib/00LOCK-Rbeast/00new/Rbeast/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+Error: package or namespace load failed for 'Rbeast' in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/home/runner/R-patched/lib/00LOCK-Rbeast/00new/Rbeast/libs/Rbeast.so':
+  Error relocating /home/runner/R-patched/lib/00LOCK-Rbeast/00new/Rbeast/libs/Rbeast.so: pthread_attr_setaffinity_np: symbol not found
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing '/home/runner/R-patched/lib/Rbeast'

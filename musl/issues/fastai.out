@@ -1,0 +1,100 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'fastai' ...
+** this is package 'fastai' version '2.2.2'
+** package 'fastai' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+
+ *** caught segfault ***
+address 0x90, cause 'memory not mapped'
+
+Traceback:
+ 1: py_initialize(config$python, config$libpython, config$pythonhome,     config$virtualenv_activate, config$version$major, config$version$minor,     interactive(), numpy_load_error)
+ 2: (function() {    Sys.setenv(PYTHONPATH = newpythonpath)    on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)    py_initialize(config$python, config$libpython, config$pythonhome,         config$virtualenv_activate, config$version$major, config$version$minor,         interactive(), numpy_load_error)})()
+ 3: doTryCatch(return(expr), name, parentenv, handler)
+ 4: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 5: tryCatchList(expr, classes, parentenv, handlers)
+ 6: tryCatch({    oldpythonpath <- Sys.getenv("PYTHONPATH")    newpythonpath <- Sys.getenv("RETICULATE_PYTHONPATH", unset = paste(config$pythonpath,         system.file("python", package = "reticulate"), sep = .Platform$path.sep))    local({        Sys.setenv(PYTHONPATH = newpythonpath)        on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)        py_initialize(config$python, config$libpython, config$pythonhome,             config$virtualenv_activate, config$version$major,             config$version$minor, interactive(), numpy_load_error)    })}, error = function(e) {    Sys.setenv(PATH = oldpath)    if (is.na(curr_session_env)) {        Sys.unsetenv("R_SESSION_INITIALIZED")    }    else {        Sys.setenv(R_SESSION_INITIALIZED = curr_session_env)    }    stop(e)})
+ 7: initialize_python()
+ 8: ensure_python_initialized(required_module = module)
+ 9: import(module)
+10: doTryCatch(return(expr), name, parentenv, handler)
+11: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+12: tryCatchList(expr, classes, parentenv, handlers)
+13: tryCatch({    import(module)    TRUE}, error = clear_error_handler(FALSE))
+14: reticulate::py_module_available("matplotlib")
+15: fun(libname, pkgname)
+16: doTryCatch(return(expr), name, parentenv, handler)
+17: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+18: tryCatchList(expr, classes, parentenv, handlers)
+19: tryCatch(fun(libname, pkgname), error = identity)
+20: runHook(".onLoad", env, package.lib, package)
+21: loadNamespace(package, lib.loc)
+22: doTryCatch(return(expr), name, parentenv, handler)
+23: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+24: tryCatchList(expr, classes, parentenv, handlers)
+25: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+26: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+27: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+28: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+29: doTryCatch(return(expr), name, parentenv, handler)
+30: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+31: tryCatchList(expr, classes, parentenv, handlers)
+32: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+33: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+34: tools:::.test_load_package("fastai", "/home/runner/R-patched/lib/00LOCK-fastai/00new")
+An irrecoverable exception occurred. R is aborting now ...
+** testing if installed package can be loaded from final location
+
+ *** caught segfault ***
+address 0x90, cause 'memory not mapped'
+
+Traceback:
+ 1: py_initialize(config$python, config$libpython, config$pythonhome,     config$virtualenv_activate, config$version$major, config$version$minor,     interactive(), numpy_load_error)
+ 2: (function() {    Sys.setenv(PYTHONPATH = newpythonpath)    on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)    py_initialize(config$python, config$libpython, config$pythonhome,         config$virtualenv_activate, config$version$major, config$version$minor,         interactive(), numpy_load_error)})()
+ 3: doTryCatch(return(expr), name, parentenv, handler)
+ 4: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 5: tryCatchList(expr, classes, parentenv, handlers)
+ 6: tryCatch({    oldpythonpath <- Sys.getenv("PYTHONPATH")    newpythonpath <- Sys.getenv("RETICULATE_PYTHONPATH", unset = paste(config$pythonpath,         system.file("python", package = "reticulate"), sep = .Platform$path.sep))    local({        Sys.setenv(PYTHONPATH = newpythonpath)        on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)        py_initialize(config$python, config$libpython, config$pythonhome,             config$virtualenv_activate, config$version$major,             config$version$minor, interactive(), numpy_load_error)    })}, error = function(e) {    Sys.setenv(PATH = oldpath)    if (is.na(curr_session_env)) {        Sys.unsetenv("R_SESSION_INITIALIZED")    }    else {        Sys.setenv(R_SESSION_INITIALIZED = curr_session_env)    }    stop(e)})
+ 7: initialize_python()
+ 8: ensure_python_initialized(required_module = module)
+ 9: import(module)
+10: doTryCatch(return(expr), name, parentenv, handler)
+11: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+12: tryCatchList(expr, classes, parentenv, handlers)
+13: tryCatch({    import(module)    TRUE}, error = clear_error_handler(FALSE))
+14: reticulate::py_module_available("matplotlib")
+15: fun(libname, pkgname)
+16: doTryCatch(return(expr), name, parentenv, handler)
+17: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+18: tryCatchList(expr, classes, parentenv, handlers)
+19: tryCatch(fun(libname, pkgname), error = identity)
+20: runHook(".onLoad", env, package.lib, package)
+21: loadNamespace(package, lib.loc)
+22: doTryCatch(return(expr), name, parentenv, handler)
+23: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+24: tryCatchList(expr, classes, parentenv, handlers)
+25: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+26: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+27: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+28: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+29: doTryCatch(return(expr), name, parentenv, handler)
+30: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+31: tryCatchList(expr, classes, parentenv, handlers)
+32: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+33: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+34: tools:::.test_load_package("fastai", "/home/runner/R-patched/lib")
+An irrecoverable exception occurred. R is aborting now ...
+** testing if installed package keeps a record of temporary installation path
+Warning in file(con, "rb") :
+  cannot open file '/home/runner/tmp/RtmpbgDpLh/file574a76543cc4': No such file or directory
+Error in file(con, "rb") : cannot open the connection
+* removing '/home/runner/R-patched/lib/fastai'
+* restoring previous '/home/runner/R-patched/lib/fastai'

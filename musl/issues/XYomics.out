@@ -1,0 +1,19 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'XYomics' ...
+** this is package 'XYomics' version '0.1.1'
+** package 'XYomics' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/XYomics/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c PCSF.cpp -o PCSF.o
+PCSF.cpp:9:10: fatal error: boost/config.hpp: No such file or directory
+    9 | #include <boost/config.hpp>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: PCSF.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/XYomics/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/XYomics/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/XYomics/src'
+ERROR: compilation failed for package 'XYomics'
+* removing '/home/runner/R-patched/lib/XYomics'

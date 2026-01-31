@@ -1,0 +1,103 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'FLSSS' ...
+** this is package 'FLSSS' version '9.2.8'
+** package 'FLSSS' successfully unpacked and MD5 sums checked
+** using staged installation
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking how to run the C++ preprocessor... g++ -std=gnu++17 -E
+checking for gcc... gcc -std=gnu23
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -std=gnu23 accepts -g... yes
+checking for gcc -std=gnu23 option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ -std=gnu++17 accepts -g... (cached) yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking gmp.h usability... yes
+checking gmp.h presence... yes
+checking for gmp.h... yes
+checking for __gmpz_init in -lgmp... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/FLSSS/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include   -I. -DGMP -O2 -mtune=native -DR_BUILD -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BaB01kp.cpp -o BaB01kp.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include   -I. -DGMP -O2 -mtune=native -DR_BUILD -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BaBgapMulthreadKPs.cpp -o BaBgapMulthreadKPs.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include   -I. -DGMP -O2 -mtune=native -DR_BUILD -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BaBgapMulthreadNodes.cpp -o BaBgapMulthreadNodes.o
+BaBgapMulthreadNodes.cpp:832:46: error: 'tbb' has not been declared
+  832 |            std::time_t timer, double tlimit, tbb::spin_mutex *mtx,
+      |                                              ^~~
+BaBgapMulthreadNodes.cpp:832:62: error: expected ',' or '...' before '*' token
+  832 |            std::time_t timer, double tlimit, tbb::spin_mutex *mtx,
+      |                                                              ^
+BaBgapMulthreadNodes.cpp: In member function 'void gapOBJ<valtype, indtype, fmove, greedyBranch>::run(WV<valtype>**, std::vector<signed char>&, time_t, double, int)':
+BaBgapMulthreadNodes.cpp:838:5: error: 'Nnode' was not declared in this scope
+  838 |     Nnode = 0;
+      |     ^~~~~
+BaBgapMulthreadNodes.cpp:839:5: error: 'Nkp' was not declared in this scope; did you mean 'bkp'?
+  839 |     Nkp = 0;
+      |     ^~~
+      |     bkp
+BaBgapMulthreadNodes.cpp:847:15: error: 'budget' was not declared in this scope
+  847 |     std::copy(budget, budget + Nagent, residualBudget.begin());
+      |               ^~~~~~
+BaBgapMulthreadNodes.cpp:900:45: error: 'currentSolutionRevenue' was not declared in this scope
+  900 |         if(needNoBacktrack and revenueUB > *currentSolutionRevenue)
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~
+BaBgapMulthreadNodes.cpp:903:11: error: 'mtx' was not declared in this scope
+  903 |           mtx->lock();
+      |           ^~~
+BaBgapMulthreadNodes.cpp:904:11: error: 'currentSolution' was not declared in this scope
+  904 |           currentSolution->assign(Bcontainer.begin(), Bcontainer.end());
+      |           ^~~~~~~~~~~~~~~
+BaBgapMulthreadNodes.cpp:1083:25: error: 'currentSolutionRevenue' was not declared in this scope
+ 1083 |         if(totalReve > *currentSolutionRevenue)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+BaBgapMulthreadNodes.cpp:1085:11: error: 'mtx' was not declared in this scope
+ 1085 |           mtx->lock();
+      |           ^~~
+BaBgapMulthreadNodes.cpp:1087:11: error: 'currentSolution' was not declared in this scope
+ 1087 |           currentSolution->assign(Bcontainer.begin(), Bcontainer.end());
+      |           ^~~~~~~~~~~~~~~
+BaBgapMulthreadNodes.cpp: At global scope:
+BaBgapMulthreadNodes.cpp:1137:3: error: 'tbb' does not name a type
+ 1137 |   tbb::spin_mutex *mtx;
+      |   ^~~
+BaBgapMulthreadNodes.cpp: In member function 'void runGapOBJ<valtype, indtype, fmove, greedyBranch>::operator()(std::size_t, std::size_t)':
+BaBgapMulthreadNodes.cpp:1150:57: error: 'mtx' was not declared in this scope
+ 1150 |       G[st].run(info, Bcontainers[objI], timer, tlimit, mtx, currentSolution,
+      |                                                         ^~~
+BaBgapMulthreadNodes.cpp: In constructor 'runGapOBJ<valtype, indtype, fmove, greedyBranch>::runGapOBJ(indtype, indtype, WV<valtype>**, std::vector<std::vector<signed char> >&, time_t, double, std::vector<signed char>*, valtype*, valtype*, indtype&, indtype&, std::size_t)':
+BaBgapMulthreadNodes.cpp:1166:5: error: 'tbb' has not been declared
+ 1166 |     tbb::spin_mutex m; mtx = &m;
+      |     ^~~
+BaBgapMulthreadNodes.cpp:1166:24: error: 'mtx' was not declared in this scope
+ 1166 |     tbb::spin_mutex m; mtx = &m;
+      |                        ^~~
+BaBgapMulthreadNodes.cpp:1166:31: error: 'm' was not declared in this scope; did you mean 'tm'?
+ 1166 |     tbb::spin_mutex m; mtx = &m;
+      |                               ^
+      |                               tm
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: BaBgapMulthreadNodes.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/FLSSS/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/FLSSS/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/FLSSS/src'
+ERROR: compilation failed for package 'FLSSS'
+* removing '/home/runner/R-patched/lib/FLSSS'

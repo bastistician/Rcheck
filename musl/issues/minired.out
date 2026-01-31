@@ -1,0 +1,117 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'minired' ...
+** this is package 'minired' version '1.0.1'
+** package 'minired' successfully unpacked and MD5 sums checked
+** using staged installation
+  checking runtime
+  found: 'linux-musl'
+   arch: 'x86_64'
+  using download from 'https://redatam-core.s3.us-west-2.amazonaws.com/core-dev/macos/redatamx-core-macos-20241010.zip'
+  checking REDATAM libraries
+  cannot find current redatam runtime files
+  attempting to download them
+trying URL 'https://redatam-core.s3.us-west-2.amazonaws.com/core-dev/macos/redatamx-core-macos-20241010.zip'
+Content type 'application/zip' length 13776556 bytes (13.1 MB)
+==================================================
+downloaded 13.1 MB
+
+  unpacking current redatam runtime
+Archive:  redatam-engine.zip
+   creating: tmpredatam/bin/
+   creating: tmpredatam/bin/locale/
+   creating: tmpredatam/bin/locale/pt/
+   creating: tmpredatam/bin/locale/pt/LC_MESSAGES/
+  inflating: tmpredatam/bin/locale/pt/LC_MESSAGES/redengine.mo  
+   creating: tmpredatam/bin/locale/es/
+   creating: tmpredatam/bin/locale/es/LC_MESSAGES/
+  inflating: tmpredatam/bin/locale/es/LC_MESSAGES/redengine.mo  
+   creating: tmpredatam/bin/locale/en/
+   creating: tmpredatam/bin/locale/en/LC_MESSAGES/
+  inflating: tmpredatam/bin/locale/en/LC_MESSAGES/redengine.mo  
+  inflating: tmpredatam/bin/rxrest   
+  inflating: tmpredatam/bin/rxapp    
+  inflating: tmpredatam/bin/application.yml  
+   creating: tmpredatam/lib/
+  inflating: tmpredatam/lib/libdatasource-csv.dylib  
+  inflating: tmpredatam/lib/libredengine-1.0.0-rc2.dylib  
+  inflating: tmpredatam/lib/libexporter-xlsx.dylib  
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/minired/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c red_dictionary.cpp -o red_dictionary.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c red_execute.cpp -o red_execute.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c red_initialize.cpp -o red_initialize.o
+g++ -std=gnu++17 -shared -L/usr/local/lib -o minired.so cpp11.o red_dictionary.o red_execute.o red_initialize.o
+make[1]: Leaving directory '/var/local/PKGS/CRAN/minired/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/minired/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/minired/src'
+installing to /home/runner/R-patched/lib/00LOCK-minired/00new/minired/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+
+ *** caught segfault ***
+address 0, cause 'memory not mapped'
+
+Traceback:
+ 1: fun(libname, pkgname)
+ 2: doTryCatch(return(expr), name, parentenv, handler)
+ 3: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 4: tryCatchList(expr, classes, parentenv, handlers)
+ 5: tryCatch(fun(libname, pkgname), error = identity)
+ 6: runHook(".onLoad", env, package.lib, package)
+ 7: loadNamespace(package, lib.loc)
+ 8: doTryCatch(return(expr), name, parentenv, handler)
+ 9: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+10: tryCatchList(expr, classes, parentenv, handlers)
+11: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+12: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+13: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+14: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+15: doTryCatch(return(expr), name, parentenv, handler)
+16: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+17: tryCatchList(expr, classes, parentenv, handlers)
+18: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+19: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+20: tools:::.test_load_package("minired", "/home/runner/R-patched/lib/00LOCK-minired/00new")
+An irrecoverable exception occurred. R is aborting now ...
+** checking absolute paths in shared objects and dynamic libraries
+readelf: Error: Not an ELF file - it has the wrong magic bytes at the start
+** testing if installed package can be loaded from final location
+
+ *** caught segfault ***
+address 0, cause 'memory not mapped'
+
+Traceback:
+ 1: fun(libname, pkgname)
+ 2: doTryCatch(return(expr), name, parentenv, handler)
+ 3: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 4: tryCatchList(expr, classes, parentenv, handlers)
+ 5: tryCatch(fun(libname, pkgname), error = identity)
+ 6: runHook(".onLoad", env, package.lib, package)
+ 7: loadNamespace(package, lib.loc)
+ 8: doTryCatch(return(expr), name, parentenv, handler)
+ 9: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+10: tryCatchList(expr, classes, parentenv, handlers)
+11: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+12: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+13: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+14: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+15: doTryCatch(return(expr), name, parentenv, handler)
+16: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+17: tryCatchList(expr, classes, parentenv, handlers)
+18: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+19: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+20: tools:::.test_load_package("minired", "/home/runner/R-patched/lib")
+An irrecoverable exception occurred. R is aborting now ...
+** testing if installed package keeps a record of temporary installation path
+Warning in file(con, "rb") :
+  cannot open file '/home/runner/tmp/RtmpmHJPCk/file78e7e43fff0': No such file or directory
+Error in file(con, "rb") : cannot open the connection
+* removing '/home/runner/R-patched/lib/minired'

@@ -1,0 +1,24 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'BoolNet' ...
+** this is package 'BoolNet' version '2.1.9'
+** package 'BoolNet' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/BoolNet/src'
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c attractor_info.c -o attractor_info.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c attractor_search_interface.c -o attractor_search_interface.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c common.c -o common.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c init.c -o init.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c picosat.c -o picosat.o
+picosat.c:8140:10: fatal error: sys/unistd.h: No such file or directory
+ 8140 | #include <sys/unistd.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:202: picosat.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/BoolNet/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/BoolNet/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/BoolNet/src'
+ERROR: compilation failed for package 'BoolNet'
+* removing '/home/runner/R-patched/lib/BoolNet'
+* restoring previous '/home/runner/R-patched/lib/BoolNet'

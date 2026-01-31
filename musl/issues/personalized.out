@@ -1,0 +1,15 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'personalized' ...
+** this is package 'personalized' version '0.2.7'
+** package 'personalized' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'slice' is not exported by 'namespace:xgboost'
+Execution halted
+ERROR: lazy loading failed for package 'personalized'
+* removing '/home/runner/R-patched/lib/personalized'
+* restoring previous '/home/runner/R-patched/lib/personalized'

@@ -1,0 +1,55 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'GenomeAdmixR' ...
+** this is package 'GenomeAdmixR' version '2.1.12'
+** package 'GenomeAdmixR' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/GenomeAdmixR/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c Fish.cpp -o Fish.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c helper_functions.cpp -o helper_functions.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c simulate.cpp -o simulate.o
+In file included from simulate.cpp:21:
+util.h: In function 'size_t get_rcpp_num_threads()':
+util.h:20:9: error: 'tbb' has not been declared
+   20 |       ? tbb::task_arena::automatic  // -1
+      |         ^~~
+util.h: In function 'void set_num_threads()':
+util.h:27:7: error: 'tbb' has not been declared
+   27 |       tbb::global_control(tbb::global_control::max_allowed_parallelism,
+      |       ^~~
+util.h:27:27: error: 'tbb' has not been declared
+   27 |       tbb::global_control(tbb::global_control::max_allowed_parallelism,
+      |                           ^~~
+simulate.cpp: In function 'void update_pop(const std::vector<Fish>&, std::vector<Fish>&, size_t, double, const std::vector<double>&, const double&, bool, double, int)':
+simulate.cpp:83:5: error: 'tbb' has not been declared
+   83 |     tbb::parallel_for(
+      |     ^~~
+simulate.cpp:84:7: error: 'tbb' has not been declared
+   84 |       tbb::blocked_range<unsigned>(0, pop_size),
+      |       ^~~
+simulate.cpp:84:26: error: expected primary-expression before 'unsigned'
+   84 |       tbb::blocked_range<unsigned>(0, pop_size),
+      |                          ^~~~~~~~
+simulate.cpp:85:17: error: 'tbb' does not name a type
+   85 |       [&](const tbb::blocked_range<unsigned>& r) {
+      |                 ^~~
+simulate.cpp: In lambda function:
+simulate.cpp:108:9: error: expected '{' before ';' token
+  108 |       });
+      |         ^
+simulate.cpp: In function 'void update_pop(const std::vector<Fish>&, std::vector<Fish>&, size_t, double, const std::vector<double>&, const double&, bool, double, int)':
+simulate.cpp:108:9: error: expected ')' before ';' token
+  108 |       });
+      |         ^
+      |         )
+simulate.cpp:83:22: note: to match this '('
+   83 |     tbb::parallel_for(
+      |                      ^
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: simulate.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/GenomeAdmixR/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/GenomeAdmixR/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/GenomeAdmixR/src'
+ERROR: compilation failed for package 'GenomeAdmixR'
+* removing '/home/runner/R-patched/lib/GenomeAdmixR'

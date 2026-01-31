@@ -1,0 +1,93 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'tm.plugin.mail' ...
+** this is package 'tm.plugin.mail' version '0.3-1'
+** package 'tm.plugin.mail' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+
+ *** caught segfault ***
+address 0x90, cause 'memory not mapped'
+
+Traceback:
+ 1: py_initialize(config$python, config$libpython, config$pythonhome,     config$virtualenv_activate, config$version$major, config$version$minor,     interactive(), numpy_load_error)
+ 2: (function() {    Sys.setenv(PYTHONPATH = newpythonpath)    on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)    py_initialize(config$python, config$libpython, config$pythonhome,         config$virtualenv_activate, config$version$major, config$version$minor,         interactive(), numpy_load_error)})()
+ 3: doTryCatch(return(expr), name, parentenv, handler)
+ 4: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 5: tryCatchList(expr, classes, parentenv, handlers)
+ 6: tryCatch({    oldpythonpath <- Sys.getenv("PYTHONPATH")    newpythonpath <- Sys.getenv("RETICULATE_PYTHONPATH", unset = paste(config$pythonpath,         system.file("python", package = "reticulate"), sep = .Platform$path.sep))    local({        Sys.setenv(PYTHONPATH = newpythonpath)        on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)        py_initialize(config$python, config$libpython, config$pythonhome,             config$virtualenv_activate, config$version$major,             config$version$minor, interactive(), numpy_load_error)    })}, error = function(e) {    Sys.setenv(PATH = oldpath)    if (is.na(curr_session_env)) {        Sys.unsetenv("R_SESSION_INITIALIZED")    }    else {        Sys.setenv(R_SESSION_INITIALIZED = curr_session_env)    }    stop(e)})
+ 7: initialize_python()
+ 8: (function (required_module = NULL) {    if (is_python_initialized())         return()    if (is_python_finalized())         stop("py_initialize() cannot be called more than once per R session or after py_finalize(). Please start a new R session.")    callback <- getOption("reticulate.python.beforeInitialized")    if (is.function(callback))         callback()    if (!is.null(required_module))         register_delay_load_import(required_module)    .globals$py_config <- initialize_python()    .globals$delay_load_imports <- NULL    remap_output_streams()    set_knitr_python_stdout_hook()    if (is_windows() && (is_rstudio() || is_positron()))         import("rpytools.subprocess")$patch_subprocess_Popen()    py_inject_r()    py_inject_hooks()    configure_environment()    callback <- getOption("reticulate.python.afterInitialized")    if (is.null(callback))         callback <- getOption("reticulate.initialized")    if (is.function(callback))         callback()    install_interrupt_handlers()    call_init_hooks()})()
+ 9: py_get_attr(x, name, TRUE)
+10: `$.python.builtin.module`(import_builtins(convert = FALSE, delay_load = TRUE),     "chr")
+11: import_builtins(convert = FALSE, delay_load = TRUE)$chr
+12: fun(libname, pkgname)
+13: doTryCatch(return(expr), name, parentenv, handler)
+14: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+15: tryCatchList(expr, classes, parentenv, handlers)
+16: tryCatch(fun(libname, pkgname), error = identity)
+17: runHook(".onLoad", env, package.lib, package)
+18: loadNamespace(package, lib.loc)
+19: doTryCatch(return(expr), name, parentenv, handler)
+20: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+21: tryCatchList(expr, classes, parentenv, handlers)
+22: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+23: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+24: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+25: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+26: doTryCatch(return(expr), name, parentenv, handler)
+27: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+28: tryCatchList(expr, classes, parentenv, handlers)
+29: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+30: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+31: tools:::.test_load_package("tm.plugin.mail", "/home/runner/R-patched/lib/00LOCK-tm.plugin.mail/00new")
+An irrecoverable exception occurred. R is aborting now ...
+** testing if installed package can be loaded from final location
+
+ *** caught segfault ***
+address 0x90, cause 'memory not mapped'
+
+Traceback:
+ 1: py_initialize(config$python, config$libpython, config$pythonhome,     config$virtualenv_activate, config$version$major, config$version$minor,     interactive(), numpy_load_error)
+ 2: (function() {    Sys.setenv(PYTHONPATH = newpythonpath)    on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)    py_initialize(config$python, config$libpython, config$pythonhome,         config$virtualenv_activate, config$version$major, config$version$minor,         interactive(), numpy_load_error)})()
+ 3: doTryCatch(return(expr), name, parentenv, handler)
+ 4: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 5: tryCatchList(expr, classes, parentenv, handlers)
+ 6: tryCatch({    oldpythonpath <- Sys.getenv("PYTHONPATH")    newpythonpath <- Sys.getenv("RETICULATE_PYTHONPATH", unset = paste(config$pythonpath,         system.file("python", package = "reticulate"), sep = .Platform$path.sep))    local({        Sys.setenv(PYTHONPATH = newpythonpath)        on.exit(Sys.setenv(PYTHONPATH = oldpythonpath), add = TRUE)        py_initialize(config$python, config$libpython, config$pythonhome,             config$virtualenv_activate, config$version$major,             config$version$minor, interactive(), numpy_load_error)    })}, error = function(e) {    Sys.setenv(PATH = oldpath)    if (is.na(curr_session_env)) {        Sys.unsetenv("R_SESSION_INITIALIZED")    }    else {        Sys.setenv(R_SESSION_INITIALIZED = curr_session_env)    }    stop(e)})
+ 7: initialize_python()
+ 8: (function (required_module = NULL) {    if (is_python_initialized())         return()    if (is_python_finalized())         stop("py_initialize() cannot be called more than once per R session or after py_finalize(). Please start a new R session.")    callback <- getOption("reticulate.python.beforeInitialized")    if (is.function(callback))         callback()    if (!is.null(required_module))         register_delay_load_import(required_module)    .globals$py_config <- initialize_python()    .globals$delay_load_imports <- NULL    remap_output_streams()    set_knitr_python_stdout_hook()    if (is_windows() && (is_rstudio() || is_positron()))         import("rpytools.subprocess")$patch_subprocess_Popen()    py_inject_r()    py_inject_hooks()    configure_environment()    callback <- getOption("reticulate.python.afterInitialized")    if (is.null(callback))         callback <- getOption("reticulate.initialized")    if (is.function(callback))         callback()    install_interrupt_handlers()    call_init_hooks()})()
+ 9: py_get_attr(x, name, TRUE)
+10: `$.python.builtin.module`(import_builtins(convert = FALSE, delay_load = TRUE),     "chr")
+11: import_builtins(convert = FALSE, delay_load = TRUE)$chr
+12: fun(libname, pkgname)
+13: doTryCatch(return(expr), name, parentenv, handler)
+14: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+15: tryCatchList(expr, classes, parentenv, handlers)
+16: tryCatch(fun(libname, pkgname), error = identity)
+17: runHook(".onLoad", env, package.lib, package)
+18: loadNamespace(package, lib.loc)
+19: doTryCatch(return(expr), name, parentenv, handler)
+20: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+21: tryCatchList(expr, classes, parentenv, handlers)
+22: tryCatch({    attr(package, "LibPath") <- which.lib.loc    ns <- loadNamespace(package, lib.loc)    env <- attachNamespace(ns, pos = pos, deps, exclude, include.only)}, error = function(e) {    P <- if (!is.null(cc <- conditionCall(e)))         paste(" in", deparse(cc)[1L])    else ""    msg <- gettextf("package or namespace load failed for %s%s:\n %s",         sQuote(package), P, conditionMessage(e))    if (logical.return && !quietly)         message(paste("Error:", msg), domain = NA)    else stop(msg, call. = FALSE, domain = NA)})
+23: library(pkg_name, lib.loc = lib, character.only = TRUE, logical.return = TRUE)
+24: withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+25: suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE))
+26: doTryCatch(return(expr), name, parentenv, handler)
+27: tryCatchOne(expr, names, parentenv, handlers[[1L]])
+28: tryCatchList(expr, classes, parentenv, handlers)
+29: tryCatch(expr, error = function(e) {    call <- conditionCall(e)    if (!is.null(call)) {        if (identical(call[[1L]], quote(doTryCatch)))             call <- sys.call(-4L)        dcall <- deparse(call, nlines = 1L)        prefix <- paste("Error in", dcall, ": ")        LONG <- 75L        sm <- strsplit(conditionMessage(e), "\n")[[1L]]        w <- 14L + nchar(dcall, type = "w") + nchar(sm[1L], type = "w")        if (is.na(w))             w <- 14L + nchar(dcall, type = "b") + nchar(sm[1L],                 type = "b")        if (w > LONG)             prefix <- paste0(prefix, "\n  ")    }    else prefix <- "Error : "    msg <- paste0(prefix, conditionMessage(e), "\n")    .Internal(seterrmessage(msg[1L]))    if (!silent && isTRUE(getOption("show.error.messages"))) {        cat(msg, file = outFile)        .Internal(printDeferredWarnings())    }    invisible(structure(msg, class = "try-error", condition = e))})
+30: try(suppressPackageStartupMessages(library(pkg_name, lib.loc = lib,     character.only = TRUE, logical.return = TRUE)))
+31: tools:::.test_load_package("tm.plugin.mail", "/home/runner/R-patched/lib")
+An irrecoverable exception occurred. R is aborting now ...
+** testing if installed package keeps a record of temporary installation path
+Warning in file(con, "rb") :
+  cannot open file '/home/runner/tmp/RtmpbCaemG/file5a5e54d10173': No such file or directory
+Error in file(con, "rb") : cannot open the connection
+* removing '/home/runner/R-patched/lib/tm.plugin.mail'
+* restoring previous '/home/runner/R-patched/lib/tm.plugin.mail'

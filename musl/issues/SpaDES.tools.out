@@ -1,0 +1,26 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'SpaDES.tools' ...
+** this is package 'SpaDES.tools' version '2.0.9'
+** package 'SpaDES.tools' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/SpaDES.tools/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c duplicated.cpp -o duplicated.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c runif.cpp -o runif.o
+g++ -std=gnu++17 -shared -L/usr/local/lib -o SpaDES.tools.so RcppExports.o duplicated.o runif.o
+make[1]: Leaving directory '/var/local/PKGS/CRAN/SpaDES.tools/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/SpaDES.tools/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/SpaDES.tools/src'
+installing to /home/runner/R-patched/lib/00LOCK-SpaDES.tools/00new/SpaDES.tools/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error in get(x, envir = ns, inherits = FALSE) : 
+  object 'isGridded' not found
+Error: unable to load R code in package 'SpaDES.tools'
+Execution halted
+ERROR: lazy loading failed for package 'SpaDES.tools'
+* removing '/home/runner/R-patched/lib/SpaDES.tools'
+* restoring previous '/home/runner/R-patched/lib/SpaDES.tools'

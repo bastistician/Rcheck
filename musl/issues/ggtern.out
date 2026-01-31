@@ -1,0 +1,16 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'ggtern' ...
+** this is package 'ggtern' version '3.5.0'
+** package 'ggtern' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+Error in get(x, envir = ns, inherits = FALSE) : 
+  object 'is.zero' not found
+Error: unable to load R code in package 'ggtern'
+Execution halted
+ERROR: lazy loading failed for package 'ggtern'
+* removing '/home/runner/R-patched/lib/ggtern'
