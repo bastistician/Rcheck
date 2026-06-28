@@ -1,4 +1,4 @@
-FROM alpine:3.22
+FROM alpine:3.24
 
 LABEL org.opencontainers.image.title="Large Alpine Linux system for checking R packages under musl"
 LABEL org.opencontainers.image.authors="Sebastian Meyer <seb.meyer@fau.de>"

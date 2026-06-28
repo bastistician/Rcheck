@@ -3,7 +3,7 @@ with musl instead of glibc and BusyBox instead of GNU coreutils.
 
 R version: nightly R-patched snapshot from CRAN/src/base-prerelease
 Platform: x86_64-pc-linux-musl
-OS: Alpine Linux v3.22
+OS: Alpine Linux v3.24
 Locale: C.UTF-8
 TZ: Europe/Berlin
 
@@ -38,4 +38,4 @@ the following software is manually installed from source:
 
 - JAGS 4.3.2 <https://mcmc-jags.sourceforge.io/>
 - BWidget 1.10.1 <https://wiki.tcl-lang.org/page/BWidget>
-- COIN-OR SYMPHONY 5.7.2 <https://github.com/coin-or/SYMPHONY>
+- COIN-OR SYMPHONY 5.7.3 <https://github.com/coin-or/SYMPHONY>
