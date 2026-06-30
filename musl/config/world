@@ -11,7 +11,9 @@ curl-dev
 cyrus-sasl-dev
 doas
 e2fsprogs
+ffmpeg-dev
 fftw-dev
+flint-dev
 font-liberation
 g++
 gcc
