@@ -1,0 +1,204 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'smoothbp' ...
+** this is package 'smoothbp' version '0.2.4'
+** package 'smoothbp' successfully unpacked and MD5 sums checked
+** using staged installation
+Using cargo 1.87.0 (99624be96 2025-05-06) (Alpine Linux 1.87.0-r1)
+Using rustc 1.87.0 (17067e9ac 2025-05-09) (Alpine Linux 1.87.0-r1)
+Building for CRAN.
+Writing `src/Makevars`.
+`tools/config.R` has finished.
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/smoothbp/src'
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c entrypoint.c -o entrypoint.o
+if [ -d ./vendor ]; then \
+	echo "=== Using offline vendor directory ==="; \
+	mkdir -p /var/local/PKGS/CRAN/smoothbp/src/.cargo && \
+	printf '[source.crates-io]\nreplace-with = "vendored-sources"\n\n[source.vendored-sources]\ndirectory = "/var/local/PKGS/CRAN/smoothbp/src/vendor"\n' > /var/local/PKGS/CRAN/smoothbp/src/.cargo/config.toml; \
+elif [ -f ./rust/vendor.tar.xz ]; then \
+	echo "=== Using offline vendor tarball ==="; \
+	tar xf rust/vendor.tar.xz && \
+	mkdir -p /var/local/PKGS/CRAN/smoothbp/src/.cargo && \
+	printf '[source.crates-io]\nreplace-with = "vendored-sources"\n\n[source.vendored-sources]\ndirectory = "/var/local/PKGS/CRAN/smoothbp/src/vendor"\n' > /var/local/PKGS/CRAN/smoothbp/src/.cargo/config.toml; \
+fi
+=== Using offline vendor tarball ===
+export CARGO_HOME=/var/local/PKGS/CRAN/smoothbp/src/.cargo && \
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/runner/.cargo/bin" && \
+RUSTFLAGS=" --print=native-static-libs" cargo build -j 2 --offline --lib --release --manifest-path=./rust/Cargo.toml --target-dir ./rust/target 
+   Compiling autocfg v1.5.0
+   Compiling libm v0.2.16
+   Compiling proc-macro2 v1.0.106
+   Compiling num-traits v0.2.19
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.45
+   Compiling libc v0.2.186
+   Compiling paste v1.0.15
+   Compiling zerocopy v0.8.48
+   Compiling cfg-if v1.0.4
+   Compiling bytemuck v1.25.0
+   Compiling safe_arch v0.7.4
+   Compiling getrandom v0.2.17
+   Compiling crossbeam-utils v0.8.21
+   Compiling rand_core v0.6.4
+   Compiling wide v0.7.33
+   Compiling num-complex v0.4.6
+   Compiling ppv-lite86 v0.2.21
+   Compiling approx v0.5.1
+   Compiling syn v2.0.117
+   Compiling matrixmultiply v0.3.10
+   Compiling syn v1.0.109
+   Compiling rand_chacha v0.3.1
+   Compiling num-integer v0.1.46
+   Compiling rawpointer v0.2.1
+   Compiling extendr-ffi v0.9.0
+   Compiling num-rational v0.4.2
+   Compiling crossbeam-epoch v0.9.18
+   Compiling rand v0.8.6
+   Compiling rayon-core v1.13.0
+   Compiling typenum v1.20.0
+   Compiling rand_distr v0.4.3
+   Compiling crossbeam-deque v0.8.6
+   Compiling simba v0.6.0
+   Compiling nalgebra-macros v0.1.0
+   Compiling extendr-api v0.9.0
+   Compiling lazy_static v1.5.0
+   Compiling extendr-macros v0.9.0
+   Compiling readonly v0.2.13
+   Compiling nalgebra v0.29.0
+   Compiling nalgebra-macros v0.2.2
+   Compiling simba v0.9.1
+   Compiling once_cell v1.21.4
+   Compiling either v1.15.0
+   Compiling rayon v1.12.0
+   Compiling statrs v0.16.1
+   Compiling nalgebra v0.33.3
+   Compiling smoothbp v0.1.0 (/var/local/PKGS/CRAN/smoothbp/src/rust)
+warning: unused import: `extendr_api::prelude`
+ --> src/bridge.rs:6:5
+  |
+6 | use extendr_api::prelude::*;
+  |     ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: fields `p_b0`, `p_b1`, `p_deltas`, `p_om`, and `p_rho` are never read
+  --> src/model.rs:80:9
+   |
+41 | pub struct Priors {
+   |            ------ fields in this struct
+...
+80 |     pub p_b0: usize,
+   |         ^^^^
+81 |     pub p_b1: usize,
+   |         ^^^^
+82 |     pub p_deltas: Vec<usize>,
+   |         ^^^^^^^^
+83 |     pub p_om: Vec<usize>,
+   |         ^^^^
+84 |     pub p_rho: Vec<usize>,
+   |         ^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+note: Link against the following native artifacts when linking against this static library. The order and any duplication can be significant on some platforms.
+
+note: native-static-libs: -lR -lgcc_s -lc
+
+warning: `smoothbp` (lib) generated 2 warnings
+    Finished `release` profile [optimized] target(s) in 6m 57s
+export CARGO_HOME="/var/local/PKGS/CRAN/smoothbp/src/.cargo" && \
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/runner/.cargo/bin" && \
+cargo run -j 2 --offline --release --bin document --manifest-path=./rust/Cargo.toml --target-dir ./rust/target 
+   Compiling autocfg v1.5.0
+   Compiling proc-macro2 v1.0.106
+   Compiling libm v0.2.16
+   Compiling num-traits v0.2.19
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.45
+   Compiling libc v0.2.186
+   Compiling zerocopy v0.8.48
+   Compiling paste v1.0.15
+   Compiling bytemuck v1.25.0
+   Compiling cfg-if v1.0.4
+   Compiling safe_arch v0.7.4
+   Compiling getrandom v0.2.17
+   Compiling crossbeam-utils v0.8.21
+   Compiling rand_core v0.6.4
+   Compiling wide v0.7.33
+   Compiling num-complex v0.4.6
+   Compiling approx v0.5.1
+   Compiling syn v2.0.117
+   Compiling ppv-lite86 v0.2.21
+   Compiling matrixmultiply v0.3.10
+   Compiling syn v1.0.109
+   Compiling rand_chacha v0.3.1
+   Compiling num-integer v0.1.46
+   Compiling extendr-ffi v0.9.0
+   Compiling rawpointer v0.2.1
+   Compiling num-rational v0.4.2
+   Compiling crossbeam-epoch v0.9.18
+   Compiling rand v0.8.6
+   Compiling rayon-core v1.13.0
+   Compiling typenum v1.20.0
+   Compiling rand_distr v0.4.3
+   Compiling crossbeam-deque v0.8.6
+   Compiling simba v0.6.0
+   Compiling nalgebra-macros v0.1.0
+   Compiling lazy_static v1.5.0
+   Compiling extendr-api v0.9.0
+   Compiling extendr-macros v0.9.0
+   Compiling nalgebra v0.29.0
+   Compiling readonly v0.2.13
+   Compiling nalgebra-macros v0.2.2
+   Compiling simba v0.9.1
+   Compiling once_cell v1.21.4
+   Compiling either v1.15.0
+   Compiling rayon v1.12.0
+   Compiling statrs v0.16.1
+   Compiling nalgebra v0.33.3
+   Compiling smoothbp v0.1.0 (/var/local/PKGS/CRAN/smoothbp/src/rust)
+warning: unused import: `extendr_api::prelude`
+ --> src/bridge.rs:6:5
+  |
+6 | use extendr_api::prelude::*;
+  |     ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: fields `p_b0`, `p_b1`, `p_deltas`, `p_om`, and `p_rho` are never read
+  --> src/model.rs:80:9
+   |
+41 | pub struct Priors {
+   |            ------ fields in this struct
+...
+80 |     pub p_b0: usize,
+   |         ^^^^
+81 |     pub p_b1: usize,
+   |         ^^^^
+82 |     pub p_deltas: Vec<usize>,
+   |         ^^^^^^^^
+83 |     pub p_om: Vec<usize>,
+   |         ^^^^
+84 |     pub p_rho: Vec<usize>,
+   |         ^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `smoothbp` (lib) generated 2 warnings
+error: linking with `cc` failed: exit status: 1
+  |
+  = note:  "cc" "-m64" "/home/runner/tmp/rustcEBPf9E/symbols.o" "<1 object files omitted>" "-Wl,--as-needed" "-Wl,-Bstatic" "/home/runner/tmp/rustcEBPf9E/{libstd-003ce02984288987.rlib}.rlib" "<sysroot>/lib/rustlib/x86_64-alpine-linux-musl/lib/{libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lR" "-lgcc_s" "-lc" "-L" "/home/runner/tmp/rustcEBPf9E/raw-dylibs" "-Wl,--eh-frame-hdr" "-Wl,-z,noexecstack" "-L" "<sysroot>/lib/rustlib/x86_64-alpine-linux-musl/lib" "-o" "/var/local/PKGS/CRAN/smoothbp/src/./rust/target/release/deps/document-9b8eb44873e9d4f5" "-Wl,--gc-sections" "-pie" "-Wl,-z,relro,-z,now" "-Wl,-O1" "-Wl,--strip-debug" "-nodefaultlibs" "-Wl,--enable-new-dtags,-z,origin"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lR: No such file or directory
+          collect2: error: ld returned 1 exit status
+          
+
+error: could not compile `smoothbp` (bin "document") due to 1 previous error
+make[1]: *** [Makevars:28: rust/target/release/libsmoothbp.a] Error 101
+make[1]: Leaving directory '/var/local/PKGS/CRAN/smoothbp/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/smoothbp/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/smoothbp/src'
+ERROR: compilation failed for package 'smoothbp'
+* removing '/home/runner/R-patched/lib/smoothbp'
+* restoring previous '/home/runner/R-patched/lib/smoothbp'

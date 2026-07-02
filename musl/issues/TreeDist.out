@@ -1,0 +1,46 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'TreeDist' ...
+** this is package 'TreeDist' version '2.12.0'
+** package 'TreeDist' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+specified C++17
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/TreeDist/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c binary_entropy_counts.cpp -o binary_entropy_counts.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c day_1985.cpp -o day_1985.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c hmi.cpp -o hmi.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c hpart.cpp -o hpart.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c hpart_relabel.cpp -o hpart_relabel.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c lap.cpp -o lap.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c mast.cpp -o mast.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c nni_distance.cpp -o nni_distance.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c path_vector.cpp -o path_vector.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c reduce_tree.cpp -o reduce_tree.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c spr.cpp -o spr.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c spr_lookup.cpp -o spr_lookup.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c tree_distance_functions.cpp -o tree_distance_functions.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/TreeTools/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c tree_distances.cpp -o tree_distances.o
+g++ -std=gnu++17 -shared -L/usr/local/lib -o TreeDist.so RcppExports.o binary_entropy_counts.o day_1985.o hmi.o hpart.o hpart_relabel.o lap.o mast.o nni_distance.o path_vector.o reduce_tree.o spr.o spr_lookup.o tree_distance_functions.o tree_distances.o
+tree_distance_functions.o: in function `_GLOBAL__sub_I_tree_distance_functions.cpp':
+tree_distance_functions.cpp:(.text.startup+0xc7): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x12c): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x133): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x142): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x14d): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x154): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x15b): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x175): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x17c): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x18e): relocation truncated to fit: R_X86_64_PC32 against `.bss'
+tree_distance_functions.cpp:(.text.startup+0x195): additional relocation overflows omitted from the output
+collect2: error: ld returned 1 exit status
+make[1]: *** [/home/runner/R-patched/build/share/make/shlib.mk:10: TreeDist.so] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/TreeDist/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/TreeDist/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/TreeDist/src'
+ERROR: compilation failed for package 'TreeDist'
+* removing '/home/runner/R-patched/lib/TreeDist'
+* restoring previous '/home/runner/R-patched/lib/TreeDist'

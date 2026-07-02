@@ -1,0 +1,24 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'spatialrisk' ...
+** this is package 'spatialrisk' version '0.7.3'
+** package 'spatialrisk' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/spatialrisk/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppProgress/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppProgress/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c haversine_cpp.cpp -o haversine_cpp.o
+g++ -std=gnu++20 -shared -L/usr/local/lib -o spatialrisk.so RcppExports.o haversine_cpp.o
+make[1]: Leaving directory '/var/local/PKGS/CRAN/spatialrisk/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/spatialrisk/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/spatialrisk/src'
+installing to /home/runner/R-patched/lib/00LOCK-spatialrisk/00new/spatialrisk/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+Error: object 'tm_scale_bar' is not exported by 'namespace:tmap'
+Execution halted
+ERROR: lazy loading failed for package 'spatialrisk'
+* removing '/home/runner/R-patched/lib/spatialrisk'
+* restoring previous '/home/runner/R-patched/lib/spatialrisk'

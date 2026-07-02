@@ -1,0 +1,39 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'Rwbo' ...
+** this is package 'Rwbo' version '0.1.1'
+** package 'Rwbo' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rwbo/src'
+cd open_wbo && sh ./configure
+cd open_wbo && if [ "$(uname -s)" = "Darwin" ]; then make r; else make rs; fi
+make[2]: Entering directory '/var/local/PKGS/CRAN/Rwbo/src/open_wbo'
+Compiling: /var/local/PKGS/CRAN/Rwbo/src/open_wbo/Encoder.or
+In file included from /var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/utils/Options.h:30,
+                 from /var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/core/Solver.h:55,
+                 from /var/local/PKGS/CRAN/Rwbo/src/open_wbo/Encoder.h:35,
+                 from /var/local/PKGS/CRAN/Rwbo/src/open_wbo/Encoder.cc:28:
+/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/utils/ParseUtils.h: In function 'double Glucose::parseDouble(B&)':
+/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/utils/ParseUtils.h:99:5: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   99 |     while (*in >= '0' && *in <= '9')
+      |     ^~~~~
+/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/utils/ParseUtils.h:103:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+  103 |         if (*in != 'e') printf("PARSE ERROR! Unexpected char: %c\n", *in),exit(3);
+      |         ^~
+/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/mtl/template.mk:72: warning: pattern recipe did not update peer target '/var/local/PKGS/CRAN/Rwbo/src/open_wbo/Encoder.od'.
+/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/mtl/template.mk:72: warning: pattern recipe did not update peer target '/var/local/PKGS/CRAN/Rwbo/src/open_wbo/Encoder.op'.
+/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/mtl/template.mk:72: warning: pattern recipe did not update peer target '/var/local/PKGS/CRAN/Rwbo/src/open_wbo/Encoder.o'.
+Compiling: /var/local/PKGS/CRAN/Rwbo/src/open_wbo/Main.or
+In file included from /var/local/PKGS/CRAN/Rwbo/src/open_wbo/Main.cc:32:
+/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/utils/System.h:25:10: fatal error: fpu_control.h: No such file or directory
+   25 | #include <fpu_control.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [/var/local/PKGS/CRAN/Rwbo/src/open_wbo/solvers/glucose4.1/mtl/template.mk:73: /var/local/PKGS/CRAN/Rwbo/src/open_wbo/Main.or] Error 1
+make[2]: Leaving directory '/var/local/PKGS/CRAN/Rwbo/src/open_wbo'
+make[1]: *** [Makevars:7: wbo] Error 2
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rwbo/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rwbo/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rwbo/src'
+ERROR: compilation failed for package 'Rwbo'
+* removing '/home/runner/R-patched/lib/Rwbo'

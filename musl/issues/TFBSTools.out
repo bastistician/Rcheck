@@ -1,0 +1,5 @@
+* installing to library '/home/runner/R-patched/lib'
+ERROR: dependency 'TFMPvalue' is not available for package 'TFBSTools'
+Perhaps try a variation of:
+install.packages('TFMPvalue')
+* removing '/home/runner/R-patched/lib/TFBSTools'

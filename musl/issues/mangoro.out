@@ -1,0 +1,17 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'mangoro' ...
+** this is package 'mangoro' version '0.2.6'
+** package 'mangoro' successfully unpacked and MD5 sums checked
+** using staged installation
+***********************************************************************
+Restoring flatbuf files from tools/flatbuf...
+***********************************************************************
+Flatbuf files restored.
+***********************************************************************
+Go is not found on your system.
+Pre-compiled binaries are not available for amd64.
+Please install Go (>= 1.22) to build from source.
+Visit https://golang.org/doc/install for installation instructions.
+***********************************************************************
+ERROR: configuration failed for package 'mangoro'
+* removing '/home/runner/R-patched/lib/mangoro'

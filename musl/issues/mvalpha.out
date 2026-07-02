@@ -1,0 +1,19 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'mvalpha' ...
+** this is package 'mvalpha' version '0.6.0'
+** package 'mvalpha' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/mvalpha/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c mvalpha_internal_functions.cpp -o mvalpha_internal_functions.o
+g++ -std=gnu++20 -shared -L/usr/local/lib -o mvalpha.so RcppExports.o mvalpha_internal_functions.o -fopenmp -lomp
+/usr/lib/gcc/x86_64-alpine-linux-musl/15.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lomp: No such file or directory
+collect2: error: ld returned 1 exit status
+make[1]: *** [/home/runner/R-patched/build/share/make/shlib.mk:10: mvalpha.so] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/mvalpha/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/mvalpha/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/mvalpha/src'
+ERROR: compilation failed for package 'mvalpha'
+* removing '/home/runner/R-patched/lib/mvalpha'

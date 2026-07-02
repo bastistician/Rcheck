@@ -1,0 +1,87 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'Rtinycc' ...
+** this is package 'Rtinycc' version '0.1.10'
+** package 'Rtinycc' successfully unpacked and MD5 sums checked
+** using staged installation
+Starting configure for Rtinycc
+Package source directory: /var/local/PKGS/CRAN/Rtinycc
+TinyCC source directory: /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+TinyCC install directory: /var/local/PKGS/CRAN/Rtinycc/inst/tinycc
+Unpacking vendored TinyCC source
+RUN: /home/runner/R-patched/build/bin/Rscript /var/local/PKGS/CRAN/Rtinycc/tools/vendortinycc.R unpack
+RUN: mkdir -p /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/lib /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/include
+Building TinyCC in /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+Selected shared library target: libtcc.so
+RUN: ./configure --prefix=/var/local/PKGS/CRAN/Rtinycc/inst/tinycc --cc=gcc --ar=ar --extra-cflags=-fPIC --debug
+RUN: make CONFIG_static=no libtcc.a libtcc.so libtcc1.a tcc
+Removing temporary source tree: /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+Starting configure for Rtinycc
+Package source directory: /var/local/PKGS/CRAN/Rtinycc
+TinyCC source directory: /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+TinyCC install directory: /var/local/PKGS/CRAN/Rtinycc/inst/tinycc
+Unpacking vendored TinyCC source
+RUN: /home/runner/R-patched/build/bin/Rscript /var/local/PKGS/CRAN/Rtinycc/tools/vendortinycc.R unpack
+Unpacking tinycc tarball...
+Renaming tinycc-34eed88a70fc8238cd5b623cc96b8bf0e40392ed to tinycc
+tinycc unpacked to /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+RUN: mkdir -p /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/lib /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/include
+Building TinyCC in /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+Selected shared library target: libtcc.so
+RUN: ./configure --prefix=/var/local/PKGS/CRAN/Rtinycc/inst/tinycc --cc=gcc --ar=ar --extra-cflags=-fPIC --debug
+Perhaps you want ./configure --config-musl
+Binary directory    /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/bin
+TinyCC directory    /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/lib/tcc
+Library directory   /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/lib
+Include directory   /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/include
+Manual directory    /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/share/man
+Info directory      /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/share/info
+Doc directory       /var/local/PKGS/CRAN/Rtinycc/inst/tinycc/share/doc
+Source path         /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+Build OS            Linux x86_64
+C compiler          gcc (15.2)
+Target OS           Linux
+CPU                 x86_64
+Config              debug
+Creating config.mak and config.h
+RUN: make CONFIG_static=no libtcc.a libtcc.so libtcc1.a tcc
+make[1]: Entering directory '/var/local/PKGS/CRAN/Rtinycc/src/tinycc'
+gcc -o libtcc.o -c libtcc.c -I. -DONE_SOURCE=0 -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -DC2STR conftest.c -o c2str.exe
+./c2str.exe include/tccdefs.h tccdefs_.h
+gcc -o tccpp.o -c tccpp.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o tccgen.o -c tccgen.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o tccdbg.o -c tccdbg.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o tccelf.o -c tccelf.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o tccasm.o -c tccasm.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o tccrun.o -c tccrun.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o x86_64-gen.o -c x86_64-gen.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o x86_64-link.o -c x86_64-link.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o i386-asm.o -c i386-asm.c -I. -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+ar rcs libtcc.a libtcc.o tccpp.o tccgen.o tccdbg.o tccelf.o tccasm.o tccrun.o x86_64-gen.o x86_64-link.o i386-asm.o
+gcc -shared -Wl,-soname,libtcc.so -o libtcc.so libtcc.o tccpp.o tccgen.o tccdbg.o tccelf.o tccasm.o tccrun.o x86_64-gen.o x86_64-link.o i386-asm.o -lm -ldl -lpthread -L/usr/local/lib -g -fPIC
+gcc -o tcc.o -c tcc.c -I. -DONE_SOURCE=0 -fPIC -Wdeclaration-after-statement -Wno-unused-result -I/usr/local/include -g
+gcc -o tcc tcc.o libtcc.so -lm -ldl -lpthread -L/usr/local/lib -g -Wl,-rpath,"/var/local/PKGS/CRAN/Rtinycc/inst/tinycc/lib"
+make[2]: Entering directory '/var/local/PKGS/CRAN/Rtinycc/src/tinycc/lib'
+../tcc -c libtcc1.c -o libtcc1.o -B.. -I..
+../tcc -c stdatomic.c -o stdatomic.o -B.. -I..
+../tcc -c atomic.S -o atomic.o -B.. -I..
+../tcc -c builtin.c -o builtin.o -B.. -I..
+../tcc -c alloca.S -o alloca.o -B.. -I..
+../tcc -c alloca-bt.S -o alloca-bt.o -B.. -I..
+../tcc -c tcov.c -o tcov.o -B.. -I..
+../tcc -c dsohandle.c -o dsohandle.o -B.. -I..
+../tcc -ar rcs ../libtcc1.a libtcc1.o stdatomic.o atomic.o builtin.o alloca.o alloca-bt.o tcov.o dsohandle.o
+../tcc -c runmain.c -o ../runmain.o -B.. -I..
+../tcc -c run_nostdlib.c -o ../run_nostdlib.o -B.. -I..
+../tcc -c bt-exe.c -o ../bt-exe.o -B.. -I..
+../tcc -c bt-log.c -o ../bt-log.o -B.. -I..
+../tcc -c bcheck.c -o ../bcheck.o -B.. -I.. -bt
+bcheck.c:1068: warning: implicit declaration of function '__ctype_b_loc'
+bcheck.c:1070: error: pointer expected
+make[2]: *** [Makefile:94: ../bcheck.o] Error 1
+make[2]: Leaving directory '/var/local/PKGS/CRAN/Rtinycc/src/tinycc/lib'
+make[1]: *** [Makefile:321: libtcc1.a] Error 2
+make[1]: Leaving directory '/var/local/PKGS/CRAN/Rtinycc/src/tinycc'
+Removing temporary source tree: /var/local/PKGS/CRAN/Rtinycc/src/tinycc
+ERROR: configuration failed for package 'Rtinycc'
+* removing '/home/runner/R-patched/lib/Rtinycc'

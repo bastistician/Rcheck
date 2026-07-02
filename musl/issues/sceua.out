@@ -1,0 +1,14 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'sceua' ...
+** this is package 'sceua' version '0.1.0'
+** package 'sceua' successfully unpacked and MD5 sums checked
+** using staged installation
+Error in eval(ei, envir) : 
+------------------ [UNSUPPORTED RUST VERSION]------------------
+- Minimum supported Rust version is 1.91.1.
+- Installed Rust version is 1.87.0.
+---------------------------------------------------------------
+Calls: source -> withVisible -> eval -> eval
+Execution halted
+ERROR: configuration failed for package 'sceua'
+* removing '/home/runner/R-patched/lib/sceua'

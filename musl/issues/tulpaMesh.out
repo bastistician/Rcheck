@@ -1,0 +1,26 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'tulpaMesh' ...
+** this is package 'tulpaMesh' version '0.1.1'
+** package 'tulpaMesh' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+specified C++17
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/tulpaMesh/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include   -I../inst/include  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include   -I../inst/include  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c mesh.cpp -o mesh.o
+mesh.cpp: In constructor 'FemWorker::FemWorker(Rcpp::NumericMatrix, Rcpp::IntegerMatrix)':
+mesh.cpp:662:38: error: 'tbb' has not been declared
+  662 |         n_threads = std::max(1, (int)tbb::this_task_arena::max_concurrency());
+      |                                      ^~~
+mesh.cpp: In member function 'virtual void FemWorker::operator()(std::size_t, std::size_t)':
+mesh.cpp:668:19: error: 'tbb' has not been declared
+  668 |         int tid = tbb::this_task_arena::current_thread_index();
+      |                   ^~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: mesh.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/tulpaMesh/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/tulpaMesh/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/tulpaMesh/src'
+ERROR: compilation failed for package 'tulpaMesh'
+* removing '/home/runner/R-patched/lib/tulpaMesh'

@@ -1,0 +1,915 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'otelsdk' ...
+** this is package 'otelsdk' version '0.2.4'
+** package 'otelsdk' successfully unpacked and MD5 sums checked
+** using staged installation
+** Detected PROTOBUF_INCLUDE="-DPROTOBUF_USE_DLLS -DNOMINMAX"
+** Detected PROTOBUF_LIBS="-lprotobuf -labsl_log_internal_check_op -labsl_die_if_null -labsl_log_internal_conditions -labsl_log_internal_message -labsl_examine_stack -labsl_log_internal_format -labsl_log_internal_nullguard -labsl_log_internal_structured_proto -labsl_log_internal_log_sink_set -labsl_log_sink -labsl_log_entry -labsl_log_internal_proto -labsl_flags_internal -labsl_flags_marshalling -labsl_flags_reflection -labsl_flags_private_handle_accessor -labsl_flags_commandlineflag -labsl_flags_commandlineflag_internal -labsl_flags_config -labsl_flags_program_name -labsl_log_initialize -labsl_log_internal_globals -labsl_log_globals -labsl_vlog_config_internal -labsl_log_internal_fnmatch -labsl_raw_hash_set -labsl_hashtablez_sampler -labsl_random_distributions -labsl_random_seed_sequences -labsl_random_internal_entropy_pool -labsl_random_internal_randen -labsl_random_internal_randen_hwaes -labsl_random_internal_randen_hwaes_impl -labsl_random_internal_randen_slow -labsl_random_internal_platform -labsl_random_internal_seed_material -labsl_random_seed_gen_exception -labsl_statusor -labsl_status -labsl_cord -labsl_cordz_info -labsl_cord_internal -labsl_hash -labsl_city -labsl_cordz_functions -labsl_exponential_biased -labsl_cordz_handle -labsl_crc_cord_state -labsl_crc32c -labsl_crc_internal -labsl_crc_cpu_detect -labsl_leak_check -labsl_strerror -labsl_str_format_internal -labsl_synchronization -labsl_graphcycles_internal -labsl_kernel_timeout_internal -labsl_stacktrace -labsl_symbolize -labsl_debugging_internal -labsl_demangle_internal -labsl_demangle_rust -labsl_decode_rust_punycode -labsl_utf8_for_code_point -labsl_malloc_internal -labsl_tracing_internal -labsl_time -labsl_civil_time -labsl_time_zone -lutf8_validity -lutf8_range -labsl_strings -labsl_strings_internal -labsl_string_view -labsl_int128 -labsl_base -lrt -labsl_spinlock_wait -labsl_throw_delegate -labsl_raw_logging_internal -labsl_log_severity"
+** Detected LIBCURL_LIBS="-lcurl"
+** libs
+using C compiler: 'gcc (Alpine 15.2.0) 15.2.0'
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/otelsdk/src'
+rm -f otelcpplib
+tar xzf vendor/opentelemetry-cpp.tgz --no-same-owner || \
+    tar xzf vendor/opentelemetry-cpp.tgz
+mkdir -p cpp/third_party/opentelemetry-proto/opentelemetry/proto/collector/common/v1
+cp status.proto \
+	cpp/third_party/opentelemetry-proto/opentelemetry/proto/collector/common/v1/
+patch -p0 < vendor/opentelemetry-cpp.patch
+patching file cpp/exporters/otlp/src/otlp_file_client.cc
+Hunk #1 succeeded at 1256 (offset 3 lines).
+patching file cpp/third_party/opentelemetry-proto/Makefile
+patching file cpp/cmake/opentelemetry-proto.cmake
+Hunk #1 succeeded at 67 (offset -23 lines).
+Hunk #2 succeeded at 107 (offset -23 lines).
+Hunk #3 succeeded at 131 (offset -23 lines).
+Hunk #4 succeeded at 252 (offset -4 lines).
+Hunk #5 succeeded at 288 (offset -4 lines).
+Hunk #6 succeeded at 301 (offset -4 lines).
+Hunk #7 succeeded at 326 (offset -3 lines).
+patching file cpp/sdk/src/metrics/meter_context.cc
+Hunk #1 succeeded at 157 (offset 3 lines).
+Hunk #2 succeeded at 173 (offset 3 lines).
+patching file cpp/sdk/include/opentelemetry/sdk/metrics/meter_context.h
+patching file cpp/sdk/src/metrics/meter_provider.cc
+Hunk #1 succeeded at 163 (offset 4 lines).
+patching file cpp/exporters/otlp/src/otlp_file_client.cc
+patching file cpp/api/include/opentelemetry/trace/span.h
+patching file cpp/sdk/include/opentelemetry/sdk/trace/multi_recordable.h
+patching file cpp/sdk/include/opentelemetry/sdk/trace/recordable.h
+patching file cpp/sdk/src/trace/span.cc
+patching file cpp/api/include/opentelemetry/trace/default_span.h
+patching file cpp/api/include/opentelemetry/trace/noop.h
+patching file cpp/sdk/src/trace/span.h
+patching file cpp/sdk/include/opentelemetry/sdk/trace/span_data.h
+patching file cpp/exporters/otlp/include/opentelemetry/exporters/otlp/otlp_recordable.h
+patching file cpp/exporters/otlp/src/otlp_recordable.cc
+patching file cpp/api/include/opentelemetry/context/runtime_context.h
+patching file cpp/sdk/include/opentelemetry/sdk/common/circular_buffer.h
+patching file cpp/cmake/opentelemetry-proto.cmake
+Hunk #1 succeeded at 207 (offset 15 lines).
+patching file cpp/third_party/opentelemetry-proto/opentelemetry/proto/metrics/v1/metrics.proto
+patching file cpp/third_party/opentelemetry-proto/opentelemetry/proto/profiles/v1development/profiles.proto
+(cd cpp; MAKEFLAGS= CC="gcc" CXX="g++ -std=gnu++20" AR="ar" \
+RANLIB="ranlib" CPPFLAGS="-I/usr/local/include" \
+CXXFLAGS="-O2 -mtune=native -Wno-ignored-attributes  -fpic -DNDEBUG " \
+CFLAGS="-O2 -mtune=native  -fpic -DNDEBUG " \
+""/usr/bin/cmake"" -G "Unix Makefiles" -S . -B build \
+-DWITH_ABI_VERSION_1=OFF -DWITH_ABI_VERSION_2=ON \
+-DCMAKE_INSTALL_PREFIX=../install -DCMAKE_INSTALL_LIBDIR=lib \
+-DCMAKE_PREFIX_PATH= \
+-DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+-DBUILD_SHARED_LIBS=OFF -DCMAKE_CXX_STANDARD=14 \
+-DWITH_ELASTICSEARCH=OFF -DWITH_EXAMPLES=OFF \
+-DWITH_OTLP_GRPC=OFF -DWITH_OTLP_HTTP=ON -DWITH_OTLP_FILE=ON \
+-DWITH_ABSEIL=OFF -DWITH_PROMETHEUS=OFF -DBUILD_TESTING=OFF \
+-DWITH_BENCHMARK=OFF -DWITH_FUNC_TESTS=OFF -DWITH_ETW=OFF)
+CMake Deprecation Warning at CMakeLists.txt:25 (cmake_policy):
+  The OLD behavior for policy CMP0092 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- OPENTELEMETRY_ABI_VERSION_NO=2
+-- OPENTELEMETRY_VERSION=1.22.0
+-- Performing Test check_cxx_compiler_flag_-Wno-type-limits
+-- Performing Test check_cxx_compiler_flag_-Wno-type-limits - Success
+-- Performing Test check_cxx_compiler_flag_-Wno-deprecated-declarations
+-- Performing Test check_cxx_compiler_flag_-Wno-deprecated-declarations - Success
+-- Performing Test check_cxx_compiler_flag_-Wno-unused-parameter
+-- Performing Test check_cxx_compiler_flag_-Wno-unused-parameter - Success
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found ZLIB: /usr/lib/libz.so (found version "1.3.2")
+-- PROTOBUF_PROTOC_EXECUTABLE=/usr/bin/protoc-31.1.0
+-- fetching opentelemetry-proto from git submodule
+-- Found CURL: /usr/lib/libcurl.so (found version "8.21.0")
+-- Using the single-header code from /var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/nlohmann-json/single_include/
+-- ---------------------------------------------
+-- build settings
+-- ---------------------------------------------
+-- OpenTelemetry: 1.22.0
+-- OpenTelemetry ABI: 2
+-- CMAKE_SYSTEM_PROCESSOR: x86_64
+-- CXX: GNU 15.2.0
+-- CMAKE_BUILD_TYPE: 
+-- CXXFLAGS: -O2 -mtune=native -Wno-ignored-attributes  -fpic -DNDEBUG
+-- CMAKE_CXX_STANDARD: 14
+-- CMAKE_TOOLCHAIN_FILE: 
+-- BUILD_SHARED_LIBS: OFF
+-- ---------------------------------------------
+-- opentelemetry-cpp build options
+-- ---------------------------------------------
+-- WITH_API_ONLY: OFF
+-- WITH_NO_DEPRECATED_CODE: OFF
+-- WITH_ABI_VERSION_1: OFF
+-- WITH_ABI_VERSION_2: ON
+-- OTELCPP_VERSIONED_LIBS: OFF
+-- OTELCPP_MAINTAINER_MODE: OFF
+-- WITH_STL: OFF
+-- WITH_GSL: OFF
+-- WITH_NO_GETENV: OFF
+-- ---------------------------------------------
+-- opentelemetry-cpp cmake component options
+-- ---------------------------------------------
+-- WITH_OTLP_GRPC: OFF
+-- WITH_OTLP_HTTP: ON
+-- WITH_OTLP_FILE: ON
+-- WITH_HTTP_CLIENT_CURL: ON
+-- WITH_ZIPKIN: OFF
+-- WITH_PROMETHEUS: OFF
+-- WITH_ELASTICSEARCH: OFF
+-- WITH_OPENTRACING: OFF
+-- WITH_ETW: OFF
+-- OPENTELEMETRY_BUILD_DLL: 
+-- ---------------------------------------------
+-- feature preview options
+-- ---------------------------------------------
+-- WITH_ASYNC_EXPORT_PREVIEW: OFF
+-- WITH_THREAD_INSTRUMENTATION_PREVIEW: OFF
+-- WITH_METRICS_EXEMPLAR_PREVIEW: OFF
+-- WITH_OTLP_GRPC_SSL_MTLS_PREVIEW: OFF
+-- WITH_OTLP_GRPC_CREDENTIAL_PREVIEW: OFF
+-- WITH_OTLP_RETRY_PREVIEW: OFF
+-- ---------------------------------------------
+-- third-party options
+-- ---------------------------------------------
+-- WITH_NLOHMANN_JSON: ON
+-- WITH_CURL_LOGGING: OFF
+-- WITH_OTLP_HTTP_COMPRESSION: OFF
+-- ---------------------------------------------
+-- examples and test options
+-- ---------------------------------------------
+-- WITH_BENCHMARK: OFF
+-- WITH_EXAMPLES: OFF
+-- WITH_EXAMPLES_HTTP: OFF
+-- WITH_FUNC_TESTS: OFF
+-- BUILD_W3CTRACECONTEXT_TEST: OFF
+-- BUILD_TESTING: OFF
+-- ---------------------------------------------
+-- versions
+-- ---------------------------------------------
+-- CMake: 4.2.3
+-- GTest:  ()
+-- benchmark:  ()
+-- Abseil: 20250814
+-- Protobuf: 31.1.0
+-- CURL: 8.21.0
+-- ZLIB: 1.3.2
+-- nlohmann-json:  (fetch_source)
+-- ---------------------------------------------
+-- Building WITH_STL=OFF
+-- Installing components:
+-- Install COMPONENT api
+--   TARGETS: opentelemetry_api
+--   TARGETS_ALIAS: opentelemetry-cpp::api
+--   COMPONENT_DEPENDS: 
+--   THIRDPARTY_DEPENDS: 
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/api/include/opentelemetry
+--   FILES_DESTINATION: include
+--   FILES_MATCHING: PATTERN;*.h
+-- Install COMPONENT sdk
+--   TARGETS: opentelemetry_sdk;opentelemetry_common;opentelemetry_resources;opentelemetry_version;opentelemetry_logs;opentelemetry_trace;opentelemetry_metrics
+--   TARGETS_ALIAS: opentelemetry-cpp::sdk;opentelemetry-cpp::common;opentelemetry-cpp::resources;opentelemetry-cpp::version;opentelemetry-cpp::logs;opentelemetry-cpp::trace;opentelemetry-cpp::metrics
+--   COMPONENT_DEPENDS: api
+--   THIRDPARTY_DEPENDS: Threads
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/sdk/include/opentelemetry/
+--   FILES_DESTINATION: include/opentelemetry
+--   FILES_MATCHING: PATTERN;*.h
+-- Install COMPONENT ext_common
+--   TARGETS: opentelemetry_ext
+--   TARGETS_ALIAS: opentelemetry-cpp::ext
+--   COMPONENT_DEPENDS: api
+--   THIRDPARTY_DEPENDS: 
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/ext/include/opentelemetry/ext
+--   FILES_DESTINATION: include/opentelemetry/
+--   FILES_MATCHING: PATTERN;*.h
+-- Install COMPONENT ext_http_curl
+--   TARGETS: opentelemetry_http_client_curl
+--   TARGETS_ALIAS: opentelemetry-cpp::http_client_curl
+--   COMPONENT_DEPENDS: api;sdk;ext_common
+--   THIRDPARTY_DEPENDS: CURL
+--   FILES_DIRECTORY: 
+--   FILES_DESTINATION: 
+--   FILES_MATCHING: 
+-- Install COMPONENT exporters_otlp_common
+--   TARGETS: opentelemetry_otlp_recordable;opentelemetry_proto
+--   TARGETS_ALIAS: opentelemetry-cpp::otlp_recordable;opentelemetry-cpp::proto
+--   COMPONENT_DEPENDS: api;sdk
+--   THIRDPARTY_DEPENDS: Protobuf
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/exporters/otlp/include/opentelemetry/exporters/otlp
+--   FILES_DESTINATION: include/opentelemetry/exporters
+--   FILES_MATCHING: PATTERN;*.h;PATTERN;otlp_http*.h;EXCLUDE;PATTERN;otlp_grpc*.h;EXCLUDE;PATTERN;otlp_file*.h;EXCLUDE
+-- Install COMPONENT exporters_otlp_http
+--   TARGETS: opentelemetry_exporter_otlp_http_client;opentelemetry_exporter_otlp_http;opentelemetry_exporter_otlp_http_log;opentelemetry_exporter_otlp_http_metric
+--   TARGETS_ALIAS: opentelemetry-cpp::otlp_http_client;opentelemetry-cpp::otlp_http_exporter;opentelemetry-cpp::otlp_http_log_record_exporter;opentelemetry-cpp::otlp_http_metric_exporter
+--   COMPONENT_DEPENDS: api;sdk;ext_common;exporters_otlp_common;ext_http_curl
+--   THIRDPARTY_DEPENDS: 
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/exporters/otlp/include/opentelemetry/exporters/otlp
+--   FILES_DESTINATION: include/opentelemetry/exporters
+--   FILES_MATCHING: PATTERN;otlp_http*.h
+-- Install COMPONENT exporters_otlp_file
+--   TARGETS: opentelemetry_exporter_otlp_file_client;opentelemetry_exporter_otlp_file;opentelemetry_exporter_otlp_file_log;opentelemetry_exporter_otlp_file_metric
+--   TARGETS_ALIAS: opentelemetry-cpp::otlp_file_client;opentelemetry-cpp::otlp_file_exporter;opentelemetry-cpp::otlp_file_log_record_exporter;opentelemetry-cpp::otlp_file_metric_exporter
+--   COMPONENT_DEPENDS: api;sdk;exporters_otlp_common
+--   THIRDPARTY_DEPENDS: 
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/exporters/otlp/include/opentelemetry/exporters/otlp
+--   FILES_DESTINATION: include/opentelemetry/exporters
+--   FILES_MATCHING: PATTERN;otlp_file*.h
+-- Install COMPONENT exporters_ostream
+--   TARGETS: opentelemetry_exporter_ostream_span;opentelemetry_exporter_ostream_metrics;opentelemetry_exporter_ostream_logs
+--   TARGETS_ALIAS: opentelemetry-cpp::ostream_span_exporter;opentelemetry-cpp::ostream_metrics_exporter;opentelemetry-cpp::ostream_log_record_exporter
+--   COMPONENT_DEPENDS: api;sdk
+--   THIRDPARTY_DEPENDS: 
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/exporters/ostream/include/opentelemetry/exporters/ostream
+--   FILES_DESTINATION: include/opentelemetry/exporters
+--   FILES_MATCHING: PATTERN;*.h
+-- Install COMPONENT exporters_in_memory
+--   TARGETS: opentelemetry_exporter_in_memory;opentelemetry_exporter_in_memory_metric
+--   TARGETS_ALIAS: opentelemetry-cpp::in_memory_span_exporter;opentelemetry-cpp::in_memory_metric_exporter
+--   COMPONENT_DEPENDS: api;sdk
+--   THIRDPARTY_DEPENDS: 
+--   FILES_DIRECTORY: /var/local/PKGS/CRAN/otelsdk/src/cpp/exporters/memory/include/opentelemetry/exporters/memory
+--   FILES_DESTINATION: include/opentelemetry/exporters
+--   FILES_MATCHING: PATTERN;*.h
+-- Configuring done (2.8s)
+-- Generating done (0.3s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    WITH_ABSEIL
+
+
+-- Build files have been written to: /var/local/PKGS/CRAN/otelsdk/src/cpp/build
+(cd cpp;  ""/usr/bin/cmake"" --build build 2>&1) | cat
+gmake[2]: Entering directory '/var/local/PKGS/CRAN/otelsdk/src/cpp/build'
+[  0%] [Run]: "/usr/bin/protoc-31.1.0" "--proto_path=/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto" "--cpp_out=/var/local/PKGS/CRAN/otelsdk/src/cpp/build/generated/third_party/opentelemetry-proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/common/v1/common.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/resource/v1/resource.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/trace/v1/trace.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/logs/v1/logs.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/metrics/v1/metrics.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/profiles/v1development/profiles.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/collector/trace/v1/trace_service.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/collector/logs/v1/logs_service.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/collector/metrics/v1/metrics_service.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/collector/profiles/v1development/profiles_service.proto" "/var/local/PKGS/CRAN/otelsdk/src/cpp/third_party/opentelemetry-proto/opentelemetry/proto/collector/common/v1/status.proto"
+[  1%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/common/v1/common.pb.cc.o
+[  2%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/resource/v1/resource.pb.cc.o
+[  2%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/trace/v1/trace.pb.cc.o
+[  3%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/logs/v1/logs.pb.cc.o
+[  4%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/metrics/v1/metrics.pb.cc.o
+[  4%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/collector/trace/v1/trace_service.pb.cc.o
+[  5%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/collector/logs/v1/logs_service.pb.cc.o
+[  6%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/collector/metrics/v1/metrics_service.pb.cc.o
+[  6%] Building CXX object CMakeFiles/opentelemetry_proto.dir/generated/third_party/opentelemetry-proto/opentelemetry/proto/collector/common/v1/status.pb.cc.o
+[  7%] Linking CXX static library libopentelemetry_proto.a
+[  7%] Built target opentelemetry_proto
+[  7%] Building CXX object sdk/src/common/CMakeFiles/opentelemetry_common.dir/random.cc.o
+[  8%] Building CXX object sdk/src/common/CMakeFiles/opentelemetry_common.dir/global_log_handler.cc.o
+[  9%] Building CXX object sdk/src/common/CMakeFiles/opentelemetry_common.dir/env_variables.cc.o
+[  9%] Building CXX object sdk/src/common/CMakeFiles/opentelemetry_common.dir/base64.cc.o
+[ 10%] Building CXX object sdk/src/common/CMakeFiles/opentelemetry_common.dir/disabled.cc.o
+[ 11%] Building CXX object sdk/src/common/CMakeFiles/opentelemetry_common.dir/platform/fork_unix.cc.o
+[ 11%] Linking CXX static library libopentelemetry_common.a
+[ 11%] Built target opentelemetry_common
+[ 12%] Building CXX object sdk/src/resource/CMakeFiles/opentelemetry_resources.dir/resource.cc.o
+[ 12%] Building CXX object sdk/src/resource/CMakeFiles/opentelemetry_resources.dir/resource_detector.cc.o
+[ 13%] Linking CXX static library libopentelemetry_resources.a
+[ 13%] Built target opentelemetry_resources
+[ 14%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/tracer_context.cc.o
+[ 14%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/tracer_context_factory.cc.o
+[ 15%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/tracer_provider.cc.o
+[ 16%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/tracer_provider_factory.cc.o
+[ 16%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/tracer.cc.o
+[ 17%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/span.cc.o
+[ 18%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/exporter.cc.o
+[ 18%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/provider.cc.o
+[ 19%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/batch_span_processor.cc.o
+[ 20%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/batch_span_processor_factory.cc.o
+[ 20%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/simple_processor_factory.cc.o
+[ 21%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/samplers/always_on_factory.cc.o
+[ 22%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/samplers/always_off_factory.cc.o
+[ 22%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/samplers/parent.cc.o
+[ 23%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/samplers/parent_factory.cc.o
+[ 24%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/samplers/trace_id_ratio.cc.o
+[ 24%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/samplers/trace_id_ratio_factory.cc.o
+[ 25%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/random_id_generator.cc.o
+[ 26%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/random_id_generator_factory.cc.o
+[ 26%] Building CXX object sdk/src/trace/CMakeFiles/opentelemetry_trace.dir/tracer_config.cc.o
+[ 27%] Linking CXX static library libopentelemetry_trace.a
+[ 27%] Built target opentelemetry_trace
+[ 28%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/async_instruments.cc.o
+[ 28%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/provider.cc.o
+[ 29%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/meter_provider.cc.o
+[ 30%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/meter_provider_factory.cc.o
+[ 30%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/meter.cc.o
+[ 31%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/meter_config.cc.o
+[ 32%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/meter_context.cc.o
+[ 32%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/meter_context_factory.cc.o
+[ 33%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/metric_reader.cc.o
+[ 34%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/instrument_metadata_validator.cc.o
+[ 34%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/export/periodic_exporting_metric_reader.cc.o
+[ 35%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/export/periodic_exporting_metric_reader_factory.cc.o
+[ 36%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/state/filtered_ordered_attribute_map.cc.o
+[ 36%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/state/metric_collector.cc.o
+[ 37%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/state/observable_registry.cc.o
+[ 38%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/state/sync_metric_storage.cc.o
+[ 38%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/state/temporal_metric_storage.cc.o
+[ 39%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/aggregation/base2_exponential_histogram_aggregation.cc.o
+[ 40%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/aggregation/base2_exponential_histogram_indexer.cc.o
+[ 40%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/aggregation/histogram_aggregation.cc.o
+[ 41%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/aggregation/lastvalue_aggregation.cc.o
+[ 42%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/aggregation/sum_aggregation.cc.o
+[ 42%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/data/circular_buffer.cc.o
+[ 43%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/exemplar/reservoir.cc.o
+[ 44%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/view/instrument_selector_factory.cc.o
+[ 44%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/view/meter_selector_factory.cc.o
+[ 45%] Building CXX object sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/view/view_factory.cc.o
+In file included from /var/local/PKGS/CRAN/otelsdk/src/cpp/sdk/src/metrics/view/view_factory.cc:8:
+/var/local/PKGS/CRAN/otelsdk/src/cpp/sdk/include/opentelemetry/sdk/metrics/aggregation/aggregation_config.h:32:3: error: 'int32_t' does not name a type
+   32 |   int32_t max_scale_   = 20;
+      |   ^~~~~~~
+/var/local/PKGS/CRAN/otelsdk/src/cpp/sdk/include/opentelemetry/sdk/metrics/aggregation/aggregation_config.h:9:1: note: 'int32_t' is defined in header '<cstdint>'; this is probably fixable by adding '#include <cstdint>'
+    8 | #include "opentelemetry/version.h"
+  +++ |+#include <cstdint>
+    9 | 
+make[4]: *** [sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/build.make:443: sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/view/view_factory.cc.o] Error 1
+make[3]: *** [CMakeFiles/Makefile2:588: sdk/src/metrics/CMakeFiles/opentelemetry_metrics.dir/all] Error 2
+gmake[2]: *** [Makefile:156: all] Error 2
+gmake[2]: Leaving directory '/var/local/PKGS/CRAN/otelsdk/src/cpp/build'
+(cd cpp; ""/usr/bin/cmake"" --install build)
+-- Install configuration: ""
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/trace
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/trace/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/trace/v1/trace.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/common
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/common/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/common/v1/common.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/resource
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/resource/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/resource/v1/resource.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/profiles
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/profiles/v1development
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/profiles/v1development/profiles.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/metrics
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/metrics/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/metrics/v1/metrics.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/trace
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/trace/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/trace/v1/trace_service.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/common
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/common/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/common/v1/status.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/profiles
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/profiles/v1development
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/profiles/v1development/profiles_service.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/metrics
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/metrics/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/metrics/v1/metrics_service.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/logs
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/logs/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/collector/logs/v1/logs_service.pb.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/logs
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/logs/v1
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/proto/logs/v1/logs.pb.h
+-- Up-to-date: /var/local/PKGS/CRAN/otelsdk/src/install/include
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/._nlohmann
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/nlohmann
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/nlohmann/json_fwd.hpp
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/nlohmann/json.hpp
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/nlohmann/._json.hpp
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/nlohmann/._json_fwd.hpp
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/share/pkgconfig/nlohmann_json.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/pkgconfig/opentelemetry_api.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/pkgconfig/opentelemetry_common.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/pkgconfig/opentelemetry_trace.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/pkgconfig/opentelemetry_metrics.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/pkgconfig/opentelemetry_logs.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/pkgconfig/opentelemetry_version.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/pkgconfig/opentelemetry_resources.pc
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/cmake/opentelemetry-cpp/opentelemetry-cpp-config.cmake
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/cmake/opentelemetry-cpp/opentelemetry-cpp-config-version.cmake
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/cmake/opentelemetry-cpp/find-package-support-functions.cmake
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/cmake/opentelemetry-cpp/opentelemetry-cpp-api-target.cmake
+-- Up-to-date: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._function_ref.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._unique_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/shared_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._shared_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/function_ref.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/unique_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/variant_alternative.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._type_pack_element.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._variant_alternative.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._all.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._variant_size.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/dependent_type.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._trait.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/valueless.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._void.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._decay.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/functional.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/trait.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/void.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/variant_size.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/type_pack_element.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/variant_fwd.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/decay.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/all.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._functional.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/invoke.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._invoke.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._dependent_type.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._variant_fwd.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/detail/._valueless.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/config.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/optimization.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/policy_checks.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/._port.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/._attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/internal
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/internal/._inline_variable.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/internal/inline_variable.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/internal/._identity.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/internal/identity.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/internal/invoke.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/internal/._invoke.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/port.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/._policy_checks.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/._options.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/macros.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/._macros.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/options.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/._optimization.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/base/._config.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types/._bad_variant_access.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types/._variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types/internal
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types/internal/._variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types/internal/variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types/variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/types/bad_variant_access.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/utility
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/utility/utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/utility/._utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/meta
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/meta/type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/internal/absl/meta/._type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/string_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/nostd/._string_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/config.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/._hook.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/dynamic_load.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/._factory.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/._dynamic_load.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/tracer.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/._dynamic_library_handle.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/dynamic_load_windows.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/dynamic_library_handle.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/._dynamic_load_windows.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/._tracer_handle.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/._utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/dynamic_load_unix.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/._loader_info.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/loader_info.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/tracer_handle.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/detail/._dynamic_load_unix.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/._tracer.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/hook.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/plugin/factory.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/span_metadata.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._span_context_kv_iterable.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._trace_flags.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/default_span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/tracer.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._trace_state.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._span_startoptions.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/trace_flags.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._span_metadata.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._noop.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/scope.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._span_context_kv_iterable_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/noop.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._tracer.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._span_id.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/span_startoptions.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/span_context_kv_iterable.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/span_id.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._scope.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._default_span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._trace_id.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._tracer_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/span_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/tracer_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/jaeger.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/._http_trace_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/http_trace_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/detail
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/detail/._string.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/detail/._hex.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/detail/hex.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/detail/string.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/b3_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/._jaeger.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/propagation/._b3_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/trace_state.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._span_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/._span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/trace_id.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/trace/span_context_kv_iterable_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/version.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/key_value_iterable_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/string_util.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._attribute_value.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/spin_lock_mutex.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._kv_properties.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._string_util.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/macros.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/timestamp.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._key_value_iterable.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._key_value_iterable_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._timestamp.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/key_value_iterable.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/kv_properties.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._macros.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/attribute_value.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/common/._spin_lock_mutex.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/._unique_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/shared_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/._shared_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/unique_ptr.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/._variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/._utility.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/._type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/variant.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/string_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/._span.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/std/._string_view.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/dns_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._graphql_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cloud_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/device_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/otel_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/http_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._test_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._system_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._app_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._container_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/faas_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._webengine_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cloudfoundry_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._security_rule_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/browser_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cpython_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/profile_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._azure_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._thread_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cassandra_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._dns_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/hw_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/session_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._deployment_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/system_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/k8s_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/message_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._faas_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._pool_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._browser_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/messaging_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._error_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._log_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._gen_ai_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/event_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/log_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._feature_flag_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._rpc_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/code_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cassandra_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/server_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._hw_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/pool_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/db_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/gen_ai_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/client_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._peer_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._zos_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._client_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/messaging_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._gen_ai_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/http_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._k8s_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._container_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._messaging_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cloud_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._user_agent_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cpu_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cloudfoundry_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/rpc_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/process_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._k8s_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._db_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/user_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._net_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._aws_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/graphql_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._enduser_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cpython_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._url_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._service_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._message_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._linux_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/system_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._http_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cicd_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/azure_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._os_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/error_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/db_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._other_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cicd_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._opentracing_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/feature_flag_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/gen_ai_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/other_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cpython_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._gcp_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/vcs_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._http_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._host_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/telemetry_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._rpc_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._server_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/linux_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._network_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._hw_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/az_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cicd_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._source_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/app_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._user_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._otel_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/gcp_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._dns_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._file_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._vcs_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/os_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/geo_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._mainframe_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/elasticsearch_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cpu_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/test_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/file_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._geo_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/mainframe_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/hw_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._faas_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/otel_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/host_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/k8s_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/rpc_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/thread_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._code_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._az_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/heroku_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._profile_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/tls_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/container_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/faas_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._otel_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._oci_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._telemetry_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/webengine_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cloudevents_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/disk_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._messaging_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._elasticsearch_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/dns_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/peer_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/azure_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/user_agent_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/destination_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._azure_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/source_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/security_rule_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._disk_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cpu_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._session_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/zos_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/enduser_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._event_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cpu_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/process_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/service_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/exception_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/oci_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._db_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._destination_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._vcs_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/network_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/artifact_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/aws_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/container_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._exception_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/url_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._heroku_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._tls_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._device_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._process_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/net_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._system_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/vcs_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._cicd_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cpython_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/deployment_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/opentracing_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._artifact_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/cloudevents_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/incubating/._process_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/otel_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/http_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._container_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._dns_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/hw_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._schema_url.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/system_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._faas_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/messaging_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._error_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._gen_ai_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._rpc_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/code_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/server_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/db_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/gen_ai_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/client_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._client_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/http_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._messaging_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._user_agent_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/process_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._k8s_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._db_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._url_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._service_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._http_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/azure_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/error_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/db_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._http_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/telemetry_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._server_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._network_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._hw_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/cicd_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._otel_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._vcs_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/schema_url.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/otel_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/k8s_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/rpc_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._code_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/faas_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._otel_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._telemetry_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/dns_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/user_agent_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._azure_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._cpu_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/cpu_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/service_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/exception_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._db_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/network_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/container_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._exception_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/url_attributes.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._system_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/vcs_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._cicd_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/semconv/._process_metrics.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/detail
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/detail/._preprocessor.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/detail/preprocessor.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/async_instruments.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/observer_result.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/._noop.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/._sync_instruments.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/meter.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/._async_instruments.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/noop.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/._observer_result.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/._provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/sync_instruments.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/meter_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/._meter_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/metrics/._meter.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/._version.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage/._baggage.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage/._baggage_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage/baggage_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage/propagation
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage/propagation/._baggage_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage/propagation/baggage_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/baggage/baggage.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/._config.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/._context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/runtime_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/._context_value.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/._global_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/noop_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/._composite_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/composite_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/._noop_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/._text_map_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/global_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/propagation/text_map_propagator.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/._runtime_context.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/context/context_value.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._logger_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/severity.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/event_logger_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/event_logger.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/logger_type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._event_id.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._noop.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._severity.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/log_record.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/event_id.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/noop.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._event_logger_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/logger_provider.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/logger.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._log_record.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._event_logger.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._logger.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/include/opentelemetry/logs/._logger_type_traits.h
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/libopentelemetry_common.a
+-- Installing: /var/local/PKGS/CRAN/otelsdk/src/install/lib/libopentelemetry_resources.a
+CMake Error at build/cmake_install.cmake:115 (file):
+  file INSTALL cannot find
+  "/var/local/PKGS/CRAN/otelsdk/src/cpp/build/sdk/src/version/libopentelemetry_version.a":
+  No such file or directory.
+
+
+make[1]: *** [Makevars:100: otelcpplib] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/otelsdk/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/otelsdk/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/otelsdk/src'
+ERROR: compilation failed for package 'otelsdk'
+* removing '/home/runner/R-patched/lib/otelsdk'

@@ -1,0 +1,50 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RPostgres' ...
+** this is package 'RPostgres' version '1.4.9'
+** package 'RPostgres' successfully unpacked and MD5 sums checked
+** using staged installation
+Found pkg-config cflags and libs (libpq 17.7)!
+Using PKG_CFLAGS=-I/usr/include/postgresql
+Using PKG_LIBS=-lpq
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RPostgres/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I/usr/include/postgresql -Ivendor -DRCPP_DEFAULT_INCLUDE_CALL=false -DRCPP_USING_UTF8_ERROR_STRING -DBOOST_NO_AUTO_PTR -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include   -fvisibility=hidden -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c DbColumn.cpp -o DbColumn.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I/usr/include/postgresql -Ivendor -DRCPP_DEFAULT_INCLUDE_CALL=false -DRCPP_USING_UTF8_ERROR_STRING -DBOOST_NO_AUTO_PTR -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include   -fvisibility=hidden -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c DbColumnDataSource.cpp -o DbColumnDataSource.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I/usr/include/postgresql -Ivendor -DRCPP_DEFAULT_INCLUDE_CALL=false -DRCPP_USING_UTF8_ERROR_STRING -DBOOST_NO_AUTO_PTR -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include   -fvisibility=hidden -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c DbColumnDataSourceFactory.cpp -o DbColumnDataSourceFactory.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I/usr/include/postgresql -Ivendor -DRCPP_DEFAULT_INCLUDE_CALL=false -DRCPP_USING_UTF8_ERROR_STRING -DBOOST_NO_AUTO_PTR -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include   -fvisibility=hidden -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c DbColumnStorage.cpp -o DbColumnStorage.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG -I/usr/include/postgresql -Ivendor -DRCPP_DEFAULT_INCLUDE_CALL=false -DRCPP_USING_UTF8_ERROR_STRING -DBOOST_NO_AUTO_PTR -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include   -fvisibility=hidden -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c DbConnection.cpp -o DbConnection.o
+DbConnection.cpp: In member function 'cpp11::list DbConnection::wait_for_notify(int)':
+DbConnection.cpp:308:3: error: 'fd_set' was not declared in this scope
+  308 |   fd_set input;
+      |   ^~~~~~
+DbConnection.cpp:334:14: error: 'input' was not declared in this scope; did you mean 'int'?
+  334 |     FD_ZERO(&input);
+      |              ^~~~~
+      |              int
+DbConnection.cpp:334:5: error: 'FD_ZERO' was not declared in this scope; did you mean 'FP_ZERO'?
+  334 |     FD_ZERO(&input);
+      |     ^~~~~~~
+      |     FP_ZERO
+DbConnection.cpp:335:5: error: 'FD_SET' was not declared in this scope; did you mean 'L_SET'?
+  335 |     FD_SET(socket, &input);
+      |     ^~~~~~
+      |     L_SET
+DbConnection.cpp:336:5: error: 'timeval' was not declared in this scope
+  336 |     timeval timeout = { 0, 0 };
+      |     ^~~~~~~
+DbConnection.cpp:337:5: error: 'timeout' was not declared in this scope; did you mean 'timer_t'?
+  337 |     timeout.tv_sec = timeout_secs;
+      |     ^~~~~~~
+      |     timer_t
+DbConnection.cpp:338:9: error: 'select' was not declared in this scope
+  338 |     if (select(socket + 1, &input, NULL, NULL, &timeout) < 0) {
+      |         ^~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: DbConnection.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RPostgres/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RPostgres/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RPostgres/src'
+ERROR: compilation failed for package 'RPostgres'
+* removing '/home/runner/R-patched/lib/RPostgres'
+* restoring previous '/home/runner/R-patched/lib/RPostgres'
