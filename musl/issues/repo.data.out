@@ -1,0 +1,23 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'repo.data' ...
+** this is package 'repo.data' version '0.2.2'
+** package 'repo.data' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Error: package or namespace load failed for 'repo.data':
+ .onAttach failed in attachNamespace() for 'repo.data', details:
+  call: options(repos = c(`@CRAN@` = "https://CRAN.R-project.org"), getOption("repos"))
+  error: invalid argument
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing '/home/runner/R-patched/lib/repo.data'

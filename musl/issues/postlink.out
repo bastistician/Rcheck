@@ -1,0 +1,26 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'postlink' ...
+** this is package 'postlink' version '0.1.1'
+** package 'postlink' successfully unpacked and MD5 sums checked
+** using staged installation
+Error in rstan::stanc(file_name, allow_undefined = TRUE, obfuscate_model_name = FALSE,  : 
+  0
+Syntax error in 'string', line 7, column 26 to column 27, parsing error:
+   -------------------------------------------------
+     5:    int<lower=1> K;               // Number of predictors
+     6:    matrix[N, K] X;               // Predictor matrix
+     7:    int<lower=0, upper=1> y[N];   // Binary outcome variable (0 or 1)
+                                   ^
+     8:    // Prior Hyperparameters (Passed from R)
+     9:    // Intercept priors (applied to beta[1] only)
+   -------------------------------------------------
+
+Ill-formed declaration. ";" expected after variable declaration.
+  It looks like you are trying to use the old array syntax.
+  Please use the new syntax:
+  array[N] int<lower=0, upper=1> y;
+Calls: <Anonymous> -> sapply -> lapply -> FUN -> <Anonymous>
+Execution halted
+ERROR: configuration failed for package 'postlink'
+* removing '/home/runner/R-patched/lib/postlink'
+* restoring previous '/home/runner/R-patched/lib/postlink'

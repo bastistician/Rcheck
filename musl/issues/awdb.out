@@ -1,0 +1,69 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'awdb' ...
+** this is package 'awdb' version '0.1.4'
+** package 'awdb' successfully unpacked and MD5 sums checked
+** using staged installation
+Using cargo 1.96.1 (356927216 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Using rustc 1.96.1 (31fca3adb 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Building for CRAN.
+Writing `src/Makevars`.
+`tools/config.R` has finished.
+** libs
+using C compiler: 'gcc (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/awdb/src'
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c entrypoint.c -o entrypoint.o
+if [ -d ./vendor ]; then \
+	echo "=== Using offline vendor directory ==="; \
+	mkdir -p "/var/local/PKGS/CRAN/awdb/src/.cargo" && \
+	cp rust/vendor-config.toml "/var/local/PKGS/CRAN/awdb/src/.cargo/config.toml"; \
+elif [ -f ./rust/vendor.tar.xz ]; then \
+	echo "=== Using offline vendor tarball ==="; \
+	tar xf rust/vendor.tar.xz && \
+	mkdir -p "/var/local/PKGS/CRAN/awdb/src/.cargo" && \
+	cp rust/vendor-config.toml "/var/local/PKGS/CRAN/awdb/src/.cargo/config.toml"; \
+fi
+=== Using offline vendor tarball ===
+export CARGO_HOME="/var/local/PKGS/CRAN/awdb/src/.cargo" && \
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/runner/.cargo/bin" && \
+RUSTFLAGS=" --print=native-static-libs" cargo build -j 2 --offline --lib --release --manifest-path=./rust/Cargo.toml --target-dir="./rust/target" 
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.47
+   Compiling crossbeam-utils v0.8.22
+   Compiling crossbeam-epoch v0.9.20
+   Compiling serde_core v1.0.229
+   Compiling syn v3.0.3
+   Compiling crossbeam-deque v0.8.7
+   Compiling extendr-ffi v0.9.0 (https://github.com/extendr/extendr#74afddcb)
+   Compiling paste v1.0.15
+   Compiling serde v1.0.229
+   Compiling rayon-core v1.13.0
+   Compiling zmij v1.0.23
+   Compiling serde_derive v1.0.229
+   Compiling syn v2.0.119
+   Compiling lazy_static v1.5.0
+   Compiling serde_json v1.0.151
+   Compiling extendr-api v0.9.0 (https://github.com/extendr/extendr#74afddcb)
+   Compiling extendr-macros v0.9.0 (https://github.com/extendr/extendr#74afddcb)
+   Compiling readonly v0.2.14
+   Compiling itoa v1.0.18
+   Compiling either v1.18.0
+   Compiling memchr v2.8.3
+   Compiling once_cell v1.21.4
+   Compiling rayon v1.12.0
+   Compiling awdb v0.1.0 (/var/local/PKGS/CRAN/awdb/src/rust)
+note: link against the following native artifacts when linking against this static library. The order and any duplication can be significant on some platforms
+
+note: native-static-libs: -lR -lgcc_s -lc
+
+    Finished `release` profile [optimized] target(s) in 1m 19s
+gcc -o rust/document rust/document.c -L./rust/target/release -lawdb -L"/home/runner/R-patched/build/lib" -lR
+/usr/lib/gcc/x86_64-alpine-linux-musl/15.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lR: No such file or directory
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makevars:29: rust/target/release/libawdb.a] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/awdb/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/awdb/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/awdb/src'
+ERROR: compilation failed for package 'awdb'
+* removing '/home/runner/R-patched/lib/awdb'
+* restoring previous '/home/runner/R-patched/lib/awdb'

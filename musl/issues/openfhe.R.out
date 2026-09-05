@@ -1,0 +1,120 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'openfhe.R' ...
+** this is package 'openfhe.R' version '1.5.1.1'
+** package 'openfhe.R' successfully unpacked and MD5 sums checked
+** using staged installation
+* checking if plain '-fopenmp' works ... yes
+* OPENMP_CFLAGS='-fopenmp'
+* OPENMP_LIBS='-fopenmp'
+* OPENMP_LIB_DIR=''
+* OPENMP_INC_DIR=''
+* Building OpenFHE from vendored sources...
+R was not built as a library
+
+CMAKE VERSION: 'cmake version 4.2.3'
+CC:       'gcc'
+CXX:      'g++ -std=gnu++17'
+CFLAGS:   '-O2 -mtune=native'
+CXXFLAGS: '-O2 -mtune=native -Wno-ignored-attributes -fpic -fopenmp -DOPENFHE_R_BUILD '
+LDFLAGS:  '-L/usr/local/lib'
+OPENFHE_OMP_CXXFLAGS:  '-fopenmp'
+
+>>> Building OpenFHE...
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building in Release mode
+-- BUILD_UNITTESTS:    OFF
+-- BUILD_EXAMPLES:     OFF
+-- BUILD_BENCHMARKS:   OFF
+-- BUILD_EXTRAS:       OFF
+-- BUILD_STATIC:       ON
+-- BUILD_SHARED:       OFF
+-- GIT_SUBMOD_AUTO:    OFF
+-- WITH_BE2:           OFF
+-- WITH_BE4:           OFF
+-- WITH_NTL:           OFF
+-- WITH_TCM:           OFF
+-- WITH_OPENMP:        ON
+-- NATIVE_SIZE:        64
+-- CKKS_M_FACTOR:      1
+-- WITH_NATIVEOPT:     OFF
+-- WITH_COVTEST:       OFF
+-- WITH_NOISE_DEBUG:   OFF
+-- WITH_REDUCED_NOISE: OFF
+-- USE_MACPORTS:       OFF
+-- BUILTIN_INFO_AVAILABLE is defined
+***** INSTALL IS AT /var/local/PKGS/CRAN/openfhe.R/src/openfhelib; to change, run cmake with -DCMAKE_INSTALL_PREFIX=/your/path
+-- Architecture is x86_64
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of __int128
+-- Check size of __int128 - done
+-- Check size of uint64_t
+-- Check size of uint64_t - done
+-- NATIVEINT is set to 64
+-- MATHBACKEND is set to 4
+-- MATHBACKEND set to 4. Setting WITH_BE4 to ON
+-- Found OpenMP_C: -fopenmp (found version "4.5")
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- Configuring done (2.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /var/local/PKGS/CRAN/openfhe.R/inst/openfhe/build
+make[1]: Entering directory '/var/local/PKGS/CRAN/openfhe.R/inst/openfhe/build'
+cp: can't stat '/var/local/PKGS/CRAN/openfhe.R/inst/openfhe/demoData': No such file or directory
+-- demoData folder already exists
+[  0%] Built target third-party
+[  2%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/constants-lattice-impl.cpp.o
+[  5%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/lattice.cpp.o
+[  8%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/stdlatticeparms.cpp.o
+[ 11%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/trapdoor-dcrtpoly.cpp.o
+[ 14%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/trapdoor-poly.cpp.o
+[ 17%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/chebyshev.cpp.o
+[ 17%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/dftransform.cpp.o
+[ 20%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/discretegaussiangeneratorgeneric.cpp.o
+[ 23%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/distributiongenerator.cpp.o
+[ 26%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintdyn/be4-math-impl.cpp.o
+[ 29%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintdyn/mubintvecdyn.cpp.o
+[ 32%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintdyn/ubintdyn.cpp.o
+[ 35%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintfxd/be2-math-impl.cpp.o
+[ 38%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintfxd/mubintvecfxd.cpp.o
+[ 41%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintfxd/ubintfxd.cpp.o
+[ 44%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintntl/be6-math-impl.cpp.o
+[ 44%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintntl/mubintvecntl.cpp.o
+[ 47%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintntl/ubintntl.cpp.o
+[ 50%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/intnat/benative-math-impl.cpp.o
+[ 52%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/intnat/mubintvecnat.cpp.o
+[ 55%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hermite.cpp.o
+[ 58%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/matrix.cpp.o
+[ 61%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/nbtheory2.cpp.o
+[ 64%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/blockAllocator/blockAllocator.cpp.o
+[ 67%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/blockAllocator/xallocator.cpp.o
+[ 70%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/debug.cpp.o
+[ 70%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/demangle.cpp.o
+[ 73%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/get-call-stack.cpp.o
+/var/local/PKGS/CRAN/openfhe.R/inst/openfhe/src/core/lib/utils/get-call-stack.cpp:39:10: fatal error: execinfo.h: No such file or directory
+   39 | #include <execinfo.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[4]: *** [src/core/CMakeFiles/coreobj.dir/build.make:457: src/core/CMakeFiles/coreobj.dir/lib/utils/get-call-stack.cpp.o] Error 1
+make[3]: *** [CMakeFiles/Makefile2:371: src/core/CMakeFiles/coreobj.dir/all] Error 2
+make[2]: *** [CMakeFiles/Makefile2:410: src/core/CMakeFiles/OPENFHEcore_static.dir/rule] Error 2
+make[1]: *** [Makefile:261: OPENFHEcore_static] Error 2
+make[1]: Leaving directory '/var/local/PKGS/CRAN/openfhe.R/inst/openfhe/build'
+OpenFHE build failed!
+ERROR: configuration failed for package 'openfhe.R'
+* removing '/home/runner/R-patched/lib/openfhe.R'
