@@ -1,0 +1,13 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'ANCOMBC' ...
+** this is package 'ANCOMBC' version '2.12.0'
+** package 'ANCOMBC' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'solve' is not exported by 'namespace:CVXR'
+Execution halted
+ERROR: lazy loading failed for package 'ANCOMBC'
+* removing '/home/runner/R-patched/lib/ANCOMBC'

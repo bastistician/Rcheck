@@ -1,0 +1,27 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'icebergr' ...
+** this is package 'icebergr' version '0.1.0'
+** package 'icebergr' successfully unpacked and MD5 sums checked
+** using staged installation
+Using cargo 1.96.1 (356927216 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Using rustc 1.96.1 (31fca3adb 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Building for CRAN.
+Writing `src/Makevars`.
+`tools/config.R` has finished.
+** libs
+using C compiler: 'gcc (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/icebergr/src'
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c entrypoint.c -o entrypoint.o
+if [ "true" = "true" ]; then \
+	tar xf rust/vendor.tar.xz && \
+	mkdir -p /var/local/PKGS/CRAN/icebergr/src/.cargo && \
+	cp rust/vendor-config.toml /var/local/PKGS/CRAN/icebergr/src/.cargo/config.toml; \
+fi
+tar: corrupted data
+tar: short read
+make[1]: *** [Makevars:43: rust/target/release/libicebergr.a] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/icebergr/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/icebergr/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/icebergr/src'
+ERROR: compilation failed for package 'icebergr'
+* removing '/home/runner/R-patched/lib/icebergr'

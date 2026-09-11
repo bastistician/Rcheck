@@ -1,0 +1,21 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RAS' ...
+** this is package 'RAS' version '1.0.3'
+** package 'RAS' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RAS/src'
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c init.c -o init.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c malloc_trim.c -o malloc_trim.o
+malloc_trim.c: In function 'RAS_malloc_trim':
+malloc_trim.c:10:15: error: implicit declaration of function 'malloc_trim'; did you mean 'RAS_malloc_trim'? [-Wimplicit-function-declaration]
+   10 |     int out = malloc_trim(0);
+      |               ^~~~~~~~~~~
+      |               RAS_malloc_trim
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:190: malloc_trim.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RAS/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RAS/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RAS/src'
+ERROR: compilation failed for package 'RAS'
+* removing '/home/runner/R-patched/lib/RAS'

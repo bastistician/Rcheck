@@ -1,0 +1,20 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'string2path' ...
+** this is package 'string2path' version '0.3.0'
+** package 'string2path' successfully unpacked and MD5 sums checked
+** using staged installation
+*** Checking if cargo is installed
+*** Checking if cargo is newer than the required version
+
+-------------- ERROR: CONFIGURATION FAILED --------------------
+
+[cargo check result]
+The installed version of cargo (1.87.0) is older than the requirement (1.88.0)
+
+Please refer to <https://rust-lang.org/tools/install/> to install Rust.
+
+---------------------------------------------------------------
+
+ERROR: configuration failed for package 'string2path'
+* removing '/home/runner/R-patched/lib/string2path'
+* restoring previous '/home/runner/R-patched/lib/string2path'

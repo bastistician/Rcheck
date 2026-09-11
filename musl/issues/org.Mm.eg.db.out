@@ -1,0 +1,12 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'org.Mm.eg.db' ...
+** this is package 'org.Mm.eg.db' version '3.23.0'
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package 'AnnotationDbi' 1.72.0 was found, but >= 1.73.0 is required by 'org.Mm.eg.db'
+Execution halted
+ERROR: lazy loading failed for package 'org.Mm.eg.db'
+* removing '/home/runner/R-patched/lib/org.Mm.eg.db'
+* restoring previous '/home/runner/R-patched/lib/org.Mm.eg.db'

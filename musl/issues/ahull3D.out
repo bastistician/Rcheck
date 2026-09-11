@@ -1,0 +1,30 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'ahull3D' ...
+** this is package 'ahull3D' version '1.0.0'
+** package 'ahull3D' successfully unpacked and MD5 sums checked
+** using staged installation
+Configuring ahull3D with RcppCGAL...
+Configuration complete.
+** libs
+specified C++17
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/ahull3D/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1 -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1 -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ahull3D.cpp -o ahull3D.o
+In file included from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from ahull3D.h:6,
+                 from ahull3D.cpp:1:
+/home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:119:10: fatal error: boost/config.hpp: No such file or directory
+  119 | #include <boost/config.hpp>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: ahull3D.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/ahull3D/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/ahull3D/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/ahull3D/src'
+ERROR: compilation failed for package 'ahull3D'
+* removing '/home/runner/R-patched/lib/ahull3D'
