@@ -1,0 +1,53 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'dsdp' ...
+** this is package 'dsdp' version '0.1.1'
+** package 'dsdp' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/dsdp/src'
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c clp.c -o clp.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c clpmisc.c -o clpmisc.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c clpmodel.c -o clpmodel.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c clpsol.c -o clpsol.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c clputil.c -o clputil.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c init.c -o init.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c interface.c -o interface.o
+In file included from interface.c:2:
+interface.c: In function 'rcdf_polygauss':
+/home/runner/R-patched/build/include/Rinternals.h:874:33: error: implicit declaration of function 'Rf_allocSExp'; did you mean 'allocSExp'? [-Wimplicit-function-declaration]
+  874 | #define allocSExp               Rf_allocSExp
+      |                                 ^~~~~~~~~~~~
+interface.c:513:16: note: in expansion of macro 'allocSExp'
+  513 |         return allocSExp(NILSXP);
+      |                ^~~~~~~~~
+/home/runner/R-patched/build/include/Rinternals.h:874:33: error: returning 'int' from a function with return type 'SEXP' {aka 'struct SEXPREC *'} makes pointer from integer without a cast [-Wint-conversion]
+  874 | #define allocSExp               Rf_allocSExp
+interface.c:513:16: note: in expansion of macro 'allocSExp'
+  513 |         return allocSExp(NILSXP);
+      |                ^~~~~~~~~
+interface.c: In function 'rcdf_polyggamma':
+/home/runner/R-patched/build/include/Rinternals.h:874:33: error: returning 'int' from a function with return type 'SEXP' {aka 'struct SEXPREC *'} makes pointer from integer without a cast [-Wint-conversion]
+  874 | #define allocSExp               Rf_allocSExp
+interface.c:558:16: note: in expansion of macro 'allocSExp'
+  558 |         return allocSExp(NILSXP);
+      |                ^~~~~~~~~
+interface.c: In function 'rigamma':
+/home/runner/R-patched/build/include/Rinternals.h:874:33: error: returning 'int' from a function with return type 'SEXP' {aka 'struct SEXPREC *'} makes pointer from integer without a cast [-Wint-conversion]
+  874 | #define allocSExp               Rf_allocSExp
+interface.c:585:16: note: in expansion of macro 'allocSExp'
+  585 |         return allocSExp(NILSXP);
+      |                ^~~~~~~~~
+interface.c: In function 'ricgamma':
+/home/runner/R-patched/build/include/Rinternals.h:874:33: error: returning 'int' from a function with return type 'SEXP' {aka 'struct SEXPREC *'} makes pointer from integer without a cast [-Wint-conversion]
+  874 | #define allocSExp               Rf_allocSExp
+interface.c:631:16: note: in expansion of macro 'allocSExp'
+  631 |         return allocSExp(NILSXP);
+      |                ^~~~~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:190: interface.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/dsdp/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/dsdp/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/dsdp/src'
+ERROR: compilation failed for package 'dsdp'
+* removing '/home/runner/R-patched/lib/dsdp'
+* restoring previous '/home/runner/R-patched/lib/dsdp'

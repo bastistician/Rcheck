@@ -1,0 +1,13 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'kerastuneR' ...
+** this is package 'kerastuneR' version '0.1.0.7'
+** package 'kerastuneR' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'at_depth' is not exported by 'namespace:purrr'
+Execution halted
+ERROR: lazy loading failed for package 'kerastuneR'
+* removing '/home/runner/R-patched/lib/kerastuneR'
+* restoring previous '/home/runner/R-patched/lib/kerastuneR'

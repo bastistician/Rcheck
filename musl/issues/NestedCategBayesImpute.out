@@ -1,0 +1,45 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'NestedCategBayesImpute' ...
+** this is package 'NestedCategBayesImpute' version '1.2.1'
+** package 'NestedCategBayesImpute' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+using C++11
+make[1]: Entering directory '/var/local/PKGS/CRAN/NestedCategBayesImpute/src'
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c SampleMatrix.cpp -o SampleMatrix.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c SampleMising.cpp -o SampleMising.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c SpecialFunctions.cpp -o SpecialFunctions.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c checkconstraints.cpp -o checkconstraints.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c checkconstraints_imp.cpp -o checkconstraints_imp.o
+g++ -std=gnu++11 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes -DRCPP_DEMANGLER_ENABLED=0   -c generateData.cpp -o generateData.o
+In file included from /usr/include/pthread.h:31,
+                 from /usr/include/c++/14.2.0/x86_64-alpine-linux-musl/bits/gthr-default.h:35,
+                 from /usr/include/c++/14.2.0/x86_64-alpine-linux-musl/bits/gthr.h:157,
+                 from /usr/include/c++/14.2.0/ext/atomicity.h:35,
+                 from /usr/include/c++/14.2.0/bits/ios_base.h:39,
+                 from /usr/include/c++/14.2.0/streambuf:43,
+                 from /usr/include/c++/14.2.0/bits/streambuf_iterator.h:35,
+                 from /usr/include/c++/14.2.0/iterator:66,
+                 from /home/runner/R-patched/lib/Rcpp/include/RcppCommon.h:51,
+                 from /home/runner/R-patched/lib/Rcpp/include/Rcpp.h:27,
+                 from generateData.cpp:1:
+generateData.cpp: In function 'Rcpp::List GetImpossibleHouseholds(Rcpp::IntegerVector, Rcpp::IntegerVector, Rcpp::List, Rcpp::NumericMatrix, Rcpp::NumericMatrix, Rcpp::NumericVector, int, int, int, bool, bool)':
+generateData.cpp:105:18: error: conversion from 'std::nullptr_t' to 'Rcpp::List' {aka 'Rcpp::Vector<19>'} is ambiguous
+  105 |     List batch = NULL;
+      |                  ^~~~
+In file included from /home/runner/R-patched/lib/Rcpp/include/Rcpp/Vector.h:51,
+                 from /home/runner/R-patched/lib/Rcpp/include/Rcpp.h:41:
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:107:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(const char*) [with int RTYPE = 19; StoragePolicy = Rcpp::PreserveStorage]'
+  107 |     Vector( const char* st ) {
+      |     ^~~~~~
+/home/runner/R-patched/lib/Rcpp/include/Rcpp/vector/Vector.h:71:5: note: candidate: 'Rcpp::Vector<RTYPE, StoragePolicy>::Vector(SEXP) [with int RTYPE = 19; StoragePolicy = Rcpp::PreserveStorage; SEXP = SEXPREC*]'
+   71 |     Vector( SEXP x ) {
+      |     ^~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:211: generateData.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/NestedCategBayesImpute/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/NestedCategBayesImpute/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/NestedCategBayesImpute/src'
+ERROR: compilation failed for package 'NestedCategBayesImpute'
+* removing '/home/runner/R-patched/lib/NestedCategBayesImpute'
