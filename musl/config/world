@@ -92,9 +92,6 @@ syslinux
 tesseract-ocr-data-eng
 tesseract-ocr-dev
 texinfo
-texlive
-texlive-xetex
-texmf-dist-most
 tiff-dev
 tk-dev
 tzdata
