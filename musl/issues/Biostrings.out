@@ -1,0 +1,38 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'Biostrings' ...
+** this is package 'Biostrings' version '2.78.0'
+** package 'Biostrings' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/BIOC/Biostrings/src'
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include    -fpic  -O2 -mtune=native  -c BAB_class.c -o BAB_class.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include    -fpic  -O2 -mtune=native  -c BitMatrix.c -o BitMatrix.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include    -fpic  -O2 -mtune=native  -c IRanges_stubs.c -o IRanges_stubs.o
+gcc -std=gnu23 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/S4Vectors/include' -I'/home/runner/R-patched/lib/IRanges/include' -I'/home/runner/R-patched/lib/XVector/include' -I/usr/local/include    -fpic  -O2 -mtune=native  -c MIndex_class.c -o MIndex_class.o
+In file included from /home/runner/R-patched/build/include/Rdefines.h:41,
+                 from /home/runner/R-patched/lib/S4Vectors/include/S4Vectors_defines.h:18,
+                 from /home/runner/R-patched/lib/IRanges/include/IRanges_defines.h:18,
+                 from ../inst/include/Biostrings_defines.h:18,
+                 from Biostrings.h:1,
+                 from MIndex_class.c:5:
+MIndex_class.c: In function 'SparseMIndex_endIndex':
+MIndex_class.c:186:27: error: implicit declaration of function 'R_lsInternal'; did you mean 'R_lsInternal3'? [-Wimplicit-function-declaration]
+  186 |         PROTECT(symbols = R_lsInternal(x_ends_envir, 1));
+      |                           ^~~~~~~~~~~~
+/home/runner/R-patched/build/include/Rinternals.h:357:36: note: in definition of macro 'PROTECT'
+  357 | #define PROTECT(s)      Rf_protect(s)
+      |                                    ^
+MIndex_class.c:186:25: error: assignment to 'SEXP' {aka 'struct SEXPREC *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  186 |         PROTECT(symbols = R_lsInternal(x_ends_envir, 1));
+      |                         ^
+/home/runner/R-patched/build/include/Rinternals.h:357:36: note: in definition of macro 'PROTECT'
+  357 | #define PROTECT(s)      Rf_protect(s)
+      |                                    ^
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:190: MIndex_class.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/BIOC/Biostrings/src'
+make[1]: Entering directory '/var/local/PKGS/BIOC/Biostrings/src'
+make[1]: Leaving directory '/var/local/PKGS/BIOC/Biostrings/src'
+ERROR: compilation failed for package 'Biostrings'
+* removing '/home/runner/R-patched/lib/Biostrings'
+* restoring previous '/home/runner/R-patched/lib/Biostrings'
