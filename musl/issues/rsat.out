@@ -1,0 +1,15 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'rsat' ...
+** this is package 'rsat' version '0.1.21'
+** package 'rsat' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'tm_scale_bar' is not exported by 'namespace:tmap'
+Execution halted
+ERROR: lazy loading failed for package 'rsat'
+* removing '/home/runner/R-patched/lib/rsat'
+* restoring previous '/home/runner/R-patched/lib/rsat'

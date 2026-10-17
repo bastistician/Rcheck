@@ -1,0 +1,12 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'GO.db' ...
+** this is package 'GO.db' version '3.23.1'
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package 'AnnotationDbi' 1.72.0 was found, but >= 1.73.0 is required by 'GO.db'
+Execution halted
+ERROR: lazy loading failed for package 'GO.db'
+* removing '/home/runner/R-patched/lib/GO.db'
+* restoring previous '/home/runner/R-patched/lib/GO.db'

@@ -1,0 +1,21 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'HIBAG' ...
+** this is package 'HIBAG' version '1.48.0'
+** using staged installation
+** libs
+specified C++11
+using C compiler: 'gcc (Alpine 14.2.0) 14.2.0'
+using C++ compiler: 'g++ (Alpine 14.2.0) 14.2.0'
+make[1]: Entering directory '/var/local/PKGS/BIOC/HIBAG/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include -I'/home/runner/R-patched/lib/RcppParallel/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c HIBAG.cpp -o HIBAG.o
+HIBAG.cpp: In function 'SEXPREC* HIBAG_NewClassifiers(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP)':
+HIBAG.cpp:622:47: error: 'nthread' was not declared in this scope; did you mean 'NThread'?
+  622 |                 verbose_num_thread(verbose && nthread>0);
+      |                                               ^~~~~~~
+      |                                               NThread
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: HIBAG.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/BIOC/HIBAG/src'
+make[1]: Entering directory '/var/local/PKGS/BIOC/HIBAG/src'
+make[1]: Leaving directory '/var/local/PKGS/BIOC/HIBAG/src'
+ERROR: compilation failed for package 'HIBAG'
+* removing '/home/runner/R-patched/lib/HIBAG'
