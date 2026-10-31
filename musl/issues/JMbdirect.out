@@ -1,0 +1,14 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'JMbdirect' ...
+** this is package 'JMbdirect' version '0.1.1'
+** package 'JMbdirect' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+Error: object 'survfitjmcs' is not exported by 'namespace:FastJM'
+Execution halted
+ERROR: lazy loading failed for package 'JMbdirect'
+* removing '/home/runner/R-patched/lib/JMbdirect'
+* restoring previous '/home/runner/R-patched/lib/JMbdirect'
