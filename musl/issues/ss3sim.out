@@ -1,0 +1,15 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'ss3sim' ...
+** this is package 'ss3sim' version '1.0.3'
+** package 'ss3sim' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'SS_changepars' is not exported by 'namespace:r4ss'
+Execution halted
+ERROR: lazy loading failed for package 'ss3sim'
+* removing '/home/runner/R-patched/lib/ss3sim'
+* restoring previous '/home/runner/R-patched/lib/ss3sim'

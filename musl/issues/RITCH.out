@@ -1,0 +1,33 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RITCH' ...
+** this is package 'RITCH' version '0.1.30'
+** package 'RITCH' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RITCH/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c count_messages.cpp -o count_messages.o
+count_messages.cpp: In function 'std::vector<long int> count_messages_internal(std::string, int64_t)':
+count_messages.cpp:20:7: error: 'fseeko64' was not declared in this scope; did you mean 'fseeko'?
+   20 |   if (fseeko64(infile, 0L, SEEK_END) != 0) {
+      |       ^~~~~~~~
+      |       fseeko
+count_messages.cpp:23:22: error: 'ftello64' was not declared in this scope; did you mean 'ftello'?
+   23 |   int64_t filesize = ftello64(infile);
+      |                      ^~~~~~~~
+      |                      ftello
+count_messages.cpp:27:7: error: 'fseeko64' was not declared in this scope; did you mean 'fseeko'?
+   27 |   if (fseeko64(infile, 0L, SEEK_SET) != 0) {
+      |       ^~~~~~~~
+      |       fseeko
+count_messages.cpp:57:5: error: 'fseeko64' was not declared in this scope; did you mean 'fseeko'?
+   57 |     fseeko64(infile, offset, SEEK_CUR);
+      |     ^~~~~~~~
+      |     fseeko
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: count_messages.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RITCH/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RITCH/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RITCH/src'
+ERROR: compilation failed for package 'RITCH'
+* removing '/home/runner/R-patched/lib/RITCH'
