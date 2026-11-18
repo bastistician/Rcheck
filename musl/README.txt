@@ -27,7 +27,8 @@ is installed on the check system but not part of the Docker image:
 - COIN-OR SYMPHONY 5.7.3 <https://github.com/coin-or/SYMPHONY>
 
 To reproduce an issue for a specific R package, it is often sufficient
-to use the standard Alpine Linux image.  Interactively:
+and preferable (especially in CI settings) to use the standard Alpine
+Linux image.  Interactively:
 
     docker pull alpine
     docker run --rm -it alpine
