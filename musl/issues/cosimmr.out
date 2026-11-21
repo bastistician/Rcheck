@@ -1,0 +1,35 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'cosimmr' ...
+** this is package 'cosimmr' version '1.0.12'
+** package 'cosimmr' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/cosimmr/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppDist/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppArmadillo/include' -I'/home/runner/R-patched/lib/RcppDist/include' -I/usr/local/include   -fopenmp -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c run_VB.cpp -o run_VB.o
+g++ -std=gnu++20 -shared -L/usr/local/lib -o cosimmr.so RcppExports.o run_VB.o -fopenmp -lopenblas -lgfortran -lm -lssp_nonshared -lquadmath
+make[1]: Leaving directory '/var/local/PKGS/CRAN/cosimmr/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/cosimmr/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/cosimmr/src'
+installing to /home/runner/R-patched/lib/00LOCK-cosimmr/00new/cosimmr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: .onLoad failed in loadNamespace() for 'rjags', details:
+  call: NULL
+  error: An error occured while linking to the JAGS installation at
+	/usr/local
+	Make sure that you have a JAGS 4.x.y installation that is binary
+	compatible with your R installation (your current R platform is
+	x86_64-pc-linux-musl).
+
+	The error returned from library.dynam(...) was:
+	unable to load shared object '/home/runner/R-patched/lib/rjags/libs/rjags.so':
+  Error loading shared library libjags.so.4: No such file or directory (needed by /home/runner/R-patched/lib/rjags/libs/rjags.so)
+Execution halted
+ERROR: lazy loading failed for package 'cosimmr'
+* removing '/home/runner/R-patched/lib/cosimmr'
+* restoring previous '/home/runner/R-patched/lib/cosimmr'

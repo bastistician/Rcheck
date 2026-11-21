@@ -1,0 +1,14 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'tynding' ...
+** this is package 'tynding' version '0.1.2'
+** package 'tynding' successfully unpacked and MD5 sums checked
+** using staged installation
+Error in eval(ei, envir) : 
+------------------ [UNSUPPORTED RUST VERSION]------------------
+- Minimum supported Rust version is 1.89.0.
+- Installed Rust version is 1.87.0.
+---------------------------------------------------------------
+Calls: source -> withVisible -> eval -> eval
+Execution halted
+ERROR: configuration failed for package 'tynding'
+* removing '/home/runner/R-patched/lib/tynding'

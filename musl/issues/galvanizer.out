@@ -1,0 +1,12 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'galvanizer' ...
+** this is package 'galvanizer' version '0.5.3'
+** package 'galvanizer' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+Error: object 'at_depth' is not exported by 'namespace:purrr'
+Execution halted
+ERROR: lazy loading failed for package 'galvanizer'
+* removing '/home/runner/R-patched/lib/galvanizer'
+* restoring previous '/home/runner/R-patched/lib/galvanizer'

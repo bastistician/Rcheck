@@ -1,0 +1,22 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'blrm' ...
+** this is package 'blrm' version '1.0-2'
+** package 'blrm' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+Error: .onLoad failed in loadNamespace() for 'rjags', details:
+  call: NULL
+  error: An error occured while linking to the JAGS installation at
+	/usr/local
+	Make sure that you have a JAGS 4.x.y installation that is binary
+	compatible with your R installation (your current R platform is
+	x86_64-pc-linux-musl).
+
+	The error returned from library.dynam(...) was:
+	unable to load shared object '/home/runner/R-patched/lib/rjags/libs/rjags.so':
+  Error loading shared library libjags.so.4: No such file or directory (needed by /home/runner/R-patched/lib/rjags/libs/rjags.so)
+Execution halted
+ERROR: lazy loading failed for package 'blrm'
+* removing '/home/runner/R-patched/lib/blrm'
+* restoring previous '/home/runner/R-patched/lib/blrm'

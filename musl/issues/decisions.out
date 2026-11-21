@@ -1,0 +1,16 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'decisions' ...
+** this is package 'decisions' version '0.1.0'
+** package 'decisions' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error in get(f@name, envir = envir) : object 'decider' not found
+Error: unable to load R code in package 'decisions'
+Execution halted
+ERROR: lazy loading failed for package 'decisions'
+* removing '/home/runner/R-patched/lib/decisions'
+* restoring previous '/home/runner/R-patched/lib/decisions'

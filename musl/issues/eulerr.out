@@ -1,0 +1,114 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'eulerr' ...
+** this is package 'eulerr' version '8.4.2'
+** package 'eulerr' successfully unpacked and MD5 sums checked
+** using staged installation
+Using cargo 1.96.1 (356927216 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Using rustc 1.96.1 (31fca3adb 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Building for CRAN.
+Writing `src/Makevars`.
+`tools/config.R` has finished.
+** libs
+using C compiler: 'gcc (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/eulerr/src'
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c entrypoint.c -o entrypoint.o
+if [ -f ./rust/vendor.tar.xz ]; then \
+	tar xf rust/vendor.tar.xz && \
+	mkdir -p /var/local/PKGS/CRAN/eulerr/src/.cargo && \
+	cp rust/vendor-config.toml /var/local/PKGS/CRAN/eulerr/src/.cargo/config.toml; \
+fi
+export CARGO_HOME=/var/local/PKGS/CRAN/eulerr/src/.cargo && \
+export PATH="/opt/texlive/bin/x86_64-linuxmusl:/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/runner/.cargo/bin" && \
+RUSTFLAGS=" --print=native-static-libs" cargo build -j 2 --offline --lib --release --manifest-path=./rust/Cargo.toml --target-dir ./rust/target 
+   Compiling libm v0.2.16
+   Compiling autocfg v1.5.1
+   Compiling num-traits v0.2.19
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling paste v1.0.15
+   Compiling syn v2.0.119
+   Compiling num-integer v0.1.47
+   Compiling num-bigint v0.4.8
+   Compiling num-complex v0.4.6
+   Compiling libc v0.2.191
+   Compiling bytemuck v1.25.2
+   Compiling rand_core v0.10.1
+   Compiling crossbeam-utils v0.8.23
+   Compiling safe_arch v0.7.4
+   Compiling num-rational v0.4.2
+   Compiling matrixmultiply v0.3.11
+   Compiling zerocopy v0.8.63
+   Compiling crossbeam-epoch v0.9.21
+   Compiling cfg-if v1.0.5
+   Compiling getrandom v0.4.3
+   Compiling wide v0.7.33
+   Compiling approx v0.5.1
+   Compiling crossbeam-deque v0.8.8
+   Compiling cpufeatures v0.3.1
+   Compiling rawpointer v0.2.1
+   Compiling chacha20 v0.10.2
+   Compiling simba v0.9.1
+   Compiling nalgebra-macros v0.3.0
+   Compiling typenum v1.20.1
+   Compiling extendr-ffi v0.9.0
+   Compiling anyhow v1.0.104
+   Compiling rayon-core v1.13.0
+   Compiling nalgebra v0.34.2
+   Compiling ppv-lite86 v0.2.21
+   Compiling rand v0.10.4
+   Compiling num-iter v0.1.46
+   Compiling i_float v5.0.0
+   Compiling i_shape v5.0.0
+   Compiling num v0.4.3
+   Compiling rand_distr v0.6.0
+   Compiling rand_chacha v0.10.0
+   Compiling syn v3.0.10
+   Compiling lazy_static v1.5.1
+   Compiling web-time v1.1.0
+   Compiling i_key_sort v0.12.0
+   Compiling nalgebra-sparse v0.11.0
+   Compiling i_tree v0.20.0
+   Compiling either v1.19.0
+   Compiling extendr-api v0.9.0
+   Compiling rayon v1.12.0
+   Compiling basin v3.3.0
+   Compiling i_overlay v9.2.0
+   Compiling extendr-macros v0.9.0
+   Compiling readonly v0.2.14
+   Compiling finitediff v0.2.0
+   Compiling log v0.4.35
+   Compiling once_cell v1.21.4
+   Compiling eunoia v1.10.2
+   Compiling eulerr v0.0.0 (/var/local/PKGS/CRAN/eulerr/src/rust)
+note: link against the following native artifacts when linking against this static library. The order and any duplication can be significant on some platforms
+
+note: native-static-libs: -lR -lgcc_s -lc
+
+    Finished `release` profile [optimized] target(s) in 5m 49s
+if [ -z "" ]; then \
+	export CARGO_HOME=/var/local/PKGS/CRAN/eulerr/src/.cargo && \
+	export PATH="/opt/texlive/bin/x86_64-linuxmusl:/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/runner/.cargo/bin" && \
+	RUSTFLAGS=" --print=native-static-libs" cargo run -j 2 --offline --bin document --release --manifest-path=./rust/Cargo.toml --target-dir ./rust/target; \
+fi
+note: link against the following native artifacts when linking against this static library. The order and any duplication can be significant on some platforms
+
+note: native-static-libs: -lR -lgcc_s -lc
+
+   Compiling eulerr v0.0.0 (/var/local/PKGS/CRAN/eulerr/src/rust)
+error: linking with `cc` failed: exit status: 1
+  |
+  = note:  "cc" "-m64" "<1 object files omitted>" "-Wl,--as-needed" "-Wl,-Bstatic" "<sysroot>/lib/rustlib/x86_64-alpine-linux-musl/lib/libcompiler_builtins-*.rlib" "-Wl,-Bdynamic" "-lR" "-lgcc_s" "-lc" "-L" "/var/local/PKGS/CRAN/eulerr/src/./rust/target/release/deps/rustcptM5lV/raw-dylibs" "-Wl,--eh-frame-hdr" "-Wl,-z,noexecstack" "-L" "<sysroot>/lib/rustlib/x86_64-alpine-linux-musl/lib" "-o" "/var/local/PKGS/CRAN/eulerr/src/./rust/target/release/deps/document-fec0037f04ad88b0" "-Wl,--gc-sections" "-pie" "-Wl,-z,relro,-z,now" "-Wl,-O1" "-Wl,--strip-debug"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: /usr/lib/gcc/x86_64-alpine-linux-musl/15.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cannot find -lR: No such file or directory
+          collect2: error: ld returned 1 exit status
+          
+
+error: could not compile `eulerr` (bin "document") due to 1 previous error
+make[1]: *** [Makevars:27: rust/target/release/libeulerr.a] Error 101
+make[1]: Leaving directory '/var/local/PKGS/CRAN/eulerr/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/eulerr/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/eulerr/src'
+ERROR: compilation failed for package 'eulerr'
+* removing '/home/runner/R-patched/lib/eulerr'
+* restoring previous '/home/runner/R-patched/lib/eulerr'
