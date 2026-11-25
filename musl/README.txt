@@ -34,6 +34,8 @@ for the R package at hand, for example:
     apk add g++ libxml2-dev  # for Rcpp, xml2 et al.
     R -s -e 'install.packages("PKGNAME", repos = "https://cloud.R-project.org")'
 
+The actual check system exercises a --clean INSTALL.
+
 
 The following extra software is installed on the check system:
 
