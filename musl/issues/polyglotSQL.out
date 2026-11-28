@@ -1,0 +1,73 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'polyglotSQL' ...
+** this is package 'polyglotSQL' version '0.1.3'
+** package 'polyglotSQL' successfully unpacked and MD5 sums checked
+** using staged installation
+Using cargo 1.96.1 (356927216 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Using rustc 1.96.1 (31fca3adb 2026-06-26) (Alpine Linux Rust 1.96.1-r0)
+Building for CRAN.
+Writing `src/Makevars`.
+`tools/config.R` has finished.
+** libs
+using C compiler: 'gcc (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/polyglotSQL/src'
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG   -I/usr/local/include    -fpic  -O2 -mtune=native  -c entrypoint.c -o entrypoint.o
+if [ -d ./vendor ]; then \
+	echo "=== Using offline vendor directory ==="; \
+	mkdir -p /var/local/PKGS/CRAN/polyglotSQL/src/.cargo && \
+	cp rust/vendor-config.toml /var/local/PKGS/CRAN/polyglotSQL/src/.cargo/config.toml; \
+elif [ -f ./rust/vendor.tar.xz ]; then \
+	echo "=== Using offline vendor tarball ==="; \
+	tar xf rust/vendor.tar.xz && \
+	mkdir -p /var/local/PKGS/CRAN/polyglotSQL/src/.cargo && \
+	cp rust/vendor-config.toml /var/local/PKGS/CRAN/polyglotSQL/src/.cargo/config.toml; \
+fi
+=== Using offline vendor tarball ===
+export CARGO_HOME=/var/local/PKGS/CRAN/polyglotSQL/src/.cargo && \
+export PATH="/opt/texlive/bin/x86_64-linuxmusl:/bin:/sbin:/usr/bin:/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/home/runner/.cargo/bin" && \
+RUSTFLAGS=" --print=native-static-libs" cargo build -j 2 --offline --lib --release --manifest-path=./rust/Cargo.toml --target-dir ./rust/target 
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.47
+   Compiling find-msvc-tools v0.1.9
+   Compiling object v0.37.3
+   Compiling shlex v2.0.1
+   Compiling cc v1.3.0
+   Compiling memchr v2.8.3
+   Compiling syn v2.0.119
+   Compiling ar_archive_writer v0.5.2
+   Compiling syn v3.0.0
+   Compiling serde_core v1.0.229
+   Compiling psm v0.1.31
+   Compiling extendr-ffi v0.9.0
+   Compiling libc v0.2.186
+   Compiling zmij v1.0.23
+   Compiling stacker v0.1.24
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.150
+   Compiling thiserror v1.0.69
+   Compiling paste v1.0.15
+   Compiling serde_derive v1.0.229
+   Compiling thiserror-impl v1.0.69
+   Compiling itoa v1.0.18
+   Compiling cfg-if v1.0.4
+   Compiling lazy_static v1.5.0
+   Compiling extendr-api v0.9.0
+   Compiling extendr-macros v0.9.0
+   Compiling readonly v0.2.14
+   Compiling polyglot-sql-ast-derive v0.14.1
+   Compiling once_cell v1.21.4
+   Compiling polyglotsql v0.1.0 (/var/local/PKGS/CRAN/polyglotSQL/src/rust)
+   Compiling unicode-segmentation v1.13.3
+   Compiling polyglot-sql v0.14.1
+error: could not compile `polyglot-sql` (lib)
+
+Caused by:
+  process didn't exit successfully: `rustc --crate-name polyglot_sql --edition=2021 /var/local/PKGS/CRAN/polyglotSQL/src/vendor/polyglot-sql/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=s -C embed-bitcode=no -C codegen-units=16 --cfg 'feature="all-dialects"' --cfg 'feature="ast-tools"' --cfg 'feature="dialect-athena"' --cfg 'feature="dialect-bigquery"' --cfg 'feature="dialect-clickhouse"' --cfg 'feature="dialect-cockroachdb"' --cfg 'feature="dialect-databricks"' --cfg 'feature="dialect-datafusion"' --cfg 'feature="dialect-doris"' --cfg 'feature="dialect-dremio"' --cfg 'feature="dialect-drill"' --cfg 'feature="dialect-druid"' --cfg 'feature="dialect-duckdb"' --cfg 'feature="dialect-dune"' --cfg 'feature="dialect-exasol"' --cfg 'feature="dialect-fabric"' --cfg 'feature="dialect-hana"' --cfg 'feature="dialect-hive"' --cfg 'feature="dialect-materialize"' --cfg 'feature="dialect-mysql"' --cfg 'feature="dialect-oracle"' --cfg 'feature="dialect-postgresql"' --cfg 'feature="dialect-presto"' --cfg 'feature="dialect-redshift"' --cfg 'feature="dialect-risingwave"' --cfg 'feature="dialect-singlestore"' --cfg 'feature="dialect-snowflake"' --cfg 'feature="dialect-solr"' --cfg 'feature="dialect-spark"' --cfg 'feature="dialect-sqlite"' --cfg 'feature="dialect-starrocks"' --cfg 'feature="dialect-tableau"' --cfg 'feature="dialect-teradata"' --cfg 'feature="dialect-tidb"' --cfg 'feature="dialect-trino"' --cfg 'feature="dialect-tsql"' --cfg 'feature="dialect-vertica"' --cfg 'feature="diff"' --cfg 'feature="generate"' --cfg 'feature="openlineage"' --cfg 'feature="semantic"' --cfg 'feature="stacker"' --cfg 'feature="transpile"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("all-dialects", "ast-tools", "bindings", "builder", "default", "dialect-athena", "dialect-bigquery", "dialect-clickhouse", "dialect-cockroachdb", "dialect-databricks", "dialect-datafusion", "dialect-doris", "dialect-dremio", "dialect-drill", "dialect-druid", "dialect-duckdb", "dialect-dune", "dialect-exasol", "dialect-fabric", "dialect-hana", "dialect-hive", "dialect-materialize", "dialect-mysql", "dialect-oracle", "dialect-postgresql", "dialect-presto", "dialect-redshift", "dialect-risingwave", "dialect-singlestore", "dialect-snowflake", "dialect-solr", "dialect-spark", "dialect-sqlite", "dialect-starrocks", "dialect-tableau", "dialect-teradata", "dialect-tidb", "dialect-trino", "dialect-tsql", "dialect-vertica", "diff", "function-catalog-all-dialects", "function-catalog-clickhouse", "function-catalog-duckdb", "generate", "openlineage", "planner", "semantic", "stacker", "time", "transpile"))' -C metadata=d8a58a0e9d3ffd73 -C extra-filename=-57ae6380dfe2a33e --out-dir /var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps -C strip=debuginfo -L dependency=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps --extern polyglot_sql_ast_derive=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps/libpolyglot_sql_ast_derive-5ab3452a5aee8cc0.so --extern serde=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps/libserde-e4a5e227487595c9.rmeta --extern serde_json=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps/libserde_json-3434f6f7d6ba395a.rmeta --extern stacker=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps/libstacker-463e79f21ae79898.rmeta --extern thiserror=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps/libthiserror-4c601b5e3ea4159a.rmeta --extern unicode_segmentation=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/deps/libunicode_segmentation-db6c3e80c3c25653.rmeta --cap-lints allow --print=native-static-libs -L native=/var/local/PKGS/CRAN/polyglotSQL/src/./rust/target/release/build/psm-d521f7798d531d81/out` (signal: 9, SIGKILL: kill)
+make[1]: *** [Makevars:27: rust/target/release/libpolyglotsql.a] Error 101
+make[1]: Leaving directory '/var/local/PKGS/CRAN/polyglotSQL/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/polyglotSQL/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/polyglotSQL/src'
+ERROR: compilation failed for package 'polyglotSQL'
+* removing '/home/runner/R-patched/lib/polyglotSQL'
+* restoring previous '/home/runner/R-patched/lib/polyglotSQL'

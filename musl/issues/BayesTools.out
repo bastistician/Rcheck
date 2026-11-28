@@ -1,0 +1,9 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'BayesTools' ...
+** this is package 'BayesTools' version '0.4.0'
+** package 'BayesTools' successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: BayesTools requires JAGS 4.x (>= 4.3.0, < 5.0.0); pkg-config reported 5.0.2. Install JAGS 4.3.x (JAGS 5 is not supported) and select it with JAGS_ROOT or --with-jags-prefix; an explicit prefix uses only its selected headers and libraries. For automatic discovery, set PKG_CONFIG_PATH when pkg-config reports another JAGS installation.
+ERROR: configuration failed for package 'BayesTools'
+* removing '/home/runner/R-patched/lib/BayesTools'
+* restoring previous '/home/runner/R-patched/lib/BayesTools'

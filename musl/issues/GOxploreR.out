@@ -1,0 +1,13 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'GOxploreR' ...
+** this is package 'GOxploreR' version '1.2.8'
+** package 'GOxploreR' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'id' is not exported by 'namespace:dplyr'
+Execution halted
+ERROR: lazy loading failed for package 'GOxploreR'
+* removing '/home/runner/R-patched/lib/GOxploreR'
+* restoring previous '/home/runner/R-patched/lib/GOxploreR'

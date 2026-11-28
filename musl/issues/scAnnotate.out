@@ -1,0 +1,15 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'scAnnotate' ...
+** this is package 'scAnnotate' version '0.3'
+** package 'scAnnotate' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: object 'HarmonyMatrix' is not exported by 'namespace:harmony'
+Execution halted
+ERROR: lazy loading failed for package 'scAnnotate'
+* removing '/home/runner/R-patched/lib/scAnnotate'
+* restoring previous '/home/runner/R-patched/lib/scAnnotate'

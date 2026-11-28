@@ -1,0 +1,174 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RcppAlgos' ...
+** this is package 'RcppAlgos' version '2.10.4'
+** package 'RcppAlgos' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RcppAlgos/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BigComboCount.cpp -o BigComboCount.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BigPartsCountDistinct.cpp -o BigPartsCountDistinct.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BigPartsCountMultiset.cpp -o BigPartsCountMultiset.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BigPartsCountRep.cpp -o BigPartsCountRep.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BigPartsCountSection.cpp -o BigPartsCountSection.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BigPermuteCount.cpp -o BigPermuteCount.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c BrutePartitionsCountMultiset.cpp -o BrutePartitionsCountMultiset.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CartesianClass.cpp -o CartesianClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CartesianUtils.cpp -o CartesianUtils.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CheckReturn.cpp -o CheckReturn.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ClassUtils.cpp -o ClassUtils.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CnstrntsSpecialClass.cpp -o CnstrntsSpecialClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CnstrntsToRClass.cpp -o CnstrntsToRClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CombinationResults.cpp -o CombinationResults.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CombinatoricsApply.cpp -o CombinatoricsApply.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CombinatoricsCount.cpp -o CombinatoricsCount.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CombinatoricsMain.cpp -o CombinatoricsMain.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboApplyClass.cpp -o ComboApplyClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboCartesian.cpp -o ComboCartesian.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboClass.cpp -o ComboClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboCount.cpp -o ComboCount.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboGridContainer.cpp -o ComboGridContainer.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboGroups.cpp -o ComboGroups.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboGroupsClass.cpp -o ComboGroupsClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboGroupsGeneral.cpp -o ComboGroupsGeneral.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboGroupsSame.cpp -o ComboGroupsSame.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboGroupsTemplate.cpp -o ComboGroupsTemplate.o
+In file included from /usr/include/c++/15.2.0/x86_64-alpine-linux-musl/bits/c++allocator.h:33,
+                 from /usr/include/c++/15.2.0/bits/allocator.h:46,
+                 from /usr/include/c++/15.2.0/string:45,
+                 from /home/runner/R-patched/lib/cpp11/include/cpp11/strings.hpp:4,
+                 from ../inst/include/ComboGroups/ComboGroupsTemplate.h:3,
+                 from ../inst/include/ComboGroups/ComboGroupsGeneral.h:3,
+                 from ComboGroupsTemplate.cpp:1:
+In member function 'void std::__new_allocator<_Tp>::deallocate(_Tp*, size_type) [with _Tp = int]',
+    inlined from 'constexpr void std::allocator< <template-parameter-1-1> >::deallocate(_Tp*, std::size_t) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/allocator.h:215:35,
+    inlined from 'static constexpr void std::allocator_traits<std::allocator<_CharT> >::deallocate(allocator_type&, pointer, size_type) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/alloc_traits.h:649:23,
+    inlined from 'constexpr void std::_Vector_base<_Tp, _Alloc>::_M_deallocate(pointer, std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:396:19,
+    inlined from 'constexpr void std::_Vector_base<_Tp, _Alloc>::_M_deallocate(pointer, std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:392:7,
+    inlined from 'constexpr std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:375:15,
+    inlined from 'constexpr std::vector<_Tp, _Alloc>::~vector() [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:805:7,
+    inlined from 'std::unique_ptr<ComboGroupsTemplate> GroupPrep(SEXP, SEXP, SEXP, int)' at ComboGroupsTemplate.cpp:90:5:
+/usr/include/c++/15.2.0/bits/new_allocator.h:172:66: warning: 'void operator delete(void*, std::size_t)' called on pointer '<unknown>' with nonzero offset [1, 9223372036854775804] [-Wfree-nonheap-object]
+  172 |         _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+      |                                                                  ^
+In member function '_Tp* std::__new_allocator<_Tp>::allocate(size_type, const void*) [with _Tp = int]',
+    inlined from 'constexpr _Tp* std::allocator< <template-parameter-1-1> >::allocate(std::size_t) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/allocator.h:203:40,
+    inlined from 'static constexpr _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(allocator_type&, size_type) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/alloc_traits.h:614:28,
+    inlined from 'constexpr std::_Vector_base<_Tp, _Alloc>::pointer std::_Vector_base<_Tp, _Alloc>::_M_allocate(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:387:33,
+    inlined from 'constexpr void std::vector<_Tp, _Alloc>::_M_range_initialize_n(_Iterator, _Sentinel, size_type) [with _Iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _Sentinel = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:1985:23,
+    inlined from 'constexpr std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&) [with _InputIterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; <template-parameter-2-2> = void; _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:746:29,
+    inlined from 'std::unique_ptr<ComboGroupsTemplate> GroupPrep(SEXP, SEXP, SEXP, int)' at ComboGroupsTemplate.cpp:80:67:
+/usr/include/c++/15.2.0/bits/new_allocator.h:151:73: note: returned from 'void* operator new(std::size_t)'
+  151 |         return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+      |                                                                         ^
+In member function 'void std::__new_allocator<_Tp>::deallocate(_Tp*, size_type) [with _Tp = int]',
+    inlined from 'constexpr void std::allocator< <template-parameter-1-1> >::deallocate(_Tp*, std::size_t) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/allocator.h:215:35,
+    inlined from 'static constexpr void std::allocator_traits<std::allocator<_CharT> >::deallocate(allocator_type&, pointer, size_type) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/alloc_traits.h:649:23,
+    inlined from 'constexpr void std::_Vector_base<_Tp, _Alloc>::_M_deallocate(pointer, std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:396:19,
+    inlined from 'constexpr void std::_Vector_base<_Tp, _Alloc>::_M_deallocate(pointer, std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:392:7,
+    inlined from 'constexpr std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:375:15,
+    inlined from 'constexpr std::vector<_Tp, _Alloc>::~vector() [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:805:7,
+    inlined from 'std::unique_ptr<ComboGroupsTemplate> GroupPrep(SEXP, SEXP, SEXP, int)' at ComboGroupsTemplate.cpp:90:5:
+/usr/include/c++/15.2.0/bits/new_allocator.h:172:66: warning: 'void operator delete(void*, std::size_t)' called on pointer '<unknown>' with nonzero offset [1, 9223372036854775804] [-Wfree-nonheap-object]
+  172 |         _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+      |                                                                  ^
+In member function '_Tp* std::__new_allocator<_Tp>::allocate(size_type, const void*) [with _Tp = int]',
+    inlined from 'constexpr _Tp* std::allocator< <template-parameter-1-1> >::allocate(std::size_t) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/allocator.h:203:40,
+    inlined from 'static constexpr _Tp* std::allocator_traits<std::allocator<_CharT> >::allocate(allocator_type&, size_type) [with _Tp = int]' at /usr/include/c++/15.2.0/bits/alloc_traits.h:614:28,
+    inlined from 'constexpr std::_Vector_base<_Tp, _Alloc>::pointer std::_Vector_base<_Tp, _Alloc>::_M_allocate(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:387:33,
+    inlined from 'constexpr void std::vector<_Tp, _Alloc>::_M_range_initialize_n(_Iterator, _Sentinel, size_type) [with _Iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _Sentinel = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:1985:23,
+    inlined from 'constexpr std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&) [with _InputIterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; <template-parameter-2-2> = void; _Tp = int; _Alloc = std::allocator<int>]' at /usr/include/c++/15.2.0/bits/stl_vector.h:746:29,
+    inlined from 'std::unique_ptr<ComboGroupsTemplate> GroupPrep(SEXP, SEXP, SEXP, int)' at ComboGroupsTemplate.cpp:80:67:
+/usr/include/c++/15.2.0/bits/new_allocator.h:151:73: note: returned from 'void* operator new(std::size_t)'
+  151 |         return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+      |                                                                         ^
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboGroupsUnique.cpp -o ComboGroupsUnique.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboManager.cpp -o ComboManager.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboResClass.cpp -o ComboResClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboResGlue.cpp -o ComboResGlue.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComboResMain.cpp -o ComboResMain.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CompositionsDistinct.cpp -o CompositionsDistinct.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CompositionsRep.cpp -o CompositionsRep.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CompositionsUtils.cpp -o CompositionsUtils.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ComputedCount.cpp -o ComputedCount.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsClass.cpp -o ConstraintsClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsDistinct.cpp -o ConstraintsDistinct.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsGeneral.cpp -o ConstraintsGeneral.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsMain.cpp -o ConstraintsMain.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsMultiset.cpp -o ConstraintsMultiset.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsRep.cpp -o ConstraintsRep.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsSpecial.cpp -o ConstraintsSpecial.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConstraintsUtils.cpp -o ConstraintsUtils.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ConvertUtils.cpp -o ConvertUtils.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c DivNumSieve.cpp -o DivNumSieve.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c Eratosthenes.cpp -o Eratosthenes.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c EulerPhiSieve.cpp -o EulerPhiSieve.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c ExposeClass.cpp -o ExposeClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c FunAssign.cpp -o FunAssign.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetClassVals.cpp -o GetClassVals.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetCombPerm.cpp -o GetCombPerm.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetCombPermApply.cpp -o GetCombPermApply.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetComboGroups.cpp -o GetComboGroups.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetConstraints.cpp -o GetConstraints.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetPrevCombPerm.cpp -o GetPrevCombPerm.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetPrevCombPermApply.cpp -o GetPrevCombPermApply.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GetProduct.cpp -o GetProduct.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GmpConvert.cpp -o GmpConvert.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c GroupHelperClass.cpp -o GroupHelperClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c Iterator.cpp -o Iterator.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c MotleyPrimes.cpp -o MotleyPrimes.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c MultisetCountEngine.cpp -o MultisetCountEngine.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NextCombinatorics.cpp -o NextCombinatorics.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NextComposition.cpp -o NextComposition.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NextPartition.cpp -o NextPartition.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NextPermutation.cpp -o NextPermutation.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthCombination.cpp -o NthCombination.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthComposition.cpp -o NthComposition.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthPartition.cpp -o NthPartition.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthPartsDispatch.cpp -o NthPartsDispatch.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthPermutation.cpp -o NthPermutation.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthPrime.cpp -o NthPrime.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthPrimeR.cpp -o NthPrimeR.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NthResult.cpp -o NthResult.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c NumThreads.cpp -o NumThreads.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c P2.cpp -o P2.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c P3.cpp -o P3.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartialSieve.cpp -o PartialSieve.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsClass.cpp -o PartitionsClass.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsCount.cpp -o PartitionsCount.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsCountDistinct.cpp -o PartitionsCountDistinct.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsCountMultiset.cpp -o PartitionsCountMultiset.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsCountRep.cpp -o PartitionsCountRep.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsCountSection.cpp -o PartitionsCountSection.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsDesign.cpp -o PartitionsDesign.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsDistinct.cpp -o PartitionsDistinct.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsEsqueDistinct.cpp -o PartitionsEsqueDistinct.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsEsqueMultiset.cpp -o PartitionsEsqueMultiset.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsEsqueRep.cpp -o PartitionsEsqueRep.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsManager.cpp -o PartitionsManager.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsMultiset.cpp -o PartitionsMultiset.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsRep.cpp -o PartitionsRep.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PartitionsUtils.cpp -o PartitionsUtils.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PermuteCount.cpp -o PermuteCount.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PermuteManager.cpp -o PermuteManager.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PermuteOptimized.cpp -o PermuteOptimized.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PermuteResGlue.cpp -o PermuteResGlue.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PermuteResMain.cpp -o PermuteResMain.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c PermuteResults.cpp -o PermuteResults.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -I../inst/include/ -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c Phi.cpp -o Phi.o
+In file included from /usr/include/limits.h:40,
+                 from /usr/include/c++/15.2.0/climits:47,
+                 from /usr/include/c++/15.2.0/bits/atomic_wait.h:47,
+                 from /usr/include/c++/15.2.0/bits/atomic_base.h:43,
+                 from /usr/include/c++/15.2.0/atomic:52,
+                 from Phi.cpp:6:
+Phi.cpp:107:27: error: expected unqualified-id before numeric constant
+  107 |     constexpr std::size_t PAGE_SIZE = 1u << PAGE_BITS;
+      |                           ^~~~~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: Phi.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RcppAlgos/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/RcppAlgos/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/RcppAlgos/src'
+ERROR: compilation failed for package 'RcppAlgos'
+* removing '/home/runner/R-patched/lib/RcppAlgos'
+* restoring previous '/home/runner/R-patched/lib/RcppAlgos'

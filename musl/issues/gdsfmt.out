@@ -1,0 +1,33 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'gdsfmt' ...
+** this is package 'gdsfmt' version '1.50.0'
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/BIOC/gdsfmt/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c R_CoreArray.cpp -o R_CoreArray.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c gdsfmt.cpp -o gdsfmt.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c digest.cpp -o digest.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/CoreArray.cpp -o CoreArray/CoreArray.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dAllocator.cpp -o CoreArray/dAllocator.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dAny.cpp -o CoreArray/dAny.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dBase.cpp -o CoreArray/dBase.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dBitGDS.cpp -o CoreArray/dBitGDS.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dEndian.cpp -o CoreArray/dEndian.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dFile.cpp -o CoreArray/dFile.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dParallel.cpp -o CoreArray/dParallel.o
+gcc -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native  -c CoreArray/dParallel_Ext.c -o CoreArray/dParallel_Ext.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c CoreArray/dPlatform.cpp -o CoreArray/dPlatform.o
+CoreArray/dPlatform.cpp: In function 'std::string CoreArray::SysErrMessage(int)':
+CoreArray/dPlatform.cpp:1641:53: error: invalid conversion from 'int' to 'const char*' [-fpermissive]
+ 1641 |                         const char *msg = strerror_r(err, buf, sizeof(buf));
+      |                                           ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+      |                                                     |
+      |                                                     int
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: CoreArray/dPlatform.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/BIOC/gdsfmt/src'
+make[1]: Entering directory '/var/local/PKGS/BIOC/gdsfmt/src'
+make[1]: Leaving directory '/var/local/PKGS/BIOC/gdsfmt/src'
+ERROR: compilation failed for package 'gdsfmt'
+* removing '/home/runner/R-patched/lib/gdsfmt'
+* restoring previous '/home/runner/R-patched/lib/gdsfmt'

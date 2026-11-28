@@ -1,0 +1,443 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'SurfaceMesh' ...
+** this is package 'SurfaceMesh' version '0.1.2'
+** package 'SurfaceMesh' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+specified C++17
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+using C++17
+make[1]: Entering directory '/var/local/PKGS/CRAN/SurfaceMesh/src'
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_alpha_wrap.cpp -o export_alpha_wrap.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/property_map.h:18,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/internal/helpers.h:15,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/iterator.h:23,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO.h:19,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/Surface_mesh.h:20,
+                 from SurfaceMesh.h:19,
+                 from export_alpha_wrap.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/15.2.0/bits/std_thread.h:45,
+                 from /usr/include/c++/15.2.0/thread:47,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:428,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from SurfaceMesh.h:17:
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_boolean.cpp -o export_boolean.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/property_map.h:18,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/internal/helpers.h:15,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/iterator.h:23,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO.h:19,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/Surface_mesh.h:20,
+                 from SurfaceMesh.h:19,
+                 from export_boolean.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/15.2.0/bits/std_thread.h:45,
+                 from /usr/include/c++/15.2.0/thread:47,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:428,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from SurfaceMesh.h:17:
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_bounding.cpp -o export_bounding.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/property_map.h:18,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/internal/helpers.h:15,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/iterator.h:23,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO.h:19,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/Surface_mesh.h:20,
+                 from SurfaceMesh.h:19,
+                 from export_bounding.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/15.2.0/bits/std_thread.h:45,
+                 from /usr/include/c++/15.2.0/thread:47,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:428,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from SurfaceMesh.h:17:
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_hausdorff.cpp -o export_hausdorff.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/property_map.h:18,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/internal/helpers.h:15,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/iterator.h:23,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO.h:19,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/Surface_mesh.h:20,
+                 from SurfaceMesh.h:19,
+                 from export_hausdorff.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/15.2.0/bits/std_thread.h:45,
+                 from /usr/include/c++/15.2.0/thread:47,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:428,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from SurfaceMesh.h:17:
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_mesh.cpp -o export_mesh.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/property_map.h:18,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/internal/helpers.h:15,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/iterator.h:23,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO.h:19,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/Surface_mesh.h:20,
+                 from SurfaceMesh.h:19,
+                 from export_mesh.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/15.2.0/bits/std_thread.h:45,
+                 from /usr/include/c++/15.2.0/thread:47,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:428,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from SurfaceMesh.h:17:
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_normals.cpp -o export_normals.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/property_map.h:18,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/internal/helpers.h:15,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/iterator.h:23,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO.h:19,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/Surface_mesh.h:20,
+                 from SurfaceMesh.h:19,
+                 from export_normals.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/15.2.0/bits/std_thread.h:45,
+                 from /usr/include/c++/15.2.0/thread:47,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:428,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from SurfaceMesh.h:17:
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/runner/R-patched/lib/BH/include/boost/scoped_ptr.hpp:13,
+                 from /home/runner/R-patched/lib/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/mst_orient_normals.h:41,
+                 from export_normals.cpp:19:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/scoped_ptr.hpp: At global scope:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/scoped_ptr.hpp:63:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   63 |     explicit scoped_ptr( std::auto_ptr<T> p ) noexcept : px( p.release() )
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_read_write.cpp -o export_read_write.o
+In file included from /home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /home/runner/R-patched/lib/BH/include/boost/property_map/property_map.hpp:598,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/property_map.h:18,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/internal/helpers.h:15,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/boost/graph/iterator.h:23,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO/3MF.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/IO.h:19,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Surface_mesh/Surface_mesh.h:20,
+                 from SurfaceMesh.h:19,
+                 from export_read_write.cpp:14:
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/detail/shared_count.hpp:294:33: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  294 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/15.2.0/bits/std_thread.h:45,
+                 from /usr/include/c++/15.2.0/thread:47,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/config.h:428,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/basic.h:21,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Cartesian/Cartesian_base.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Simple_cartesian.h:20,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Exact_predicates_inexact_constructions_kernel.h:20,
+                 from SurfaceMesh.h:17:
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:354:31: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  354 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:365:22: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  365 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:423:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  423 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:430:34: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  430 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function 'boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)':
+/home/runner/R-patched/lib/BH/include/boost/smart_ptr/shared_ptr.hpp:432:38: warning: 'template<class> class std::auto_ptr' is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  432 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+/usr/include/c++/15.2.0/bits/unique_ptr.h:59:28: note: declared here
+   59 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++17 -I"/home/runner/R-patched/build/include" -DNDEBUG  -I'/home/runner/R-patched/lib/BH/include' -I'/home/runner/R-patched/lib/Rcpp/include' -I'/home/runner/R-patched/lib/RcppCGAL/include' -I'/home/runner/R-patched/lib/RcppEigen/include' -I/usr/local/include   -DCGAL_HEADER_ONLY=1  -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c export_reconstruct.cpp -o export_reconstruct.o
+In file included from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Mesh_edge_criteria_3.h:24,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/Mesh_criteria_3.h:27,
+                 from /home/runner/R-patched/lib/RcppCGAL/include/CGAL/poisson_surface_reconstruction.h:19,
+                 from export_reconstruct.cpp:21:
+/home/runner/R-patched/lib/RcppCGAL/include/CGAL/Mesh_3/Is_mesh_domain_field_3.h:24:10: fatal error: boost/callable_traits/is_invocable.hpp: No such file or directory
+   24 | #include <boost/callable_traits/is_invocable.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: export_reconstruct.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/SurfaceMesh/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/SurfaceMesh/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/SurfaceMesh/src'
+ERROR: compilation failed for package 'SurfaceMesh'
+* removing '/home/runner/R-patched/lib/SurfaceMesh'

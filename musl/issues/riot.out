@@ -1,0 +1,31 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'riot' ...
+** this is package 'riot' version '1.2.0'
+** package 'riot' successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: 'g++ (Alpine 15.2.0) 15.2.0'
+make[1]: Entering directory '/var/local/PKGS/CRAN/riot/src'
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG `"/home/runner/R-patched/build/bin/Rscript" ../tools/configure.R --cppflags` -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c bundleReaders.cpp -o bundleReaders.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG `"/home/runner/R-patched/build/bin/Rscript" ../tools/configure.R --cppflags` -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c bundleWriters.cpp -o bundleWriters.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG `"/home/runner/R-patched/build/bin/Rscript" ../tools/configure.R --cppflags` -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++20 -I"/home/runner/R-patched/build/include" -DNDEBUG `"/home/runner/R-patched/build/bin/Rscript" ../tools/configure.R --cppflags` -I'/home/runner/R-patched/lib/cpp11/include' -I/usr/local/include    -fpic  -O2 -mtune=native -Wno-ignored-attributes   -c tinyxml2.cpp -o tinyxml2.o
+tinyxml2.cpp: In member function 'tinyxml2::XMLError tinyxml2::XMLDocument::LoadFile(FILE*)':
+tinyxml2.cpp:111:21: error: 'fseeko64' was not declared in this scope; did you mean 'fseeko'?
+  111 | #define TIXML_FSEEK fseeko64
+      |                     ^~~~~~~~
+tinyxml2.cpp:2038:3: note: in expansion of macro 'TIXML_FSEEK'
+ 2038 |   TIXML_FSEEK(fp, 0, SEEK_SET);
+      |   ^~~~~~~~~~~
+tinyxml2.cpp:112:21: error: 'ftello64' was not declared in this scope; did you mean 'ftello'?
+  112 | #define TIXML_FTELL ftello64
+      |                     ^~~~~~~~
+tinyxml2.cpp:2048:40: note: in expansion of macro 'TIXML_FTELL'
+ 2048 |     const long long fileLengthSigned = TIXML_FTELL(fp);
+      |                                        ^~~~~~~~~~~
+make[1]: *** [/home/runner/R-patched/build/etc/Makeconf:199: tinyxml2.o] Error 1
+make[1]: Leaving directory '/var/local/PKGS/CRAN/riot/src'
+make[1]: Entering directory '/var/local/PKGS/CRAN/riot/src'
+make[1]: Leaving directory '/var/local/PKGS/CRAN/riot/src'
+ERROR: compilation failed for package 'riot'
+* removing '/home/runner/R-patched/lib/riot'

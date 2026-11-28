@@ -1,0 +1,10 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'RoBSA' ...
+** this is package 'RoBSA' version '1.1.0'
+** package 'RoBSA' successfully unpacked and MD5 sums checked
+** using staged installation
+checking for pkg-config... /usr/bin/pkg-config
+configure: error: pkg-config found JAGS 5.0.2 but rjags requires JAGS 4.x.y
+ERROR: configuration failed for package 'RoBSA'
+* removing '/home/runner/R-patched/lib/RoBSA'
+* restoring previous '/home/runner/R-patched/lib/RoBSA'

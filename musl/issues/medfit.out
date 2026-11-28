@@ -1,0 +1,14 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'medfit' ...
+** this is package 'medfit' version '0.3.2'
+** package 'medfit' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error : Class union has not been registered with S4; please call S4_register(new_union(class_integer, class_double, NULL)).
+Error: unable to load R code in package 'medfit'
+Execution halted
+ERROR: lazy loading failed for package 'medfit'
+* removing '/home/runner/R-patched/lib/medfit'
+* restoring previous '/home/runner/R-patched/lib/medfit'

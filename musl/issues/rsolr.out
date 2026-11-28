@@ -1,0 +1,16 @@
+* installing to library '/home/runner/R-patched/lib'
+* installing *source* package 'rsolr' ...
+** this is package 'rsolr' version '0.0.14'
+** package 'rsolr' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for 'as.factor' from package 'base' in package 'rsolr'
+Error in conformMethod(signature, mnames, fnames, f, fdef, definition) : 
+  in method for 'transform' with signature 'x="SolrQuery"': formal arguments (x = "SolrQuery", ... = "SolrQuery") omitted in the method definition cannot be in the signature
+Error: unable to load R code in package 'rsolr'
+Execution halted
+ERROR: lazy loading failed for package 'rsolr'
+* removing '/home/runner/R-patched/lib/rsolr'
+* restoring previous '/home/runner/R-patched/lib/rsolr'
